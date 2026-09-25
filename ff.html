@@ -1,0 +1,807 @@
+<!-- =========================================================
+     ASTRA VISTA — MEMBERSHIP SECTION
+     Premium Editorial Membership
+========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<section class="av-membership">
+
+    <div class="av-membership-wrap">
+
+        <!-- CENTER HEADING -->
+        <div class="av-membership-heading">
+
+            <div class="av-membership-eyebrow">
+                <span></span>
+                ASTRA VISTA MEMBERSHIP
+                <span></span>
+            </div>
+
+            <h2>
+                Make Space
+                <em>Part of Your Story</em>
+            </h2>
+
+            <p>
+                Stay closer to the stars with exclusive access, special
+                programs, member events and experiences designed to make
+                every visit feel extraordinary.
+            </p>
+
+        </div>
+
+
+        <!-- MEMBERSHIP CONTENT -->
+        <div class="av-membership-grid">
+
+            <!-- IMAGE -->
+            <div class="av-membership-visual">
+
+                <img src="images/membership.jpg" alt="Astra Vista membership experience">
+
+                <div class="av-membership-image-label">
+                    <span>ASTRA</span>
+                    <strong>VISTA</strong>
+                </div>
+
+                <div class="av-membership-orbit"></div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+            <div class="av-membership-content">
+
+                <div class="av-membership-intro">
+                    <span class="av-small-label">ONE MEMBERSHIP</span>
+
+                    <h3>
+                        More reasons<br>
+                        to <span>look up.</span>
+                    </h3>
+
+                    <p>
+                        Turn your curiosity into a year-round journey.
+                        Astra Vista Membership gives you more opportunities
+                        to explore, discover and experience the universe.
+                    </p>
+                </div>
+
+
+                <!-- BENEFITS -->
+                <div class="av-membership-benefits">
+
+                    <div class="av-member-item">
+                        <div class="av-member-number">01</div>
+                        <div>
+                            <h4>Unlimited Discovery</h4>
+                            <p>
+                                Enjoy member access throughout the year
+                                and return whenever curiosity calls.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="av-member-item">
+                        <div class="av-member-number">02</div>
+                        <div>
+                            <h4>Exclusive Events</h4>
+                            <p>
+                                Get closer to special programs, astronomy
+                                evenings and member-only experiences.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="av-member-item">
+                        <div class="av-member-number">03</div>
+                        <div>
+                            <h4>Bring Someone Along</h4>
+                            <p>
+                                Share the wonder with family and friends
+                                through selected membership benefits.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+                <div class="av-membership-action">
+
+                    <a href="Membership.html" class="av-membership-btn">
+                        <span>Explore Membership</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <div class="av-membership-note">
+                        <span></span>
+                        Discover your membership benefits
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   ASTRA VISTA — MEMBERSHIP
+========================================================= */
+
+.av-membership{
+
+    position:relative;
+
+    width:100%;
+
+    padding:120px 7%;
+
+    background:#fff;
+
+    overflow:hidden;
+
+    font-family:"DM Sans",sans-serif;
+
+    color:#15182a;
+}
+
+
+.av-membership::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    right:-280px;
+    top:100px;
+
+    border:1px solid rgba(115,87,232,.10);
+
+    border-radius:50%;
+}
+
+
+.av-membership::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    left:-250px;
+    bottom:-170px;
+
+    border:1px solid rgba(23,63,159,.08);
+
+    border-radius:50%;
+}
+
+
+.av-membership-wrap{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1280px;
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-membership-heading{
+
+    max-width:760px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+}
+
+
+.av-membership-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:13px;
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+
+.av-membership-eyebrow span{
+
+    width:28px;
+
+    height:1px;
+
+    background:var(--secondary);
+
+    display:block;
+}
+
+
+.av-membership-heading h2{
+
+    margin:0;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(42px,5vw,68px);
+
+    line-height:1.04;
+
+    font-weight:600;
+
+    letter-spacing:-2px;
+
+    color:#15182a;
+}
+
+
+.av-membership-heading h2 em{
+
+    display:block;
+
+    font-weight:500;
+
+    color:var(--primary);
+
+}
+
+
+.av-membership-heading p{
+
+    max-width:620px;
+
+    margin:24px auto 0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#707384;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.av-membership-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.av-membership-visual{
+
+    position:relative;
+
+    height:590px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+
+.av-membership-visual img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+}
+
+
+.av-membership-visual:hover img{
+
+    transform:scale(1.045);
+}
+
+
+.av-membership-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5,7,19,.05) 30%,
+            rgba(5,7,19,.72) 100%
+        );
+}
+
+
+/* IMAGE LABEL */
+
+.av-membership-image-label{
+
+    position:absolute;
+
+    left:30px;
+    bottom:28px;
+
+    z-index:3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:.9;
+}
+
+
+.av-membership-image-label span{
+
+    color:#fff;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+}
+
+
+.av-membership-image-label strong{
+
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:35px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+}
+
+
+/* ORBIT */
+
+.av-membership-orbit{
+
+    position:absolute;
+
+    z-index:3;
+
+    width:115px;
+    height:42px;
+
+    right:30px;
+    top:35px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    transform:rotate(-25deg);
+}
+
+
+.av-membership-orbit::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    right:12px;
+    top:4px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-membership-content{
+
+    max-width:570px;
+}
+
+
+.av-small-label{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    color:var(--secondary);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:2.5px;
+}
+
+
+.av-membership-intro h3{
+
+    margin:0;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:48px;
+
+    line-height:1.08;
+
+    font-weight:600;
+
+    letter-spacing:-1.5px;
+
+    color:#15182a;
+}
+
+
+.av-membership-intro h3 span{
+
+    color:var(--primary);
+
+    font-style:italic;
+}
+
+
+.av-membership-intro p{
+
+    margin:22px 0 0;
+
+    max-width:500px;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#727583;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.av-membership-benefits{
+
+    margin-top:38px;
+
+    border-top:1px solid #e8e9ee;
+}
+
+
+.av-member-item{
+
+    display:grid;
+
+    grid-template-columns:45px 1fr;
+
+    gap:18px;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #e8e9ee;
+
+    transition:padding-left .3s ease;
+}
+
+
+.av-member-item:hover{
+
+    padding-left:8px;
+}
+
+
+.av-member-number{
+
+    color:var(--secondary);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    padding-top:3px;
+}
+
+
+.av-member-item h4{
+
+    margin:0 0 7px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#202235;
+}
+
+
+.av-member-item p{
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.65;
+
+    color:#818390;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.av-membership-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:34px;
+}
+
+
+.av-membership-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    min-height:54px;
+
+    padding:0 8px 0 22px;
+
+    border-radius:100px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.av-membership-btn i{
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    font-size:14px;
+
+    transition:transform .3s ease;
+}
+
+
+.av-membership-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--secondary);
+}
+
+
+.av-membership-btn:hover i{
+
+    transform:rotate(45deg);
+
+    background:#fff;
+
+    color:var(--secondary);
+}
+
+
+.av-membership-note{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#858793;
+
+    font-size:11px;
+}
+
+
+.av-membership-note span{
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .av-membership{
+
+        padding:90px 6%;
+    }
+
+    .av-membership-heading{
+
+        margin-bottom:55px;
+    }
+
+    .av-membership-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .av-membership-visual{
+
+        height:500px;
+    }
+
+    .av-membership-content{
+
+        max-width:100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .av-membership{
+
+        padding:75px 20px;
+    }
+
+    .av-membership-heading{
+
+        margin-bottom:45px;
+    }
+
+    .av-membership-heading h2{
+
+        font-size:40px;
+
+        letter-spacing:-1px;
+    }
+
+    .av-membership-heading p{
+
+        font-size:14px;
+    }
+
+    .av-membership-eyebrow{
+
+        font-size:9px;
+
+        letter-spacing:2px;
+    }
+
+    .av-membership-eyebrow span{
+
+        width:18px;
+    }
+
+    .av-membership-visual{
+
+        height:410px;
+
+        border-radius:22px;
+    }
+
+    .av-membership-intro h3{
+
+        font-size:38px;
+    }
+
+    .av-membership-action{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:17px;
+    }
+
+}
+
+</style>

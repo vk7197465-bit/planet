@@ -1,0 +1,3816 @@
+
+:root {
+  /* ================================
+     BRAND COLORS
+  ================================= */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     LIGHT THEME
+  ================================= */
+  --bg: #F7F9FF;
+  --bg-soft: #EEF2FF;
+  --surface: #FFFFFF;
+  --surface-soft: #F8F9FE;
+
+  --text: #111827;
+  --text-soft: #4B5563;
+  --text-muted: #7B8498;
+
+  --border: #E2E7F2;
+  --border-soft: #EDF0F7;
+
+  --primary-soft: #E9EEFF;
+  --secondary-soft: #F0ECFF;
+
+  --shadow: 0 18px 50px rgba(23, 63, 159, 0.10);
+  --shadow-soft: 0 8px 28px rgba(17, 24, 39, 0.07);
+
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --footer-bg: #101936;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(17, 24, 39, 0.45);
+  --glass: rgba(255, 255, 255, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #16805D;
+  --warning: #D98B16;
+  --danger: #D14343;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 38px;
+
+  --transition: 0.3s ease;
+}
+
+
+/* ====================================
+   DARK THEME
+==================================== */
+[data-theme="dark"] {
+
+  /* Brand colors remain unchanged */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     DARK BACKGROUNDS
+  ================================= */
+  --bg: #080D1D;
+  --bg-soft: #0D1429;
+  --surface: #11182D;
+  --surface-soft: #151D35;
+
+  /* ================================
+     DARK TEXT
+  ================================= */
+  --text: #F5F7FF;
+  --text-soft: #C7CEE2;
+  --text-muted: #8F9AB4;
+
+  /* ================================
+     DARK BORDERS
+  ================================= */
+  --border: #27314D;
+  --border-soft: #1C2540;
+
+  /* ================================
+     BRAND SOFT COLORS
+  ================================= */
+  --primary-soft: #172A63;
+  --secondary-soft: #2A2159;
+
+  /* ================================
+     DARK SHADOWS
+  ================================= */
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 10px 32px rgba(0, 0, 0, 0.25);
+
+  /* ================================
+     NAV / FOOTER
+  ================================= */
+  --nav-bg: rgba(8, 13, 29, 0.88);
+  --footer-bg: #050914;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(0, 0, 0, 0.58);
+  --glass: rgba(17, 24, 45, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #36B37E;
+  --warning: #F0B84B;
+  --danger: #F06A6A;
+}
+.av-membership-hero{
+
+   
+    position:relative;
+
+    width:100%;
+   
+    height:100vh;
+
+    overflow:hidden;
+
+    background:var(-bg);
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.av-membership-bg{
+
+    position:absolute;
+    inset:0;
+
+    background-image:url("images/membership-hero.jpg");
+    background-size:cover;
+    background-position:center;
+
+    transform:scale(1.04);
+
+    animation:avMemberZoom 15s ease-in-out infinite alternate;
+}
+
+@keyframes avMemberZoom{
+
+    from{
+        transform:scale(1.04);
+    }
+
+    to{
+        transform:scale(1.10);
+    }
+
+}
+
+
+/* =========================================================
+   DARK CINEMATIC OVERLAY
+========================================================= */
+
+.av-membership-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.98) 0%,
+            rgba(5,7,19,.91) 35%,
+            rgba(5,7,19,.60) 65%,
+            rgba(5,7,19,.82) 100%
+        );
+}
+
+
+/* =========================================================
+   PURPLE LIGHT
+========================================================= */
+
+.av-membership-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:0;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.25),
+            transparent 68%
+        );
+
+    filter:blur(20px);
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.av-membership-stars{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.42;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.4) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        130px 130px,
+        210px 210px;
+
+    background-position:
+        20px 30px,
+        80px 100px;
+
+    animation:avStarsMove 20s linear infinite;
+}
+
+@keyframes avStarsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-70px);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.av-membership-hero-inner{
+
+    position:relative;
+    z-index:5;
+
+    width:min(1180px,90%);
+    height:100%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(400px,500px);
+
+    align-items:center;
+
+    gap:60px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.av-membership-content{
+
+    max-width:650px;
+
+    animation:avContentIn .9s ease both;
+}
+
+@keyframes avContentIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.av-membership-eyebrow{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:22px;
+
+    color:var(--secondary);
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:3px;
+}
+
+.av-membership-eyebrow span{
+
+    width:32px;
+    height:1px;
+
+    background:var(--av-secondary);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-membership-content h1{
+
+    margin:0;
+
+    color:var(--text);
+
+color: var(--secondary);
+    font-size:clamp(58px,6vw,88px);
+
+    font-weight:600;
+
+    line-height:.96;
+
+    letter-spacing:-2px;
+}
+
+.av-membership-content h1 em{
+
+    color:#A99CFF;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-membership-content p{
+
+    max-width:540px;
+
+    margin:28px 0 32px;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.av-membership-actions{
+
+    display:flex;
+    align-items:center;
+
+    gap:25px;
+}
+
+.av-member-primary{
+
+    display:inline-flex;
+    align-items:center;
+    gap:11px;
+
+    padding:14px 21px;
+
+    background:var(--primary);
+    color:white;
+
+    border-radius:4px;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:700;
+
+    transition:.35s ease;
+}
+
+.av-member-primary svg{
+
+    width:15px;
+    height:15px;
+
+    transition:.35s ease;
+}
+
+
+.av-member-primary:hover svg{
+
+    transform:translate(3px,-3px);
+}
+
+
+.av-member-link{
+
+    display:inline-flex;
+    align-items:center;
+
+    gap:9px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.av-member-link svg{
+
+    width:14px;
+    height:14px;
+
+    color:#A99CFF;
+
+    transition:.3s ease;
+}
+
+.av-member-link:hover{
+    color:#A99CFF;
+}
+
+.av-member-link:hover svg{
+    transform:translateY(4px);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.av-membership-visual{
+
+    position:relative;
+
+    width:100%;
+    height:540px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    animation:avVisualIn 1s .15s ease both;
+}
+
+@keyframes avVisualIn{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.av-visual-glow{
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.30),
+            rgba(115,87,232,.08) 40%,
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    animation:avGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes avGlow{
+
+    from{
+        transform:scale(.94);
+        opacity:.7;
+    }
+
+    to{
+        transform:scale(1.06);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   STRAIGHT MEMBERSHIP FRAME
+========================================================= */
+
+.av-membership-frame{
+
+    position:relative;
+    z-index:3;
+
+    width:360px;
+    height:475px;
+
+    padding:12px;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.16),
+            rgba(115,87,232,.10)
+        );
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.22);
+
+    /* STRAIGHT */
+    transform:none;
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.av-membership-frame:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 45px 110px rgba(0,0,0,.62),
+        inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+
+/* =========================================================
+   FRAME TOP
+========================================================= */
+
+.av-frame-top{
+
+    height:48px;
+
+    padding:0 13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.av-frame-brand{
+
+    color:rgba(255,255,255,.72);
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.av-frame-icon{
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--av-secondary);
+
+    color:#fff;
+}
+
+.av-frame-icon svg{
+
+    width:14px;
+    height:14px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.av-frame-image{
+
+    position:relative;
+
+    width:100%;
+    height:380px;
+
+    overflow:hidden;
+
+    border-radius:14px;
+}
+
+.av-frame-image img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .8s ease;
+}
+
+.av-membership-frame:hover .av-frame-image img{
+
+    transform:scale(1.06);
+
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.av-frame-image-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(5,7,19,.15) 45%,
+            rgba(5,7,19,.92) 100%
+        );
+}
+
+
+/* =========================================================
+   IMAGE COPY
+========================================================= */
+
+.av-frame-copy{
+
+    position:absolute;
+
+    left:24px;
+    right:24px;
+    bottom:24px;
+
+    z-index:2;
+}
+
+.av-frame-copy small{
+
+    color:#C0B8FF;
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.av-frame-copy h3{
+
+    margin:9px 0 0;
+
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+    font-weight:500;
+
+    line-height:1;
+}
+
+.av-frame-copy h3 em{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#B0A5FF;
+
+    font-size:22px;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   FRAME BOTTOM
+========================================================= */
+
+.av-frame-bottom{
+
+    height:46px;
+
+    padding:0 13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    color:rgba(255,255,255,.48);
+
+    font-size:7px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   FLOATING LABELS
+========================================================= */
+
+.av-membership-label{
+
+    position:absolute;
+
+    z-index:6;
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    padding:10px 13px;
+
+    border:1px solid rgba(255,255,255,.17);
+
+    border-radius:50px;
+
+    background:rgba(7,10,22,.72);
+
+    backdrop-filter:blur(14px);
+
+    color:rgba(255,255,255,.78);
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.av-membership-label svg{
+
+    width:13px;
+    height:13px;
+
+    color:#A99CFF;
+}
+
+.label-top{
+
+    top:82px;
+    right:4px;
+
+    animation:avFloatTop 4s ease-in-out infinite;
+}
+
+.label-bottom{
+
+    bottom:75px;
+    left:0;
+
+    animation:avFloatBottom 4.5s ease-in-out infinite;
+}
+
+@keyframes avFloatTop{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+@keyframes avFloatBottom{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.av-membership-scroll{
+
+    position:absolute;
+
+    z-index:8;
+
+    left:50%;
+    bottom:24px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    color:rgba(255,255,255,.42);
+
+    font-size:8px;
+
+    letter-spacing:2.5px;
+}
+
+.av-membership-scroll div{
+
+    width:35px;
+    height:1px;
+
+    background:var(--av-secondary);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .av-membership-hero-inner{
+
+        width:90%;
+
+        grid-template-columns:
+            minmax(0,1fr)
+            390px;
+
+        gap:25px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:62px;
+
+    }
+
+    .av-membership-visual{
+
+        height:500px;
+    }
+
+    .av-membership-frame{
+
+        width:330px;
+        height:440px;
+    }
+
+    .av-frame-image{
+
+        height:348px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:760px){
+
+    .av-membership-hero{
+
+        height:auto;
+        min-height:850px;
+    }
+
+    .av-membership-overlay{
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,7,19,.90),
+                rgba(5,7,19,.96)
+            );
+    }
+
+    .av-membership-hero-inner{
+
+        width:90%;
+        min-height:850px;
+
+        padding:75px 0 65px;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:30px;
+
+        text-align:center;
+    }
+
+    .av-membership-content{
+
+        max-width:600px;
+    }
+
+    .av-membership-eyebrow{
+
+        justify-content:center;
+
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:48px;
+
+        letter-spacing:-1px;
+    }
+
+    .av-membership-content p{
+
+        margin:20px auto 25px;
+
+        font-size:13px;
+    }
+
+    .av-membership-actions{
+
+        justify-content:center;
+    }
+
+    .av-membership-visual{
+
+        height:410px;
+
+    }
+
+    .av-membership-frame{
+
+        width:280px;
+        height:375px;
+
+        border-radius:18px;
+    }
+
+    .av-frame-image{
+
+        height:295px;
+    }
+
+    .av-frame-copy h3{
+
+        font-size:25px;
+    }
+
+    .av-frame-copy h3 em{
+
+        font-size:18px;
+    }
+
+    .label-top{
+
+        top:30px;
+        right:0;
+    }
+
+    .label-bottom{
+
+        bottom:35px;
+        left:0;
+    }
+
+    .av-membership-scroll{
+
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px){
+
+    .av-membership-hero-inner{
+
+        padding-top:60px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:42px;
+    }
+
+    .av-membership-content p{
+
+        font-size:12px;
+    }
+
+    .av-membership-actions{
+
+        flex-direction:column;
+        gap:16px;
+    }
+
+    .av-membership-visual{
+
+        height:380px;
+    }
+
+    .av-membership-frame{
+
+        width:250px;
+        height:340px;
+    }
+
+    .av-frame-image{
+
+        height:260px;
+    }
+
+    .av-frame-copy{
+
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .av-frame-copy h3{
+
+        font-size:22px;
+    }
+
+    .av-frame-copy h3 em{
+
+        font-size:16px;
+    }
+
+    .av-membership-label{
+
+        font-size:7px;
+        padding:8px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   ASTRA VISTA — PRICING
+========================================================= */
+
+.av-pricing{
+
+    --av-primary:var(--primary,#173F9F);
+    --av-secondary:var(--secondary,#7357E8);
+
+    width:100%;
+
+    padding:85px 20px 40px;
+
+    background:var(--bg);
+   
+
+
+    color:var(--text);
+
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-pricing-head{
+
+    max-width:680px;
+
+    margin:0 auto 48px;
+
+    text-align:center;
+
+}
+
+
+.av-pricing-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:14px;
+
+    color:var(--av-secondary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2.8px;
+
+}
+
+
+.av-pricing-eyebrow span{
+
+    width:30px;
+
+    height:1px;
+
+    background:var(--av-secondary);
+
+}
+
+
+.av-pricing-head h2{
+
+    margin:0;
+
+    color:var(--av-primary);
+
+
+    font-size:clamp(38px,4.5vw,58px);
+
+    line-height:1.04;
+
+    font-weight:600;
+
+    letter-spacing:-1px;
+
+}
+
+
+.av-pricing-head h2 em{
+
+    color:var(--av-secondary);
+
+
+}
+
+
+.av-pricing-head p{
+
+    max-width:490px;
+
+    margin:16px auto 0;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   WIDE GRID
+========================================================= */
+
+.av-pricing-grid{
+
+    width:min(1240px,94%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    align-items:stretch;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.av-price-card{
+
+    position:relative;
+
+    min-height:470px;
+
+    padding:25px 28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--bg);
+
+    border:1px solid #E5E7EF;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(23,63,159,.045);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.av-price-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:
+        rgba(115,87,232,.32);
+
+    box-shadow:
+        0 22px 50px rgba(23,63,159,.10);
+
+}
+
+
+/* =========================================================
+   POPULAR CARD
+========================================================= */
+
+.popular-card{
+
+    min-height:490px;
+
+    transform:translateY(-8px);
+
+    border:1.5px solid var(--av-primary);
+
+    box-shadow:
+        0 20px 48px rgba(23,63,159,.13);
+
+}
+
+
+.popular-card:hover{
+
+    transform:translateY(-13px);
+
+}
+
+
+/* =========================================================
+   POPULAR BADGE
+========================================================= */
+
+.av-popular-badge{
+
+    position:absolute;
+
+    top:-13px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:7px 15px;
+
+    background:var(--av-primary);
+
+    color:var(--text);
+
+    border-radius:30px;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.6px;
+
+    white-space:nowrap;
+
+}
+
+
+.av-popular-badge svg{
+
+    width:11px;
+
+    height:11px;
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.av-price-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+
+.av-price-icon{
+
+    width:43px;
+
+    height:43px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:var(--bg);
+
+    color:var(--av-secondary);
+
+    transition:.35s ease;
+
+}
+
+
+.av-price-icon svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+.popular-icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--av-primary),
+            var(--av-secondary)
+        );
+
+    color:var(--text);
+
+}
+
+
+.av-price-card:hover .av-price-icon{
+
+    transform:translateY(-3px);
+
+}
+
+
+.av-price-label{
+
+    color:var(--text);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.7px;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-price-content h3{
+
+    margin:0 0 8px;
+
+    color:var(--av-primary);
+
+
+    font-size:29px;
+
+    font-weight:600;
+
+}
+
+
+.av-price-content p{
+
+    min-height:52px;
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:12px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.av-price{
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:7px;
+
+    margin-top:17px;
+
+}
+
+
+.av-price strong{
+
+    color:var(--text);
+
+    font-size:34px;
+
+    font-weight:600;
+
+    letter-spacing:-1px;
+
+}
+
+
+.av-price span{
+
+    color:var(--text);
+
+    font-size:11px;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.av-price-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:20px 0 18px;
+
+    background:var(--bg);
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.av-price-features{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.av-price-features li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    color:var(--text);
+
+    font-size:11.5px;
+
+    line-height:1.5;
+
+}
+
+
+.av-price-features li svg{
+
+    flex-shrink:0;
+
+    width:14px;
+
+    height:14px;
+
+    margin-top:1px;
+
+    color:var(--av-secondary);
+
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.av-price-btn{
+
+    width:100%;
+
+    min-height:44px;
+
+    margin-top:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    border-radius:7px;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.av-price-btn svg{
+
+    width:14px;
+
+    height:14px;
+
+    transition:.3s ease;
+
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   NON-POPULAR PLANS
+========================================================= */
+
+.secondary-btn{
+
+    background:#F2F3F8;
+
+    color:var(--av-secondary);
+
+    border:1px solid #E3E5ED;
+
+}
+
+
+
+
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   POPULAR PLAN
+========================================================= */
+
+.primary-btn{
+
+    background:var(--av-primary);
+
+    color:#fff;
+
+    border:1px solid var(--av-primary);
+
+    box-shadow:
+        0 9px 22px rgba(23,63,159,.20);
+
+}
+
+
+.primary-btn:hover{
+
+    background:var(--av-secondary);
+
+    border-color:var(--av-secondary);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 26px rgba(115,87,232,.23);
+
+}
+
+
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.av-pricing-note{
+
+    width:min(1240px,94%);
+
+    margin:20px auto 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    color:var(--text);
+
+    font-size:10px;
+
+}
+
+
+.av-pricing-note svg{
+
+    width:14px;
+
+    height:14px;
+
+    color:var(--av-secondary);
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .av-pricing-grid{
+
+        width:94%;
+
+        gap:16px;
+
+    }
+
+    .av-price-card{
+
+        min-height:450px;
+
+        padding:23px;
+
+    }
+
+    .popular-card{
+
+        min-height:470px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:850px){
+
+    .av-pricing-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .av-price-card:last-child{
+
+        grid-column:1 / -1;
+
+        width:calc(50% - 8px);
+
+        margin:0 auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .av-pricing{
+
+        padding:70px 16px 75px;
+
+    }
+
+    .av-pricing-head{
+
+        margin-bottom:40px;
+
+    }
+
+    .av-pricing-head h2{
+
+        font-size:38px;
+
+    }
+
+    .av-pricing-head p{
+
+        font-size:13px;
+
+    }
+
+    .av-pricing-grid{
+
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .av-price-card,
+    .popular-card{
+
+        min-height:auto;
+
+        padding:24px;
+
+        transform:none;
+
+    }
+
+    .popular-card:hover{
+
+        transform:translateY(-5px);
+
+    }
+
+    .av-price-card:last-child{
+
+        grid-column:auto;
+
+        width:auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .av-pricing{
+
+        padding-left:13px;
+
+        padding-right:13px;
+
+    }
+
+    .av-pricing-head h2{
+
+        font-size:33px;
+
+    }
+
+    .av-price-card{
+
+        padding:21px;
+
+    }
+
+    .av-price strong{
+
+        font-size:32px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ASTRA VISTA — MEMBERSHIP
+========================================================= */
+
+.av-membership{
+
+    position:relative;
+
+    width:100%;
+
+    padding:120px 7%;
+
+    background:var(--bg);
+
+    overflow:hidden;
+
+    font-family:"DM Sans",sans-serif;
+
+    color:var(--text);
+}
+
+
+.av-membership::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    right:-280px;
+    top:100px;
+
+    border:1px solid rgba(115,87,232,.10);
+
+    border-radius:50%;
+}
+
+
+.av-membership::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    left:-250px;
+    bottom:-170px;
+
+    border:1px solid rgba(23,63,159,.08);
+
+    border-radius:50%;
+}
+
+
+.av-membership-wrap{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1280px;
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-membership-heading{
+
+    max-width:760px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+}
+
+
+.av-membership-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:13px;
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+}
+
+
+.av-membership-eyebrow span{
+
+    width:28px;
+
+    height:1px;
+
+    background:var(--secondary);
+
+    display:block;
+}
+
+
+.av-membership-heading h2{
+
+    margin:0;
+
+
+    font-size:clamp(42px,5vw,58px);
+
+    line-height:1.04;
+
+    font-weight:600;
+
+    letter-spacing:-2px;
+
+    color:var(--primary);
+}
+
+
+.av-membership-heading h2 em{
+
+    display:block;
+
+    font-weight:500;
+
+    color:var(--secondary);
+
+}
+
+
+.av-membership-heading p{
+
+    max-width:620px;
+
+    margin:24px auto 0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.av-membership-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.av-membership-visual{
+
+    position:relative;
+
+    height:590px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+
+.av-membership-visual img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+}
+
+
+.av-membership-visual:hover img{
+
+    transform:scale(1.045);
+}
+
+
+.av-membership-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5,7,19,.05) 30%,
+            rgba(5,7,19,.72) 100%
+        );
+}
+
+
+/* IMAGE LABEL */
+
+.av-membership-image-label{
+
+    position:absolute;
+
+    left:30px;
+    bottom:28px;
+
+    z-index:3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:.9;
+}
+
+
+.av-membership-image-label span{
+
+    color:var(--text);
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+}
+
+
+.av-membership-image-label strong{
+
+    color:var(--text);
+
+
+    font-size:35px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+}
+
+
+/* ORBIT */
+
+.av-membership-orbit{
+
+    position:absolute;
+
+    z-index:3;
+
+    width:115px;
+    height:42px;
+
+    right:30px;
+    top:35px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    transform:rotate(-25deg);
+}
+
+
+.av-membership-orbit::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    right:12px;
+    top:4px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-membership-content{
+
+    max-width:570px;
+}
+
+
+.av-small-label{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    color:var(--secondary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2.5px;
+}
+
+
+.av-membership-intro h3{
+
+    margin:0;
+
+
+    font-size:48px;
+
+    line-height:1.08;
+
+    font-weight:600;
+
+    letter-spacing:-1.5px;
+
+    color:var(--primary);
+}
+
+
+.av-membership-intro h3 span{
+
+    color:var(--secondary);
+
+    font-style:italic;
+}
+
+
+.av-membership-intro p{
+
+    margin:22px 0 0;
+
+    max-width:500px;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+
+
+.av-member-item{
+
+    display:grid;
+
+    grid-template-columns:45px 1fr;
+
+    gap:18px;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #e8e9ee;
+
+    transition:padding-left .3s ease;
+}
+
+
+.av-member-item:hover{
+
+    padding-left:8px;
+}
+
+
+.av-member-number{
+
+    color:var(--secondary);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    padding-top:3px;
+}
+
+
+.av-member-item h4{
+
+    margin:0 0 7px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+
+.av-member-item p{
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.65;
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.av-membership-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:34px;
+}
+
+
+.av-membership-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    min-height:54px;
+
+    padding:0 8px 0 22px;
+
+    border-radius:100px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.av-membership-btn i{
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    font-size:14px;
+
+    transition:transform .3s ease;
+}
+
+
+.av-membership-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--secondary);
+}
+
+
+.av-membership-btn:hover i{
+
+    transform:rotate(45deg);
+
+    background:#fff;
+
+    color:var(--secondary);
+}
+
+
+.av-membership-note{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:var(--text);
+
+    font-size:11px;
+}
+
+
+.av-membership-note span{
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .av-membership{
+
+        padding:90px 6%;
+    }
+
+    .av-membership-heading{
+
+        margin-bottom:55px;
+    }
+
+    .av-membership-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .av-membership-visual{
+
+        height:500px;
+    }
+
+    .av-membership-content{
+
+        max-width:100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .av-membership{
+
+        padding:75px 20px;
+    }
+
+    .av-membership-heading{
+
+        margin-bottom:45px;
+    }
+
+    .av-membership-heading h2{
+
+        font-size:40px;
+
+        letter-spacing:-1px;
+    }
+
+    .av-membership-heading p{
+
+        font-size:14px;
+    }
+
+    .av-membership-eyebrow{
+
+        font-size:9px;
+
+        letter-spacing:2px;
+    }
+
+    .av-membership-eyebrow span{
+
+        width:18px;
+    }
+
+    .av-membership-visual{
+
+        height:410px;
+
+        border-radius:22px;
+    }
+
+    .av-membership-intro h3{
+
+        font-size:38px;
+    }
+
+    .av-membership-action{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:17px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.av-membership-benefits{
+    padding:95px 5% 105px;
+    background:var(--bg);
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-membership-title{
+    max-width:700px;
+    margin:0 auto 65px;
+    text-align:center;
+}
+
+.av-membership-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin-bottom:16px;
+
+    color:var(--secondary);
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.av-membership-eyebrow span{
+    width:30px;
+    height:1px;
+    background:var(--secondary);
+}
+
+.av-membership-title h2{
+    margin:0;
+
+    color:var(--primary);
+
+    font-size:clamp(38px,4vw,56px);
+    line-height:1.05;
+    font-weight:600;
+    letter-spacing:-1.5px;
+}
+
+.av-membership-title h2 em{
+    color:var(--secondary);
+  
+    font-weight:500;
+}
+
+.av-membership-title p{
+    max-width:520px;
+    margin:18px auto 0;
+
+    color:var(--text);
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.av-benefit-timeline{
+    position:relative;
+
+    max-width:1180px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+}
+
+
+/* CONNECTING LINE */
+
+.av-benefit-line{
+    position:absolute;
+
+    top:9px;
+    left:8%;
+    right:8%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(115,87,232,.35),
+            rgba(23,63,159,.22),
+            rgba(115,87,232,.35),
+            transparent
+        );
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.av-benefit-item{
+    position:relative;
+}
+
+
+/* =========================================================
+   NODE
+========================================================= */
+
+.av-benefit-node{
+    position:relative;
+
+    width:19px;
+    height:19px;
+
+    margin:0 auto 22px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid rgba(115,87,232,.35);
+    border-radius:50%;
+
+    background:var(--bg);
+
+    z-index:2;
+}
+
+.av-benefit-node::after{
+    content:"";
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+.av-benefit-node span{
+    position:absolute;
+
+    top:25px;
+
+    color:var(--text);
+
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   EQUAL CARDS
+========================================================= */
+
+.av-benefit-card{
+    width:100%;
+    height:245px;
+
+    box-sizing:border-box;
+
+    padding:24px 20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    border:1px solid rgba(23,63,159,.10);
+    border-radius:18px;
+
+    background:var(--bg);
+
+    box-shadow:
+        0 7px 28px rgba(23,63,159,.045);
+
+    transition:
+         transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.av-benefit-card:hover{
+    transform:translateY(-7px);
+
+    border-color:rgba(115,87,232,.30);
+
+    box-shadow:
+        0 18px 40px rgba(23,63,159,.10);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.av-benefit-icon{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:15px;
+
+    border:1px solid rgba(115,87,232,.16);
+    border-radius:13px;
+
+    background:var(--bg);
+
+    color:var(--secondary);
+}
+
+.av-benefit-icon svg{
+    width:18px;
+    height:18px;
+
+    stroke-width:1.7;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.av-benefit-label{
+    margin-bottom:7px;
+
+    color:var(--secondary);
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.av-benefit-card h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    line-height:1.2;
+    font-weight:600;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-benefit-card p{
+    max-width:175px;
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:12px;
+    line-height:1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .av-benefit-timeline{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:45px;
+    }
+
+    .av-benefit-line{
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .av-membership-benefits{
+        padding:75px 20px 85px;
+    }
+
+    .av-membership-title{
+        margin-bottom:48px;
+    }
+
+    .av-membership-title h2{
+        font-size:40px;
+    }
+
+    .av-benefit-timeline{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .av-benefit-item{
+        padding-top:0;
+    }
+
+    .av-benefit-node{
+        display:none;
+    }
+
+    .av-benefit-card{
+        height:220px;
+    }
+
+}
+
+
+
+/* =========================================================
+   ASTRA VISTA — BOX FAQ
+========================================================= */
+
+.av-box-faq{
+
+    padding:80px 24px;
+
+    background:var(--bg);
+
+}
+
+.av-box-faq-container{
+
+    width:min(1080px,100%);
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-box-faq-heading{
+
+    max-width:680px;
+
+    margin:0 auto 55px;
+
+    text-align:center;
+
+}
+
+.av-box-faq-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:11px;
+
+    margin-bottom:17px;
+
+    color:var(--primary);
+
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2.5px;
+
+}
+
+.av-box-faq-eyebrow span{
+
+    width:30px;
+    height:1px;
+
+    background:var(--secondary);
+
+}
+
+.av-box-faq-heading h2{
+
+    margin:0;
+
+    color:var(--primary);
+
+
+    font-size:clamp(42px,5vw,60px);
+
+    line-height:1.04;
+
+    font-weight:500;
+
+    letter-spacing:-1.8px;
+
+}
+
+.av-box-faq-heading h2 em{
+
+    color:var(--secondary);
+}
+
+.av-box-faq-heading p{
+
+    max-width:510px;
+
+    margin:18px auto 0;
+
+    color:var(--text);
+
+
+    font-size:14px;
+
+    line-height:1.75;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.av-box-faq-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+
+/* =========================================================
+   FAQ CARD
+========================================================= */
+
+.av-box-faq-card{
+
+    min-height:105px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(23,63,159,.12);
+
+    border-radius:18px;
+
+    background:var(--bg);
+
+    box-shadow:
+        0 8px 28px rgba(20,30,70,.045);
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+
+}
+
+.av-box-faq-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(115,87,232,.28);
+
+    box-shadow:
+        0 14px 38px rgba(20,30,70,.08);
+
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.av-box-faq-question{
+
+    width:100%;
+
+    min-height:105px;
+
+    padding:23px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    border:0;
+
+    background:transparent;
+
+    color:var(--text);
+
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    text-align:left;
+
+    cursor:pointer;
+
+}
+
+.av-box-faq-question span{
+
+    max-width:360px;
+
+}
+
+.av-box-faq-question i{
+
+    width:32px;
+    height:32px;
+
+    flex:0 0 32px;
+
+    display:grid;
+
+    place-items:center;
+
+    border:1px solid rgba(23,63,159,.13);
+
+    border-radius:10px;
+
+    color:var(--primary);
+
+    font-size:19px;
+
+    font-style:normal;
+
+    font-weight:400;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.av-box-faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    padding:0 22px;
+
+    transition:
+        max-height .4s ease,
+        padding .4s ease;
+
+}
+
+.av-box-faq-answer p{
+
+    margin:0;
+
+    color:var(--text);
+
+
+    font-size:13px;
+
+    line-height:1.75;
+
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.av-box-faq-card.active{
+
+    border-color:rgba(23,63,159,.25);
+
+    box-shadow:
+        0 16px 42px rgba(23,63,159,.09);
+
+}
+
+.av-box-faq-card.active
+.av-box-faq-answer{
+
+    max-height:180px;
+
+    padding:
+        0 22px 22px;
+
+}
+
+.av-box-faq-card.active
+.av-box-faq-question{
+
+    min-height:76px;
+
+}
+
+.av-box-faq-card.active
+.av-box-faq-question i{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:var(--text);
+
+    transform:rotate(45deg);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:700px){
+
+    .av-box-faq{
+
+        padding:75px 16px;
+
+    }
+
+    .av-box-faq-heading{
+
+        margin-bottom:38px;
+
+    }
+
+    .av-box-faq-heading h2{
+
+        font-size:38px;
+
+        letter-spacing:-1px;
+
+    }
+
+    .av-box-faq-grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+    .av-box-faq-card{
+
+        border-radius:15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+    .av-box-faq-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .av-box-faq-question{
+
+        padding:19px;
+
+        min-height:90px;
+
+        font-size:13px;
+
+    }
+
+    .av-box-faq-question i{
+
+        width:29px;
+        height:29px;
+
+        flex-basis:29px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ASTRA VISTA — PREMIUM CTA
+========================================================= */
+
+.av-premium-cta{
+
+    padding:95px 24px;
+
+    background:var(--bg);
+
+}
+
+.av-premium-cta-card{
+
+    position:relative;
+
+    width:min(1180px,100%);
+
+    min-height:510px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:48% 52%;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#080b1c;
+
+    box-shadow:
+        0 30px 80px rgba(15,25,70,.16);
+
+}
+
+
+/* =========================================================
+   VISUAL SIDE
+========================================================= */
+
+.av-premium-cta-visual{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:510px;
+
+    background:
+        radial-gradient(
+            circle at 55% 45%,
+            rgba(115,87,232,.42),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 25% 75%,
+            rgba(23,63,159,.55),
+            transparent 45%
+        ),
+        #070a18;
+
+}
+
+
+/* STARS */
+
+.av-cta-stars{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.7;
+
+    background-image:
+        radial-gradient(circle,rgba(255,255,255,.85) 1px,transparent 1.5px),
+        radial-gradient(circle,rgba(255,255,255,.45) 1px,transparent 1.5px);
+
+    background-size:
+        75px 75px,
+        125px 125px;
+
+    background-position:
+        15px 20px,
+        40px 55px;
+
+    animation:
+        avStarMove 16s linear infinite;
+
+}
+
+@keyframes avStarMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-55px);
+    }
+
+}
+
+
+/* GLOW */
+
+.av-cta-glow{
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.30),
+            rgba(23,63,159,.08) 45%,
+            transparent 70%
+        );
+
+    filter:blur(8px);
+
+}
+
+
+/* PLANET */
+
+.av-cta-planet{
+
+    position:absolute;
+
+    width:205px;
+    height:205px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 32% 28%,
+            rgba(255,255,255,.8),
+            transparent 4%
+        ),
+        radial-gradient(
+            circle at 40% 35%,
+            #8e8fe7,
+            #3d3c8c 45%,
+            #151638 75%
+        );
+
+    box-shadow:
+        inset -35px -25px 55px rgba(0,0,0,.55),
+        0 0 70px rgba(115,87,232,.28);
+
+    animation:
+        avPlanetFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes avPlanetFloat{
+
+    0%,100%{
+        transform:
+            translate(-50%,-50%)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translate(-50%,-50%)
+            translateY(-10px);
+    }
+
+}
+
+
+/* ORBIT */
+
+.av-cta-orbit{
+
+    position:absolute;
+
+    width:350px;
+    height:105px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-17deg);
+
+    border:1px solid rgba(255,255,255,.32);
+
+    border-radius:50%;
+
+}
+
+
+/* COORDINATES */
+
+.av-cta-coordinate{
+
+    position:absolute;
+
+    left:28px;
+    bottom:25px;
+
+    color:rgba(255,255,255,.48);
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:8px;
+
+    line-height:1.7;
+
+    letter-spacing:1.5px;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-premium-cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:
+        65px 75px 65px 62px;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.01)
+        );
+
+}
+
+
+.av-premium-cta-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    margin-bottom:19px;
+
+    color:#b9b7ff;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+}
+
+.av-premium-cta-eyebrow span{
+
+    width:27px;
+
+    height:1px;
+
+    background:var(--secondary);
+
+}
+
+
+/* TITLE */
+
+.av-premium-cta-content h2{
+
+    margin:0;
+
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(46px,5vw,68px);
+
+    line-height:.98;
+
+    font-weight:500;
+
+    letter-spacing:-2.5px;
+
+}
+
+.av-premium-cta-content h2 em{
+
+    color:#a69cff;
+
+    font-style:italic;
+
+}
+
+
+/* TEXT */
+
+.av-premium-cta-content p{
+
+    max-width:500px;
+
+    margin:24px 0 30px;
+
+    color:rgba(255,255,255,.62);
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.av-premium-cta-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.av-cta-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:13px 15px 13px 19px;
+
+    border-radius:11px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+/* =========================================================
+   INDEX
+========================================================= */
+
+.av-cta-index{
+
+    position:absolute;
+
+    right:24px;
+
+    top:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:rgba(255,255,255,.3);
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+}
+
+.av-cta-index strong{
+
+    color:rgba(255,255,255,.65);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:18px;
+
+    font-weight:400;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+    .av-premium-cta-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .av-premium-cta-visual{
+
+        min-height:350px;
+
+    }
+
+    .av-premium-cta-content{
+
+        padding:55px 42px 60px;
+
+    }
+
+}
+
+@media(max-width:560px){
+
+    .av-premium-cta{
+
+        padding:70px 16px;
+
+    }
+
+    .av-premium-cta-card{
+
+        border-radius:21px;
+
+    }
+
+    .av-premium-cta-visual{
+
+        min-height:300px;
+
+    }
+
+    .av-cta-planet{
+
+        width:155px;
+        height:155px;
+
+    }
+
+    .av-cta-orbit{
+
+        width:270px;
+        height:80px;
+
+    }
+
+    .av-premium-cta-content{
+
+        padding:45px 25px 50px;
+
+    }
+
+    .av-premium-cta-content h2{
+
+        font-size:43px;
+
+        letter-spacing:-1.5px;
+
+    }
+
+    .av-premium-cta-content p{
+
+        font-size:13px;
+
+    }
+
+    .av-premium-cta-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .av-cta-primary,
+    .av-cta-secondary{
+
+        justify-content:center;
+
+    }
+
+    .av-cta-index{
+
+        display:none;
+
+    }
+
+}
+

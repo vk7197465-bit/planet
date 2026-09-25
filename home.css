@@ -1,0 +1,4051 @@
+
+:root {
+  /* ================================
+     BRAND COLORS
+  ================================= */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     LIGHT THEME
+  ================================= */
+  --bg: #F7F9FF;
+  --bg-soft: #EEF2FF;
+  --surface: #FFFFFF;
+  --surface-soft: #F8F9FE;
+
+  --text: #111827;
+  --text-soft: #4B5563;
+  --text-muted: #7B8498;
+
+  --border: #E2E7F2;
+  --border-soft: #EDF0F7;
+
+  --primary-soft: #E9EEFF;
+  --secondary-soft: #F0ECFF;
+
+  --shadow: 0 18px 50px rgba(23, 63, 159, 0.10);
+  --shadow-soft: 0 8px 28px rgba(17, 24, 39, 0.07);
+
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --footer-bg: #101936;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(17, 24, 39, 0.45);
+  --glass: rgba(255, 255, 255, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #16805D;
+  --warning: #D98B16;
+  --danger: #D14343;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 38px;
+
+  --transition: 0.3s ease;
+}
+
+
+/* ====================================
+   DARK THEME
+==================================== */
+[data-theme="dark"] {
+
+  /* Brand colors remain unchanged */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     DARK BACKGROUNDS
+  ================================= */
+  --bg: #080D1D;
+  --bg-soft: #0D1429;
+  --surface: #11182D;
+  --surface-soft: #151D35;
+
+  /* ================================
+     DARK TEXT
+  ================================= */
+  --text: #F5F7FF;
+  --text-soft: #C7CEE2;
+  --text-muted: #8F9AB4;
+
+  /* ================================
+     DARK BORDERS
+  ================================= */
+  --border: #27314D;
+  --border-soft: #1C2540;
+
+  /* ================================
+     BRAND SOFT COLORS
+  ================================= */
+  --primary-soft: #172A63;
+  --secondary-soft: #2A2159;
+
+  /* ================================
+     DARK SHADOWS
+  ================================= */
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 10px 32px rgba(0, 0, 0, 0.25);
+
+  /* ================================
+     NAV / FOOTER
+  ================================= */
+  --nav-bg: rgba(8, 13, 29, 0.88);
+  --footer-bg: #050914;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(0, 0, 0, 0.58);
+  --glass: rgba(17, 24, 45, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #36B37E;
+  --warning: #F0B84B;
+  --danger: #F06A6A;
+}
+
+
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.av2-hero{
+    position:relative;
+  
+    height:100vh;
+    
+    overflow:hidden;
+    background:#050713;
+    color:#fff;
+    font-family:"DM Sans",sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.av2-hero-bg{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.98) 0%,
+            rgba(5,7,19,.82) 35%,
+            rgba(5,7,19,.34) 65%,
+            rgba(5,7,19,.72) 100%
+        ),
+        url("images/planetarium-hero.jpg") center/cover no-repeat;
+    transform:scale(1.04);
+    animation:av2Bg 14s ease-in-out infinite alternate;
+}
+
+@keyframes av2Bg{
+    from{transform:scale(1.04)}
+    to{transform:scale(1.10)}
+}
+
+
+.av2-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(115,87,232,.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(5,7,19,.12),
+            rgba(5,7,19,.7)
+        );
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.av2-stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.65;
+    background-image:
+        radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1px),
+        radial-gradient(circle,rgba(255,255,255,.45) 1px,transparent 1px);
+    background-size:110px 110px,180px 180px;
+    animation:av2Stars 22s linear infinite;
+}
+
+.av2-stars-two{
+    opacity:.3;
+    background-size:230px 230px,140px 140px;
+    animation-duration:30s;
+}
+
+@keyframes av2Stars{
+    from{transform:translateY(0)}
+    to{transform:translateY(-90px)}
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.av2-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    pointer-events:none;
+}
+
+.av2-glow-one{
+    width:420px;
+    height:420px;
+    right:8%;
+    top:25%;
+    background:rgba(115,87,232,.22);
+}
+
+.av2-glow-two{
+    width:300px;
+    height:300px;
+    left:20%;
+    bottom:-120px;
+    background:rgba(23,63,159,.25);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.av2-container{
+    position:relative;
+    z-index:5;
+    width:min(1400px,calc(100% - 120px));
+    height:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:48% 52%;
+    align-items:center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av2-content{
+    position:relative;
+    z-index:10;
+    padding-top:35px;
+    animation:av2Content .9s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes av2Content{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.av2-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-bottom:28px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:rgba(255,255,255,.72);
+}
+
+.av2-eyebrow-line{
+    width:48px;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+}
+
+
+.av2-content h1{
+    margin:0;
+    line-height:.88;
+    letter-spacing:-4px;
+}
+
+.av2-title-small{
+    display:block;
+    font-size:clamp(38px,4vw,64px);
+    font-weight:500;
+    color:rgba(255,255,255,.9);
+    margin-bottom:6px;
+}
+
+.av2-title-main{
+    display:block;
+    font-size:clamp(70px,7vw,118px);
+    font-weight:600;
+}
+
+.av2-title-gradient{
+    display:block;
+    font-size:clamp(70px,7vw,118px);
+    font-weight:600;
+    background:linear-gradient(
+        100deg,
+        #fff 0%,
+        #fff 30%,
+        var(--secondary) 70%,
+        var(--primary) 100%
+    );
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+
+.av2-description{
+    max-width:560px;
+    margin:34px 0 0;
+    color:rgba(255,255,255,.66);
+    font-size:16px;
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.av2-actions{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:34px;
+}
+
+.av2-btn{
+    min-height:54px;
+    padding:0 22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.2px;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.av2-btn-primary{
+    color:#fff;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    box-shadow:
+        0 14px 35px rgba(23,63,159,.25);
+}
+
+.av2-btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 20px 45px rgba(115,87,232,.32);
+}
+
+.av2-btn-outline{
+    color:#fff;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+}
+
+.av2-btn-outline:hover{
+    transform:translateY(-3px);
+    border-color:rgba(115,87,232,.6);
+    background:rgba(115,87,232,.12);
+}
+
+.av2-btn i{
+    font-size:17px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.av2-stats{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-top:52px;
+    background: var(--bg);
+}
+
+.av2-stat{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.av2-stat strong{
+    font-size:25px;
+    font-weight:600;
+}
+
+.av2-stat span{
+    color:rgba(255,255,255,.46);
+    font-size:10px;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+}
+
+.av2-stat-divider{
+    width:1px;
+    height:34px;
+    background:rgba(255,255,255,.14);
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.av2-visual{
+    position:relative;
+    width:650px;
+    height:650px;
+    justify-self:end;
+    margin-right:-30px;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.av2-orbit{
+    position:absolute;
+    left:50%;
+    top:50%;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+}
+
+.av2-orbit-1{
+    width:430px;
+    height:430px;
+    transform:translate(-50%,-50%) rotate(25deg);
+}
+
+.av2-orbit-2{
+    width:540px;
+    height:260px;
+    border-color:rgba(115,87,232,.25);
+    transform:translate(-50%,-50%) rotate(-28deg);
+}
+
+.av2-orbit-3{
+    width:610px;
+    height:320px;
+    border-color:rgba(23,63,159,.28);
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+
+
+/* =========================================================
+   PLANET
+========================================================= */
+
+.av2-planet-wrap{
+    position:absolute;
+    width:390px;
+    height:390px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.av2-planet-glow{
+    position:absolute;
+    inset:-55px;
+    border-radius:50%;
+    background:radial-gradient(
+        circle,
+        rgba(115,87,232,.4),
+        rgba(23,63,159,.12) 45%,
+        transparent 70%
+    );
+    filter:blur(25px);
+}
+
+.av2-planet{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.22);
+    box-shadow:
+        0 0 60px rgba(115,87,232,.28),
+        inset -45px -25px 90px rgba(0,0,0,.8);
+    animation:av2Planet 8s ease-in-out infinite;
+}
+
+.av2-planet img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:saturate(.82) contrast(1.08);
+}
+
+.av2-planet::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:
+        linear-gradient(
+            120deg,
+            transparent 25%,
+            rgba(255,255,255,.12),
+            transparent 55%
+        ),
+        radial-gradient(
+            circle at 65% 70%,
+            rgba(0,0,0,.6),
+            transparent 58%
+        );
+}
+
+@keyframes av2Planet{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-12px) rotate(2deg);
+    }
+}
+
+
+/* =========================================================
+   MOON
+========================================================= */
+
+.av2-moon{
+    position:absolute;
+    width:72px;
+    height:72px;
+    right:70px;
+    top:115px;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle at 35% 32%,
+            #fff,
+            #c9d0e8 52%,
+            #777e9a 100%
+        );
+    box-shadow:
+        0 0 25px rgba(255,255,255,.2);
+    animation:av2Moon 5s ease-in-out infinite;
+}
+
+.av2-moon span{
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(70,76,100,.25);
+    top:25px;
+    left:20px;
+}
+
+@keyframes av2Moon{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-16px);
+    }
+}
+
+
+/* =========================================================
+   DATA CARDS
+========================================================= */
+
+.av2-data{
+    position:absolute;
+    z-index:5;
+    min-width:245px;
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:13px 16px;
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:15px;
+    background:rgba(8,10,25,.62);
+    backdrop-filter:blur(18px);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.av2-data-top{
+    top:95px;
+    left:5px;
+    animation:av2Float 5s ease-in-out infinite;
+}
+
+.av2-data-bottom{
+    right:0;
+    bottom:105px;
+    animation:av2Float 6s ease-in-out infinite reverse;
+}
+
+@keyframes av2Float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.av2-data-icon{
+    width:38px;
+    height:38px;
+    flex:0 0 38px;
+    display:grid;
+    place-items:center;
+    border-radius:11px;
+    background:linear-gradient(
+        135deg,
+        rgba(23,63,159,.85),
+        rgba(115,87,232,.85)
+    );
+}
+
+.av2-data-icon i{
+    font-size:17px;
+}
+
+.av2-data small{
+    display:block;
+    margin-bottom:4px;
+    color:rgba(255,255,255,.4);
+    font-size:8px;
+    letter-spacing:1.5px;
+}
+
+.av2-data strong{
+    display:block;
+    color:#fff;
+    font-size:11px;
+}
+
+
+/* =========================================================
+   VERTICAL BRAND
+========================================================= */
+
+.av2-vertical{
+    position:absolute;
+    right:-8px;
+    top:50%;
+    writing-mode:vertical-rl;
+    transform:translateY(-50%);
+    font-size:10px;
+    letter-spacing:5px;
+    font-weight:700;
+    color:rgba(255,255,255,.28);
+}
+
+.av2-vertical span{
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.av2-scroll{
+    position:absolute;
+    z-index:10;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:rgba(255,255,255,.42);
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.av2-scroll-line{
+    width:42px;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--secondary)
+    );
+}
+
+.av2-scroll i{
+    color:var(--secondary);
+    font-size:14px;
+    animation:av2Arrow 1.8s ease-in-out infinite;
+}
+
+@keyframes av2Arrow{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(5px)}
+}
+
+
+/* =========================================================
+   INDEX
+========================================================= */
+
+.av2-index{
+    position:absolute;
+    z-index:10;
+    right:35px;
+    bottom:35px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:rgba(255,255,255,.35);
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.av2-index i{
+    width:32px;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .av2-container{
+        width:min(94%,1100px);
+        grid-template-columns:1fr;
+    }
+
+    .av2-content{
+        padding-top:70px;
+        text-align:center;
+    }
+
+    .av2-eyebrow{
+        justify-content:center;
+    }
+
+    .av2-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .av2-actions,
+    .av2-stats{
+        justify-content:center;
+    }
+
+    .av2-visual{
+        position:absolute;
+        width:520px;
+        height:520px;
+        right:-120px;
+        bottom:-120px;
+        opacity:.55;
+    }
+
+    .av2-title-main,
+    .av2-title-gradient{
+        font-size:clamp(60px,9vw,100px);
+    }
+
+    .av2-scroll{
+        display:none;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .av2-hero{
+        min-height:780px;
+    }
+
+    .av2-container{
+        width:calc(100% - 34px);
+    }
+
+    .av2-content{
+        padding-top:40px;
+    }
+
+    .av2-title-small{
+        font-size:35px;
+    }
+
+    .av2-title-main,
+    .av2-title-gradient{
+        font-size:57px;
+        letter-spacing:-2px;
+    }
+
+    .av2-description{
+        font-size:14px;
+        line-height:1.7;
+        margin-top:25px;
+    }
+
+    .av2-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .av2-btn{
+        width:100%;
+    }
+
+    .av2-stats{
+        gap:13px;
+        margin-top:32px;
+    }
+
+    .av2-stat strong{
+        font-size:20px;
+    }
+
+    .av2-stat span{
+        font-size:8px;
+        letter-spacing:.8px;
+    }
+
+    .av2-visual{
+        width:390px;
+        height:390px;
+        right:-120px;
+        bottom:-110px;
+        opacity:.4;
+    }
+
+    .av2-planet-wrap{
+        width:245px;
+        height:245px;
+    }
+
+    .av2-orbit-1{
+        width:290px;
+        height:290px;
+    }
+
+    .av2-orbit-2{
+        width:360px;
+        height:180px;
+    }
+
+    .av2-orbit-3{
+        width:410px;
+        height:220px;
+    }
+
+    .av2-data{
+        min-width:190px;
+        transform:scale(.8);
+    }
+
+    .av2-data-top{
+        left:-20px;
+    }
+
+    .av2-data-bottom{
+        right:-35px;
+    }
+
+    .av2-vertical,
+    .av2-index{
+        display:none;
+    }
+}
+
+
+
+
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.av-choice{
+    width:100%;
+
+    padding:115px 0;
+
+    background:var(--bg);
+
+
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.av-choice-wrap{
+    width:min(1240px,90%);
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.av-choice-head{
+
+    max-width:760px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.av-choice-eyebrow{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:20px;
+
+    color:var(--secondary);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+
+.av-choice-eyebrow span{
+
+    width:35px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-choice-head h2{
+
+    margin:0;
+
+
+    color:var(--primary);
+
+    font-size:clamp(32px,5vw,48px);
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    letter-spacing:-1px;
+}
+
+
+.av-choice-head h2 strong{
+
+    display:block;
+
+    font-weight:600;
+
+    color:transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+}
+
+
+.av-choice-head p{
+
+    max-width:650px;
+
+    margin:24px auto 0;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.av-choice-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1.25fr 1fr;
+
+    align-items:center;
+border-radius: 10px;
+    gap:55px;
+}
+
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
+.av-choice-center{
+
+    display:flex;
+
+    justify-content:center;
+}
+
+
+.av-choice-image{
+    position:relative;
+    width:100%;
+    height:400px;
+    overflow:hidden;
+    border-radius:28px;
+    background:var(--bg);
+}
+
+.av-choice-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    border-radius:28px;
+}
+/* =========================================================
+   IMAGE TAG
+========================================================= */
+
+.av-choice-image-tag{
+
+    position:absolute;
+
+    right:22px;
+
+    bottom:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    line-height:1;
+
+    color:var(--text);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+
+.av-choice-image-tag span{
+
+    opacity:.65;
+
+    margin-bottom:5px;
+}
+
+
+.av-choice-image-tag b{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+}
+
+
+/* =========================================================
+   SIDE CONTENT
+========================================================= */
+
+.av-choice-side{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:70px;
+}
+
+
+.av-choice-point{
+
+    display:grid;
+
+    grid-template-columns:38px 1fr;
+
+    gap:18px;
+
+    align-items:start;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.av-choice-icon{
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid rgba(115,87,232,.35);
+
+    color:var(--secondary);
+
+    font-size:9px;
+
+    font-weight:700;
+
+    border-radius:50%;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.av-choice-point h3{
+
+    margin:2px 0 10px;
+
+    color:var(--text);
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+
+.av-choice-point p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT ALIGNMENT
+========================================================= */
+
+.av-choice-right .av-choice-point{
+
+    text-align:left;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .av-choice-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+    }
+
+
+    .av-choice-center{
+
+        order:-1;
+    }
+
+
+    .av-choice-image{
+
+        max-width:600px;
+
+        height:430px;
+    }
+
+
+    .av-choice-side{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:35px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .av-choice{
+
+        padding:80px 0;
+    }
+
+
+    .av-choice-head{
+
+        margin-bottom:45px;
+    }
+
+
+    .av-choice-head h2{
+
+        font-size:42px;
+
+        letter-spacing:-1px;
+    }
+
+
+    .av-choice-head p{
+
+        font-size:14px;
+    }
+
+
+    .av-choice-image{
+
+        height:330px;
+    }
+
+
+    .av-choice-side{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+    --ink:#171a2c;
+    --muted:#777c91;
+    --line:#e9eaf1;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.av-white-experience{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:125px 6% 140px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-white-heading{
+
+    position:relative;
+
+    z-index:20;
+
+    max-width:700px;
+
+    margin:0 auto 65px;
+
+    text-align:center;
+}
+
+
+.av-white-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:19px;
+
+    color:var(--secondary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+
+.av-white-eyebrow span{
+
+    width:34px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--secondary)
+        );
+
+}
+
+
+.av-white-eyebrow span:last-child{
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            transparent
+        );
+
+}
+
+
+.av-white-heading h2{
+
+    margin:0;
+
+
+    font-size:clamp(35px,5vw,53px);
+
+    line-height:.98;
+
+    letter-spacing:-2px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+
+.av-white-heading h2 em{
+
+    font-style:normal;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.av-white-heading p{
+
+    max-width:570px;
+
+    margin:23px auto 0;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.av-white-stage{
+
+    position:relative;
+
+    width:min(1120px,100%);
+
+    height:700px;
+
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   ATMOSPHERIC GLOW
+========================================================= */
+
+.av-white-glow{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:540px;
+
+    height:540px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.13),
+            rgba(23,63,159,.045) 40%,
+            transparent 70%
+        );
+
+    filter:blur(15px);
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.av-white-orbit{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+}
+
+
+.orbit-a{
+
+    width:550px;
+
+    height:550px;
+
+    border:1px solid rgba(115,87,232,.20);
+
+    animation:whiteOrbit 28s linear infinite;
+
+}
+
+
+.orbit-b{
+
+    width:760px;
+
+    height:390px;
+
+    border:1px solid rgba(23,63,159,.13);
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-28deg);
+
+}
+
+
+.orbit-c{
+
+    width:900px;
+
+    height:570px;
+
+    border:1px solid rgba(20,25,60,.06);
+
+    transform:
+        translate(-50%,-50%)
+        rotate(25deg);
+
+}
+
+
+@keyframes whiteOrbit{
+
+    from{
+
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   SPHERE
+========================================================= */
+
+.av-white-sphere{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:300px;
+
+    height:300px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    z-index:10;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 25%,
+            #a9b8ff 0%,
+            #7d78ed 17%,
+            #7357E8 31%,
+            #37458f 53%,
+            #173F9F 76%,
+            #101d55 100%
+        );
+
+    box-shadow:
+
+        0 30px 70px rgba(23,63,159,.18),
+
+        0 0 80px rgba(115,87,232,.20),
+
+        inset -35px -40px 65px rgba(4,13,50,.35);
+
+    animation:whiteSphereFloat 6s ease-in-out infinite;
+
+}
+
+
+@keyframes whiteSphereFloat{
+
+    0%,100%{
+
+        transform:
+            translate(-50%,-50%)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translate(-50%,-50%)
+            translateY(-10px);
+
+    }
+
+}
+
+
+/* sphere outer atmosphere */
+
+.av-white-sphere::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-7px;
+
+    border-radius:50%;
+
+    border:
+
+        1px solid
+        rgba(115,87,232,.25);
+
+    box-shadow:
+
+        0 0 35px
+        rgba(115,87,232,.18);
+
+}
+
+
+/* sphere highlight */
+
+.av-sphere-highlight{
+
+    position:absolute;
+
+    width:115px;
+
+    height:115px;
+
+    left:30px;
+
+    top:25px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.52),
+            rgba(255,255,255,.08) 45%,
+            transparent 70%
+        );
+
+    filter:blur(5px);
+
+}
+
+
+/* =========================================================
+   SPHERE CONTOURS
+========================================================= */
+
+.av-sphere-contours{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    opacity:.27;
+
+}
+
+
+.av-sphere-contours span{
+
+    position:absolute;
+
+    width:190px;
+
+    height:48px;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.6);
+
+    border-radius:50%;
+
+}
+
+
+.av-sphere-contours span:nth-child(1){
+
+    left:-20px;
+
+    top:75px;
+
+    transform:rotate(-24deg);
+
+}
+
+
+.av-sphere-contours span:nth-child(2){
+
+    right:-25px;
+
+    top:135px;
+
+    transform:rotate(24deg);
+
+}
+
+
+.av-sphere-contours span:nth-child(3){
+
+    left:35px;
+
+    top:205px;
+
+    transform:rotate(-8deg);
+
+}
+
+
+/* =========================================================
+   SPHERE TEXT
+========================================================= */
+
+.av-white-sphere-text{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+
+.av-white-sphere-text small{
+
+    margin-bottom:8px;
+
+    color:var(--text);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+}
+
+
+.av-white-sphere-text strong{
+
+
+    font-size:35px;
+
+    line-height:1;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+.av-white-sphere-text b{
+
+    margin-top:7px;
+
+    color:var(--text);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =========================================================
+   WHITE GLASS CARDS
+========================================================= */
+
+.av-white-card{
+
+    position:absolute;
+
+    z-index:15;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:13px;
+
+    width:255px;
+
+    min-height:101px;
+
+    padding:17px 18px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            var(--bg)
+        );
+
+    border:
+
+        1px solid
+        rgba(20,30,70,.08);
+
+    border-radius:17px;
+
+    box-shadow:
+
+        0 18px 45px rgba(25,35,80,.08),
+
+        0 3px 10px rgba(25,35,80,.04);
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease,
+
+        border-color .45s ease;
+
+}
+
+
+.av-white-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(115,87,232,.30);
+
+    box-shadow:
+
+        0 25px 55px rgba(25,35,80,.12),
+
+        0 0 30px rgba(115,87,232,.08);
+
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.av-white-number{
+
+    width:30px;
+
+    height:30px;
+
+    flex:0 0 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(23,63,159,.08),
+            rgba(115,87,232,.10)
+        );
+
+    border:
+        1px solid
+        rgba(115,87,232,.20);
+
+    color:var(--secondary);
+
+    font-size:9px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.av-white-card h3{
+
+    margin:1px 0 6px;
+
+    color:var(--text);
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+
+.av-white-card p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:11px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   CONNECTOR DOTS
+========================================================= */
+
+.av-white-card i{
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    box-shadow:
+
+        0 0 0 5px
+        rgba(115,87,232,.08),
+
+        0 0 16px
+        rgba(115,87,232,.35);
+
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+========================================================= */
+
+.card-a{
+
+    left:0;
+
+    top:5%;
+
+}
+
+
+.card-a i{
+
+    right:-4px;
+
+    top:50%;
+
+}
+
+
+.card-b{
+
+    right:0;
+
+    top:5%;
+
+}
+
+
+.card-b i{
+
+    left:-4px;
+
+    top:50%;
+
+}
+
+
+.card-c{
+
+    left:-3%;
+
+    top:42%;
+
+}
+
+
+.card-c i{
+
+    right:-4px;
+
+    top:50%;
+
+}
+
+
+.card-d{
+
+    right:-3%;
+
+    top:42%;
+
+}
+
+
+.card-d i{
+
+    left:-4px;
+
+    top:50%;
+
+}
+
+
+.card-e{
+
+    left:8%;
+
+    bottom:3%;
+
+}
+
+
+.card-e i{
+
+    right:-4px;
+
+    top:50%;
+
+}
+
+
+.card-f{
+
+    right:8%;
+
+    bottom:3%;
+
+}
+
+
+.card-f i{
+
+    left:-4px;
+
+    top:50%;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .av-white-experience{
+
+        padding:90px 6% 100px;
+
+    }
+
+    .av-white-stage{
+
+        height:auto;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:14px;
+
+    }
+
+    .av-white-orbit{
+
+        display:none;
+
+    }
+
+    .av-white-glow{
+
+        width:350px;
+
+        height:350px;
+
+    }
+
+    .av-white-sphere{
+
+        position:relative;
+
+        left:auto;
+
+        top:auto;
+
+        transform:none;
+
+        width:260px;
+
+        height:260px;
+
+        margin:10px 0 30px;
+
+    }
+
+    .av-white-card{
+
+        position:relative;
+
+        left:auto !important;
+
+        right:auto !important;
+
+        top:auto !important;
+
+        bottom:auto !important;
+
+        width:min(100%,420px);
+
+    }
+
+    .av-white-card i{
+
+        display:none;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.av-current-shows{
+
+  
+    position:relative;
+
+    overflow:hidden;
+
+    padding:50px 6vw 55px;
+
+    background:var(--bg);
+
+}
+
+
+/* =========================================================
+   WRAPPER
+========================================================= */
+
+.av-current-wrap{
+
+    max-width:1180px;
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-current-heading{
+
+    max-width:680px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+}
+
+
+.av-current-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:16px;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+}
+
+
+.av-current-eyebrow span{
+
+    width:30px;
+
+    height:1px;
+
+    background:var(--secondary);
+}
+
+
+.av-current-heading h2{
+
+    margin:0;
+
+    color:var(--primary);
+
+
+    font-size:clamp(34px,5vw,55px);
+
+    font-weight:600;
+
+    line-height:.98;
+
+    letter-spacing:-2.5px;
+}
+
+
+.av-current-heading h2 em{
+
+    display:block;
+
+    color:var(--secondary);
+
+
+    font-weight:600;
+    margin-bottom: 15px;
+}
+
+
+.av-current-heading p{
+
+    max-width:510px;
+
+    margin:30px auto 0;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.av-current-layout{
+
+    display:grid;
+
+    grid-template-columns:42% 58%;
+
+    align-items:center;
+
+    gap:45px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.av-current-content{
+
+    padding-left:5px;
+}
+
+
+.av-current-small-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    color:var(--text);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+}
+
+
+.av-current-small-title span{
+
+    color:var(--secondary);
+
+
+    font-size:19px;
+
+    font-weight:600;
+}
+
+
+.av-current-small-title i{
+
+    width:28px;
+
+    height:1px;
+
+    background:var(--bg);
+}
+
+
+.av-current-content h3{
+
+    margin:0;
+
+    color:var(--primary);
+
+
+    font-size:55px;
+
+    font-weight:600;
+
+    line-height:.94;
+
+    letter-spacing:-2px;
+}
+
+
+.av-current-content h3 em{
+
+    display:block;
+
+    color:var(--secondary);
+
+}
+
+
+.av-current-text {
+    width: 100%;
+    max-width: 520px;
+    margin: 24px 0 30px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.75;
+    text-align: left;
+    letter-spacing: 0.1px;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.av-current-meta{
+
+    display:flex;
+
+    width:max-content;
+
+    margin-bottom:30px;
+
+    border-top:1px solid #e1e3e9;
+
+    border-bottom:1px solid #e1e3e9;
+}
+
+
+.av-current-meta div{
+
+    min-width:90px;
+
+    padding:11px 15px 11px 0;
+}
+
+
+.av-current-meta div + div{
+
+    padding-left:15px;
+
+    border-left:1px solid #e1e3e9;
+}
+
+
+.av-current-meta span{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    color:var(--text);
+
+    font-size:9px;
+
+    font-weight:600;
+
+    letter-spacing:1.4px;
+
+    text-transform:uppercase;
+}
+
+
+.av-current-meta strong{
+
+    color:var(--text);
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.av-current-btn{
+
+    display:inline-flex;
+width: 150px;
+height: 50px;
+    align-items:center;
+
+    gap:18px;
+
+    padding:11px 14px;
+
+    color:#fff;
+border-radius: 3px;
+    background:var(--primary);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.av-current-btn b{
+
+    font-size:15px;
+
+    font-weight:400;
+
+    transition:transform .3s ease;
+}
+
+
+
+/* =========================================================
+   IMAGE COMPOSITION
+========================================================= */
+
+.av-image-composition{
+
+    position:relative;
+
+    width:100%;
+
+    height:485px;
+}
+
+
+/* =========================================================
+   LARGE IMAGE
+========================================================= */
+
+.av-large-image{
+
+    position:absolute;
+
+    z-index:1;
+
+    top:0;
+
+    left:0;
+
+    width:76%;
+
+    height:390px;
+border-radius: 15px;
+    overflow:hidden;
+
+    background:#ddd;
+
+    box-shadow:
+        0 25px 55px rgba(20,30,65,.12);
+}
+
+
+.av-large-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+border-radius: 15px;
+
+    display:block;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.av-image-composition:hover
+.av-large-image img{
+
+    transform:scale(1.06);
+}
+
+
+/* =========================================================
+   SMALL IMAGE
+========================================================= */
+
+.av-small-image{
+
+    position:absolute;
+
+    z-index:3;
+
+    right:0;
+
+    bottom:0;
+
+    width:58%;
+
+    height:245px;
+
+    overflow:hidden;
+
+    background:#ddd;
+border-radius: 15px;
+    border:8px solid #fff;
+
+    box-shadow:
+        0 22px 50px rgba(20,30,65,.16);
+}
+
+
+.av-small-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+border-radius: 15px;
+
+    display:block;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.av-image-composition:hover
+.av-small-image img{
+
+    transform:scale(1.07);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.av-image-dark{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(5,10,30,.42)
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   IMAGE LABELS
+========================================================= */
+
+.av-large-label{
+
+    position:absolute;
+
+    left:18px;
+
+    bottom:17px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+}
+
+
+.av-small-label{
+
+    position:absolute;
+
+    right:14px;
+
+    bottom:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:27px;
+
+    height:27px;
+
+    color:#fff;
+
+    background:var(--secondary);
+
+    font-size:8px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.av-current-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:45px;
+
+    padding-top:18px;
+
+    border-top:1px solid #e1e3e9;
+}
+
+
+.av-bottom-number{
+
+    color:var(--secondary);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:17px;
+}
+
+
+.av-bottom-total{
+
+    color:#a4a8b3;
+
+    font-size:9px;
+
+    font-weight:700;
+}
+
+
+.av-bottom-line{
+
+    width:90px;
+
+    height:1px;
+
+    background:#dedfe5;
+}
+
+
+.av-bottom-line span{
+
+    display:block;
+
+    width:35%;
+
+    height:1px;
+
+    background:var(--secondary);
+}
+
+
+.av-current-bottom p{
+
+    margin:0 0 0 auto;
+
+    color:#9ba0ac;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .av-current-shows{
+
+        padding:85px 5vw 90px;
+    }
+
+
+    .av-current-layout{
+
+        grid-template-columns:43% 57%;
+
+        gap:25px;
+    }
+
+
+    .av-current-content h3{
+
+        font-size:45px;
+    }
+
+
+    .av-image-composition{
+
+        height:420px;
+    }
+
+
+    .av-large-image{
+
+        height:335px;
+
+        width:78%;
+    }
+
+
+    .av-small-image{
+
+        height:210px;
+
+        width:59%;
+
+        border-width:6px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .av-current-shows{
+
+        padding:70px 20px 75px;
+    }
+
+
+    .av-current-heading{
+
+        margin-bottom:45px;
+    }
+
+
+    .av-current-heading h2{
+
+        font-size:43px;
+
+        letter-spacing:-1.5px;
+    }
+
+
+    .av-current-heading p{
+
+        font-size:12px;
+    }
+
+
+    .av-current-layout{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+
+    .av-current-content{
+
+        padding:0;
+    }
+
+
+    .av-current-content h3{
+
+        font-size:47px;
+    }
+
+
+    .av-current-text{
+
+        font-size:11px;
+    }
+
+
+    .av-current-meta{
+
+        width:100%;
+    }
+
+
+    .av-current-meta div{
+
+        min-width:0;
+
+        flex:1;
+
+        padding-right:8px;
+    }
+
+
+    .av-current-meta div + div{
+
+        padding-left:8px;
+    }
+
+
+    .av-image-composition{
+
+        height:360px;
+    }
+
+
+    .av-large-image{
+
+        width:78%;
+
+        height:290px;
+    }
+
+
+    .av-small-image{
+
+        width:58%;
+
+        height:190px;
+
+        border-width:5px;
+    }
+
+
+    .av-current-bottom{
+
+        margin-top:35px;
+    }
+
+
+    .av-current-bottom p{
+
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   ASTRA VISTA — NIGHT EVENTS
+========================================================= */
+
+.av-night-events{
+
+    padding:110px 24px;
+
+    background:var(--bg);
+
+}
+
+.av-night-wrap{
+
+    width:min(1120px,100%);
+
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-night-heading{
+
+    max-width:700px;
+
+    margin:0 auto 58px;
+
+    text-align:center;
+
+}
+
+.av-night-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:11px;
+
+    margin-bottom:17px;
+
+    color:var(--primary);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+}
+
+.av-night-eyebrow span{
+
+    width:29px;
+
+    height:1px;
+
+    background:var(--secondary);
+
+}
+
+.av-night-heading h2{
+
+    margin:0;
+
+    color:var(--primary);
+
+
+    font-size:clamp(43px,5vw,62px);
+
+    line-height:1;
+
+    font-weight:500;
+
+    letter-spacing:-2px;
+
+}
+
+.av-night-heading h2 em{
+
+    color:var(--secondary);
+
+
+}
+
+.av-night-heading p{
+
+    max-width:520px;
+
+    margin:19px auto 0;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   MAIN SHOWCASE
+========================================================= */
+
+.av-event-showcase{
+
+    display:grid;
+
+    grid-template-columns:53% 47%;
+
+    min-height:470px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(23,63,159,.12);
+
+    border-radius:24px;
+
+    background:var(--bg);
+
+    box-shadow:
+        0 20px 60px rgba(20,30,70,.07);
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.av-event-image{
+
+    position:relative;
+
+    min-height:470px;
+
+    overflow:hidden;
+
+    background:var(--bg);
+
+}
+
+.av-event-image img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        opacity .3s ease,
+        transform .7s ease;
+
+}
+
+.av-event-image.changing img{
+
+    opacity:.35;
+
+    transform:scale(1.04);
+
+}
+
+.av-event-image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.48)
+        );
+
+    pointer-events:none;
+
+}
+
+.av-event-image-label{
+
+    position:absolute;
+
+    left:24px;
+    right:24px;
+    bottom:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    color:var(--text);
+
+}
+
+.av-event-image-label span{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:2.5px;
+
+}
+
+.av-event-image-label strong{
+
+
+    font-size:28px;
+
+    font-weight:600;
+
+    opacity:.8;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-event-content{
+
+    padding:55px 52px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.av-event-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:1.6px;
+
+}
+
+.av-event-date i{
+
+    width:20px;
+
+    height:1px;
+
+    background:var(--secondary);
+
+}
+
+.av-event-content h3{
+
+    margin:20px 0 0;
+
+    color:var(--text);
+
+
+    font-size:clamp(38px,4vw,53px);
+
+    line-height:1.02;
+
+    font-weight:500;
+
+    letter-spacing:-1.5px;
+
+}
+
+.av-event-content h3 em{
+
+    color:var(--primary);
+
+
+}
+
+.av-event-content > p{
+
+    max-width:410px;
+
+    margin:21px 0 27px;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.av-event-meta{
+
+    display:flex;
+
+    gap:42px;
+
+    padding:17px 0;
+
+    margin-bottom:24px;
+
+    border-top:1px solid rgba(23,63,159,.11);
+
+    border-bottom:1px solid rgba(23,63,159,.11);
+
+}
+
+.av-event-meta div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.av-event-meta small{
+
+    color:var(--text);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+}
+
+.av-event-meta strong{
+
+    color:var(--text);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.av-event-button{
+
+    width:max-content;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:12px 13px 12px 17px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.av-event-button span{
+
+    width:25px;
+    height:25px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:7px;
+
+    background:rgba(255,255,255,.15);
+
+    font-size:14px;
+
+}
+
+/* =========================================================
+   EVENT SELECTOR
+========================================================= */
+
+.av-event-selector{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+    margin-top:14px;
+
+}
+
+.av-event-tab{
+
+    min-height:82px;
+
+    padding:13px 14px;
+
+    display:grid;
+
+    grid-template-columns:28px 1fr 24px;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:1px solid #e5e6ec;
+
+    border-radius:14px;
+
+    background:var(--bg);
+
+    cursor:pointer;
+
+    text-align:left;
+
+    transition:.3s ease;
+
+}
+
+.av-event-tab > span{
+
+    color:var(--text);
+
+
+    font-size:14px;
+
+
+}
+
+.av-event-tab strong{
+
+    color:var(--text);
+
+    font-size:12px;
+
+    line-height:1.45;
+
+}
+
+.av-event-tab i{
+
+    color:var(--t);
+
+    font-size:16px;
+
+
+}
+
+.av-event-tab:hover{
+
+    border-color:rgba(23,63,159,.22);
+
+}
+
+.av-event-tab.active{
+
+    border-color:var(--primary);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(23,63,159,.045),
+            rgba(115,87,232,.055)
+        );
+
+}
+
+.av-event-tab.active > span{
+
+    color:var(--primary);
+
+}
+
+.av-event-tab.active i{
+
+    color:var(--primary);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+    .av-event-showcase{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .av-event-image{
+
+        min-height:370px;
+
+    }
+
+    .av-event-content{
+
+        padding:45px 35px;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .av-night-events{
+
+        padding:75px 16px;
+
+    }
+
+    .av-night-heading{
+
+        margin-bottom:38px;
+
+    }
+
+    .av-night-heading h2{
+
+        font-size:38px;
+
+    }
+
+    .av-event-showcase{
+
+        border-radius:18px;
+
+    }
+
+    .av-event-image{
+
+        min-height:300px;
+
+    }
+
+    .av-event-content{
+
+        padding:35px 24px;
+
+    }
+
+    .av-event-content h3{
+
+        font-size:38px;
+
+    }
+
+    .av-event-selector{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+@media(max-width:430px){
+
+    .av-event-selector{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .av-event-tab{
+
+        min-height:70px;
+
+    }
+
+}
+
+
+
+
+/* =========================================================
+   ASTRA VISTA — BOX FAQ
+========================================================= */
+
+.av-faq-box{
+    padding:95px 20px;
+    background:var(--bg);
+}
+
+.av-faq-box-container{
+    width:100%;
+    max-width:1120px;
+    margin:auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-faq-box-heading{
+    max-width:680px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.av-faq-box-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin-bottom:15px;
+
+    color:var(--secondary);
+
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2.7px;
+}
+
+.av-faq-box-eyebrow span{
+    width:28px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+}
+
+.av-faq-box-heading h2{
+    margin:0;
+
+    color:var(--primary);
+
+
+    font-size:clamp(38px,4.5vw,56px);
+    font-weight:600;
+    line-height:1.08;
+    letter-spacing:-2px;
+}
+
+.av-faq-box-heading h2 em{
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.av-faq-box-heading p{
+    max-width:520px;
+    margin:17px auto 0;
+
+    color:var(--text);
+
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.av-faq-box-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+}
+
+
+/* =========================================================
+   BOX
+========================================================= */
+
+.av-faq-box-item{
+    background:var(--bg);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+.av-faq-box-item:hover{
+    border-color:rgba(115,87,232,.35);
+
+    box-shadow:
+        0 12px 30px rgba(23,63,159,.07);
+
+    transform:translateY(-2px);
+}
+
+.av-faq-box-item.active{
+    border-color:rgba(115,87,232,.45);
+
+    box-shadow:
+        0 15px 35px rgba(23,63,159,.08);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.av-faq-box-question{
+    width:100%;
+    min-height:76px;
+
+    padding:14px 15px 14px 17px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+
+    border:0;
+    outline:0;
+
+    background:transparent;
+
+    cursor:pointer;
+    text-align:left;
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.av-faq-box-left{
+    display:flex;
+    align-items:center;
+
+    gap:13px;
+
+    min-width:0;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.av-faq-box-number{
+    width:34px;
+    height:34px;
+
+    flex:0 0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:var(--bg);
+
+    color:var(--primary);
+
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+.av-faq-box-item.active .av-faq-box-number{
+    color:var(--text);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.av-faq-box-title{
+    color:var(--text);
+
+    font-size:15px;
+    font-weight:600;
+    line-height:1.45;
+}
+
+.av-faq-box-item.active .av-faq-box-title{
+    color:var(--primary);
+}
+
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.av-faq-box-icon{
+    width:30px;
+    height:30px;
+
+    flex:0 0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid var(--border);
+    border-radius:50%;
+
+    color:var(--primary);
+
+    background:var(--bg);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+.av-faq-box-icon i{
+    font-size:12px;
+}
+
+.av-faq-box-item.active .av-faq-box-icon{
+    color:var(--text);
+
+    border-color:var(--primary);
+
+    background:var(--primary);
+
+    transform:rotate(45deg);
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.av-faq-box-answer{
+    display:grid;
+    grid-template-rows:0fr;
+
+    transition:
+        grid-template-rows .35s ease;
+}
+
+.av-faq-box-item.active .av-faq-box-answer{
+    grid-template-rows:1fr;
+}
+
+.av-faq-box-answer-inner{
+    min-height:0;
+    overflow:hidden;
+
+    padding:
+        0
+        62px
+        0
+        64px;
+
+    color:var(--text-soft);
+
+    font-size:12px;
+    line-height:1.75;
+
+    opacity:0;
+
+    transition:
+        opacity .25s ease,
+        padding .35s ease;
+}
+
+.av-faq-box-item.active .av-faq-box-answer-inner{
+    padding-bottom:20px;
+    opacity:1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+    .av-faq-box{
+        padding:80px 18px;
+    }
+
+    .av-faq-box-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:560px){
+
+    .av-faq-box{
+        padding:65px 14px;
+    }
+
+    .av-faq-box-heading{
+        margin-bottom:35px;
+    }
+
+    .av-faq-box-heading h2{
+        font-size:36px;
+        letter-spacing:-1.4px;
+    }
+
+    .av-faq-box-heading p{
+        font-size:12px;
+    }
+
+    .av-faq-box-grid{
+        gap:10px;
+    }
+
+    .av-faq-box-question{
+        min-height:70px;
+        padding:13px 12px;
+    }
+
+    .av-faq-box-left{
+        gap:10px;
+    }
+
+    .av-faq-box-number{
+        width:31px;
+        height:31px;
+        border-radius:8px;
+    }
+
+    .av-faq-box-title{
+        font-size:12px;
+    }
+
+    .av-faq-box-icon{
+        width:28px;
+        height:28px;
+    }
+
+    .av-faq-box-answer-inner{
+        padding-left:53px;
+        padding-right:18px;
+        font-size:11px;
+    }
+
+    .av-faq-box-item.active
+    .av-faq-box-answer-inner{
+        padding-bottom:18px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    .av-faq-box-item,
+    .av-faq-box-number,
+    .av-faq-box-icon,
+    .av-faq-box-answer,
+    .av-faq-box-answer-inner{
+        transition:none;
+    }
+
+}
+
+
+

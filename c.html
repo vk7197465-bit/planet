@@ -1,0 +1,1191 @@
+<!-- =========================================================
+     ASTRA VISTA — MEMBERSHIP PREMIUM HERO
+     STRAIGHT IMAGE / CARD VERSION
+========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<section class="av-membership-hero">
+
+    <!-- BACKGROUND -->
+    <div class="av-membership-bg"></div>
+    <div class="av-membership-overlay"></div>
+    <div class="av-membership-stars"></div>
+
+
+    <div class="av-membership-hero-inner">
+
+        <!-- =================================================
+             LEFT CONTENT
+        ================================================== -->
+
+        <div class="av-membership-content">
+
+            <div class="av-membership-eyebrow">
+                <span></span>
+                ASTRA VISTA MEMBERSHIP
+                <span></span>
+            </div>
+
+            <h1>
+                Stay Curious.
+                <br>
+                <em>Stay Connected.</em>
+            </h1>
+
+            <p>
+                Make the universe part of your journey. Enjoy memorable
+                experiences, special access and more reasons to keep
+                looking up throughout the year.
+            </p>
+
+            <div class="av-membership-actions">
+
+                <a href="#membership-plans" class="av-member-primary">
+                    Explore Membership
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#benefits" class="av-member-link">
+                    View Benefits
+                    <i data-lucide="arrow-down"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT IMAGE / MEMBERSHIP VISUAL
+        ================================================== -->
+
+        <div class="av-membership-visual">
+
+            <div class="av-visual-glow"></div>
+
+            <div class="av-membership-frame">
+
+                <div class="av-frame-top">
+
+                    <span class="av-frame-brand">
+                        ASTRA VISTA
+                    </span>
+
+                    <span class="av-frame-icon">
+                        <i data-lucide="sparkles"></i>
+                    </span>
+
+                </div>
+
+
+                <div class="av-frame-image">
+
+                    <img
+                        src="images/hero6.png"
+                        alt="Astra Vista Membership"
+                    >
+
+                    <div class="av-frame-image-overlay"></div>
+
+                    <div class="av-frame-copy">
+
+                        <small>
+                            MEMBERSHIP
+                        </small>
+
+                        <h3>
+                            Look Beyond
+                            <em>the ordinary.</em>
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="av-frame-bottom">
+
+                    <span>ASTRA VISTA</span>
+
+                    <span>2026</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMALL FLOATING LABEL -->
+
+            <div class="av-membership-label label-top">
+
+                <i data-lucide="star"></i>
+
+                <span>
+                    SPECIAL ACCESS
+                </span>
+
+            </div>
+
+
+            <div class="av-membership-label label-bottom">
+
+                <span>
+                    DISCOVER MORE
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SCROLL INDICATOR
+    ================================================== -->
+
+    <div class="av-membership-scroll">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div></div>
+
+    </div>
+
+</section>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<style>
+
+
+.av-membership-hero{
+
+   
+    position:relative;
+
+    width:100%;
+    min-height:720px;
+    height:88vh;
+
+    overflow:hidden;
+
+    background:var(-bg);
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.av-membership-bg{
+
+    position:absolute;
+    inset:0;
+
+    background-image:url("images/membership-hero.jpg");
+    background-size:cover;
+    background-position:center;
+
+    transform:scale(1.04);
+
+    animation:avMemberZoom 15s ease-in-out infinite alternate;
+}
+
+@keyframes avMemberZoom{
+
+    from{
+        transform:scale(1.04);
+    }
+
+    to{
+        transform:scale(1.10);
+    }
+
+}
+
+
+/* =========================================================
+   DARK CINEMATIC OVERLAY
+========================================================= */
+
+.av-membership-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.98) 0%,
+            rgba(5,7,19,.91) 35%,
+            rgba(5,7,19,.60) 65%,
+            rgba(5,7,19,.82) 100%
+        );
+}
+
+
+/* =========================================================
+   PURPLE LIGHT
+========================================================= */
+
+.av-membership-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:0;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.25),
+            transparent 68%
+        );
+
+    filter:blur(20px);
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.av-membership-stars{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.42;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.4) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        130px 130px,
+        210px 210px;
+
+    background-position:
+        20px 30px,
+        80px 100px;
+
+    animation:avStarsMove 20s linear infinite;
+}
+
+@keyframes avStarsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-70px);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.av-membership-hero-inner{
+
+    position:relative;
+    z-index:5;
+
+    width:min(1180px,90%);
+    height:100%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(400px,500px);
+
+    align-items:center;
+
+    gap:60px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.av-membership-content{
+
+    max-width:650px;
+
+    animation:avContentIn .9s ease both;
+}
+
+@keyframes avContentIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.av-membership-eyebrow{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:22px;
+
+    color:#B8B0FF;
+
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.av-membership-eyebrow span{
+
+    width:32px;
+    height:1px;
+
+    background:var(--av-secondary);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-membership-content h1{
+
+    margin:0;
+
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(58px,6vw,88px);
+
+    font-weight:500;
+
+    line-height:.96;
+
+    letter-spacing:-2px;
+}
+
+.av-membership-content h1 em{
+
+    color:#A99CFF;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-membership-content p{
+
+    max-width:540px;
+
+    margin:28px 0 32px;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.av-membership-actions{
+
+    display:flex;
+    align-items:center;
+
+    gap:25px;
+}
+
+.av-member-primary{
+
+    display:inline-flex;
+    align-items:center;
+    gap:11px;
+
+    padding:14px 21px;
+
+    background:#fff;
+    color:#111425;
+
+    border-radius:4px;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:700;
+
+    transition:.35s ease;
+}
+
+.av-member-primary svg{
+
+    width:15px;
+    height:15px;
+
+    transition:.35s ease;
+}
+
+.av-member-primary:hover{
+
+    background:var(--av-secondary);
+    color:#fff;
+
+    transform:translateY(-3px);
+}
+
+.av-member-primary:hover svg{
+
+    transform:translate(3px,-3px);
+}
+
+
+.av-member-link{
+
+    display:inline-flex;
+    align-items:center;
+
+    gap:9px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.av-member-link svg{
+
+    width:14px;
+    height:14px;
+
+    color:#A99CFF;
+
+    transition:.3s ease;
+}
+
+.av-member-link:hover{
+    color:#A99CFF;
+}
+
+.av-member-link:hover svg{
+    transform:translateY(4px);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.av-membership-visual{
+
+    position:relative;
+
+    width:100%;
+    height:540px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    animation:avVisualIn 1s .15s ease both;
+}
+
+@keyframes avVisualIn{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.av-visual-glow{
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.30),
+            rgba(115,87,232,.08) 40%,
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    animation:avGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes avGlow{
+
+    from{
+        transform:scale(.94);
+        opacity:.7;
+    }
+
+    to{
+        transform:scale(1.06);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   STRAIGHT MEMBERSHIP FRAME
+========================================================= */
+
+.av-membership-frame{
+
+    position:relative;
+    z-index:3;
+
+    width:360px;
+    height:475px;
+
+    padding:12px;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.16),
+            rgba(115,87,232,.10)
+        );
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.22);
+
+    /* STRAIGHT */
+    transform:none;
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.av-membership-frame:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 45px 110px rgba(0,0,0,.62),
+        inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+
+/* =========================================================
+   FRAME TOP
+========================================================= */
+
+.av-frame-top{
+
+    height:48px;
+
+    padding:0 13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.av-frame-brand{
+
+    color:rgba(255,255,255,.72);
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.av-frame-icon{
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--av-secondary);
+
+    color:#fff;
+}
+
+.av-frame-icon svg{
+
+    width:14px;
+    height:14px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.av-frame-image{
+
+    position:relative;
+
+    width:100%;
+    height:380px;
+
+    overflow:hidden;
+
+    border-radius:14px;
+}
+
+.av-frame-image img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .8s ease;
+}
+
+.av-membership-frame:hover .av-frame-image img{
+
+    transform:scale(1.06);
+
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.av-frame-image-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(5,7,19,.15) 45%,
+            rgba(5,7,19,.92) 100%
+        );
+}
+
+
+/* =========================================================
+   IMAGE COPY
+========================================================= */
+
+.av-frame-copy{
+
+    position:absolute;
+
+    left:24px;
+    right:24px;
+    bottom:24px;
+
+    z-index:2;
+}
+
+.av-frame-copy small{
+
+    color:#C0B8FF;
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.av-frame-copy h3{
+
+    margin:9px 0 0;
+
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+    font-weight:500;
+
+    line-height:1;
+}
+
+.av-frame-copy h3 em{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#B0A5FF;
+
+    font-size:22px;
+
+    font-style:italic;
+}
+
+
+/* =========================================================
+   FRAME BOTTOM
+========================================================= */
+
+.av-frame-bottom{
+
+    height:46px;
+
+    padding:0 13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    color:rgba(255,255,255,.48);
+
+    font-size:7px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   FLOATING LABELS
+========================================================= */
+
+.av-membership-label{
+
+    position:absolute;
+
+    z-index:6;
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    padding:10px 13px;
+
+    border:1px solid rgba(255,255,255,.17);
+
+    border-radius:50px;
+
+    background:rgba(7,10,22,.72);
+
+    backdrop-filter:blur(14px);
+
+    color:rgba(255,255,255,.78);
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.av-membership-label svg{
+
+    width:13px;
+    height:13px;
+
+    color:#A99CFF;
+}
+
+.label-top{
+
+    top:82px;
+    right:4px;
+
+    animation:avFloatTop 4s ease-in-out infinite;
+}
+
+.label-bottom{
+
+    bottom:75px;
+    left:0;
+
+    animation:avFloatBottom 4.5s ease-in-out infinite;
+}
+
+@keyframes avFloatTop{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+@keyframes avFloatBottom{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.av-membership-scroll{
+
+    position:absolute;
+
+    z-index:8;
+
+    left:50%;
+    bottom:24px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    color:rgba(255,255,255,.42);
+
+    font-size:8px;
+
+    letter-spacing:2.5px;
+}
+
+.av-membership-scroll div{
+
+    width:35px;
+    height:1px;
+
+    background:var(--av-secondary);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .av-membership-hero-inner{
+
+        width:90%;
+
+        grid-template-columns:
+            minmax(0,1fr)
+            390px;
+
+        gap:25px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:62px;
+
+    }
+
+    .av-membership-visual{
+
+        height:500px;
+    }
+
+    .av-membership-frame{
+
+        width:330px;
+        height:440px;
+    }
+
+    .av-frame-image{
+
+        height:348px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:760px){
+
+    .av-membership-hero{
+
+        height:auto;
+        min-height:850px;
+    }
+
+    .av-membership-overlay{
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,7,19,.90),
+                rgba(5,7,19,.96)
+            );
+    }
+
+    .av-membership-hero-inner{
+
+        width:90%;
+        min-height:850px;
+
+        padding:75px 0 65px;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:30px;
+
+        text-align:center;
+    }
+
+    .av-membership-content{
+
+        max-width:600px;
+    }
+
+    .av-membership-eyebrow{
+
+        justify-content:center;
+
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:48px;
+
+        letter-spacing:-1px;
+    }
+
+    .av-membership-content p{
+
+        margin:20px auto 25px;
+
+        font-size:13px;
+    }
+
+    .av-membership-actions{
+
+        justify-content:center;
+    }
+
+    .av-membership-visual{
+
+        height:410px;
+
+    }
+
+    .av-membership-frame{
+
+        width:280px;
+        height:375px;
+
+        border-radius:18px;
+    }
+
+    .av-frame-image{
+
+        height:295px;
+    }
+
+    .av-frame-copy h3{
+
+        font-size:25px;
+    }
+
+    .av-frame-copy h3 em{
+
+        font-size:18px;
+    }
+
+    .label-top{
+
+        top:30px;
+        right:0;
+    }
+
+    .label-bottom{
+
+        bottom:35px;
+        left:0;
+    }
+
+    .av-membership-scroll{
+
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px){
+
+    .av-membership-hero-inner{
+
+        padding-top:60px;
+    }
+
+    .av-membership-content h1{
+
+        font-size:42px;
+    }
+
+    .av-membership-content p{
+
+        font-size:12px;
+    }
+
+    .av-membership-actions{
+
+        flex-direction:column;
+        gap:16px;
+    }
+
+    .av-membership-visual{
+
+        height:380px;
+    }
+
+    .av-membership-frame{
+
+        width:250px;
+        height:340px;
+    }
+
+    .av-frame-image{
+
+        height:260px;
+    }
+
+    .av-frame-copy{
+
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .av-frame-copy h3{
+
+        font-size:22px;
+    }
+
+    .av-frame-copy h3 em{
+
+        font-size:16px;
+    }
+
+    .av-membership-label{
+
+        font-size:7px;
+        padding:8px 10px;
+    }
+
+}
+
+</style>
+
+
+<script>
+lucide.createIcons();
+</script>

@@ -1,0 +1,527 @@
+<!-- =========================================================
+     ASTRA VISTA — MEMBERSHIP BENEFITS
+     Equal Width / Equal Height Timeline Cards
+========================================================= -->
+
+<section class="av-membership-benefits">
+
+<div class="av-membership-title">
+
+    <div class="av-membership-eyebrow">
+        <span></span>
+        MEMBERSHIP BENEFITS
+        <span></span>
+    </div>
+
+    <h2>
+        More To <em>Discover</em>
+    </h2>
+
+    <p>
+        Enjoy more access, special moments and new ways to
+        experience the universe with AstraVista membership.
+    </p>
+
+</div>
+
+
+<div class="av-benefit-timeline">
+
+    <div class="av-benefit-line"></div>
+
+
+    <!-- 01 -->
+    <article class="av-benefit-item">
+
+        <div class="av-benefit-node">
+            <span>01</span>
+        </div>
+
+        <div class="av-benefit-card">
+
+            <div class="av-benefit-icon">
+                <i data-lucide="ticket"></i>
+            </div>
+
+            <div class="av-benefit-label">
+                ACCESS
+            </div>
+
+            <h3>Priority Access</h3>
+
+            <p>
+                Get priority access to selected shows and programs.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 02 -->
+    <article class="av-benefit-item">
+
+        <div class="av-benefit-node">
+            <span>02</span>
+        </div>
+
+        <div class="av-benefit-card">
+
+            <div class="av-benefit-icon">
+                <i data-lucide="sparkles"></i>
+            </div>
+
+            <div class="av-benefit-label">
+                EXPERIENCE
+            </div>
+
+            <h3>Exclusive Events</h3>
+
+            <p>
+                Discover special events created for members.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 03 -->
+    <article class="av-benefit-item">
+
+        <div class="av-benefit-node">
+            <span>03</span>
+        </div>
+
+        <div class="av-benefit-card">
+
+            <div class="av-benefit-icon">
+                <i data-lucide="users"></i>
+            </div>
+
+            <div class="av-benefit-label">
+                FAMILY
+            </div>
+
+            <h3>Family Discovery</h3>
+
+            <p>
+                Share memorable moments of learning together.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 04 -->
+    <article class="av-benefit-item">
+
+        <div class="av-benefit-node">
+            <span>04</span>
+        </div>
+
+        <div class="av-benefit-card">
+
+            <div class="av-benefit-icon">
+                <i data-lucide="calendar-days"></i>
+            </div>
+
+            <div class="av-benefit-label">
+                CONNECT
+            </div>
+
+            <h3>Member Events</h3>
+
+            <p>
+                Join talks, gatherings and seasonal events.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 05 -->
+    <article class="av-benefit-item">
+
+        <div class="av-benefit-node">
+            <span>05</span>
+        </div>
+
+        <div class="av-benefit-card">
+
+            <div class="av-benefit-icon">
+                <i data-lucide="badge-percent"></i>
+            </div>
+
+            <div class="av-benefit-label">
+                REWARDS
+            </div>
+
+            <h3>Member Savings</h3>
+
+            <p>
+                Enjoy selected offers and member pricing.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+</section>
+
+<style>
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.av-membership-benefits{
+    padding:95px 5% 105px;
+    background:#fff;
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-membership-title{
+    max-width:700px;
+    margin:0 auto 65px;
+    text-align:center;
+}
+
+.av-membership-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin-bottom:16px;
+
+    color:var(--secondary);
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.av-membership-eyebrow span{
+    width:30px;
+    height:1px;
+    background:var(--secondary);
+}
+
+.av-membership-title h2{
+    margin:0;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4vw,56px);
+    line-height:1.05;
+    font-weight:600;
+    letter-spacing:-1.5px;
+}
+
+.av-membership-title h2 em{
+    color:var(--primary);
+    font-style:italic;
+    font-weight:500;
+}
+
+.av-membership-title p{
+    max-width:520px;
+    margin:18px auto 0;
+
+    color:#777b86;
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.av-benefit-timeline{
+    position:relative;
+
+    max-width:1180px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+}
+
+
+/* CONNECTING LINE */
+
+.av-benefit-line{
+    position:absolute;
+
+    top:9px;
+    left:8%;
+    right:8%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(115,87,232,.35),
+            rgba(23,63,159,.22),
+            rgba(115,87,232,.35),
+            transparent
+        );
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.av-benefit-item{
+    position:relative;
+}
+
+
+/* =========================================================
+   NODE
+========================================================= */
+
+.av-benefit-node{
+    position:relative;
+
+    width:19px;
+    height:19px;
+
+    margin:0 auto 22px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid rgba(115,87,232,.35);
+    border-radius:50%;
+
+    background:#fff;
+
+    z-index:2;
+}
+
+.av-benefit-node::after{
+    content:"";
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+}
+
+.av-benefit-node span{
+    position:absolute;
+
+    top:25px;
+
+    color:#a0a2aa;
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   EQUAL CARDS
+========================================================= */
+
+.av-benefit-card{
+    width:100%;
+    height:245px;
+
+    box-sizing:border-box;
+
+    padding:24px 20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    border:1px solid rgba(23,63,159,.10);
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:
+        0 7px 28px rgba(23,63,159,.045);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.av-benefit-card:hover{
+    transform:translateY(-7px);
+
+    border-color:rgba(115,87,232,.30);
+
+    box-shadow:
+        0 18px 40px rgba(23,63,159,.10);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.av-benefit-icon{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:15px;
+
+    border:1px solid rgba(115,87,232,.16);
+    border-radius:13px;
+
+    background:#fafaff;
+
+    color:var(--secondary);
+}
+
+.av-benefit-icon svg{
+    width:18px;
+    height:18px;
+
+    stroke-width:1.7;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.av-benefit-label{
+    margin-bottom:7px;
+
+    color:var(--secondary);
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.av-benefit-card h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    line-height:1.2;
+    font-weight:600;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-benefit-card p{
+    max-width:175px;
+
+    margin:0;
+
+    color:#777b86;
+
+    font-size:12px;
+    line-height:1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .av-benefit-timeline{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:45px;
+    }
+
+    .av-benefit-line{
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .av-membership-benefits{
+        padding:75px 20px 85px;
+    }
+
+    .av-membership-title{
+        margin-bottom:48px;
+    }
+
+    .av-membership-title h2{
+        font-size:40px;
+    }
+
+    .av-benefit-timeline{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .av-benefit-item{
+        padding-top:0;
+    }
+
+    .av-benefit-node{
+        display:none;
+    }
+
+    .av-benefit-card{
+        height:220px;
+    }
+
+}
+
+</style>
+
+<script>
+if(window.lucide){
+    lucide.createIcons();
+}
+</script>

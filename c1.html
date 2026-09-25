@@ -1,0 +1,290 @@
+<!-- =========================================================
+     ASTRA VISTA — FINAL DISCOVERY CTA
+========================================================= -->
+
+<section class="av-final-cta">
+
+    <div class="av-final-cta-frame">
+
+        <div class="av-final-cta-top">
+            <span></span>
+            <p>THE NEXT CHAPTER</p>
+            <span></span>
+        </div>
+
+        <div class="av-final-cta-content">
+
+            <h2>
+                There is more
+                <em>above.</em>
+            </h2>
+
+            <p>
+                Discover immersive shows, extraordinary night-sky events
+                and new ways to experience the universe.
+            </p>
+
+            <a href="Shows&programs.html" class="av-final-cta-link">
+                <span>Explore the Universe</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="av-final-cta-bottom">
+            <span>ASTRAVISTA</span>
+            <span>PLANETARIUM · OBSERVATORY</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.av-final-cta{
+    padding:25px 20px 110px;
+    background:#fff;
+}
+
+.av-final-cta-frame{
+    position:relative;
+
+    width:100%;
+    max-width:1120px;
+    min-height:350px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:55px 35px;
+
+    border:1px solid var(--border);
+    border-radius:26px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(115,87,232,.07),
+            transparent 48%
+        ),
+        var(--surface);
+
+    overflow:hidden;
+}
+
+
+/* TOP LABEL */
+
+.av-final-cta-top{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+
+    margin-bottom:21px;
+}
+
+.av-final-cta-top span{
+    width:30px;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+}
+
+.av-final-cta-top p{
+    margin:0;
+
+    color:var(--secondary);
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:2.8px;
+}
+
+
+/* CONTENT */
+
+.av-final-cta-content{
+    max-width:700px;
+
+    text-align:center;
+}
+
+.av-final-cta-content h2{
+    margin:0;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",Georgia,serif;
+
+    font-size:clamp(46px,6vw,76px);
+    line-height:.98;
+
+    font-weight:500;
+    letter-spacing:-3px;
+}
+
+.av-final-cta-content h2 em{
+    font-style:italic;
+
+    background:linear-gradient(
+        100deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.av-final-cta-content p{
+    max-width:510px;
+
+    margin:22px auto 27px;
+
+    color:var(--text-soft);
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* BUTTON */
+
+.av-final-cta-link{
+    position:relative;
+
+    display:inline-flex;
+    align-items:center;
+    gap:13px;
+
+    padding:13px 3px;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.3px;
+
+    border-bottom:1px solid var(--text);
+
+    transition:
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.av-final-cta-link i{
+    color:var(--secondary);
+
+    font-size:10px;
+
+    transition:transform .25s ease;
+}
+
+.av-final-cta-link:hover{
+    color:var(--secondary);
+    border-color:var(--secondary);
+}
+
+.av-final-cta-link:hover i{
+    transform:translateX(5px);
+}
+
+
+/* BOTTOM MICRO LABEL */
+
+.av-final-cta-bottom{
+    position:absolute;
+
+    left:32px;
+    right:32px;
+    bottom:22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding-top:13px;
+
+    border-top:1px solid var(--border);
+}
+
+.av-final-cta-bottom span{
+    color:var(--text-muted);
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:7px;
+    font-weight:800;
+    letter-spacing:1.8px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .av-final-cta{
+        padding:15px 14px 75px;
+    }
+
+    .av-final-cta-frame{
+        min-height:390px;
+
+        padding:45px 22px;
+
+        border-radius:20px;
+    }
+
+    .av-final-cta-content h2{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .av-final-cta-content p{
+        margin-top:18px;
+
+        font-size:11px;
+    }
+
+    .av-final-cta-top{
+        margin-bottom:18px;
+    }
+
+    .av-final-cta-bottom{
+        left:20px;
+        right:20px;
+        bottom:17px;
+    }
+
+    .av-final-cta-bottom span{
+        font-size:6px;
+        letter-spacing:1px;
+    }
+
+}
+
+</style>

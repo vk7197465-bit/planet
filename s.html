@@ -1,0 +1,935 @@
+```html
+<!-- =========================================================
+     ASTRA VISTA — SHOWS & PROGRAMS
+     PREMIUM CINEMATIC HERO
+========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+    --hero-dark:#050713;
+    --hero-text:#ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.av-shows-hero{
+    position:relative;
+    min-height:760px;
+    overflow:hidden;
+    background:var(--hero-dark);
+    color:var(--hero-text);
+    font-family:"DM Sans",sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.av-shows-bg{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.98) 0%,
+            rgba(5,7,19,.91) 35%,
+            rgba(5,7,19,.52) 63%,
+            rgba(5,7,19,.20) 100%
+        ),
+        url("images/programs-hero.jpg") center/cover no-repeat;
+
+    transform:scale(1.04);
+    animation:avHeroZoom 12s ease-out forwards;
+}
+
+
+/* =========================================================
+   PURPLE ATMOSPHERE
+========================================================= */
+
+.av-shows-glow{
+    position:absolute;
+    width:650px;
+    height:650px;
+    right:-180px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.40) 0%,
+            rgba(115,87,232,.15) 35%,
+            transparent 70%
+        );
+
+    filter:blur(20px);
+    animation:avGlowMove 8s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.av-shows-stars{
+    position:absolute;
+    inset:0;
+    opacity:.38;
+
+    background-image:
+        radial-gradient(circle,#fff 1px,transparent 1.5px),
+        radial-gradient(circle,#fff 1px,transparent 1.5px),
+        radial-gradient(circle,#fff 1px,transparent 1.5px);
+
+    background-size:
+        170px 170px,
+        250px 250px,
+        320px 320px;
+
+    background-position:
+        10px 20px,
+        80px 120px,
+        170px 40px;
+
+    animation:avStarsMove 25s linear infinite;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.av-shows-inner{
+    position:relative;
+    z-index:5;
+
+    width:min(1250px,92%);
+    min-height:760px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.av-shows-content{
+    width:62%;
+    position:relative;
+    z-index:5;
+}
+
+
+/* eyebrow */
+
+.av-shows-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:13px;
+
+    margin-bottom:25px;
+
+    color:#B9C4FF;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    animation:avFadeUp .9s ease both;
+}
+
+.av-shows-eyebrow::before{
+    content:"";
+
+    width:45px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            #B9C4FF
+        );
+}
+
+
+/* heading */
+
+.av-shows-title{
+    margin:0;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(58px,7.3vw,108px);
+
+    font-weight:500;
+
+    line-height:.91;
+
+    letter-spacing:-5px;
+
+    max-width:850px;
+
+    animation:avFadeUp 1s .12s ease both;
+}
+
+.av-shows-title span{
+    display:block;
+}
+
+.av-shows-title .outline{
+    color:transparent;
+
+    -webkit-text-stroke:
+        1px rgba(255,255,255,.70);
+
+    margin-left:80px;
+}
+
+.av-shows-title em{
+    color:#A99AFF;
+    font-style:italic;
+}
+
+
+/* description */
+
+.av-shows-description{
+    max-width:525px;
+
+    margin:32px 0 32px 5px;
+
+    color:rgba(255,255,255,.68);
+
+    font-size:15px;
+    line-height:1.8;
+
+    animation:avFadeUp 1s .25s ease both;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.av-shows-actions{
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    animation:avFadeUp 1s .38s ease both;
+}
+
+.av-shows-button{
+    position:relative;
+
+    display:inline-flex;
+    align-items:center;
+    gap:13px;
+
+    padding:15px 24px;
+
+    border-radius:100px;
+
+    background:#fff;
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:700;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+}
+
+.av-shows-button::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    transform:translateX(-105%);
+
+    transition:.45s ease;
+}
+
+.av-shows-button span,
+.av-shows-button i{
+    position:relative;
+    z-index:2;
+    transition:.4s ease;
+}
+
+.av-shows-button:hover{
+    color:#fff;
+    transform:translateY(-4px);
+}
+
+.av-shows-button:hover::before{
+    transform:translateX(0);
+}
+
+.av-shows-button:hover i{
+    transform:translateX(4px);
+}
+
+
+/* secondary text */
+
+.av-shows-meta{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    color:rgba(255,255,255,.48);
+
+    font-size:11px;
+    letter-spacing:.5px;
+}
+
+.av-shows-meta-dot{
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    box-shadow:
+        0 0 12px rgba(115,87,232,.9);
+
+    animation:avPulse 2s infinite;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.av-shows-visual{
+    position:absolute;
+
+    right:-40px;
+    top:50%;
+
+    width:500px;
+    height:500px;
+
+    transform:translateY(-50%);
+
+    animation:avVisualIn 1.3s .2s ease both;
+}
+
+
+/* main circle */
+
+.av-shows-circle{
+    position:absolute;
+
+    inset:45px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,.25),
+            rgba(115,87,232,.28) 28%,
+            rgba(23,63,159,.65) 65%,
+            rgba(5,7,19,.92) 100%
+        );
+
+    box-shadow:
+        0 0 100px rgba(115,87,232,.28),
+        inset -35px -35px 70px rgba(0,0,0,.42);
+
+    animation:avPlanetFloat 6s ease-in-out infinite;
+}
+
+
+/* image inside visual */
+
+.av-shows-circle::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+        url("images/programs-hero.jpg")
+        center/cover no-repeat;
+
+    mix-blend-mode:screen;
+
+    opacity:.38;
+}
+
+
+/* orbit */
+
+.av-shows-orbit{
+    position:absolute;
+
+    inset:0;
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:50%;
+
+    transform:rotate(-22deg);
+
+    animation:avOrbit 18s linear infinite;
+}
+
+.av-shows-orbit::before{
+    content:"";
+
+    position:absolute;
+
+    width:13px;
+    height:13px;
+
+    top:42px;
+    left:70px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 25px #fff,
+        0 0 45px var(--secondary);
+}
+
+
+/* second orbit */
+
+.av-shows-orbit.two{
+    inset:35px -20px;
+
+    transform:rotate(58deg);
+
+    border-color:rgba(169,154,255,.18);
+
+    animation-duration:24s;
+    animation-direction:reverse;
+}
+
+
+/* =========================================================
+   FLOATING DATA CARDS
+========================================================= */
+
+.av-shows-data{
+    position:absolute;
+
+    padding:12px 15px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:12px;
+
+    background:rgba(8,10,25,.55);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    font-size:9px;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.55);
+}
+
+.av-shows-data strong{
+    display:block;
+
+    margin-top:4px;
+
+    color:#fff;
+
+    font-size:12px;
+
+    letter-spacing:.3px;
+}
+
+.av-data-one{
+    right:-10px;
+    top:105px;
+
+    animation:avFloat 4s ease-in-out infinite;
+}
+
+.av-data-two{
+    left:-20px;
+    bottom:100px;
+
+    animation:avFloat 5s 1s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   VERTICAL LABEL
+========================================================= */
+
+.av-shows-side-label{
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    transform:
+        translateY(-50%)
+        rotate(90deg);
+
+    transform-origin:center;
+
+    color:rgba(255,255,255,.35);
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.av-shows-bottom{
+    position:absolute;
+
+    z-index:8;
+
+    left:50%;
+    bottom:28px;
+
+    width:min(1250px,92%);
+
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border-top:1px solid rgba(255,255,255,.13);
+
+    padding-top:17px;
+
+    color:rgba(255,255,255,.42);
+
+    font-size:10px;
+
+    letter-spacing:1.8px;
+
+    text-transform:uppercase;
+}
+
+.av-shows-scroll{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.av-scroll-line{
+    width:45px;
+    height:1px;
+
+    background:var(--secondary);
+
+    animation:avLine 2s ease-in-out infinite;
+}
+
+.av-shows-number{
+    color:rgba(255,255,255,.65);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes avHeroZoom{
+    from{
+        transform:scale(1.04);
+    }
+    to{
+        transform:scale(1.11);
+    }
+}
+
+@keyframes avGlowMove{
+    from{
+        transform:translateY(-50%) translateX(0) scale(1);
+    }
+    to{
+        transform:translateY(-50%) translateX(-55px) scale(1.15);
+    }
+}
+
+@keyframes avStarsMove{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+@keyframes avFadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes avVisualIn{
+    from{
+        opacity:0;
+        transform:translateY(-50%) translateX(70px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(-50%) translateX(0) scale(1);
+    }
+}
+
+@keyframes avPlanetFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-13px);
+    }
+}
+
+@keyframes avOrbit{
+    from{
+        transform:rotate(-22deg);
+    }
+    to{
+        transform:rotate(338deg);
+    }
+}
+
+@keyframes avFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes avPulse{
+    0%,100%{
+        opacity:.45;
+        transform:scale(.8);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
+
+@keyframes avLine{
+    0%,100%{
+        width:25px;
+    }
+    50%{
+        width:55px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+    .av-shows-content{
+        width:75%;
+    }
+
+    .av-shows-visual{
+        right:-170px;
+        opacity:.55;
+        transform:
+            translateY(-50%)
+            scale(.85);
+    }
+
+    .av-shows-title{
+        font-size:clamp(58px,9vw,85px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .av-shows-hero,
+    .av-shows-inner{
+        min-height:720px;
+    }
+
+    .av-shows-bg{
+        background-position:65% center;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,7,19,.92) 0%,
+                rgba(5,7,19,.84) 55%,
+                rgba(5,7,19,.97) 100%
+            ),
+            url("images/programs-hero.jpg")
+            65% center/cover no-repeat;
+    }
+
+    .av-shows-inner{
+        align-items:flex-start;
+        padding-top:145px;
+    }
+
+    .av-shows-content{
+        width:100%;
+    }
+
+    .av-shows-eyebrow{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    .av-shows-title{
+        font-size:58px;
+        letter-spacing:-3px;
+    }
+
+    .av-shows-title .outline{
+        margin-left:35px;
+    }
+
+    .av-shows-description{
+        max-width:390px;
+        margin-top:25px;
+        font-size:13px;
+    }
+
+    .av-shows-visual{
+        width:310px;
+        height:310px;
+
+        right:-100px;
+        top:auto;
+        bottom:-45px;
+
+        transform:scale(.72);
+
+        opacity:.38;
+    }
+
+    .av-shows-data{
+        display:none;
+    }
+
+    .av-shows-side-label{
+        display:none;
+    }
+
+    .av-shows-bottom{
+        bottom:18px;
+        font-size:8px;
+    }
+
+    .av-shows-meta{
+        display:none;
+    }
+}
+
+</style>
+
+
+<!-- =========================================================
+     HERO HTML
+========================================================= -->
+
+<section class="av-shows-hero">
+
+    <!-- background -->
+    <div class="av-shows-bg"></div>
+
+    <!-- atmosphere -->
+    <div class="av-shows-glow"></div>
+
+    <!-- stars -->
+    <div class="av-shows-stars"></div>
+
+
+    <div class="av-shows-inner">
+
+        <!-- ================================================
+             CONTENT
+        ================================================= -->
+
+        <div class="av-shows-content">
+
+            <div class="av-shows-eyebrow">
+                SHOWS & PROGRAMS
+            </div>
+
+
+            <h1 class="av-shows-title">
+
+                <span>Enter the</span>
+
+                <span class="outline">
+                    Unknown.
+                </span>
+
+                <span>
+                    <em>Explore.</em>
+                </span>
+
+            </h1>
+
+
+            <p class="av-shows-description">
+                Step beyond the ordinary and experience the universe
+                through immersive planetarium shows, guided sky
+                observations, and programs created to spark curiosity.
+            </p>
+
+
+            <div class="av-shows-actions">
+
+                <a href="#programs" class="av-shows-button">
+
+                    <span>Explore Experiences</span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </a>
+
+
+                <div class="av-shows-meta">
+
+                    <span class="av-shows-meta-dot"></span>
+
+                    Now showing at Astra Vista
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================
+             RIGHT VISUAL
+        ================================================= -->
+
+        <div class="av-shows-visual">
+
+            <div class="av-shows-circle"></div>
+
+            <div class="av-shows-orbit"></div>
+
+            <div class="av-shows-orbit two"></div>
+
+
+            <div class="av-shows-data av-data-one">
+
+                FEATURED
+
+                <strong>Deep Space</strong>
+
+            </div>
+
+
+            <div class="av-shows-data av-data-two">
+
+                EXPERIENCE
+
+                <strong>Immersive Sky</strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="av-shows-side-label">
+            ASTRA VISTA • DISCOVER • EXPLORE
+        </div>
+
+    </div>
+
+
+    <!-- ================================================
+         BOTTOM INFORMATION
+    ================================================= -->
+
+    <div class="av-shows-bottom">
+
+        <div class="av-shows-scroll">
+
+            <span class="av-scroll-line"></span>
+
+            Scroll to explore
+
+        </div>
+
+        <div class="av-shows-number">
+            01 / 03
+        </div>
+
+    </div>
+
+</section>
+```

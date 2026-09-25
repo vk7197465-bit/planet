@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Astra Vista | Contact</title>
+
+<!-- =========================================================
+     FONTS
+========================================================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+<!-- =========================================================
+     LUCIDE
+========================================================= -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+
+/* =========================================================
+   ASTRA VISTA — CONTACT PAGE
+========================================================= */
+
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+
+    --dark:#050713;
+    --dark-soft:#0B1020;
+
+    --text:#25283A;
+    --muted:#73778A;
+
+    --white:#ffffff;
+    --surface:#F7F8FC;
+    --line:#E7E9F1;
+
+    --radius:24px;
+    --shadow:0 20px 60px rgba(17,25,55,.08);
+
+    --container:1180px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--text);
+    background:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(var(--container),calc(100% - 40px));
+    margin:auto;
+}
+
+/* =========================================================
+   GLOBAL HEADING
+========================================================= */
+
+.av-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 55px;
+}
+
+.av-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+
+    color:var(--secondary);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.3px;
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+}
+
+.av-eyebrow span{
+    width:25px;
+    height:1px;
+    background:var(--secondary);
+}
+
+.av-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(36px,4vw,54px);
+    line-height:1.08;
+    font-weight:600;
+    letter-spacing:-1.5px;
+}
+
+.av-heading h2 em{
+    color:var(--secondary);
+    font-style:italic;
+}
+
+.av-heading p{
+    max-width:600px;
+    margin:17px auto 0;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   HERO — COMPACT TYPING
+========================================================= */
+
+.av-contact-hero{
+    position:relative;
+    min-height:510px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.94) 0%,
+            rgba(5,7,19,.78) 46%,
+            rgba(5,7,19,.48) 100%
+        ),
+        url("images/contact-hero.jpg") center/cover no-repeat;
+
+    color:#fff;
+}
+
+.av-contact-hero::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    right:-160px;
+    top:-170px;
+
+    background:radial-gradient(
+        circle,
+        rgba(115,87,232,.30),
+        transparent 68%
+    );
+
+    filter:blur(15px);
+    animation:heroGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow{
+    from{
+        transform:translate(0,0) scale(1);
+    }
+    to{
+        transform:translate(-30px,25px) scale(1.12);
+    }
+}
+
+.av-contact-hero .container{
+    position:relative;
+    z-index:3;
+}
+
+.av-hero-content{
+    max-width:780px;
+}
+
+.av-hero-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#BDB5FF;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.5px;
+
+    margin-bottom:18px;
+}
+
+.av-hero-eyebrow::before{
+    content:"";
+    width:34px;
+    height:1px;
+    background:#BDB5FF;
+}
+
+.av-hero-content h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(48px,7vw,88px);
+    line-height:.98;
+    font-weight:600;
+    letter-spacing:-3px;
+}
+
+.av-hero-content h1 span{
+    display:block;
+    color:#BDB5FF;
+    min-height:1em;
+}
+
+.av-typing-cursor{
+    display:inline-block;
+    width:2px;
+    height:.78em;
+    background:#BDB5FF;
+    margin-left:7px;
+    vertical-align:-2px;
+    animation:cursorBlink .75s infinite;
+}
+
+@keyframes cursorBlink{
+    50%{
+        opacity:0;
+    }
+}
+
+.av-hero-content p{
+    max-width:590px;
+    color:rgba(255,255,255,.72);
+    font-size:15px;
+    line-height:1.75;
+    margin:22px 0 28px;
+}
+
+.av-hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.av-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    min-height:48px;
+    padding:0 21px;
+
+    border-radius:12px;
+    font-size:13px;
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.av-btn-primary{
+    background:#fff;
+    color:var(--primary);
+}
+
+.av-btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+
+.av-btn-outline{
+    border:1px solid rgba(255,255,255,.25);
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+}
+
+.av-btn-outline:hover{
+    border-color:rgba(255,255,255,.6);
+    background:rgba(255,255,255,.12);
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   CONTACT CHANNELS
+========================================================= */
+
+.av-contact-ways{
+    padding:90px 0;
+    background:#fff;
+}
+
+.av-way-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.av-way-card{
+    position:relative;
+    padding:27px;
+    min-height:205px;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:#fff;
+
+    transition:.35s ease;
+    overflow:hidden;
+}
+
+.av-way-card::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    right:-45px;
+    bottom:-45px;
+
+    background:var(--secondary);
+    opacity:.06;
+    border-radius:50%;
+}
+
+.av-way-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(115,87,232,.25);
+    box-shadow:var(--shadow);
+}
+
+.av-way-icon{
+    width:45px;
+    height:45px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:13px;
+
+    color:var(--secondary);
+    background:rgba(115,87,232,.08);
+
+    margin-bottom:22px;
+}
+
+.av-way-card h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.av-way-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+}
+
+.av-way-card strong{
+    display:block;
+    color:var(--text);
+    font-size:13px;
+    margin-top:13px;
+}
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.av-contact-section{
+    padding:90px 0;
+    background:var(--surface);
+}
+
+.av-contact-layout{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:70px;
+    align-items:start;
+}
+
+.av-contact-copy{
+    padding-top:10px;
+}
+
+.av-contact-copy .av-eyebrow{
+    justify-content:flex-start;
+}
+
+.av-contact-copy h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4vw,55px);
+    line-height:1.05;
+    letter-spacing:-1.5px;
+}
+
+.av-contact-copy h2 em{
+    color:var(--secondary);
+}
+
+.av-contact-copy > p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+    margin:20px 0 30px;
+}
+
+.av-mini-points{
+    display:grid;
+    gap:13px;
+}
+
+.av-mini-point{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:#505467;
+    font-size:13px;
+}
+
+.av-mini-point i{
+    width:29px;
+    height:29px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+    color:var(--primary);
+    background:#fff;
+}
+
+.av-form{
+    padding:34px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:24px;
+    box-shadow:0 15px 50px rgba(20,28,55,.06);
+}
+
+.av-form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:17px;
+}
+
+.av-field{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.av-field.full{
+    grid-column:1/-1;
+}
+
+.av-field label{
+    color:#44485B;
+    font-size:12px;
+    font-weight:700;
+}
+
+.av-field input,
+.av-field select,
+.av-field textarea{
+    width:100%;
+
+    border:1px solid var(--line);
+    outline:none;
+
+    border-radius:12px;
+    padding:13px 14px;
+
+    background:#FBFCFE;
+    color:var(--text);
+
+    font-size:13px;
+
+    transition:.25s ease;
+}
+
+.av-field textarea{
+    min-height:125px;
+    resize:vertical;
+}
+
+.av-field input:focus,
+.av-field select:focus,
+.av-field textarea:focus{
+    border-color:var(--secondary);
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(115,87,232,.07);
+}
+
+.av-submit{
+    width:100%;
+    border:0;
+    cursor:pointer;
+
+    margin-top:18px;
+
+    min-height:50px;
+    border-radius:12px;
+
+    background:var(--primary);
+    color:#fff;
+
+    font-size:13px;
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    transition:.3s ease;
+}
+
+.av-submit:hover{
+    background:var(--secondary);
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   VISIT INFORMATION
+========================================================= */
+
+.av-visit{
+    padding:90px 0;
+    background:#fff;
+}
+
+.av-visit-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.av-visit-card{
+    padding:30px;
+    border-radius:20px;
+    background:#fff;
+    border:1px solid var(--line);
+    transition:.3s ease;
+}
+
+.av-visit-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.av-visit-number{
+    font-family:"Playfair Display",serif;
+    font-size:34px;
+    color:var(--secondary);
+    margin-bottom:18px;
+}
+
+.av-visit-card h3{
+    font-size:17px;
+    margin-bottom:9px;
+}
+
+.av-visit-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+}
+
+/* =========================================================
+   HELP TOPICS
+========================================================= */
+
+.av-help{
+    padding:90px 0;
+    background:var(--dark);
+    color:#fff;
+}
+
+.av-help .av-eyebrow{
+    color:#AFA6FF;
+}
+
+.av-help .av-eyebrow span{
+    background:#AFA6FF;
+}
+
+.av-help .av-heading h2{
+    color:#fff;
+}
+
+.av-help .av-heading p{
+    color:rgba(255,255,255,.58);
+}
+
+.av-help-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.av-help-card{
+    position:relative;
+    min-height:185px;
+
+    padding:25px;
+
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:19px;
+
+    background:rgba(255,255,255,.035);
+
+    transition:.35s ease;
+}
+
+.av-help-card:hover{
+    background:rgba(115,87,232,.10);
+    border-color:rgba(115,87,232,.3);
+    transform:translateY(-6px);
+}
+
+.av-help-card i{
+    color:#AFA6FF;
+    margin-bottom:30px;
+}
+
+.av-help-card h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.av-help-card p{
+    color:rgba(255,255,255,.52);
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   FAQ — COMPACT PREMIUM
+========================================================= */
+
+.av-faq{
+    padding:78px 0 85px;
+    background:var(--surface);
+}
+
+.av-faq .av-heading{
+    margin-bottom:38px;
+}
+
+.av-faq .av-heading h2{
+    font-size:clamp(34px,4vw,48px);
+}
+
+.av-faq-list{
+    max-width:820px;
+    margin:auto;
+
+    border-top:1px solid var(--line);
+}
+
+.av-faq-item{
+    border-bottom:1px solid var(--line);
+}
+
+.av-faq-question{
+    width:100%;
+    min-height:67px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    padding:0;
+
+    border:0;
+    background:transparent;
+    cursor:pointer;
+
+    color:var(--text);
+    text-align:left;
+
+    font-size:14px;
+    font-weight:700;
+}
+
+.av-faq-question i{
+    flex-shrink:0;
+
+    width:30px;
+    height:30px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+
+    background:#fff;
+    color:var(--secondary);
+
+    transition:.3s ease;
+}
+
+.av-faq-answer{
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+}
+
+.av-faq-answer p{
+    max-width:730px;
+    padding:0 50px 19px 0;
+
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+}
+
+.av-faq-item.active .av-faq-question i{
+    transform:rotate(45deg);
+    background:var(--secondary);
+    color:#fff;
+}
+
+/* =========================================================
+   SMALL CTA
+========================================================= */
+
+.av-final-cta{
+    position:relative;
+    min-height:330px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,19,.92),
+            rgba(5,7,19,.65)
+        ),
+        url("images/observatory-night.jpg") center/cover no-repeat;
+}
+
+.av-final-cta::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    right:-130px;
+    top:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(115,87,232,.35),
+        transparent 68%
+    );
+}
+
+.av-cta-content{
+    position:relative;
+    z-index:2;
+
+    max-width:720px;
+}
+
+.av-cta-content .av-eyebrow{
+    justify-content:flex-start;
+    color:#BDB5FF;
+}
+
+.av-cta-content .av-eyebrow span{
+    background:#BDB5FF;
+}
+
+.av-cta-content h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    letter-spacing:-2px;
+}
+
+.av-cta-content h2 em{
+    color:#BDB5FF;
+}
+
+.av-cta-content p{
+    max-width:530px;
+    color:rgba(255,255,255,.65);
+    font-size:14px;
+    line-height:1.7;
+    margin:15px 0 23px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.av-reveal{
+    opacity:0;
+    transform:translateY(25px);
+    animation:revealUp .8s ease forwards;
+}
+
+@keyframes revealUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+    .av-way-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .av-contact-layout{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .av-help-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    .av-contact-hero{
+        min-height:470px;
+        background-position:center;
+    }
+
+    .av-hero-content h1{
+        font-size:52px;
+        letter-spacing:-2px;
+    }
+
+    .av-hero-content p{
+        font-size:14px;
+        margin:18px 0 23px;
+    }
+
+    .av-hero-actions{
+        width:100%;
+    }
+
+    .av-btn{
+        flex:1;
+    }
+
+    .av-contact-ways,
+    .av-contact-section,
+    .av-visit,
+    .av-help{
+        padding:70px 0;
+    }
+
+    .av-heading{
+        margin-bottom:38px;
+    }
+
+    .av-heading h2{
+        font-size:36px;
+    }
+
+    .av-way-grid{
+        grid-template-columns:1fr;
+    }
+
+    .av-way-card{
+        min-height:175px;
+    }
+
+    .av-form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .av-field.full{
+        grid-column:auto;
+    }
+
+    .av-form{
+        padding:22px;
+    }
+
+    .av-visit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .av-help-grid{
+        grid-template-columns:1fr;
+    }
+
+    .av-help-card{
+        min-height:160px;
+    }
+
+    .av-faq{
+        padding:65px 0 70px;
+    }
+
+    .av-faq-question{
+        min-height:62px;
+        font-size:13px;
+    }
+
+    .av-faq-answer p{
+        padding-right:35px;
+        font-size:12px;
+    }
+
+    .av-final-cta{
+        min-height:300px;
+    }
+
+    .av-cta-content h2{
+        font-size:42px;
+    }
+
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .container{
+        width:calc(100% - 22px);
+    }
+
+    .av-contact-hero{
+        min-height:455px;
+    }
+
+    .av-hero-content h1{
+        font-size:45px;
+    }
+
+    .av-hero-content p{
+        font-size:13px;
+    }
+
+    .av-btn{
+        min-height:44px;
+        padding:0 14px;
+        font-size:12px;
+    }
+
+    .av-form{
+        padding:18px;
+    }
+
+    .av-cta-content h2{
+        font-size:37px;
+    }
+
+}
+
+<style>
+
+/* =========================================================
+   LOCATION SECTION
+========================================================= */
+
+.av-location-section{
+    padding:75px 0;
+    background:#fff;
+}
+
+
+/* =========================================================
+   CENTER HEADING
+========================================================= */
+
+.av-location-heading{
+    text-align:center;
+    max-width:620px;
+    margin:0 auto 38px;
+}
+
+
+.av-location-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin-bottom:10px;
+
+    color:var(--secondary);
+
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+
+.av-location-eyebrow span{
+    width:24px;
+    height:1px;
+    background:var(--secondary);
+    opacity:.7;
+}
+
+
+.av-location-heading h2{
+    margin:0;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(30px,3.2vw,43px);
+    line-height:1.08;
+
+    font-weight:600;
+    letter-spacing:-1.2px;
+}
+
+
+.av-location-heading h2 em{
+    color:var(--secondary);
+    font-style:italic;
+}
+
+
+.av-location-heading p{
+    margin:12px auto 0;
+
+    max-width:470px;
+
+    color:var(--muted);
+
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   MAIN BOX
+========================================================= */
+
+.av-location-box{
+    width:min(1050px,92%);
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    min-height:370px;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:22px;
+
+    background:#fff;
+
+    box-shadow:
+        0 18px 55px rgba(20,25,50,.07);
+}
+
+
+/* =========================================================
+   CONTENT SIDE
+========================================================= */
+
+.av-location-content{
+    padding:40px 43px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(115,87,232,.07),
+            transparent 42%
+        ),
+        #fff;
+}
+
+
+.av-location-mini{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--secondary);
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:1.8px;
+}
+
+
+.av-location-top h3{
+    margin:0;
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--text);
+
+    font-size:36px;
+    line-height:1.05;
+
+    letter-spacing:-1px;
+}
+
+
+.av-location-top h3 em{
+    color:var(--primary);
+    font-style:italic;
+}
+
+
+.av-location-top p{
+    max-width:390px;
+
+    margin:15px 0 22px;
+
+    color:var(--muted);
+
+    font-size:12px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.av-location-details{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    margin-bottom:22px;
+}
+
+
+.av-location-detail{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+
+.av-detail-icon{
+    width:34px;
+    height:34px;
+
+    flex-shrink:0;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+
+    background:rgba(23,63,159,.07);
+
+    color:var(--primary);
+}
+
+
+.av-detail-icon svg{
+    width:15px;
+    height:15px;
+}
+
+
+.av-location-detail div:last-child{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+
+.av-location-detail span{
+    font-size:7px;
+    font-weight:700;
+
+    letter-spacing:1.4px;
+
+    color:var(--secondary);
+}
+
+
+.av-location-detail strong{
+    color:var(--text);
+
+    font-size:11px;
+    font-weight:600;
+
+    line-height:1.4;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.av-location-link{
+    width:max-content;
+
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    color:var(--primary);
+
+    font-size:11px;
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+
+.av-location-link svg{
+    width:14px;
+    height:14px;
+
+    transition:.3s ease;
+}
+
+
+.av-location-link:hover{
+    color:var(--secondary);
+}
+
+
+.av-location-link:hover svg{
+    transform:translate(3px,-3px);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.av-location-map{
+    position:relative;
+
+    min-height:370px;
+
+    background:#eef0f4;
+}
+
+
+.av-location-map iframe{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    border:0;
+
+    filter:
+        grayscale(.2)
+        saturate(.7);
+}
+
+
+/* =========================================================
+   MAP TAG
+========================================================= */
+
+.av-map-tag{
+    position:absolute;
+
+    left:18px;
+    bottom:18px;
+
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:9px 12px;
+
+    border-radius:9px;
+
+    background:rgba(255,255,255,.94);
+
+    box-shadow:
+        0 8px 25px rgba(20,25,50,.12);
+
+    backdrop-filter:blur(10px);
+}
+
+
+.av-map-tag svg{
+    width:13px;
+    height:13px;
+
+    color:var(--secondary);
+}
+
+
+.av-map-tag span{
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:1.4px;
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+    .av-location-section{
+        padding:65px 0;
+    }
+
+    .av-location-box{
+        grid-template-columns:1fr;
+    }
+
+    .av-location-content{
+        padding:38px;
+    }
+
+    .av-location-map{
+        min-height:330px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:520px){
+
+    .av-location-section{
+        padding:55px 0;
+    }
+
+    .av-location-heading{
+        width:90%;
+        margin-bottom:28px;
+    }
+
+    .av-location-heading h2{
+        font-size:31px;
+    }
+
+    .av-location-heading p{
+        font-size:12px;
+    }
+
+    .av-location-box{
+        width:92%;
+        border-radius:18px;
+    }
+
+    .av-location-content{
+        padding:30px 24px;
+    }
+
+    .av-location-top h3{
+        font-size:31px;
+    }
+
+    .av-location-top p{
+        font-size:11px;
+    }
+
+    .av-location-map{
+        min-height:280px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media(max-width:380px){
+
+    .av-location-top h3{
+        font-size:28px;
+    }
+
+    .av-location-content{
+        padding:27px 20px;
+    }
+
+    .av-location-map{
+        min-height:250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="av-contact-hero">
+
+    <div class="container">
+
+        <div class="av-hero-content av-reveal">
+
+            <div class="av-hero-eyebrow">
+                CONTACT ASTRA VISTA
+            </div>
+
+            <h1>
+                Let's Start
+                <span>
+                    <b id="typingText"></b>
+                    <i class="av-typing-cursor"></i>
+                </span>
+            </h1>
+
+            <p>
+                Have a question about shows, school visits, observatory
+                sessions or memberships? Our team is here to help you
+                plan your next journey beyond Earth.
+            </p>
+
+            <div class="av-hero-actions">
+
+                <a href="#contactForm" class="av-btn av-btn-primary">
+                    Send an Enquiry
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#visit" class="av-btn av-btn-outline">
+                    Plan Your Visit
+                    <i data-lucide="calendar-days"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT WAYS
+========================================================= -->
+
+<section class="av-contact-ways">
+
+    <div class="container">
+
+        <div class="av-heading">
+
+            <div class="av-eyebrow">
+                <span></span>
+                REACH OUT
+                <span></span>
+            </div>
+
+            <h2>
+                We're Here to
+                <em>Help You Explore.</em>
+            </h2>
+
+            <p>
+                Choose the easiest way to connect with the Astra Vista team.
+            </p>
+
+        </div>
+
+
+        <div class="av-way-grid">
+
+            <div class="av-way-card">
+
+                <div class="av-way-icon">
+                    <i data-lucide="map-pin"></i>
+                </div>
+
+                <h3>Visit Us</h3>
+
+                <p>
+                    Come experience immersive shows and discover
+                    the universe with us.
+                </p>
+
+                <strong>Astra Vista Visitor Center</strong>
+
+            </div>
+
+
+            <div class="av-way-card">
+
+                <div class="av-way-icon">
+                    <i data-lucide="phone"></i>
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    Speak with our visitor team for quick assistance
+                    with your plans.
+                </p>
+
+                <strong>+91 00000 00000</strong>
+
+            </div>
+
+
+            <div class="av-way-card">
+
+                <div class="av-way-icon">
+                    <i data-lucide="mail"></i>
+                </div>
+
+                <h3>Email Us</h3>
+
+                <p>
+                    Send your questions and our team will help
+                    with the details.
+                </p>
+
+                <strong>hello@astravista.com</strong>
+
+            </div>
+
+
+            <div class="av-way-card">
+
+                <div class="av-way-icon">
+                    <i data-lucide="users"></i>
+                </div>
+
+                <h3>Group Visits</h3>
+
+                <p>
+                    Planning a school or large group experience?
+                    Let's organize it together.
+                </p>
+
+                <strong>Group Enquiries</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT FORM
+========================================================= -->
+
+<section class="av-contact-section" id="contactForm">
+
+    <div class="container">
+
+        <div class="av-contact-layout">
+
+            <div class="av-contact-copy">
+
+                <div class="av-eyebrow">
+                    <span></span>
+                    SEND A MESSAGE
+                </div>
+
+                <h2>
+                    Tell Us What
+                    <em>You Need.</em>
+                </h2>
+
+                <p>
+                    Whether you're planning your first planetarium visit,
+                    organizing a school program or simply curious about
+                    the night sky, send us your question.
+                </p>
+
+                <div class="av-mini-points">
+
+                    <div class="av-mini-point">
+                        <i data-lucide="check"></i>
+                        Visitor and ticket enquiries
+                    </div>
+
+                    <div class="av-mini-point">
+                        <i data-lucide="check"></i>
+                        School and educational programs
+                    </div>
+
+                    <div class="av-mini-point">
+                        <i data-lucide="check"></i>
+                        Group and event planning
+                    </div>
+
+                    <div class="av-mini-point">
+                        <i data-lucide="check"></i>
+                        Membership information
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="av-form">
+
+                <div class="av-form-grid">
+
+                    <div class="av-field">
+
+                        <label>Your Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your name"
+                        >
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            placeholder="you@example.com"
+                        >
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label>Phone</label>
+
+                        <input
+                            type="tel"
+                            placeholder="+91"
+                        >
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label>Enquiry Type</label>
+
+                        <select>
+
+                            <option>Select an option</option>
+                            <option>General Visit</option>
+                            <option>Shows & Programs</option>
+                            <option>School Program</option>
+                            <option>Membership</option>
+                            <option>Group Visit</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="av-field full">
+
+                        <label>Your Message</label>
+
+                        <textarea
+                            placeholder="How can we help you?"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button class="av-submit" type="submit">
+
+                    Send Message
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PLAN YOUR VISIT
+========================================================= -->
+
+<section class="av-visit" id="visit">
+
+    <div class="container">
+
+        <div class="av-heading">
+
+            <div class="av-eyebrow">
+                <span></span>
+                PLAN YOUR VISIT
+                <span></span>
+            </div>
+
+            <h2>
+                Everything You Need
+                <em>Before You Arrive.</em>
+            </h2>
+
+            <p>
+                A few useful details to help make your Astra Vista
+                experience simple and enjoyable.
+            </p>
+
+        </div>
+
+
+        <div class="av-visit-grid">
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">01</div>
+
+                <h3>Opening Hours</h3>
+
+                <p>
+                    Check current visitor hours and show schedules
+                    before planning your journey.
+                </p>
+
+            </div>
+
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">02</div>
+
+                <h3>Tickets & Shows</h3>
+
+                <p>
+                    Explore available planetarium programs and
+                    choose the experience that interests you.
+                </p>
+
+            </div>
+
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">03</div>
+
+                <h3>Accessibility</h3>
+
+                <p>
+                    Contact our team if you need accessibility
+                    information before your visit.
+                </p>
+
+            </div>
+
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">04</div>
+
+                <h3>Getting Here</h3>
+
+                <p>
+                    Find the easiest route and prepare your journey
+                    to the visitor center.
+                </p>
+
+            </div>
+
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">05</div>
+
+                <h3>School Groups</h3>
+
+                <p>
+                    Ask our education team about school visits,
+                    learning programs and group arrangements.
+                </p>
+
+            </div>
+
+
+            <div class="av-visit-card">
+
+                <div class="av-visit-number">06</div>
+
+                <h3>Large Groups</h3>
+
+                <p>
+                    Planning a group experience? Contact us early
+                    so we can help organize your visit.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="av-location-section">
+
+    <!-- CENTER HEADING -->
+    <div class="av-location-heading">
+
+        <div class="av-location-eyebrow">
+            <span></span>
+            FIND US
+            <span></span>
+        </div>
+
+        <h2>
+            Visit <em>Astra Vista</em>
+        </h2>
+
+        <p>
+            Plan your visit and discover where your journey among the stars begins.
+        </p>
+
+    </div>
+
+
+    <!-- 50 / 50 CONTENT -->
+    <div class="av-location-box">
+
+        <!-- CONTENT -->
+        <div class="av-location-content">
+
+            <div class="av-location-top">
+                <span class="av-location-mini">ASTRA VISTA</span>
+
+                <h3>
+                    Your journey<br>
+                    starts <em>here.</em>
+                </h3>
+
+                <p>
+                    Find us easily and step into an immersive world of
+                    planets, stars, galaxies and extraordinary discoveries.
+                </p>
+            </div>
+
+
+            <div class="av-location-details">
+
+                <div class="av-location-detail">
+                    <div class="av-detail-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+
+                    <div>
+                        <span>LOCATION</span>
+                        <strong>Planetarium & Observatory Visitor Center</strong>
+                    </div>
+                </div>
+
+
+                <div class="av-location-detail">
+                    <div class="av-detail-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div>
+                        <span>VISITOR HOURS</span>
+                        <strong>Open throughout the week</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://www.google.com/maps"
+                target="_blank"
+                class="av-location-link"
+            >
+                Get Directions
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- MAP -->
+        <div class="av-location-map">
+
+            <iframe
+                src="https://www.google.com/maps?q=Planetarium&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Astra Vista Location">
+            </iframe>
+
+            <div class="av-map-tag">
+                <i data-lucide="map-pin"></i>
+                <span>ASTRA VISTA</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     HELP TOPICS
+========================================================= -->
+
+<section class="av-help">
+
+    <div class="container">
+
+        <div class="av-heading">
+
+            <div class="av-eyebrow">
+                <span></span>
+                NEED HELP?
+                <span></span>
+            </div>
+
+            <h2>
+                Find the Right
+                <em>Place to Begin.</em>
+            </h2>
+
+            <p>
+                Explore our most common visitor topics before
+                sending an enquiry.
+            </p>
+
+        </div>
+
+
+        <div class="av-help-grid">
+
+            <div class="av-help-card">
+
+                <i data-lucide="play-circle"></i>
+
+                <h3>Planetarium Shows</h3>
+
+                <p>
+                    Discover immersive journeys through stars,
+                    planets and distant galaxies.
+                </p>
+
+            </div>
+
+
+            <div class="av-help-card">
+
+                <i data-lucide="telescope"></i>
+
+                <h3>Observatory Nights</h3>
+
+                <p>
+                    Learn more about telescope experiences and
+                    opportunities to explore the night sky.
+                </p>
+
+            </div>
+
+
+            <div class="av-help-card">
+
+                <i data-lucide="graduation-cap"></i>
+
+                <h3>School Programs</h3>
+
+                <p>
+                    Explore educational experiences created
+                    for students and learning groups.
+                </p>
+
+            </div>
+
+
+            <div class="av-help-card">
+
+                <i data-lucide="sparkles"></i>
+
+                <h3>Membership</h3>
+
+                <p>
+                    Find out about membership experiences,
+                    benefits and visitor access.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ — SMALL PREMIUM
+========================================================= -->
+
+<section class="av-faq">
+
+    <div class="container">
+
+        <div class="av-heading">
+
+            <div class="av-eyebrow">
+                <span></span>
+                FAQ
+                <span></span>
+            </div>
+
+            <h2>
+                Questions,
+                <em>Answered.</em>
+            </h2>
+
+            <p>
+                A few quick answers before your visit.
+            </p>
+
+        </div>
+
+
+        <div class="av-faq-list">
+
+
+            <div class="av-faq-item">
+
+                <button class="av-faq-question">
+
+                    Do I need to book my visit in advance?
+
+                    <i data-lucide="plus"></i>
+
+                </button>
+
+                <div class="av-faq-answer">
+
+                    <p>
+                        Advance booking can be helpful for scheduled
+                        shows, school groups and larger visits.
+                        Check the relevant program information before arriving.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-faq-item">
+
+                <button class="av-faq-question">
+
+                    Can schools arrange a special visit?
+
+                    <i data-lucide="plus"></i>
+
+                </button>
+
+                <div class="av-faq-answer">
+
+                    <p>
+                        Yes. Schools and educational groups can contact
+                        our team to discuss suitable programs,
+                        scheduling and group arrangements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-faq-item">
+
+                <button class="av-faq-question">
+
+                    Are group visits available?
+
+                    <i data-lucide="plus"></i>
+
+                </button>
+
+                <div class="av-faq-answer">
+
+                    <p>
+                        Group visits can be arranged depending on
+                        availability. Send us your preferred date,
+                        group size and requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-faq-item">
+
+                <button class="av-faq-question">
+
+                    How can I ask about membership?
+
+                    <i data-lucide="plus"></i>
+
+                </button>
+
+                <div class="av-faq-answer">
+
+                    <p>
+                        Use the enquiry form above and select
+                        Membership as your enquiry type.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-faq-item">
+
+                <button class="av-faq-question">
+
+                    How can I contact Astra Vista directly?
+
+                    <i data-lucide="plus"></i>
+
+                </button>
+
+                <div class="av-faq-answer">
+
+                    <p>
+                        You can contact the visitor team by phone,
+                        email or through the enquiry form on this page.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA — COMPACT
+========================================================= -->
+
+<section class="av-final-cta">
+
+    <div class="container">
+
+        <div class="av-cta-content">
+
+            <div class="av-eyebrow">
+
+                <span></span>
+
+                KEEP LOOKING UP
+
+                <span></span>
+
+            </div>
+
+            <h2>
+                Your Next Discovery
+                <em>Starts Here.</em>
+            </h2>
+
+            <p>
+                Have something you'd like to explore?
+                Start a conversation with Astra Vista.
+            </p>
+
+            <a href="#contactForm" class="av-btn av-btn-primary">
+
+                Talk to Astra Vista
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   LUCIDE
+========================================================= */
+
+lucide.createIcons();
+
+
+/* =========================================================
+   TYPING HERO
+========================================================= */
+
+const typingText = document.getElementById("typingText");
+
+const words = [
+    "the Universe.",
+    "the Stars.",
+    "New Worlds.",
+    "Your Journey."
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect(){
+
+    const currentWord = words[wordIndex];
+
+    if(!deleting){
+
+        typingText.textContent =
+            currentWord.substring(0,charIndex + 1);
+
+        charIndex++;
+
+        if(charIndex === currentWord.length){
+
+            deleting = true;
+
+            setTimeout(typeEffect,1700);
+
+            return;
+        }
+
+    }else{
+
+        typingText.textContent =
+            currentWord.substring(0,charIndex - 1);
+
+        charIndex--;
+
+        if(charIndex === 0){
+
+            deleting = false;
+
+            wordIndex =
+                (wordIndex + 1) % words.length;
+        }
+    }
+
+    setTimeout(
+        typeEffect,
+        deleting ? 55 : 90
+    );
+}
+
+typeEffect();
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+const faqItems =
+    document.querySelectorAll(".av-faq-item");
+
+faqItems.forEach(item => {
+
+    const question =
+        item.querySelector(".av-faq-question");
+
+    const answer =
+        item.querySelector(".av-faq-answer");
+
+    question.addEventListener("click", () => {
+
+        const isOpen =
+            item.classList.contains("active");
+
+
+        faqItems.forEach(other => {
+
+            other.classList.remove("active");
+
+            other.querySelector(".av-faq-answer")
+                .style.maxHeight = null;
+
+        });
+
+
+        if(!isOpen){
+
+            item.classList.add("active");
+
+            answer.style.maxHeight =
+                answer.scrollHeight + "px";
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+const form =
+    document.querySelector(".av-form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const button =
+        form.querySelector(".av-submit");
+
+    button.innerHTML = `
+        Message Sent
+        <i data-lucide="check"></i>
+    `;
+
+    button.style.background =
+        "var(--secondary)";
+
+    lucide.createIcons();
+
+});
+
+
+</script>
+
+</body>
+</html>
