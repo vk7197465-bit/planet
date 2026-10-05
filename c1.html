@@ -1,103 +1,79 @@
 <!-- =========================================================
-     ASTRA VISTA — FINAL DISCOVERY CTA
+     ASTRA VISTA — SCHOOL PROGRAMS
+     PREMIUM EDUCATION EXPERIENCE
+     NO HEADER / NO FOOTER
 ========================================================= -->
 
-<section class="av-final-cta">
-
-    <div class="av-final-cta-frame">
-
-        <div class="av-final-cta-top">
-            <span></span>
-            <p>THE NEXT CHAPTER</p>
-            <span></span>
-        </div>
-
-        <div class="av-final-cta-content">
-
-            <h2>
-                There is more
-                <em>above.</em>
-            </h2>
-
-            <p>
-                Discover immersive shows, extraordinary night-sky events
-                and new ways to experience the universe.
-            </p>
-
-            <a href="Shows&programs.html" class="av-final-cta-link">
-                <span>Explore the Universe</span>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-        </div>
-
-        <div class="av-final-cta-bottom">
-            <span>ASTRAVISTA</span>
-            <span>PLANETARIUM · OBSERVATORY</span>
-        </div>
-
-    </div>
-
-</section>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.av-final-cta{
-    padding:25px 20px 110px;
-    background:#fff;
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+    --ink:#151827;
+    --muted:#697087;
+    --soft:#F5F7FC;
+    --line:#E5E8F1;
+    --white:#fff;
 }
 
-.av-final-cta-frame{
-    position:relative;
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-    width:100%;
-    max-width:1120px;
-    min-height:350px;
-
-    margin:auto;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    padding:55px 35px;
-
-    border:1px solid var(--border);
-    border-radius:26px;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(115,87,232,.07),
-            transparent 48%
-        ),
-        var(--surface);
-
+.av-school{
+    font-family:"DM Sans",sans-serif;
+    color:var(--ink);
+    background:#fff;
     overflow:hidden;
 }
 
+.av-school *{
+    box-sizing:border-box;
+}
 
-/* TOP LABEL */
+.av-school img{
+    display:block;
+    width:100%;
+}
 
-.av-final-cta-top{
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.avs-section{
+    padding:110px 0;
+}
+
+.avs-container{
+    width:min(1180px,91%);
+    margin:auto;
+}
+
+.avs-heading{
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.avs-eyebrow{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:13px;
-
-    margin-bottom:21px;
+    gap:10px;
+    margin-bottom:17px;
+    color:var(--secondary);
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:3px;
 }
 
-.av-final-cta-top span{
-    width:30px;
+.avs-eyebrow span{
+    width:24px;
     height:1px;
-
     background:linear-gradient(
         90deg,
         var(--primary),
@@ -105,186 +81,2097 @@
     );
 }
 
-.av-final-cta-top p{
+.avs-heading h2{
     margin:0;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    letter-spacing:-2.5px;
+    font-weight:500;
+}
 
+.avs-heading h2 em{
+    font-style:normal;
     color:var(--secondary);
+}
 
-    font-family:"DM Sans",sans-serif;
-
-    font-size:9px;
-    font-weight:800;
-    letter-spacing:2.8px;
+.avs-heading p{
+    max-width:570px;
+    margin:20px auto 0;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.9;
 }
 
 
-/* CONTENT */
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-.av-final-cta-content{
-    max-width:700px;
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.av-school-hero{
+
+    position:relative;
+
+    min-height:760px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:#050713;
+
+    color:#fff;
+
+    isolation:isolate;
+}
+
+
+/* =========================================================
+   STATIC BACKGROUND IMAGE
+========================================================= */
+
+.av-school-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-4;
+
+    background:
+        url("images/deepspace.jpg")
+        center center /
+        cover
+        no-repeat;
+
+}
+
+
+/* =========================================================
+   DARK CINEMATIC OVERLAY
+========================================================= */
+
+.av-school-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-3;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(115,87,232,.17),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(4,6,18,.48),
+            rgba(4,6,18,.68) 48%,
+            rgba(4,6,18,.94)
+        );
+}
+
+
+/* =========================================================
+   STATIC STARS
+========================================================= */
+
+.av-school-stars{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-2;
+
+    opacity:.35;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        105px 95px;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.av-school-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.av-school-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+    color:#c5cae8;
+
+    font:
+        700 9px
+        "DM Sans",sans-serif;
+
+    letter-spacing:3.5px;
+}
+
+
+.av-school-eyebrow span{
+
+    width:32px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--secondary)
+        );
+}
+
+
+.av-school-eyebrow span:last-child{
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-school-content h1{
+
+    margin:0;
+
+    color:#fff;
+
+    font:
+        500 clamp(54px,7vw,88px)
+        "Playfair Display",serif;
+
+    line-height:.98;
+
+    letter-spacing:-4px;
+}
+
+
+/* =========================================================
+   TYPING LINE
+========================================================= */
+
+.av-typing-line{
+
+    display:block;
+
+    min-height:1.05em;
+
+    color:transparent;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #ffffff 0%,
+            #c8c3ff 45%,
+            #7357E8 100%
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+}
+
+
+#avTypingText{
+
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.av-cursor{
+
+    display:inline-block;
+
+    width:2px;
+
+    height:.78em;
+
+    margin-left:6px;
+
+    vertical-align:-2px;
+
+    background:
+        var(--secondary);
+
+    box-shadow:
+        0 0 14px
+        rgba(115,87,232,.9);
+
+    animation:
+        avCursorBlink
+        .8s
+        steps(1)
+        infinite;
+}
+
+
+@keyframes avCursorBlink{
+
+    0%,
+    45%{
+        opacity:1;
+    }
+
+    46%,
+    100%{
+        opacity:0;
+    }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-school-content > p{
+
+    max-width:590px;
+
+    margin:27px auto 0;
+
+    color:
+        rgba(255,255,255,.67);
+
+    font:
+        400 13px/1.9
+        "DM Sans",sans-serif;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.av-school-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+    margin-top:31px;
+}
+
+
+.av-school-btn{
+
+    min-height:44px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 20px;
+
+    text-decoration:none;
+border-radius: 5px;
+    font:
+        700 9px
+      ;
+
+    letter-spacing:.7px;
+
+    transition:.3s ease;
+}
+
+
+/* PRIMARY */
+
+.av-school-btn.primary{
+
+    gap:10px;
+
+    color:#fff;
+
+    background:var(--primary);
+
+    box-shadow:
+        0 12px 30px
+        rgba(115,87,232,.24);
+}
+
+
+.av-school-btn.primary span{
+
+    font-size:14px;
+}
+
+
+.av-school-btn.primary:hover{
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* SECONDARY */
+
+.av-school-btn.secondary{
+
+    color:
+        rgba(255,255,255,.82);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+.av-school-btn.secondary:hover{
+
+    border-color:
+        rgba(255,255,255,.5);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   INFORMATION STRIP
+========================================================= */
+
+.av-school-info{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:min(650px,100%);
+
+    margin-top:52px;
+
+    padding-top:18px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.14);
+}
+
+
+.av-info-item{
+
+    flex:1;
 
     text-align:center;
 }
 
-.av-final-cta-content h2{
-    margin:0;
 
-    color:var(--text);
+.av-info-item strong{
 
-    font-family:"Playfair Display",Georgia,serif;
+    display:block;
 
-    font-size:clamp(46px,6vw,76px);
-    line-height:.98;
+    margin-bottom:5px;
 
-    font-weight:500;
-    letter-spacing:-3px;
-}
+    color:#fff;
 
-.av-final-cta-content h2 em{
-    font-style:italic;
-
-    background:linear-gradient(
-        100deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.av-final-cta-content p{
-    max-width:510px;
-
-    margin:22px auto 27px;
-
-    color:var(--text-soft);
-
-    font-family:"DM Sans",sans-serif;
-
-    font-size:13px;
-    line-height:1.75;
+    font:
+        500 19px
+        "Playfair Display",serif;
 }
 
 
-/* BUTTON */
+.av-info-item span{
 
-.av-final-cta-link{
-    position:relative;
+    display:block;
 
-    display:inline-flex;
-    align-items:center;
-    gap:13px;
+    color:
+        rgba(255,255,255,.36);
 
-    padding:13px 3px;
+    font:
+        700 6px
+        "DM Sans",sans-serif;
 
-    color:var(--text);
-
-    text-decoration:none;
-
-    font-family:"DM Sans",sans-serif;
-
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:.3px;
-
-    border-bottom:1px solid var(--text);
-
-    transition:
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.av-final-cta-link i{
-    color:var(--secondary);
-
-    font-size:10px;
-
-    transition:transform .25s ease;
-}
-
-.av-final-cta-link:hover{
-    color:var(--secondary);
-    border-color:var(--secondary);
-}
-
-.av-final-cta-link:hover i{
-    transform:translateX(5px);
+    letter-spacing:1.2px;
 }
 
 
-/* BOTTOM MICRO LABEL */
+.av-school-info i{
 
-.av-final-cta-bottom{
+    width:1px;
+
+    height:28px;
+
+    background:
+        rgba(255,255,255,.14);
+}
+
+
+/* =========================================================
+   BOTTOM LABEL
+========================================================= */
+
+.av-school-bottom{
+
     position:absolute;
 
-    left:32px;
-    right:32px;
-    bottom:22px;
+    left:5%;
+
+    right:5%;
+
+    bottom:25px;
+
+    z-index:5;
 
     display:flex;
+
     align-items:center;
-    justify-content:space-between;
 
-    padding-top:13px;
+    gap:14px;
 
-    border-top:1px solid var(--border);
-}
+    color:
+        rgba(255,255,255,.30);
 
-.av-final-cta-bottom span{
-    color:var(--text-muted);
+    font:
+        700 6px
+        "DM Sans",sans-serif;
 
-    font-family:"DM Sans",sans-serif;
-
-    font-size:7px;
-    font-weight:800;
     letter-spacing:1.8px;
 }
 
 
-/* MOBILE */
+.av-school-bottom b{
+
+    flex:1;
+
+    height:1px;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+    .av-school-hero{
+
+        min-height:700px;
+    }
+
+    .av-school-content h1{
+
+        font-size:
+            clamp(48px,9vw,72px);
+
+        letter-spacing:-3px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:600px){
 
-    .av-final-cta{
-        padding:15px 14px 75px;
+    .av-school-hero{
+
+        min-height:670px;
     }
 
-    .av-final-cta-frame{
-        min-height:390px;
+    .av-school-content{
 
-        padding:45px 22px;
-
-        border-radius:20px;
+        width:88%;
     }
 
-    .av-final-cta-content h2{
-        font-size:48px;
+    .av-school-eyebrow{
+
+        font-size:7px;
+
+        letter-spacing:2.5px;
+    }
+
+    .av-school-eyebrow span{
+
+        width:20px;
+    }
+
+    .av-school-content h1{
+
+        font-size:43px;
+
         letter-spacing:-2px;
+
+        line-height:1;
     }
 
-    .av-final-cta-content p{
-        margin-top:18px;
+    .av-school-content > p{
 
+        margin-top:22px;
+
+        font-size:11px;
+
+        line-height:1.8;
+    }
+
+    .av-school-actions{
+
+        flex-wrap:wrap;
+
+        margin-top:26px;
+    }
+
+    .av-school-btn{
+
+        min-height:42px;
+
+        padding:0 16px;
+    }
+
+    .av-school-info{
+
+        margin-top:40px;
+
+        padding-top:15px;
+    }
+
+    .av-info-item strong{
+
+        font-size:16px;
+    }
+
+    .av-info-item span{
+
+        font-size:4.5px;
+
+        letter-spacing:.7px;
+    }
+
+    .av-school-bottom{
+
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px){
+
+    .av-school-hero{
+
+        min-height:640px;
+    }
+
+    .av-school-content h1{
+
+        font-size:38px;
+    }
+
+    .av-school-content > p{
+
+        font-size:10.5px;
+    }
+
+}
+
+
+/* =========================================================
+   02 — PROGRAM PATH
+========================================================= */
+
+.avs-path{
+    background:var(--soft);
+}
+
+.avs-path-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.avs-path-card{
+    position:relative;
+    min-height:370px;
+    padding:30px;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--line);
+    transition:.35s ease;
+}
+
+.avs-path-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 25px 60px rgba(20,30,70,.10);
+}
+
+.avs-path-number{
+    position:absolute;
+    right:25px;
+    top:20px;
+    color:#e8eaf1;
+    font-family:"Playfair Display",serif;
+    font-size:60px;
+    line-height:1;
+}
+
+.avs-path-image{
+    width:100%;
+    height:155px;
+    margin-bottom:25px;
+    overflow:hidden;
+}
+
+.avs-path-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.avs-path-card:hover img{
+    transform:scale(1.07);
+}
+
+.avs-path-card small{
+    color:var(--secondary);
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.avs-path-card h3{
+    margin:9px 0 10px;
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    font-weight:500;
+}
+
+.avs-path-card p{
+    margin:0;
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   03 — IMMERSIVE LEARNING
+========================================================= */
+
+.avs-experience{
+    background:#fff;
+}
+
+.avs-experience-layout{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:70px;
+    align-items:center;
+}
+
+.avs-experience-image{
+    position:relative;
+    height:570px;
+    overflow:hidden;
+}
+
+.avs-experience-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.avs-image-tag{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    padding:13px 16px;
+    color:#fff;
+    background:rgba(7,10,25,.78);
+    backdrop-filter:blur(12px);
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.avs-experience-copy{
+    max-width:510px;
+}
+
+.avs-experience-copy .avs-eyebrow{
+    justify-content:flex-start;
+}
+
+.avs-experience-copy h2{
+    margin:0;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,61px);
+    line-height:.98;
+    letter-spacing:-2.5px;
+    font-weight:500;
+}
+
+.avs-experience-copy h2 em{
+    color:var(--secondary);
+    font-style:normal;
+}
+
+.avs-experience-copy > p{
+    margin:22px 0 30px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.avs-feature-list{
+    display:grid;
+    gap:12px;
+}
+
+.avs-feature{
+    display:grid;
+    grid-template-columns:38px 1fr;
+    gap:13px;
+    align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.avs-feature-icon{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+    font-size:12px;
+}
+
+.avs-feature strong{
+    display:block;
+    font-size:11px;
+    margin-bottom:3px;
+}
+
+.avs-feature span{
+    color:var(--muted);
+    font-size:9px;
+}
+
+/* =========================================================
+   04 — PROGRAMS
+========================================================= */
+
+.avs-programs{
+    background:#F7F8FC;
+}
+
+.avs-program-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.avs-program-card{
+    position:relative;
+    height:420px;
+    overflow:hidden;
+    background:#111526;
+}
+
+.avs-program-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+.avs-program-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 25%,
+            rgba(4,6,17,.9) 100%
+        );
+}
+
+.avs-program-card:hover img{
+    transform:scale(1.08);
+}
+
+.avs-program-info{
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:23px;
+    z-index:2;
+    color:#fff;
+}
+
+.avs-program-info small{
+    color:#bdb8ff;
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.avs-program-info h3{
+    margin:7px 0 8px;
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    line-height:1;
+    font-weight:500;
+}
+
+.avs-program-info p{
+    min-height:44px;
+    margin:0;
+    color:rgba(255,255,255,.6);
+    font-size:9px;
+    line-height:1.6;
+}
+
+/* =========================================================
+   05 — HOW IT WORKS
+========================================================= */
+
+.avs-journey{
+    background:#fff;
+}
+
+.avs-journey-line{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.avs-journey-line::before{
+    content:"";
+    position:absolute;
+    top:31px;
+    left:11%;
+    right:11%;
+    height:1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+    opacity:.25;
+}
+
+.avs-step{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.avs-step-circle{
+    width:62px;
+    height:62px;
+    margin:0 auto 23px;
+    display:grid;
+    place-items:center;
+    border:1px solid #dfe2ec;
+    background:#fff;
+    color:var(--secondary);
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    box-shadow:0 8px 25px rgba(20,30,70,.06);
+}
+
+.avs-step h3{
+    margin:0 0 8px;
+    font-size:13px;
+}
+
+.avs-step p{
+    max-width:190px;
+    margin:auto;
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   06 — SCHOOL BENEFITS
+========================================================= */
+
+.avs-benefits{
+    background:
+        linear-gradient(
+            135deg,
+            #F4F6FC,
+            #fff
+        );
+}
+
+.avs-benefit-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.avs-benefit{
+    min-height:245px;
+    padding:30px;
+    border:1px solid var(--line);
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:.3s ease;
+}
+
+.avs-benefit:hover{
+    transform:translateY(-5px);
+    border-color:rgba(115,87,232,.35);
+}
+
+.avs-benefit-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.avs-benefit-number{
+    color:#dfe2ed;
+    font-family:"Playfair Display",serif;
+    font-size:38px;
+}
+
+.avs-benefit-icon{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+}
+
+.avs-benefit h3{
+    margin:25px 0 8px;
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+    font-weight:500;
+}
+
+.avs-benefit p{
+    max-width:430px;
+    margin:0;
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   07 — CTA
+========================================================= */
+
+.avs-cta{
+    padding:80px 0 100px;
+}
+
+.avs-cta-box{
+    position:relative;
+    min-height:330px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    text-align:center;
+    color:#fff;
+    background:#080B19;
+}
+
+.avs-cta-image{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,18,.88),
+            rgba(23,63,159,.55),
+            rgba(5,7,18,.88)
+        ),
+        url("images/school-space.jpg")
+        center/cover no-repeat;
+}
+
+.avs-cta-content{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    padding:40px 20px;
+}
+
+.avs-cta-content .avs-eyebrow{
+    color:#c4c9e2;
+}
+
+.avs-cta-content h2{
+    margin:0;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,5vw,58px);
+    line-height:1;
+    font-weight:500;
+    letter-spacing:-2px;
+}
+
+.avs-cta-content p{
+    max-width:500px;
+    margin:17px auto 25px;
+    color:rgba(255,255,255,.62);
+    font-size:11px;
+    line-height:1.8;
+}
+
+.avs-cta-content .avs-btn{
+    background:#fff;
+    color:var(--primary);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+    .avs-section{
+        padding:85px 0;
+    }
+
+    .avs-path-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .avs-experience-layout{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .avs-experience-image{
+        height:470px;
+    }
+
+    .avs-program-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .avs-journey-line{
+        grid-template-columns:1fr 1fr;
+        row-gap:45px;
+    }
+
+    .avs-journey-line::before{
+        display:none;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .avs-section{
+        padding:70px 0;
+    }
+
+    .avs-heading{
+        margin-bottom:40px;
+    }
+
+    .avs-heading h2{
+        font-size:40px;
+    }
+
+    .avs-hero{
+        min-height:670px;
+    }
+
+    .avs-hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+    }
+
+    .avs-hero-copy p{
         font-size:11px;
     }
 
-    .av-final-cta-top{
-        margin-bottom:18px;
+    .avs-hero-actions{
+        flex-wrap:wrap;
     }
 
-    .av-final-cta-bottom{
-        left:20px;
-        right:20px;
-        bottom:17px;
+    .avs-path-grid,
+    .avs-program-grid,
+    .avs-benefit-layout{
+        grid-template-columns:1fr;
     }
 
-    .av-final-cta-bottom span{
-        font-size:6px;
-        letter-spacing:1px;
+    .avs-path-card{
+        min-height:350px;
+    }
+
+    .avs-experience-image{
+        height:390px;
+    }
+
+    .avs-experience-copy h2{
+        font-size:42px;
+    }
+
+    .avs-program-card{
+        height:390px;
+    }
+
+    .avs-journey-line{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .avs-journey-line::before{
+        display:none;
+    }
+
+    .avs-cta{
+        padding:60px 0 70px;
+    }
+
+    .avs-cta-box{
+        min-height:350px;
     }
 
 }
 
 </style>
+
+
+<div class="av-school">
+
+
+
+<section class="av-school-hero" id="school-programs">
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="av-school-bg"></div>
+
+    <!-- OVERLAYS -->
+    <div class="av-school-overlay"></div>
+    <div class="av-school-stars"></div>
+
+    <!-- CENTER CONTENT -->
+    <div class="av-school-content">
+
+        <div class="av-school-eyebrow">
+            <span></span>
+            SCHOOL PROGRAMS
+            <span></span>
+        </div>
+
+        <h1>
+            Where Learning
+            <span class="av-typing-line">
+                <span id="avTypingText"></span>
+                <span class="av-cursor"></span>
+            </span>
+        </h1>
+
+        <p>
+            Take students beyond the classroom into an immersive
+            journey through stars, planets, galaxies and the science
+            that connects us to the universe.
+        </p>
+
+        <div class="av-school-actions">
+
+            <a href="#school-experiences"
+               class="av-school-btn primary">
+                Explore Programs
+               
+            </a>
+
+            <a href="#school-booking"
+               class="av-school-btn secondary">
+                Plan a School Visit
+            </a>
+
+        </div>
+
+
+
+</section>
+
+<script>
+
+/* =========================================================
+   ASTRA VISTA — TYPING TEXT
+========================================================= */
+
+const avTypingText =
+    document.getElementById("avTypingText");
+
+const avTypingWords = [
+
+    "Comes Alive",
+    "Becomes an Adventure",
+    "Reaches the Stars",
+    "Meets the Cosmos"
+
+];
+
+let avTypingWord = 0;
+
+let avTypingChar = 0;
+
+let avTypingDeleting = false;
+
+
+function avTypeText(){
+
+    const word =
+        avTypingWords[avTypingWord];
+
+
+    /* TYPE */
+
+    if(!avTypingDeleting){
+
+        avTypingText.textContent =
+            word.substring(
+                0,
+                avTypingChar + 1
+            );
+
+        avTypingChar++;
+
+
+        /* WORD COMPLETE */
+
+        if(
+            avTypingChar >=
+            word.length
+        ){
+
+            avTypingDeleting = true;
+
+            setTimeout(
+                avTypeText,
+                1700
+            );
+
+            return;
+        }
+
+
+        setTimeout(
+            avTypeText,
+            85
+        );
+
+        return;
+    }
+
+
+    /* DELETE */
+
+    avTypingText.textContent =
+        word.substring(
+            0,
+            avTypingChar - 1
+        );
+
+    avTypingChar--;
+
+
+    /* NEXT WORD */
+
+    if(avTypingChar <= 0){
+
+        avTypingDeleting = false;
+
+        avTypingWord =
+            (avTypingWord + 1)
+            % avTypingWords.length;
+
+        setTimeout(
+            avTypeText,
+            350
+        );
+
+        return;
+    }
+
+
+    setTimeout(
+        avTypeText,
+        45
+    );
+}
+
+
+avTypeText();
+
+</script>
+
+<!-- =========================================================
+     02 — LEARNING PATH
+========================================================= -->
+
+<section class="avs-section avs-path">
+
+    <div class="avs-container">
+
+        <div class="avs-heading">
+
+            <div class="avs-eyebrow">
+                <span></span>
+                DESIGNED FOR DISCOVERY
+                <span></span>
+            </div>
+
+            <h2>
+                Every visit becomes a
+                <em>learning journey.</em>
+            </h2>
+
+            <p>
+                Experiences are structured to help students
+                observe, question, understand and imagine.
+            </p>
+
+        </div>
+
+
+        <div class="avs-path-grid">
+
+
+            <article class="avs-path-card">
+
+                <div class="avs-path-number">01</div>
+
+                <div class="avs-path-image">
+                    <img
+                        src="images/school-class.jpg"
+                        alt="Students learning astronomy"
+                    >
+                </div>
+
+                <small>PREPARE</small>
+
+                <h3>Build Curiosity</h3>
+
+                <p>
+                    Introduce students to the questions,
+                    ideas and discoveries they will encounter
+                    during their AstraVista experience.
+                </p>
+
+            </article>
+
+
+            <article class="avs-path-card">
+
+                <div class="avs-path-number">02</div>
+
+                <div class="avs-path-image">
+                    <img
+                        src="images/planetarium-students.jpg"
+                        alt="Students inside planetarium"
+                    >
+                </div>
+
+                <small>EXPERIENCE</small>
+
+                <h3>See the Universe</h3>
+
+                <p>
+                    Immersive visual storytelling transforms
+                    astronomy concepts into memorable journeys
+                    through space and time.
+                </p>
+
+            </article>
+
+
+            <article class="avs-path-card">
+
+                <div class="avs-path-number">03</div>
+
+                <div class="avs-path-image">
+                    <img
+                        src="images/telescope-students.jpg"
+                        alt="Students observing through telescope"
+                    >
+                </div>
+
+                <small>DISCOVER</small>
+
+                <h3>Ask Bigger Questions</h3>
+
+                <p>
+                    Guided observation encourages students
+                    to connect what they see with science,
+                    evidence and the world around them.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 — IMMERSIVE EXPERIENCE
+========================================================= -->
+
+<section class="avs-section avs-experience">
+
+    <div class="avs-container">
+
+        <div class="avs-experience-layout">
+
+            <div class="avs-experience-image">
+
+                <img
+                    src="images/planetarium-school.jpg"
+                    alt="Students experiencing a planetarium show"
+                >
+
+                <div class="avs-image-tag">
+                    IMMERSIVE ASTRONOMY EXPERIENCE
+                </div>
+
+            </div>
+
+
+            <div class="avs-experience-copy">
+
+                <div class="avs-eyebrow">
+                    <span></span>
+                    INSIDE THE EXPERIENCE
+                </div>
+
+                <h2>
+                    Science becomes
+                    <em>something they can see.</em>
+                </h2>
+
+                <p>
+                    AstraVista combines visual storytelling,
+                    astronomy education and live guidance to
+                    create experiences that students remember
+                    long after their visit.
+                </p>
+
+
+                <div class="avs-feature-list">
+
+                    <div class="avs-feature">
+
+                        <div class="avs-feature-icon">01</div>
+
+                        <div>
+                            <strong>Immersive Shows</strong>
+                            <span>
+                                Explore planets, stars and galaxies.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="avs-feature">
+
+                        <div class="avs-feature-icon">02</div>
+
+                        <div>
+                            <strong>Guided Learning</strong>
+                            <span>
+                                Concepts explained for student groups.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="avs-feature">
+
+                        <div class="avs-feature-icon">03</div>
+
+                        <div>
+                            <strong>Real Sky Observation</strong>
+                            <span>
+                                Connect classroom learning with the sky.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     04 — PROGRAM COLLECTION
+========================================================= -->
+
+<section
+    class="avs-section avs-programs"
+    id="programs"
+>
+
+    <div class="avs-container">
+
+        <div class="avs-heading">
+
+            <div class="avs-eyebrow">
+                <span></span>
+                SCHOOL EXPERIENCES
+                <span></span>
+            </div>
+
+            <h2>
+                Choose their next
+                <em>adventure.</em>
+            </h2>
+
+            <p>
+                Flexible experiences designed around different
+                ages, interests and ways of learning.
+            </p>
+
+        </div>
+
+
+        <div class="avs-program-grid">
+
+
+            <article class="avs-program-card">
+
+                <img
+                    src="images/kids-cosmos.jpg"
+                    alt="Young students exploring space"
+                >
+
+                <div class="avs-program-info">
+
+                    <small>FOUNDATION</small>
+
+                    <h3>
+                        Little Explorers
+                    </h3>
+
+                    <p>
+                        A playful introduction to planets,
+                        stars and the night sky.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-program-card">
+
+                <img
+                    src="images/space-students.jpg"
+                    alt="Students learning about space"
+                >
+
+                <div class="avs-program-info">
+
+                    <small>SCIENCE</small>
+
+                    <h3>
+                        Cosmic Classroom
+                    </h3>
+
+                    <p>
+                        Discover how astronomy helps us
+                        understand our place in the universe.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-program-card">
+
+                <img
+                    src="images/astronomy-class.jpg"
+                    alt="Astronomy students"
+                >
+
+                <div class="avs-program-info">
+
+                    <small>EXPLORATION</small>
+
+                    <h3>
+                        Beyond Earth
+                    </h3>
+
+                    <p>
+                        Investigate distant worlds, moons,
+                        missions and planetary science.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-program-card">
+
+                <img
+                    src="images/telescope-night.jpg"
+                    alt="Students observing the night sky"
+                >
+
+                <div class="avs-program-info">
+
+                    <small>OBSERVATION</small>
+
+                    <h3>
+                        Night Sky Lab
+                    </h3>
+
+                    <p>
+                        Meet the real night sky through
+                        guided telescope observation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 — VISIT JOURNEY
+========================================================= -->
+
+<section
+    class="avs-section avs-journey"
+    id="journey"
+>
+
+    <div class="avs-container">
+
+        <div class="avs-heading">
+
+            <div class="avs-eyebrow">
+                <span></span>
+                YOUR SCHOOL VISIT
+                <span></span>
+            </div>
+
+            <h2>
+                From classroom to
+                <em>cosmos.</em>
+            </h2>
+
+            <p>
+                A simple four-stage experience designed
+                to make every school visit meaningful.
+            </p>
+
+        </div>
+
+
+        <div class="avs-journey-line">
+
+
+            <div class="avs-step">
+
+                <div class="avs-step-circle">
+                    01
+                </div>
+
+                <h3>Plan</h3>
+
+                <p>
+                    Select an experience that fits
+                    your students and learning goals.
+                </p>
+
+            </div>
+
+
+            <div class="avs-step">
+
+                <div class="avs-step-circle">
+                    02
+                </div>
+
+                <h3>Arrive</h3>
+
+                <p>
+                    Students enter a space designed
+                    to immediately spark curiosity.
+                </p>
+
+            </div>
+
+
+            <div class="avs-step">
+
+                <div class="avs-step-circle">
+                    03
+                </div>
+
+                <h3>Explore</h3>
+
+                <p>
+                    Discover the universe through
+                    immersive shows and observation.
+                </p>
+
+            </div>
+
+
+            <div class="avs-step">
+
+                <div class="avs-step-circle">
+                    04
+                </div>
+
+                <h3>Reflect</h3>
+
+                <p>
+                    Take new questions and discoveries
+                    back into the classroom.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     06 — SCHOOL BENEFITS
+========================================================= -->
+
+<section class="avs-section avs-benefits">
+
+    <div class="avs-container">
+
+        <div class="avs-heading">
+
+            <div class="avs-eyebrow">
+                <span></span>
+                WHY ASTRAVISTA
+                <span></span>
+            </div>
+
+            <h2>
+                Built for
+                <em>real learning.</em>
+            </h2>
+
+            <p>
+                More than a field trip — an experience that
+                gives teachers and students something to take
+                back with them.
+            </p>
+
+        </div>
+
+
+        <div class="avs-benefit-layout">
+
+
+            <article class="avs-benefit">
+
+                <div class="avs-benefit-top">
+
+                    <div class="avs-benefit-icon">
+                        ✦
+                    </div>
+
+                    <div class="avs-benefit-number">
+                        01
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3>Curriculum Connection</h3>
+
+                    <p>
+                        Astronomy experiences complement classroom
+                        learning by turning scientific ideas into
+                        memorable visual experiences.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-benefit">
+
+                <div class="avs-benefit-top">
+
+                    <div class="avs-benefit-icon">
+                        ◇
+                    </div>
+
+                    <div class="avs-benefit-number">
+                        02
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3>Curiosity First</h3>
+
+                    <p>
+                        Every experience encourages students to
+                        ask questions, investigate possibilities
+                        and think beyond familiar boundaries.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-benefit">
+
+                <div class="avs-benefit-top">
+
+                    <div class="avs-benefit-icon">
+                        ◎
+                    </div>
+
+                    <div class="avs-benefit-number">
+                        03
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3>Memorable Experiences</h3>
+
+                    <p>
+                        Immersive environments give students
+                        powerful visual memories that make
+                        complex concepts easier to remember.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="avs-benefit">
+
+                <div class="avs-benefit-top">
+
+                    <div class="avs-benefit-icon">
+                        ↗
+                    </div>
+
+                    <div class="avs-benefit-number">
+                        04
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3>Beyond the Classroom</h3>
+
+                    <p>
+                        Students leave with new questions,
+                        fresh perspectives and a deeper interest
+                        in the world beyond Earth.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     07 — CTA
+========================================================= -->
+
+<section class="avs-cta">
+
+    <div class="avs-container">
+
+        <div class="avs-cta-box">
+
+            <div class="avs-cta-image"></div>
+
+            <div class="avs-cta-content">
+
+                <div class="avs-eyebrow">
+                    <span></span>
+                    PLAN YOUR VISIT
+                    <span></span>
+                </div>
+
+                <h2>
+                    Take the classroom
+                    to the stars.
+                </h2>
+
+                <p>
+                    Bring your students to AstraVista for
+                    an unforgettable journey through space,
+                    science and discovery.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="avs-btn"
+                >
+                    Plan A School Visit
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>

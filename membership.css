@@ -144,7 +144,7 @@
     position:absolute;
     inset:0;
 
-    background-image:url("images/membership-hero.jpg");
+    background-image:url("images/p10.jfif");
     background-size:cover;
     background-position:center;
 
@@ -297,7 +297,8 @@
 .av-membership-content{
 
     max-width:650px;
-
+padding-top:1vh;
+padding-bottom: 10vh;
     animation:avContentIn .9s ease both;
 }
 

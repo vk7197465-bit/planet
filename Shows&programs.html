@@ -1,0 +1,3111 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>AstraVista | Planetarium & Observatory Visitor Center</title>
+
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+<link rel="icon" type="image/png" sizes="42x42" href="images/logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet">
+
+<!-- =========================================================
+     LUCIDE
+========================================================= -->
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="shows.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="care-header" id="header">
+
+    <div class="header-inner">
+
+
+        <!-- BRAND -->
+
+        <a href="#" class="brand">
+<div class="logo-box image-logo">
+    <img src="images/logo.png" alt="">
+</div>
+
+            <div class="brand-text">
+
+<span class="brand-name">
+    <span class="brand-primary">Astra</span>
+    <span class="brand-secondary">Vista</span>
+</span>                <span class="brand-tag">
+                  ASTRONOMY 
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             DESKTOP NAVIGATION
+        ================================================== -->
+
+        <nav class="main-nav">
+ 
+
+            <!-- HOME DROPDOWN -->
+
+            <div class="dropdown" id="homeDropdown">
+
+                <a href="#"
+                   class="nav-link"
+                   id="homeToggle">
+
+                    Home
+
+                    <i data-lucide="chevron-down"
+                       class="nav-arrow">
+                    </i>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <div class="dropdown-title">
+                        Explore Home
+                    </div>
+
+
+                    <a href="index.html"
+                       class="dropdown-item">
+
+
+                        Home 1
+
+                    </a>
+
+
+                    <a href="home.html"
+                       class="dropdown-item">
+
+
+                        Home 2
+
+                    </a>
+
+
+                    
+                </div>
+
+            </div>
+
+
+
+            <a href="Shows&programs.html"
+               class="nav-link">
+                Shows & programs
+            </a>
+
+      <a href="School Programs.html"
+               class="nav-link">
+                School Programs
+            </a>
+            <a href="Membership.html"
+               class="nav-link">
+                Membership
+            </a>
+
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+            <a href="dashboard.html"
+               class="nav-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             HEADER ACTIONS
+        ================================================== -->
+
+        <div class="header-actions">
+
+
+            <!-- THEME -->
+
+            <button
+                class="icon-btn"
+                id="themeBtn"
+                type="button"
+                title="Toggle theme"
+                aria-label="Toggle theme">
+
+                <i data-lucide="moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+
+            <button
+                class="icon-btn"
+                id="rtlBtn"
+                type="button"
+                title="RTL / LTR"
+                aria-label="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+
+ 
+            </button>
+
+
+            <!-- DESKTOP LOGIN -->
+
+            <a href="login.html"
+               class="login-btn desktop-login">
+
+
+                <span>Login</span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RESPONSIVE MOBILE / TABLET PANEL
+    ====================================================== -->
+
+    <div class="mobile-panel"
+         id="mobilePanel">
+
+
+        <!-- HOME -->
+
+        <div class="mobile-nav-group">
+
+
+            <button
+                class="mobile-nav-dropdown"
+                id="mobileHomeBtn"
+                type="button"
+                aria-expanded="false">
+
+                <span>
+
+
+                    Home
+
+                </span>
+
+
+                <i data-lucide="chevron-down"
+                   class="mobile-chevron">
+                </i>
+
+            </button>
+
+
+            <!-- HOME SUBMENU -->
+
+            <div class="mobile-dropdown"
+                 id="mobileHomeDropdown">
+
+
+                <a href="index.html">
+
+              
+
+                    Home 1
+
+                </a>
+
+
+                <a href="home.html">
+
+                  
+
+                    Home 2
+
+                </a>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <a href="Shows&programs.html">
+
+        
+
+            Shows & programs
+
+        </a>
+       <a href="School Programs.html">
+
+
+            School Programs
+
+        </a>
+
+        <a href="Membership.html">
+
+
+            Membership
+
+        </a>
+
+
+    
+
+        <a href="contact.html">
+
+
+
+            Contact
+
+        </a>
+
+
+        <a href="dashboard.html">
+
+         
+
+            Dashboard
+
+        </a>
+
+
+        <!-- MOBILE LOGIN -->
+
+        <a href="login.html"
+           class="mobile-login">
+
+            <i data-lucide="log-in"></i>
+
+            Login
+
+        </a>
+
+    </div>
+
+</header>
+<section class="av-program-hero" id="shows">
+
+    <div class="av-program-bg"></div>
+    <div class="av-program-stars"></div>
+    <div class="av-program-glow"></div>
+
+    <div class="av-program-wrap">
+
+        <!-- =================================================
+             LEFT CONTENT
+        ================================================== -->
+
+        <div class="av-program-copy">
+
+            <div class="av-program-eyebrow">
+                <span></span>
+                SHOWS & PROGRAMS
+                <span></span>
+            </div>
+
+            <h1>
+                Discover
+                <strong>Another</strong>
+                Universe
+            </h1>
+
+            <p>
+                Step into immersive planetarium shows, live sky
+                presentations and extraordinary observatory
+                experiences designed to bring the universe closer.
+            </p>
+
+            <div class="av-program-actions">
+
+                <a href="#programs"
+                   class="av-program-btn primary">
+
+                    Explore Programs
+
+                </a>
+
+             
+
+            </div>
+
+            <!-- STATS -->
+
+            <div class="av-program-stats">
+
+                <div>
+                    <strong>04</strong>
+                    <span>FEATURED PROGRAMS</span>
+                </div>
+
+                <div>
+                    <strong>360°</strong>
+                    <span>IMMERSIVE EXPERIENCE</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>WORLDS TO DISCOVER</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT IMAGE SHOWCASE
+        ================================================== -->
+
+        <div class="av-program-showcase">
+
+            <div class="av-program-frame">
+
+                <div
+                    class="av-program-image"
+                    id="avProgramImage"
+                >
+
+                    <div class="av-image-overlay"></div>
+
+                    <div class="av-scan-beam"></div>
+
+
+                    <!-- CORNERS -->
+
+                    <i class="av-frame-corner top-left"></i>
+                    <i class="av-frame-corner top-right"></i>
+                    <i class="av-frame-corner bottom-left"></i>
+                    <i class="av-frame-corner bottom-right"></i>
+
+
+                    <!-- LIVE LABEL -->
+
+
+                    <!-- IMAGE CONTENT -->
+
+                    <div
+                        class="av-image-content"
+                        id="avProgramInfo"
+                    >
+
+                        <small id="avProgramType">
+                            FULL-DOME EXPERIENCE
+                        </small>
+
+                        <h2 id="avProgramName">
+                            Journey Through the Cosmos
+                        </h2>
+
+                        <p id="avProgramDescription">
+                            Travel across planets, stars and
+                            distant galaxies through an immersive
+                            astronomical experience.
+                        </p>
+
+                    </div>
+
+
+                    <!-- COUNTER -->
+
+                    <div
+                        class="av-program-counter"
+                        id="avProgramCounter"
+                    >
+                        01 <span>/</span> 04
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIMPLE BOTTOM LINE
+            ================================================== -->
+
+            <div class="av-showcase-footer">
+
+                <span>FULL-DOME</span>
+
+                <i></i>
+
+                <span>LIVE SKY</span>
+
+                <i></i>
+
+                <span>OBSERVATORY</span>
+
+                <b></b>
+
+                <span>ASTRAVISTA</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       ASTRA VISTA — PROGRAM DATA
+    ========================================================= */
+
+    const avPrograms = [
+
+        {
+            image: "images/2.jpg",
+            type: "FULL-DOME EXPERIENCE",
+            name: "Journey Through the Cosmos",
+            description:
+                "Travel across planets, stars and distant galaxies through an immersive astronomical experience."
+        },
+
+        {
+            image: "images/observe.webp",
+            type: "SPACE EXPLORATION",
+            name: "Worlds Beyond Earth",
+            description:
+                "Explore mysterious planets, distant moons and remarkable worlds hidden beyond our solar system."
+        },
+
+        {
+            image: "images/11.jpg",
+            type: "LIVE SKY PROGRAM",
+            name: "Tonight Above Us",
+            description:
+                "Discover constellations, planets and celestial highlights visible across tonight's changing sky."
+        },
+
+        {
+            image: "images/1.avif",
+            type: "OBSERVATORY EXPERIENCE",
+            name: "Eyes on the Universe",
+            description:
+                "Move beyond the planetarium and discover how telescopes reveal distant worlds and celestial phenomena."
+        }
+
+    ];
+
+
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+
+    const avShowcase =
+        document.querySelector(".av-program-showcase");
+
+    const avProgramImage =
+        document.getElementById("avProgramImage");
+
+    const avProgramInfo =
+        document.getElementById("avProgramInfo");
+
+    const avProgramType =
+        document.getElementById("avProgramType");
+
+    const avProgramName =
+        document.getElementById("avProgramName");
+
+    const avProgramDescription =
+        document.getElementById("avProgramDescription");
+
+    const avProgramCounter =
+        document.getElementById("avProgramCounter");
+
+
+    /* =========================================================
+       CHECK ELEMENTS
+    ========================================================= */
+
+    if (!avProgramImage) {
+        console.error("avProgramImage not found");
+        return;
+    }
+
+
+    let avCurrentProgram = 0;
+    let avProgramTimer;
+
+
+    /* =========================================================
+       CHANGE PROGRAM
+    ========================================================= */
+
+    function avChangeProgram(index) {
+
+        const program = avPrograms[index];
+
+        if (!program) return;
+
+
+        if (avShowcase) {
+            avShowcase.classList.add("scanning");
+        }
+
+        if (avProgramInfo) {
+            avProgramInfo.classList.add("changing");
+        }
+
+
+        avProgramImage.style.opacity = "0";
+
+
+        setTimeout(function () {
+
+            /* IMAGE */
+
+            avProgramImage.style.backgroundImage =
+                `url('${program.image}')`;
+
+
+            /* CONTENT */
+
+            if (avProgramType) {
+                avProgramType.textContent =
+                    program.type;
+            }
+
+            if (avProgramName) {
+                avProgramName.textContent =
+                    program.name;
+            }
+
+            if (avProgramDescription) {
+                avProgramDescription.textContent =
+                    program.description;
+            }
+
+
+            /* COUNTER */
+
+            if (avProgramCounter) {
+
+                avProgramCounter.innerHTML =
+                    `0${index + 1}
+                     <span>/</span>
+                     04`;
+
+            }
+
+
+            /* SHOW IMAGE */
+
+            avProgramImage.style.opacity = "1";
+
+
+            if (avProgramInfo) {
+                avProgramInfo.classList.remove("changing");
+            }
+
+
+            avCurrentProgram = index;
+
+
+        }, 350);
+
+
+        setTimeout(function () {
+
+            if (avShowcase) {
+                avShowcase.classList.remove("scanning");
+            }
+
+        }, 1200);
+
+    }
+
+
+    /* =========================================================
+       INITIAL PROGRAM
+    ========================================================= */
+
+    avChangeProgram(0);
+
+
+    /* =========================================================
+       AUTO ROTATION
+    ========================================================= */
+
+    function avStartProgramTimer() {
+
+        clearInterval(avProgramTimer);
+
+        avProgramTimer = setInterval(function () {
+
+            let next =
+                avCurrentProgram + 1;
+
+            if (
+                next >=
+                avPrograms.length
+            ) {
+                next = 0;
+            }
+
+            avChangeProgram(next);
+
+        }, 5500);
+
+    }
+
+
+    avStartProgramTimer();
+
+});
+
+</script>
+<section class="av-cosmic-section" id="programs">
+
+    <div class="av-cosmic-wrap">
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <header class="av-cosmic-header">
+
+            <div class="av-cosmic-eyebrow">
+                <span></span>
+                Explore The Lineup
+                <span></span>
+            </div>
+
+            <h2>
+                Find Your Way
+                <em>Into The Universe</em>
+            </h2>
+
+            <p>
+                Choose an experience and discover a different way
+                to explore planets, stars, distant galaxies and
+                the changing night sky.
+            </p>
+
+        </header>
+
+
+        <!-- =================================================
+             PROGRAM NAVIGATION
+        ================================================== -->
+
+        <nav class="av-cosmic-nav" aria-label="Program categories">
+
+            <button class="av-cosmic-tab active" data-program="0">
+                <span class="av-tab-number">01</span>
+                <span class="av-tab-text">
+                    <strong>Planetarium</strong>
+                    <small>Immersive Shows</small>
+                </span>
+                <span class="av-tab-arrow"></span>
+            </button>
+
+            <button class="av-cosmic-tab" data-program="1">
+                <span class="av-tab-number">02</span>
+                <span class="av-tab-text">
+                    <strong>Live Sky</strong>
+                    <small>Guided Presentations</small>
+                </span>
+                <span class="av-tab-arrow"></span>
+            </button>
+
+            <button class="av-cosmic-tab" data-program="2">
+                <span class="av-tab-number">03</span>
+                <span class="av-tab-text">
+                    <strong>Observatory</strong>
+                    <small>Telescope Sessions</small>
+                </span>
+                <span class="av-tab-arrow"></span>
+            </button>
+
+            <button class="av-cosmic-tab" data-program="3">
+                <span class="av-tab-number">04</span>
+                <span class="av-tab-text">
+                    <strong>Special Events</strong>
+                    <small>Unique Sky Moments</small>
+                </span>
+                <span class="av-tab-arrow"></span>
+            </button>
+
+        </nav>
+
+
+        <!-- =================================================
+             FEATURED EXPERIENCE
+        ================================================== -->
+
+        <div class="av-cosmic-feature">
+
+            <!-- IMAGE SIDE -->
+
+            <div class="av-cosmic-visual">
+
+                <div
+                    class="av-cosmic-image"
+                    id="avCosmicImage"
+                ></div>
+
+                <div class="av-image-shade"></div>
+
+                <!-- image frame -->
+
+                <div class="av-image-frame"></div>
+
+                <!-- top label -->
+
+                <div class="av-live-label">
+                    <i></i>
+                    ASTRA VISTA
+                </div>
+
+                <!-- image index -->
+
+                <div class="av-image-index">
+                    <span id="avCosmicIndex">01</span>
+                    <b>/</b>
+                    <small>04</small>
+                </div>
+
+                <!-- image caption -->
+
+                <div class="av-image-caption">
+                    <span id="avCosmicCaption">
+                        IMMERSIVE PLANETARIUM
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT SIDE -->
+
+            <div class="av-cosmic-content">
+
+                <div class="av-content-top">
+
+                    <span
+                        class="av-content-category"
+                        id="avCosmicCategory"
+                    >
+                        IMMERSIVE PLANETARIUM
+                    </span>
+
+                    <div class="av-content-line"></div>
+
+                </div>
+
+
+                <h3 id="avCosmicTitle">
+                    Travel Beyond
+                    The Visible Sky
+                </h3>
+
+
+                <p
+                    class="av-cosmic-description"
+                    id="avCosmicDescription"
+                >
+                    Enter the dome and journey through planets,
+                    nebulae, galaxies and distant worlds through
+                    an immersive astronomical experience designed
+                    to make the universe feel closer than ever.
+                </p>
+
+
+                <!-- INFORMATION -->
+
+                <div class="av-cosmic-details">
+
+                    <div class="av-detail">
+
+                        <span>Duration</span>
+
+                        <strong id="avCosmicDuration">
+                            45–60 MIN
+                        </strong>
+
+                    </div>
+
+                    <div class="av-detail">
+
+                        <span>Format</span>
+
+                        <strong id="avCosmicFormat">
+                            FULL-DOME
+                        </strong>
+
+                    </div>
+
+                    <div class="av-detail">
+
+                        <span>Audience</span>
+
+                        <strong id="avCosmicAudience">
+                            ALL AGES
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+
+                <div class="av-cosmic-footer">
+
+                    <a
+                        href="#schedule"
+                        class="av-cosmic-cta"
+                    >
+                        <span>Explore This Experience</span>
+                    </a>
+
+                    <span class="av-cosmic-note">
+                        Discover • Experience • Remember
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<script>
+
+/* =========================================================
+   ASTRA VISTA — EXPERIENCE DATA
+========================================================= */
+
+const avCosmicPrograms = [
+
+    {
+        image:"images/1.avif",
+
+        category:"IMMERSIVE PLANETARIUM",
+
+        title:"Travel Beyond The Visible Sky",
+
+        caption:"IMMERSIVE PLANETARIUM",
+
+        description:
+        "Enter the dome and journey through planets, nebulae, galaxies and distant worlds through an immersive astronomical experience designed to make the universe feel closer than ever.",
+
+        duration:"45–60 MIN",
+        format:"FULL-DOME",
+        audience:"ALL AGES"
+    },
+
+    {
+        image:"images/2.jpg",
+
+        category:"LIVE SKY PROGRAM",
+
+        title:"Look Up. Discover More.",
+
+        caption:"LIVE SKY PROGRAM",
+
+        description:
+        "Explore the changing night sky through guided presentations that reveal constellations, planets and remarkable celestial events visible above us.",
+
+        duration:"45 MIN",
+        format:"LIVE SKY",
+        audience:"ALL AGES"
+    },
+
+    {
+        image:"images/3.jpg",
+
+        category:"OBSERVATORY EXPERIENCE",
+
+        title:"See The Universe Up Close",
+
+        caption:"OBSERVATORY EXPERIENCE",
+
+        description:
+        "Step beyond the dome and discover how telescopes reveal distant worlds, stars and celestial phenomena through guided observing sessions.",
+
+        duration:"60–90 MIN",
+        format:"TELESCOPE",
+        audience:"AGES 10+"
+    },
+
+    {
+        image:"images/11.jpg",
+
+        category:"SPECIAL EVENTS",
+
+        title:"When The Sky Becomes An Event",
+
+        caption:"SPECIAL EVENTS",
+
+        description:
+        "Experience special astronomical nights, seasonal sky events and unique programs created around the moments that make the universe extraordinary.",
+
+        duration:"VARIES",
+        format:"SPECIAL EVENT",
+        audience:"ALL AGES"
+    }
+
+];
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const avCosmicTabs =
+    document.querySelectorAll(".av-cosmic-tab");
+
+const avCosmicImage =
+    document.getElementById("avCosmicImage");
+
+const avCosmicCategory =
+    document.getElementById("avCosmicCategory");
+
+const avCosmicTitle =
+    document.getElementById("avCosmicTitle");
+
+const avCosmicDescription =
+    document.getElementById("avCosmicDescription");
+
+const avCosmicDuration =
+    document.getElementById("avCosmicDuration");
+
+const avCosmicFormat =
+    document.getElementById("avCosmicFormat");
+
+const avCosmicAudience =
+    document.getElementById("avCosmicAudience");
+
+const avCosmicIndex =
+    document.getElementById("avCosmicIndex");
+
+const avCosmicCaption =
+    document.getElementById("avCosmicCaption");
+
+
+/* =========================================================
+   CHANGE CONTENT
+========================================================= */
+
+function avSetCosmicProgram(index){
+
+    const item = avCosmicPrograms[index];
+
+    if(!item) return;
+
+
+    avCosmicTabs.forEach((tab,i)=>{
+
+        tab.classList.toggle(
+            "active",
+            i === index
+        );
+
+    });
+
+
+    avCosmicImage.style.opacity = "0";
+
+
+    setTimeout(()=>{
+
+        avCosmicImage.style.backgroundImage =
+            `url("${item.image}")`;
+
+        avCosmicCategory.textContent =
+            item.category;
+
+        avCosmicTitle.textContent =
+            item.title;
+
+        avCosmicDescription.textContent =
+            item.description;
+
+        avCosmicDuration.textContent =
+            item.duration;
+
+        avCosmicFormat.textContent =
+            item.format;
+
+        avCosmicAudience.textContent =
+            item.audience;
+
+        avCosmicIndex.textContent =
+            `0${index + 1}`;
+
+        avCosmicCaption.textContent =
+            item.caption;
+
+        avCosmicImage.style.opacity = "1";
+
+    },220);
+
+}
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+avCosmicTabs.forEach((tab,index)=>{
+
+    tab.addEventListener("click",()=>{
+
+        avSetCosmicProgram(index);
+
+    });
+
+});
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
+
+avSetCosmicProgram(0);
+
+</script>
+<section class="av-inside-section">
+
+    <div class="av-inside-container">
+
+        <!-- =========================
+             CENTER HEADING
+        ========================== -->
+
+        <header class="av-inside-heading">
+
+            <div class="av-inside-eyebrow">
+                <span></span>
+                Inside The Experience
+                <span></span>
+            </div>
+
+            <h2>
+                More Than A Show.
+                <em>A Journey.</em>
+            </h2>
+
+            <p>
+                Every AstraVista experience is designed to take you
+                from curiosity to discovery — one moment at a time.
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+             EXPERIENCE JOURNEY
+        ========================== -->
+
+        <div class="av-inside-journey">
+
+
+            <!-- =========================
+                 ITEM 01
+            ========================== -->
+
+            <article class="av-inside-item active">
+
+                <div class="av-inside-number">
+                    01
+                </div>
+
+                <div class="av-inside-image">
+
+                    <img
+                        src="images/observe.webp"
+                        alt="Planetarium interior"
+                    >
+
+                    <div class="av-image-overlay"></div>
+
+                    <span class="av-image-tag">
+                        BEGIN
+                    </span>
+
+                </div>
+
+                <div class="av-inside-content">
+
+                    <span class="av-step-label">
+                        STEP ONE
+                    </span>
+
+                    <h3>
+                        Enter The
+                        <em>Dome</em>
+                    </h3>
+
+                    <p>
+                        Leave the everyday behind and step into a
+                        space where the ceiling disappears and the
+                        universe surrounds you.
+                    </p>
+
+                    <div class="av-step-line">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 ITEM 02
+            ========================== -->
+
+            <article class="av-inside-item">
+
+                <div class="av-inside-number">
+                    02
+                </div>
+
+                <div class="av-inside-image">
+
+                    <img
+                        src="images/1.avif"
+                        alt="Immersive space journey"
+                    >
+
+                    <div class="av-image-overlay"></div>
+
+                    <span class="av-image-tag">
+                        EXPLORE
+                    </span>
+
+                </div>
+
+                <div class="av-inside-content">
+
+                    <span class="av-step-label">
+                        STEP TWO
+                    </span>
+
+                    <h3>
+                        Journey
+                        <em>Beyond Earth</em>
+                    </h3>
+
+                    <p>
+                        Move across planets, stars and galaxies as
+                        immersive visuals turn astronomical ideas
+                        into an experience you can feel.
+                    </p>
+
+                    <div class="av-step-line">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 ITEM 03
+            ========================== -->
+
+            <article class="av-inside-item">
+
+                <div class="av-inside-number">
+                    03
+                </div>
+
+                <div class="av-inside-image">
+
+                    <img
+                        src="images/3.jpg"
+                        alt="Observatory night sky"
+                    >
+
+                    <div class="av-image-overlay"></div>
+
+                    <span class="av-image-tag">
+                        DISCOVER
+                    </span>
+
+                </div>
+
+                <div class="av-inside-content">
+
+                    <span class="av-step-label">
+                        STEP THREE
+                    </span>
+
+                    <h3>
+                        Look Up
+                        <em>For Real</em>
+                    </h3>
+
+                    <p>
+                        Continue beyond the screen and discover the
+                        real night sky through guided observation
+                        and telescope experiences.
+                    </p>
+
+                    <div class="av-step-line">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =========================
+             BOTTOM STATEMENT
+        ========================== -->
+
+        <div class="av-inside-bottom">
+
+            <span class="av-bottom-rule"></span>
+
+            <p>
+                <strong>Curiosity</strong>
+                becomes
+                <strong>discovery</strong>
+                when you experience the universe differently.
+            </p>
+
+            <span class="av-bottom-rule"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="av-night" id="choose-night">
+
+    <!-- ================= HEADING ================= -->
+
+    <div class="av-night-head">
+
+        <div class="av-night-eyebrow">
+            <i></i>
+            YOUR NIGHT AT ASTRAVISTA
+            <i></i>
+        </div>
+
+        <h2>
+            One Night.
+            <em>Many Discoveries.</em>
+        </h2>
+
+        <p>
+            Choose how you want to experience the universe.
+        </p>
+
+    </div>
+
+
+    <!-- ================= OPTIONS ================= -->
+
+    <div class="av-night-tabs">
+
+        <button class="av-night-tab active" data-night="0">
+            <span>01</span>
+            <strong>Family Night</strong>
+        </button>
+
+        <button class="av-night-tab" data-night="1">
+            <span>02</span>
+            <strong>Deep Space</strong>
+        </button>
+
+        <button class="av-night-tab" data-night="2">
+            <span>03</span>
+            <strong>Observatory</strong>
+        </button>
+
+        <button class="av-night-tab" data-night="3">
+            <span>04</span>
+            <strong>Special Event</strong>
+        </button>
+
+    </div>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <div class="av-night-content">
+
+        <!-- IMAGE -->
+
+        <div class="av-night-media">
+
+            <img
+                id="avNightImg"
+                src="images/observe.webp"
+                alt="Family astronomy experience"
+            >
+
+            <div class="av-night-media-overlay"></div>
+
+            <div class="av-night-media-top">
+                <span id="avNightTag">
+                    FAMILY ASTRONOMY
+                </span>
+
+                <b id="avNightCount">
+                    01 / 04
+                </b>
+            </div>
+
+            <div class="av-night-media-bottom">
+                <span class="av-night-dot"></span>
+                ASTRAVISTA
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="av-night-info">
+
+            <span class="av-night-type" id="avNightType">
+                FAMILY EXPERIENCE
+            </span>
+
+            <h3 id="avNightTitle">
+                Make Space
+                <em>For Wonder.</em>
+            </h3>
+
+            <p id="avNightDesc">
+                A relaxed evening where families can discover
+                planets, stars and astronomy together through
+                immersive shows and simple activities.
+            </p>
+
+
+            <div class="av-night-details">
+
+                <div>
+                    <small>BEST FOR</small>
+                    <strong id="avNightBest">
+                        FAMILIES
+                    </strong>
+                </div>
+
+                <div>
+                    <small>EXPERIENCE</small>
+                    <strong id="avNightExperience">
+                        DOME SHOW
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <a href="#programs" class="av-night-explore">
+                Explore Experience
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+
+const avNightData = [
+
+    {
+        image:"images/observe.webp",
+        tag:"FAMILY ASTRONOMY",
+        type:"FAMILY EXPERIENCE",
+        title:"Make Space For Wonder.",
+        desc:"A relaxed evening where families can discover planets, stars and astronomy together through immersive shows and simple activities.",
+        best:"FAMILIES",
+        experience:"DOME SHOW"
+    },
+
+    {
+        image:"images/2.jpg",
+        tag:"DEEP SPACE",
+        type:"IMMERSIVE EXPERIENCE",
+        title:"Go Beyond Earth.",
+        desc:"Travel through planets, galaxies and distant cosmic landscapes inside an immersive full-dome astronomy experience.",
+        best:"CURIOUS MINDS",
+        experience:"FULL-DOME"
+    },
+
+    {
+        image:"images/11.jpg",
+        tag:"OBSERVATORY NIGHT",
+        type:"OBSERVATORY EXPERIENCE",
+        title:"Look Into The Real Sky.",
+        desc:"Step outside and use powerful telescopes to observe planets, stars and fascinating celestial objects in the real night sky.",
+        best:"SKY WATCHERS",
+        experience:"TELESCOPE"
+    },
+
+    {
+        image:"images/1.avif",
+        tag:"SPECIAL ASTRONOMY EVENT",
+        type:"SPECIAL EVENT",
+        title:"Be There When It Happens.",
+        desc:"Discover seasonal astronomy programs, rare celestial events and special moments that make the night unforgettable.",
+        best:"EVERYONE",
+        experience:"SPECIAL EVENT"
+    }
+
+];
+
+
+const avNightTabs =
+    document.querySelectorAll(".av-night-tab");
+
+const avNightImg =
+    document.getElementById("avNightImg");
+
+const avNightTag =
+    document.getElementById("avNightTag");
+
+const avNightCount =
+    document.getElementById("avNightCount");
+
+const avNightType =
+    document.getElementById("avNightType");
+
+const avNightTitle =
+    document.getElementById("avNightTitle");
+
+const avNightDesc =
+    document.getElementById("avNightDesc");
+
+const avNightBest =
+    document.getElementById("avNightBest");
+
+const avNightExperience =
+    document.getElementById("avNightExperience");
+
+
+function avChangeNight(index){
+
+    const data = avNightData[index];
+
+    if(!data) return;
+
+
+    avNightTabs.forEach((tab,i)=>{
+
+        tab.classList.toggle(
+            "active",
+            i === index
+        );
+
+    });
+
+
+    avNightImg.classList.add("fade");
+
+
+    setTimeout(()=>{
+
+        avNightImg.src = data.image;
+
+        avNightImg.alt = data.tag;
+
+        avNightTag.textContent =
+            data.tag;
+
+        avNightCount.textContent =
+            `0${index + 1} / 04`;
+
+        avNightType.textContent =
+            data.type;
+
+        const parts =
+            data.title.split(".");
+
+        if(parts.length > 1){
+
+            avNightTitle.innerHTML =
+                `${parts[0]}.<em>${parts.slice(1).join(".")}</em>`;
+
+        }else{
+
+            avNightTitle.textContent =
+                data.title;
+        }
+
+        avNightDesc.textContent =
+            data.desc;
+
+        avNightBest.textContent =
+            data.best;
+
+        avNightExperience.textContent =
+            data.experience;
+
+
+        requestAnimationFrame(()=>{
+
+            avNightImg.classList.remove("fade");
+
+        });
+
+    },260);
+
+}
+
+
+avNightTabs.forEach((tab,index)=>{
+
+    tab.addEventListener(
+        "click",
+        ()=>{
+            avChangeNight(index);
+        }
+    );
+
+});
+
+
+avChangeNight(0);
+
+</script>
+
+<section class="av-shows-section" id="shows-programs">
+
+    <div class="av-shows-container">
+
+        <!-- HEADING -->
+        <div class="av-shows-heading">
+
+            <div class="av-shows-eyebrow">
+                <span></span>
+                SHOWS & PROGRAMS
+                <span></span>
+            </div>
+
+            <h2>
+                Choose your
+                <em>cosmic journey.</em>
+            </h2>
+
+            <p>
+                Immersive experiences designed to bring the universe
+                closer through stories, science and discovery.
+            </p>
+
+        </div>
+
+
+        <!-- MAIN SHOWCASE -->
+        <div class="av-showcase">
+
+            <!-- IMAGE -->
+            <div class="av-show-image">
+
+                <img
+                    id="avShowImage"
+                    src="images/2.jpg"
+                    alt="Journey Through the Cosmos"
+                >
+
+                <div class="av-image-overlay"></div>
+
+                <div class="av-image-number">
+                    <span id="avCurrentNumber">01</span>
+                    <b>/</b>
+                    <span>04</span>
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+            <div class="av-show-content">
+
+                <div class="av-show-type"
+                     id="avShowType">
+                    FULL-DOME EXPERIENCE
+                </div>
+
+                <h3 id="avShowName">
+                    Journey Through the Cosmos
+                </h3>
+
+                <p id="avShowDescription">
+                    Travel across planets, stars and distant galaxies
+                    through an immersive astronomical experience.
+                </p>
+
+                <a href="login.html"
+                   class="av-show-button">
+
+                    Book Experience
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- OPTIONS -->
+        <div class="av-show-options">
+
+            <button
+                class="av-show-option active"
+                data-index="0">
+
+                <span class="option-number">01</span>
+
+                <span>
+                    <strong>Journey Through the Cosmos</strong>
+                    <small>Full-Dome Experience</small>
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </button>
+
+
+            <button
+                class="av-show-option"
+                data-index="1">
+
+                <span class="option-number">02</span>
+
+                <span>
+                    <strong>Worlds Beyond Earth</strong>
+                    <small>Space Exploration</small>
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </button>
+
+
+            <button
+                class="av-show-option"
+                data-index="2">
+
+                <span class="option-number">03</span>
+
+                <span>
+                    <strong>Tonight Above Us</strong>
+                    <small>Live Sky Program</small>
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </button>
+
+
+            <button
+                class="av-show-option"
+                data-index="3">
+
+                <span class="option-number">04</span>
+
+                <span>
+                    <strong>Eyes on the Universe</strong>
+                    <small>Observatory Experience</small>
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+/* =========================================================
+   ASTRA VISTA — INTERACTIVE SHOWS
+========================================================= */
+
+const avShowPrograms = [
+
+    {
+        image:"images/2.jpg",
+        type:"FULL-DOME EXPERIENCE",
+        name:"Journey Through the Cosmos",
+        description:
+        "Travel across planets, stars and distant galaxies through an immersive astronomical experience."
+    },
+
+    {
+        image:"images/observe.webp",
+        type:"SPACE EXPLORATION",
+        name:"Worlds Beyond Earth",
+        description:
+        "Explore mysterious planets, distant moons and remarkable worlds hidden beyond our solar system."
+    },
+
+    {
+        image:"images/11.jpg",
+        type:"LIVE SKY PROGRAM",
+        name:"Tonight Above Us",
+        description:
+        "Discover constellations, planets and celestial highlights visible across tonight's changing sky."
+    },
+
+    {
+        image:"images/1.avif",
+        type:"OBSERVATORY EXPERIENCE",
+        name:"Eyes on the Universe",
+        description:
+        "Move beyond the planetarium and discover how telescopes reveal distant worlds and celestial phenomena."
+    }
+
+];
+
+
+const avShowImage =
+    document.getElementById("avShowImage");
+
+const avShowType =
+    document.getElementById("avShowType");
+
+const avShowName =
+    document.getElementById("avShowName");
+
+const avShowDescription =
+    document.getElementById("avShowDescription");
+
+const avCurrentNumber =
+    document.getElementById("avCurrentNumber");
+
+const avShowOptions =
+    document.querySelectorAll(".av-show-option");
+
+
+let avSelectedShow = 0;
+
+
+function avSelectShow(index){
+
+    const show =
+        avShowPrograms[index];
+
+    if(!show) return;
+
+
+    /* Fade image/content */
+
+    avShowImage.style.opacity = "0";
+
+    avShowName.style.opacity = "0";
+
+    avShowDescription.style.opacity = "0";
+
+
+    setTimeout(function(){
+
+        avShowImage.src = show.image;
+
+        avShowImage.alt = show.name;
+
+        avShowType.textContent =
+            show.type;
+
+        avShowName.textContent =
+            show.name;
+
+        avShowDescription.textContent =
+            show.description;
+
+        avCurrentNumber.textContent =
+            String(index + 1).padStart(2,"0");
+
+
+        avShowImage.style.opacity = "1";
+
+        avShowName.style.opacity = "1";
+
+        avShowDescription.style.opacity = "1";
+
+    },180);
+
+
+    /* Active option */
+
+    avShowOptions.forEach(function(option){
+
+        option.classList.remove("active");
+
+    });
+
+
+    avShowOptions[index]
+        .classList.add("active");
+
+
+    avSelectedShow = index;
+
+}
+
+
+/* =========================================================
+   CLICK OPTIONS
+========================================================= */
+
+avShowOptions.forEach(function(option){
+
+    option.addEventListener(
+        "click",
+        function(){
+
+            const index =
+                Number(
+                    option.dataset.index
+                );
+
+            avSelectShow(index);
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   LUCIDE
+========================================================= */
+
+if(typeof lucide !== "undefined"){
+
+    lucide.createIcons();
+
+}
+
+</script>
+
+
+<section class="av-compact-cta">
+
+    <div class="av-compact-cta-inner">
+
+        <div class="av-compact-cta-eyebrow">
+            <span></span>
+            PLAN YOUR VISIT
+            <span></span>
+        </div>
+
+        <h2>
+            Your Next
+            <em>Skyward Journey.</em>
+        </h2>
+
+        <p>
+            Choose an experience and discover something
+            extraordinary at AstraVista.
+        </p>
+
+        <div class="av-compact-cta-actions">
+
+            <a href="contact.html"
+               class="av-compact-btn primary">
+
+                Plan Your Visit
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+            <a href="Membership.html"
+               class="av-compact-btn secondary">
+
+                Explore Membership
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="care-footer">
+
+
+    <div class="footer-orb one"></div>
+
+    <div class="footer-orb two"></div>
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-top">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+
+                <a href="#"
+                   class="brand">
+
+<div class="logo-box image-logo">
+    <img src="images/logo.png" alt="">
+</div>
+
+                    <div class="brand-text">
+<span class="brand-name">
+    <span class="brand-primary">Astra</span>
+    <span class="brand-secondary">Vista</span>
+</span>
+                        <span class="brand-tag">
+                        Astronomy
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                   Journey beyond the ordinary with immersive shows and extraordinary programs that transform the wonders of space into unforgettable experiences for curious minds of every age.
+
+
+                </p>
+
+
+                <div class="footer-badge">
+
+                    <span></span>
+
+                    Trusted Care • Every Visit
+
+                </div>
+
+
+<div class="socials">
+
+    <a href="#"
+       class="social"
+       aria-label="Facebook">
+
+        <i class="bi bi-facebook"></i>
+
+    </a>
+
+    <a href="#"
+       class="social"
+       aria-label="Instagram">
+
+        <i class="bi bi-instagram"></i>
+
+    </a>
+
+    <a href="#"
+       class="social"
+       aria-label="LinkedIn">
+
+        <i class="bi bi-linkedin"></i>
+
+    </a>
+
+    <a href="#"
+       class="social"
+       aria-label="YouTube">
+
+        <i class="bi bi-youtube"></i>
+
+    </a>
+
+</div>
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="Shows&programs.html">
+                            Shows & programs
+                        </a>
+                    </li>
+    <li>
+                        <a href="School Programs.html">
+                            School Programs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Membership.html">
+                            Membership
+                        </a>
+                    </li>
+<li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Shows&programs -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Our Shows & programs
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#">
+                         Planetarium Shows
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                        Stargazing Sessions
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                        Space Exploration
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                          Astronomy Workshops
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                           School Programs
+
+                        </a>
+                    </li>
+   <li>
+                        <a href="#">
+                           Special Sky Events
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Stay Connected
+                </h3>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="map-pin"></i>
+
+                    </div>
+
+                    <span>
+                        Bengaluru, Karnataka, India
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="phone"></i>
+
+                    </div>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="mail"></i>
+
+                    </div>
+
+                    <span>
+                        AstraVista.com
+                    </span>
+
+                </div>
+
+
+                <!-- NEWSLETTER -->
+
+                <div class="newsletter">
+
+                    <div class="newsletter-box">
+
+                        <input
+                            id="newsletterInput"
+                            type="email"
+                            placeholder="Your email address"
+                            autocomplete="email"
+                        >
+
+
+                        <button
+                            id="newsletterButton"
+                            type="button"
+                            aria-label="Subscribe">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+
+            <div class="copyright">
+
+                © 2026 AstraVista.
+                All rights reserved.
+
+            </div>
+
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms of Service
+                </a>
+
+                <a href="#">
+                    Accessibility
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   INITIALIZE LUCIDE
+========================================================= */
+
+lucide.createIcons();
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const header =
+    document.getElementById("header");
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mobilePanel =
+    document.getElementById("mobilePanel");
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+const rtlBtn =
+    document.getElementById("rtlBtn");
+
+const homeDropdown =
+    document.getElementById("homeDropdown");
+
+const mobileHomeBtn =
+    document.getElementById("mobileHomeBtn");
+
+const mobileHomeDropdown =
+    document.getElementById("mobileHomeDropdown");
+
+const newsletterInput =
+    document.getElementById("newsletterInput");
+
+const newsletterButton =
+    document.getElementById("newsletterButton");
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(window.scrollY > 25){
+
+            header.classList.add("scrolled");
+
+        }else{
+
+            header.classList.remove("scrolled");
+
+        }
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+function setMenuIcon(open){
+
+    menuBtn.innerHTML = open
+
+        ? '<i data-lucide="x"></i>'
+
+        : '<i data-lucide="menu"></i>';
+
+    lucide.createIcons();
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+    );
+
+}
+
+
+/* =========================================================
+   OPEN MOBILE MENU
+========================================================= */
+
+function openMenu(){
+
+    mobilePanel.classList.add("active");
+
+    setMenuIcon(true);
+
+}
+
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+function closeMenu(){
+
+    mobilePanel.classList.remove("active");
+
+    setMenuIcon(false);
+
+    /* Close mobile Home submenu */
+
+    mobileHomeDropdown.classList.remove(
+        "active"
+    );
+
+    mobileHomeBtn.classList.remove(
+        "open"
+    );
+
+    mobileHomeBtn.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
+
+
+/* =========================================================
+   TOGGLE MOBILE MENU
+========================================================= */
+
+function toggleMenu(){
+
+    if(
+        mobilePanel.classList.contains("active")
+    ){
+
+        closeMenu();
+
+    }else{
+
+        openMenu();
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+menuBtn.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+        toggleMenu();
+
+    }
+);
+
+
+/* =========================================================
+   DESKTOP HOME DROPDOWN
+   ---------------------------------------------------------
+   IMPORTANT:
+   NO CLICK JAVASCRIPT HERE.
+
+   Desktop Home dropdown is controlled ONLY
+   by CSS :hover.
+
+   Therefore:
+   - Hover Home = open
+   - Move away = close
+   - No click required
+========================================================= */
+
+
+/* =========================================================
+   MOBILE HOME DROPDOWN
+   ---------------------------------------------------------
+   Mobile/tablet Home submenu remains click based.
+========================================================= */
+
+mobileHomeBtn.addEventListener(
+    "click",
+    function(event){
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+        const isOpen =
+            mobileHomeDropdown.classList.toggle(
+                "active"
+            );
+
+        mobileHomeBtn.classList.toggle(
+            "open",
+            isOpen
+        );
+
+        mobileHomeBtn.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".mobile-panel > a"
+    )
+    .forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    closeMenu();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   MOBILE HOME SUBMENU LINKS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".mobile-dropdown a"
+    )
+    .forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    closeMenu();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   CLICK OUTSIDE MOBILE PANEL
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            mobilePanel.classList.contains(
+                "active"
+            ) &&
+
+            !mobilePanel.contains(
+                event.target
+            ) &&
+
+            !menuBtn.contains(
+                event.target
+            )
+        ){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PREMIUM DARK / LIGHT MODE
+========================================================= */
+
+let darkMode =
+    localStorage.getItem(
+        "astravista-theme"
+    ) === "dark";
+
+
+function applyTheme(){
+
+    const root =
+        document.documentElement;
+
+
+    if(darkMode){
+
+        /* DARK THEME */
+
+        root.setAttribute(
+            "data-theme",
+            "dark"
+        );
+
+        root.style.setProperty(
+            "--bg",
+            "#111017"
+        );
+
+        root.style.setProperty(
+            "--surface",
+            "#191720"
+        );
+
+        root.style.setProperty(
+            "--surface-soft",
+            "#211D29"
+        );
+
+        root.style.setProperty(
+            "--text",
+            "#F8F5FA"
+        );
+
+        root.style.setProperty(
+            "--muted",
+            "#B9B2C2"
+        );
+
+        root.style.setProperty(
+            "--border",
+            "rgba(255,255,255,.11)"
+        );
+
+        themeBtn.innerHTML =
+            '<i data-lucide="sun"></i>';
+
+    }else{
+
+        /* LIGHT THEME */
+
+        root.setAttribute(
+            "data-theme",
+            "light"
+        );
+
+        root.style.setProperty(
+            "--bg",
+            "#FBF8F4"
+        );
+
+        root.style.setProperty(
+            "--surface",
+            "#FFFFFF"
+        );
+
+        root.style.setProperty(
+            "--surface-soft",
+            "#F5F0EA"
+        );
+
+        root.style.setProperty(
+            "--text",
+            "#292535"
+        );
+
+        root.style.setProperty(
+            "--muted",
+            "#777180"
+        );
+
+        root.style.setProperty(
+            "--border",
+            "rgba(91,75,138,.14)"
+        );
+
+        themeBtn.innerHTML =
+            '<i data-lucide="moon"></i>';
+
+    }
+
+
+    lucide.createIcons();
+
+}
+
+
+/* =========================================================
+   APPLY INITIAL THEME
+========================================================= */
+
+applyTheme();
+
+
+/* =========================================================
+   THEME BUTTON
+========================================================= */
+
+themeBtn.addEventListener(
+    "click",
+    function(){
+
+        darkMode =
+            !darkMode;
+
+        localStorage.setItem(
+            "astravista-theme",
+            darkMode
+                ? "dark"
+                : "light"
+        );
+
+        applyTheme();
+
+    }
+);
+
+
+/* =========================================================
+   RTL / LTR
+========================================================= */
+
+let rtlMode =
+    localStorage.getItem(
+        "astravista-direction"
+    ) === "rtl";
+
+
+function applyDirection(){
+
+    document.documentElement.dir =
+        rtlMode
+            ? "rtl"
+            : "ltr";
+
+}
+
+
+/* =========================================================
+   APPLY INITIAL DIRECTION
+========================================================= */
+
+applyDirection();
+
+
+/* =========================================================
+   RTL BUTTON
+========================================================= */
+
+rtlBtn.addEventListener(
+    "click",
+    function(){
+
+        rtlMode =
+            !rtlMode;
+
+        localStorage.setItem(
+            "astravista-direction",
+            rtlMode
+                ? "rtl"
+                : "ltr"
+        );
+
+        applyDirection();
+
+    }
+);
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+newsletterButton.addEventListener(
+    "click",
+    function(){
+
+        const email =
+            newsletterInput.value.trim();
+
+
+        /* EMPTY */
+
+        if(!email){
+
+            newsletterInput.focus();
+
+            newsletterInput.style.outline =
+                "2px solid rgba(216,155,106,.6)";
+
+            setTimeout(
+                function(){
+
+                    newsletterInput.style.outline =
+                        "none";
+
+                },
+                1200
+            );
+
+            return;
+
+        }
+
+
+        /* INVALID EMAIL */
+
+        if(
+            !email.includes("@") ||
+            !email.includes(".")
+        ){
+
+            newsletterInput.focus();
+
+            newsletterInput.style.outline =
+                "2px solid rgba(216,155,106,.6)";
+
+            setTimeout(
+                function(){
+
+                    newsletterInput.style.outline =
+                        "none";
+
+                },
+                1200
+            );
+
+            return;
+
+        }
+
+
+        /* SUCCESS */
+
+        newsletterButton.innerHTML =
+            '<i data-lucide="check"></i>';
+
+        lucide.createIcons();
+
+
+        newsletterInput.value = "";
+
+
+        setTimeout(
+            function(){
+
+                newsletterButton.innerHTML =
+                    '<i data-lucide="arrow-up-right"></i>';
+
+                lucide.createIcons();
+
+            },
+            2200
+        );
+
+    }
+);
+
+
+/* =========================================================
+   FOOTER REVEAL
+========================================================= */
+
+const footer =
+    document.querySelector(
+        ".care-footer"
+    );
+
+
+if(
+    "IntersectionObserver" in window
+){
+
+    const footerObserver =
+        new IntersectionObserver(
+            function(entries){
+
+                entries.forEach(
+                    function(entry){
+
+                        if(
+                            entry.isIntersecting
+                        ){
+
+                            footer.style.animation =
+                                "footerReveal .9s cubic-bezier(.2,.8,.2,1) both";
+
+                            footerObserver.unobserve(
+                                footer
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold:.08
+            }
+        );
+
+
+    footerObserver.observe(
+        footer
+    );
+
+}
+
+
+/* =========================================================
+   DEMO HASH LINKS
+========================================================= */
+
+document
+    .querySelectorAll(
+        'a[href="#"]'
+    )
+    .forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(event){
+
+                    event.preventDefault();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   INITIAL MENU STATE
+========================================================= */
+
+setMenuIcon(false);
+
+
+/* =========================================================
+   INITIAL MOBILE HOME STATE
+========================================================= */
+
+mobileHomeDropdown.classList.remove(
+    "active"
+);
+
+mobileHomeBtn.classList.remove(
+    "open"
+);
+
+mobileHomeBtn.setAttribute(
+    "aria-expanded",
+    "false"
+);
+
+</script>
+```html
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       ASTRA VISTA — CURRENT PAGE ACTIVE NAVIGATION
+    ========================================================= */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase()
+            .trim();
+
+    const navLinks =
+        document.querySelectorAll(
+            ".main-nav a, .nav-links a, .mobilePanel a"
+        );
+
+
+    navLinks.forEach(function (link) {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href || href === "#") {
+            return;
+        }
+
+
+        const linkPage =
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase()
+                .trim();
+
+
+        /* Remove old active state */
+
+        link.classList.remove("active");
+
+
+        /* =====================================================
+           CURRENT PAGE
+        ===================================================== */
+
+        if (
+            linkPage === currentPage
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+
+        /* =====================================================
+           HOME PAGE
+        ===================================================== */
+
+        if (
+            (currentPage === "" ||
+             currentPage === "index.html") &&
+            (linkPage === "" ||
+             linkPage === "index.html")
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>

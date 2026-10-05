@@ -10,7 +10,6 @@
       content="width=device-width, initial-scale=1.0">
 
 <title>AstraVista | Planetarium & Observatory Visitor Center</title>
-
 <!-- =========================================================
      GOOGLE FONTS
 ========================================================= -->
@@ -24,7 +23,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet">
-
+<link rel="icon" type="image/png" sizes="42x42" href="images/logo.png">
 <!-- =========================================================
      LUCIDE
 ========================================================= -->
@@ -32,7 +31,7 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="in.css">
+<link rel="stylesheet" href="i.css">
 
 </head>
 
@@ -81,7 +80,7 @@
 
             <div class="dropdown" id="homeDropdown">
 
-                <a href="#"
+                <a href="index.html"
                    class="nav-link"
                    id="homeToggle">
 
@@ -133,7 +132,7 @@
 
       <a href="School Programs.html"
                class="nav-link">
-                School Programs
+               School Programs
             </a>
             <a href="Membership.html"
                class="nav-link">
@@ -343,55 +342,38 @@
 
 </header>
 
-<body>
 
+<section class="avp-hero" aria-label="AstraVista Planetarium">
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+    <!-- =====================================================
+         CINEMATIC BACKGROUND
+    ====================================================== -->
 
-<section class="avp-hero" id="astravistaHero">
-
-
-    <!-- Background -->
     <img
         class="avp-hero-bg"
-        src="images/astravista-hero.webp"
-        alt=""
-        aria-hidden="true"
+        src="images/planetarium-hero.jpg"
+        alt="Planetarium and Observatory"
     >
 
-
-    <!-- Layers -->
     <div class="avp-hero-overlay"></div>
-
     <div class="avp-hero-glow"></div>
-
     <div class="avp-hero-stars"></div>
 
 
-    <!-- =================================================
-         CONTAINER
-    ================================================= -->
+    <!-- =====================================================
+         HERO CONTENT
+    ====================================================== -->
 
     <div class="avp-hero-container">
 
-
-        <!-- =============================================
-             CONTENT
-        ============================================= -->
-
         <div class="avp-hero-content">
 
-
             <div class="avp-hero-eyebrow">
-
-                Astronomy
-                <span>•</span>
-                Observatory
-                <span>•</span>
-                Discovery
-
+                <span></span>
+                PLANETARIUM & OBSERVATORY
+                <span class="avp-eyebrow-break">
+                    VISITOR CENTER
+                </span>
             </div>
 
 
@@ -408,742 +390,510 @@
             </h1>
 
 
+            <!-- TYPING LINE -->
+
             <div class="avp-typing-line">
 
                 <span class="avp-typing-marker"></span>
 
                 <span id="avpTyping">
-                    Explore Deep Space
+                    THE UNIVERSE
                 </span>
 
-                <span class="avp-cursor"></span>
+                <span class="avp-typing-cursor">
+                    |
+                </span>
 
             </div>
 
 
             <p class="avp-hero-description">
 
-                Step beyond the familiar and experience astronomy
-                through immersive observation, scientific discovery,
-                celestial events and unforgettable journeys through
-                the universe.
+                Journey beyond Earth into a spectacular
+                world of stars, planets and galaxies.
+                Experience astronomy through immersive
+                planetarium shows and unforgettable
+                observatory discoveries.
 
             </p>
 
 
-            <div class="avp-hero-actions">
+            <!-- ACTIONS -->
 
-                <a
-                    href="#observatory"
-                    class="avp-primary-btn"
-                >
-                    Explore The Observatory
-                </a>
+      
+
+        </div>
+
+    </div>
 
 
-                <a
-                    href="#programs"
-                    class="avp-secondary-btn"
-                >
-                    Explore Programs
-                </a>
+    <!-- =====================================================
+         CONTAINED MOVING SPACE VISUAL
+         EVERYTHING MOVES TOGETHER
+    ====================================================== -->
 
-            </div>
+    <div class="avp-hero-visual">
 
+
+        <!-- Atmospheric glow -->
+
+        <div class="avp-visual-halo"></div>
+
+
+        <!-- ORBIT SYSTEM -->
+
+        <div class="avp-orbit-system">
+
+            <div class="avp-orbit avp-orbit-one"></div>
+
+            <div class="avp-orbit avp-orbit-two"></div>
+
+            <div class="avp-orbit avp-orbit-three"></div>
+
+
+            <div class="avp-orbit-dot avp-dot-one"></div>
+
+            <div class="avp-orbit-dot avp-dot-two"></div>
+
+            <div class="avp-orbit-dot avp-dot-three"></div>
 
         </div>
 
 
-        <!-- =============================================
-             VISUAL
-        ============================================= -->
+        <!-- GIANT PLANET -->
 
-        <div class="avp-hero-visual">
+        <div class="avp-planet">
 
+            <div class="avp-planet-light"></div>
 
-            <div class="avp-visual-halo"></div>
+            <div class="avp-planet-shadow"></div>
 
+            <div class="avp-planet-ring"></div>
 
-            <div class="avp-orbit-system">
-
-
-                <!-- Orbit 1 -->
-                <div class="avp-orbit avp-orbit-1">
-
-                    <span
-                        class="avp-orbit-dot avp-dot-one"
-                    ></span>
-
-                </div>
+        </div>
 
 
-                <!-- Orbit 2 -->
-                <div class="avp-orbit avp-orbit-2">
+        <!-- FLOATING DATA -->
 
-                    <span
-                        class="avp-orbit-dot avp-dot-two"
-                    ></span>
+        <div class="avp-data-card avp-data-top">
 
-                </div>
+            <small>
+                CELESTIAL COORDINATES
+            </small>
 
+            <strong>
+                18h 36m · +38° 47′
+            </strong>
 
-                <!-- Orbit 3 -->
-                <div class="avp-orbit avp-orbit-3">
-
-                    <span
-                        class="avp-orbit-dot avp-dot-three"
-                    ></span>
-
-                </div>
+        </div>
 
 
-                <!-- Planet -->
-                <div class="avp-planet">
+        <div class="avp-data-card avp-data-bottom">
 
-                    <div class="avp-planet-light"></div>
+            <small>
+                OBSERVATION
+            </small>
 
-                    <div class="avp-planet-shadow"></div>
+            <strong>
+                ∞ POSSIBILITIES
+            </strong>
 
-                    <div class="avp-planet-ring"></div>
-
-                </div>
-
-
-            </div>
+        </div>
 
 
-            <!-- Data Card -->
-            <div class="avp-data-card avp-data-card-one">
+        <!-- SMALL LABEL -->
 
-                <small>
-                    OBSERVATION
-                </small>
-
-                <strong>
-                    DEEP SPACE
-                </strong>
-
-            </div>
-
-
-            <!-- Data Card -->
-            <div class="avp-data-card avp-data-card-two">
-
-                <small>
-                    EXPLORATION
-                </small>
-
-                <strong>
-                    13.8B+ YEARS
-                </strong>
-
-            </div>
-
-
-            <div class="avp-visual-label">
-
-                ASTRAVISTA / 01
-
-            </div>
-
-
+        <div class="avp-visual-label">
+            EXPLORE
+            <span>∞</span>
+            DISCOVER
         </div>
 
 
     </div>
 
 
-    <!-- Side Label -->
+    <!-- =====================================================
+         SIDE VERTICAL LABEL
+    ====================================================== -->
+
     <div class="avp-side-label">
 
-        01 — ASTRAVISTA / OBSERVATORY
+        LOOK BEYOND
+        <span>·</span>
+        THE NIGHT SKY IS WAITING
 
     </div>
 
 
-    <!-- Bottom Label -->
+    <!-- =====================================================
+         BOTTOM LINE
+    ====================================================== -->
+
     <div class="avp-bottom-line">
 
-        Explore
-        •
-        Observe
-        •
-        Discover
+        <span></span>
+
+        <small>
+            ASTRONOMY • SCIENCE • DISCOVERY
+        </small>
 
     </div>
 
 
 </section>
-
-
 
 <script>
 
 /* =========================================================
-   TYPING EFFECT
+   ASTRA VISTA HERO TYPING
+   UNIQUE VARIABLES — NO CONFLICT WITH f1.js
 ========================================================= */
 
-const typingElement =
-    document.getElementById("avpTyping");
+(function(){
 
-const typingWords = [
+    const avpTyping =
+        document.getElementById("avpTyping");
 
-    "EXPLORE DEEP SPACE",
-
-    "OBSERVE DISTANT GALAXIES",
-
-    "DISCOVER THE COSMOS",
-
-    "LEARN BEYOND EARTH"
-
-];
-
-let wordIndex = 0;
-
-let charIndex = 0;
-
-let deleting = false;
+    if(!avpTyping) return;
 
 
-function typeAstravista(){
+    const avpWords = [
 
-    const currentWord =
-        typingWords[wordIndex];
+        "THE UNIVERSE",
 
+        "THE COSMOS",
 
-    if(!deleting){
+        "DISTANT GALAXIES",
 
-        typingElement.textContent =
-            currentWord.substring(
-                0,
-                charIndex + 1
-            );
+        "THE NIGHT SKY",
 
-        charIndex++;
+        "THE UNKNOWN"
+
+    ];
 
 
-        if(charIndex === currentWord.length){
+    let avpWordIndex = 0;
 
-            deleting = true;
+    let avpCharIndex = 0;
 
-            setTimeout(
-                typeAstravista,
-                1700
-            );
-
-            return;
-        }
+    let avpDeleting = false;
 
 
-    }else{
+    function avpTypeWriter(){
 
-        typingElement.textContent =
-            currentWord.substring(
-                0,
-                charIndex - 1
-            );
-
-        charIndex--;
+        const avpWord =
+            avpWords[avpWordIndex];
 
 
-        if(charIndex === 0){
+        if(!avpDeleting){
 
-            deleting = false;
+            avpTyping.textContent =
+                avpWord.substring(
+                    0,
+                    avpCharIndex + 1
+                );
 
-            wordIndex =
-                (wordIndex + 1)
-                % typingWords.length;
-
-        }
-
-    }
+            avpCharIndex++;
 
 
-    setTimeout(
-        typeAstravista,
-        deleting ? 35 : 75
-    );
-}
+            if(
+                avpCharIndex >=
+                avpWord.length
+            ){
 
+                avpDeleting = true;
 
-if(
-    !window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches
-){
+                setTimeout(
+                    avpTypeWriter,
+                    1700
+                );
 
-    setTimeout(
-        typeAstravista,
-        900
-    );
-
-}
-
-
-
-/* =========================================================
-   BUTTON SCROLL
-========================================================= */
-
-document
-    .querySelectorAll(".avp-hero-actions a")
-    .forEach(button => {
-
-        button.addEventListener(
-            "click",
-            function(event){
-
-                const target =
-                    document.querySelector(
-                        this.getAttribute("href")
-                    );
-
-                if(target){
-
-                    event.preventDefault();
-
-                    target.scrollIntoView({
-                        behavior:"smooth",
-                        block:"start"
-                    });
-
-                }
+                return;
 
             }
+
+        }else{
+
+            avpTyping.textContent =
+                avpWord.substring(
+                    0,
+                    avpCharIndex - 1
+                );
+
+            avpCharIndex--;
+
+
+            if(avpCharIndex <= 0){
+
+                avpCharIndex = 0;
+
+                avpDeleting = false;
+
+                avpWordIndex =
+                    (
+                        avpWordIndex + 1
+                    )
+                    %
+                    avpWords.length;
+
+            }
+
+        }
+
+
+        setTimeout(
+
+            avpTypeWriter,
+
+            avpDeleting
+                ? 45
+                : 85
+
         );
 
-    });
-
-
-
-/* =========================================================
-   DESKTOP PARALLAX
-========================================================= */
-
-const hero =
-    document.getElementById(
-        "astravistaHero"
-    );
-
-const visual =
-    document.querySelector(
-        ".avp-hero-visual"
-    );
-
-
-const reducedMotion =
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    );
-
-
-function enableParallax(){
-
-    if(
-        window.innerWidth < 901 ||
-        reducedMotion.matches
-    ){
-
-        visual.style.transform = "";
-
-        return;
     }
 
 
-    hero.addEventListener(
-        "mousemove",
-        handleParallax
-    );
+    avpTypeWriter();
 
-
-    hero.addEventListener(
-        "mouseleave",
-        resetParallax
-    );
-
-}
-
-
-function handleParallax(event){
-
-    const rect =
-        hero.getBoundingClientRect();
-
-
-    const x =
-        (event.clientX - rect.left)
-        / rect.width
-        - .5;
-
-
-    const y =
-        (event.clientY - rect.top)
-        / rect.height
-        - .5;
-
-
-    visual.style.transform =
-        `
-        translateY(-50%)
-        translateX(0)
-        translate3d(
-            ${x * 14}px,
-            ${y * 10}px,
-            0
-        )
-        `;
-}
-
-
-function resetParallax(){
-
-    visual.style.transform =
-        "translateY(-50%) translateX(0)";
-}
-
-
-enableParallax();
-
-
-window.addEventListener(
-    "resize",
-    enableParallax
-);
+})();
 
 </script>
-<section class="av-happening-section">
+<section class="happening-section">
 
-    <div class="av-happening-container">
+<div class="happening-container">
 
-        <!-- =========================
-             SECTION HEADING
-        ========================== -->
 
-        <div class="av-section-heading">
+<!-- =========================
+     CENTER HEADING
+========================= -->
 
-            <div class="av-eyebrow">
-                <span class="av-eyebrow-line"></span>
-                LIVE OBSERVATORY
-            </div>
+<div class="section-heading">
 
-            <h2>
-                Happening <span>Now</span>
-            </h2>
+  <div class="eyebrow">
+    Live Observatory
+  </div>
 
-            <p>
-                See what's happening across the observatory,
-                from immersive shows to tonight's stargazing.
-            </p>
+  <h2>
+    Happening <span>Now</span>
+  </h2>
 
-            <div class="av-live-pill">
-                <span class="av-live-dot"></span>
-                LIVE TODAY
-            </div>
+  <p>
+    See what's happening across the observatory,
+    from immersive shows to tonight's stargazing.
+  </p>
 
-        </div>
+  <div class="live-pill">
+    <span class="live-dot"></span>
+    LIVE TODAY
+  </div>
 
+</div>
 
-        <!-- =========================
-             HAPPENING CARDS
-        ========================== -->
 
-        <div class="av-happening-grid">
+<!-- =========================
+     COMPACT IMAGE CARDS
+========================= -->
 
+<div class="happening-grid">
 
-            <!-- CARD 01 -->
 
-            <article class="av-happening-card">
+<!-- CARD 01 -->
 
-                <div class="av-card-image">
+<article class="happening-card">
 
-                    <img
-                        src="images/1.avif"
-                        alt="Deep space show"
-                    >
+  <div class="card-image">
+    <img
+      src="images/1.avif"
+      alt="Deep space show">
+  </div>
 
-                    <div class="av-image-overlay"></div>
+  <div class="card-content">
 
-                    <div class="av-card-index">
-                        01
-                    </div>
+    <div class="card-time">
+      12:30 PM
+    </div>
 
-                </div>
+    <div class="card-label">
+      ● NOW SHOWING
+    </div>
 
+    <h3 class="card-title">
+      Deep Space
+    </h3>
 
-                <div class="av-card-content">
+    <p class="card-description">
+      Journey beyond the stars.
+    </p>
 
-                    <div class="av-card-top">
+    <div class="card-arrow">
+      →
+    </div>
 
-                        <span class="av-card-time">
-                            12:30 PM
-                        </span>
+  </div>
 
-                        <span class="av-card-status live">
-                            <i></i>
-                            NOW SHOWING
-                        </span>
+</article>
 
-                    </div>
 
-                    <h3>
-                        Deep Space
-                    </h3>
+<!-- CARD 02 -->
 
-                    <p>
-                        Journey beyond the stars.
-                    </p>
+<article class="happening-card">
 
-                    <div class="av-card-bottom">
+  <div class="card-image">
+    <img
+      src="images/solar space.jfif"
+      alt="Solar system show">
+  </div>
 
-                        <span>
-                            IMMERSIVE SHOW
-                        </span>
+  <div class="card-content">
 
-                        <span class="av-card-arrow">
-                            ↗
-                        </span>
+    <div class="card-time">
+      03:00 PM
+    </div>
 
-                    </div>
+    <div class="card-label">
+      NEXT SHOW
+    </div>
 
-                </div>
+    <h3 class="card-title">
+      Solar System
+    </h3>
 
-            </article>
+    <p class="card-description">
+      Explore our cosmic neighborhood.
+    </p>
 
+    <div class="card-arrow">
+      →
+    </div>
 
+  </div>
 
-            <!-- CARD 02 -->
+</article>
 
-            <article class="av-happening-card">
 
-                <div class="av-card-image">
+<!-- CARD 03 -->
 
-                    <img
-                        src="images/solar space.jfif"
-                        alt="Solar system show"
-                    >
+<article class="happening-card">
 
-                    <div class="av-image-overlay"></div>
+  <div class="card-image">
+    <img
+      src="images/star.jfif"
+      alt="Night sky stargazing">
+  </div>
 
-                    <div class="av-card-index">
-                        02
-                    </div>
+  <div class="card-content">
 
-                </div>
+    <div class="card-time">
+      07:30 PM
+    </div>
 
+    <div class="card-label">
+      TONIGHT
+    </div>
 
-                <div class="av-card-content">
+    <h3 class="card-title">
+      Stargazing
+    </h3>
 
-                    <div class="av-card-top">
+    <p class="card-description">
+      Experience the real night sky.
+    </p>
 
-                        <span class="av-card-time">
-                            03:00 PM
-                        </span>
+    <div class="card-arrow">
+      →
+    </div>
 
-                        <span class="av-card-status">
-                            NEXT SHOW
-                        </span>
+  </div>
 
-                    </div>
+</article>
 
-                    <h3>
-                        Solar System
-                    </h3>
 
-                    <p>
-                        Explore our cosmic neighborhood.
-                    </p>
+<!-- CARD 04 -->
 
-                    <div class="av-card-bottom">
+<article class="happening-card">
 
-                        <span>
-                            COSMIC JOURNEY
-                        </span>
+  <div class="card-image">
+    <img
+      src="images/observe.webp"
+      alt="Observatory open">
+  </div>
 
-                        <span class="av-card-arrow">
-                            ↗
-                        </span>
+  <div class="card-content">
 
-                    </div>
+    <div class="card-time">
+      UNTIL 10 PM
+    </div>
 
-                </div>
+    <div class="card-label">
+      OPEN NOW
+    </div>
 
-            </article>
+    <h3 class="card-title">
+      Observatory
+    </h3>
 
+    <p class="card-description">
+      The night is waiting.
+    </p>
 
+    <div class="card-arrow">
+      →
+    </div>
 
-            <!-- CARD 03 -->
+  </div>
 
-            <article class="av-happening-card">
+</article>
 
-                <div class="av-card-image">
+</div>
 
-                    <img
-                        src="images/star.jfif"
-                        alt="Night sky stargazing"
-                    >
 
-                    <div class="av-image-overlay"></div>
+<!-- =========================
+     OPEN STATUS
+========================= -->
 
-                    <div class="av-card-index">
-                        03
-                    </div>
+<div class="status-bar">
 
-                </div>
+  <div class="status-left">
 
+    <div class="status-icon">
+      ✦
+    </div>
 
-                <div class="av-card-content">
+    <div>
 
-                    <div class="av-card-top">
+      <p class="status-label">
+        Observatory Status
+      </p>
 
-                        <span class="av-card-time">
-                            07:30 PM
-                        </span>
-
-                        <span class="av-card-status">
-                            TONIGHT
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        Stargazing
-                    </h3>
-
-                    <p>
-                        Experience the real night sky.
-                    </p>
-
-                    <div class="av-card-bottom">
-
-                        <span>
-                            NIGHT SKY
-                        </span>
-
-                        <span class="av-card-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 04 -->
-
-            <article class="av-happening-card">
-
-                <div class="av-card-image">
-
-                    <img
-                        src="images/observe.webp"
-                        alt="Observatory open"
-                    >
-
-                    <div class="av-image-overlay"></div>
-
-                    <div class="av-card-index">
-                        04
-                    </div>
-
-                </div>
-
-
-                <div class="av-card-content">
-
-                    <div class="av-card-top">
-
-                        <span class="av-card-time">
-                            UNTIL 10 PM
-                        </span>
-
-                        <span class="av-card-status open">
-                            OPEN NOW
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        Observatory
-                    </h3>
-
-                    <p>
-                        The night is waiting.
-                    </p>
-
-                    <div class="av-card-bottom">
-
-                        <span>
-                            VISITOR ACCESS
-                        </span>
-
-                        <span class="av-card-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-
-
-        <!-- =========================
-             STATUS BAR
-        ========================== -->
-
-        <div class="av-status-bar">
-
-            <div class="av-status-left">
-
-                <div class="av-status-icon">
-              
-                </div>
-
-                <div>
-
-                    <span class="av-status-label">
-                        OBSERVATORY STATUS
-                    </span>
-
-                    <h3>
-                        Observatory Open
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <div class="av-status-right">
-
-                <span class="av-open-time">
-                    Open until 10:00 PM
-                </span>
-
-                <a
-                    href="#"
-                    class="av-visit-btn"
-                >
-                    Plan Your Visit
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-        </div>
+      <h3 class="status-title">
+        Observatory Open
+      </h3>
 
     </div>
 
+  </div>
+
+
+  <div class="status-right">
+
+    <span class="open-time">
+      Open until 10:00 PM
+    </span>
+
+    <a href="#" class="visit-btn">
+      Plan Your Visit →
+    </a>
+
+  </div>
+
+</div>
+
+
+</div>
+
 </section>
-
-</body>
-
 <section class="cosmic-shows">
 
   <div class="cosmic-shows-inner">
@@ -1159,7 +909,7 @@ window.addEventListener(
       </div>
 
       <h2>
-        Beyond the
+        Beyond the 
         <span>Sky</span>
       </h2>
 
@@ -1180,17 +930,14 @@ window.addEventListener(
       </div>
 
       <div class="cosmic-photo">
-
-        <img
-          src="images/so.webp"
-          alt="Journey Through the Solar System">
+        <img src="images/so.webp"
+             alt="Journey Through the Solar System">
 
         <div class="photo-shine"></div>
 
         <span class="photo-label">
           FEATURED
         </span>
-
       </div>
 
       <div class="cosmic-detail">
@@ -1237,13 +984,10 @@ window.addEventListener(
       </div>
 
       <div class="cosmic-photo">
-
-        <img
-          src="images/milk2.jpg"
-          alt="Beyond the Milky Way">
+        <img src="images/milk2.jpg"
+             alt="Beyond the Milky Way">
 
         <div class="photo-shine"></div>
-
       </div>
 
       <div class="cosmic-detail">
@@ -1290,13 +1034,10 @@ window.addEventListener(
       </div>
 
       <div class="cosmic-photo">
-
-        <img
-          src="images/black.jfif"
-          alt="Black Holes Into the Unknown">
+        <img src="images/black.jfif"
+             alt="Black Holes Into the Unknown">
 
         <div class="photo-shine"></div>
-
       </div>
 
       <div class="cosmic-detail">
@@ -1343,13 +1084,10 @@ window.addEventListener(
       </div>
 
       <div class="cosmic-photo">
-
-        <img
-          src="images/ds1.avif"
-          alt="Wonders of Deep Space">
+        <img src="images/ds1.avif"
+             alt="Wonders of Deep Space">
 
         <div class="photo-shine"></div>
-
       </div>
 
       <div class="cosmic-detail">
@@ -1389,20 +1127,15 @@ window.addEventListener(
   </div>
 
 </section>
-
 <section class="tonight-section">
 
   <!-- ================= CENTER HEADING ================= -->
 
   <div class="tonight-head">
 
-    <span class="tonight-eyebrow">
-      TONIGHT'S SKY
-    </span>
+    <span class="tonight-eyebrow">TONIGHT'S SKY</span>
 
-    <h2>
-      Tonight <span>Look Up</span>
-    </h2>
+    <h2>Tonight <span>Look Up</span></h2>
 
     <p>
       Explore the celestial highlights waiting above the observatory.
@@ -1415,413 +1148,377 @@ window.addEventListener(
 
   <div class="sky-tabs">
 
-    <button
-      class="sky-tab active"
-      data-target="sky1"
-      type="button"
-    >
+    <button class="sky-tab active" data-target="sky1">
       <i class="bi bi-moon-stars"></i>
-      <span>Moon Watch</span>
+      Moon Watch
     </button>
 
-    <button
-      class="sky-tab"
-      data-target="sky2"
-      type="button"
-    >
+    <button class="sky-tab" data-target="sky2">
       <i class="bi bi-stars"></i>
-      <span>Deep Sky</span>
+      Deep Sky
     </button>
 
-    <button
-      class="sky-tab"
-      data-target="sky3"
-      type="button"
-    >
+    <button class="sky-tab" data-target="sky3">
       <i class="bi bi-brightness-high"></i>
-      <span>Constellations</span>
+      Constellations
     </button>
 
   </div>
 
 
   <!-- =====================================================
-       STABLE PANEL WRAPPER
-       Keeps page from jumping
+       SKY 1
   ====================================================== -->
 
-  <div class="tonight-panels">
+  <div class="tonight-card sky-panel active" id="sky1">
 
+    <!-- LEFT IMAGE -->
 
-    <!-- =====================================================
-         SKY 1
-    ====================================================== -->
+    <div class="tonight-image">
 
-    <div
-      class="tonight-card sky-panel active"
-      id="sky1"
-    >
+      <img
+        src="images/u.jpg"
+        alt="Moonlight night sky"
+      >
 
-      <!-- IMAGE -->
+      <div class="image-overlay"></div>
 
-      <div class="tonight-image">
+      <div class="sky-caption">
 
-        <img
-          src="images/u.jpg"
-          alt="Moonlight night sky"
-        >
+        <span>23 SEPTEMBER</span>
 
-        <div class="image-overlay"></div>
-
-        <div class="sky-caption">
-
-          <span>23 SEPTEMBER</span>
-
-          <strong>Moonlit Horizon</strong>
-
-        </div>
-
-      </div>
-
-
-      <!-- CONTENT -->
-
-      <div class="tonight-content">
-
-        <div class="sky-intro">
-
-          <span>MOON & PLANET WATCH</span>
-
-          <h3>
-            Discover Tonight's Sky
-          </h3>
-
-        </div>
-
-
-        <div class="sky-grid">
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-moon-stars"></i>
-            </div>
-
-            <div>
-              <small>MOON</small>
-              <strong>Waxing Crescent</strong>
-            </div>
-
-          </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-globe2"></i>
-            </div>
-
-            <div>
-              <small>PLANETS</small>
-              <strong>Jupiter · Saturn</strong>
-            </div>
-
-          </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-stars"></i>
-            </div>
-
-            <div>
-              <small>VISIBILITY</small>
-              <strong>Excellent After 8 PM</strong>
-            </div>
-
-          </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-<i class="bi bi-stars"></i>            </div>
-
-            <div>
-              <small>SESSION</small>
-              <strong>Moon & Planet Tour</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="tonight-bottom">
-
-          <div>
-            <i class="bi bi-clock"></i>
-            <span>Best viewing · 8:00 PM</span>
-          </div>
-
-          <a href="#">
-            Explore Tonight
-          </a>
-
-        </div>
+        <strong>Moonlit Horizon</strong>
 
       </div>
 
     </div>
 
 
+    <!-- RIGHT CONTENT -->
 
-    <!-- =====================================================
-         SKY 2
-    ====================================================== -->
+    <div class="tonight-content">
 
-    <div
-      class="tonight-card sky-panel"
-      id="sky2"
-    >
+      <div class="sky-intro">
 
-      <!-- IMAGE -->
+        <span>MOON & PLANET WATCH</span>
 
-      <div class="tonight-image">
+        <h3>Discover Tonight's Sky</h3>
 
-        <img
-          src="images/sky.webp"
-          alt="Deep space observation"
-        >
+      </div>
 
-        <div class="image-overlay"></div>
 
-        <div class="sky-caption">
+      <div class="sky-grid">
 
-          <span>DEEP SKY SESSION</span>
+        <div class="sky-mini">
 
-          <strong>Beyond The Horizon</strong>
+          <div class="mini-icon">
+            <i class="bi bi-moon-stars"></i>
+          </div>
+
+          <div>
+            <small>MOON</small>
+            <strong>Waxing Crescent</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-globe2"></i>
+          </div>
+
+          <div>
+            <small>PLANETS</small>
+            <strong>Jupiter · Saturn</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+
+          <div>
+            <small>VISIBILITY</small>
+            <strong>Excellent After 8 PM</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-telescope"></i>
+          </div>
+
+          <div>
+            <small>SESSION</small>
+            <strong>Moon & Planet Tour</strong>
+          </div>
 
         </div>
 
       </div>
 
 
-      <!-- CONTENT -->
+      <div class="tonight-bottom">
 
-      <div class="tonight-content">
-
-        <div class="sky-intro">
-
-          <span>DEEP SPACE EXPLORATION</span>
-
-          <h3>
-            See Beyond The Stars
-          </h3>
-
+        <div>
+          <i class="bi bi-clock"></i>
+          <span>Best viewing · 8:00 PM</span>
         </div>
 
+        <a href="#">
+          Explore Tonight
+        </a>
 
-        <div class="sky-grid">
+      </div>
 
-          <div class="sky-mini">
+    </div>
 
-            <div class="mini-icon">
-              <i class="bi bi-stars"></i>
-            </div>
-
-            <div>
-              <small>FEATURED</small>
-              <strong>Cygnus Star Field</strong>
-            </div>
-
-          </div>
+  </div>
 
 
-          <div class="sky-mini">
 
-            <div class="mini-icon">
-              <i class="bi bi-globe2"></i>
-            </div>
+  <!-- =====================================================
+       SKY 2
+  ====================================================== -->
 
-            <div>
-              <small>PLANETS</small>
-              <strong>Jupiter · Saturn</strong>
-            </div>
+  <div class="tonight-card sky-panel" id="sky2">
 
-          </div>
+    <!-- LEFT IMAGE -->
 
+    <div class="tonight-image">
 
-          <div class="sky-mini">
+      <img
+        src="images/sky.webp"
+        alt="Deep space observation"
+      >
 
-            <div class="mini-icon">
-              <i class="bi bi-eye"></i>
-            </div>
+      <div class="image-overlay"></div>
 
-            <div>
-              <small>ACTIVITY</small>
-              <strong>Clear Deep-Sky Viewing</strong>
-            </div>
+      <div class="sky-caption">
 
-          </div>
+        <span>DEEP SKY SESSION</span>
 
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-telescope"></i>
-            </div>
-
-            <div>
-              <small>SESSION</small>
-              <strong>Guided Telescope Tour</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="tonight-bottom">
-
-          <div>
-            <i class="bi bi-clock"></i>
-            <span>Best viewing · 9:15 PM</span>
-          </div>
-
-          <a href="#">
-            Explore Tonight
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-
-        </div>
+        <strong>Beyond The Horizon</strong>
 
       </div>
 
     </div>
 
 
+    <!-- RIGHT CONTENT -->
 
-    <!-- =====================================================
-         SKY 3
-    ====================================================== -->
+    <div class="tonight-content">
 
-    <div
-      class="tonight-card sky-panel"
-      id="sky3"
-    >
+      <div class="sky-intro">
 
-      <!-- IMAGE -->
+        <span>DEEP SPACE EXPLORATION</span>
 
-      <div class="tonight-image">
+        <h3>See Beyond The Stars</h3>
 
-        <img
-          src="images/constellation.jpeg"
-          alt="Constellation night sky"
-        >
+      </div>
 
-        <div class="image-overlay"></div>
 
-        <div class="sky-caption">
+      <div class="sky-grid">
 
-          <span>CONSTELLATION FOCUS</span>
+        <div class="sky-mini">
 
-          <strong>Cygnus Above</strong>
+          <div class="mini-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+
+          <div>
+            <small>FEATURED</small>
+            <strong>Cygnus Star Field</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-globe2"></i>
+          </div>
+
+          <div>
+            <small>PLANETS</small>
+            <strong>Jupiter · Saturn</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-eye"></i>
+          </div>
+
+          <div>
+            <small>ACTIVITY</small>
+            <strong>Clear Deep-Sky Viewing</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-telescope"></i>
+          </div>
+
+          <div>
+            <small>SESSION</small>
+            <strong>Guided Telescope Tour</strong>
+          </div>
 
         </div>
 
       </div>
 
 
-      <!-- CONTENT -->
+      <div class="tonight-bottom">
 
-      <div class="tonight-content">
-
-        <div class="sky-intro">
-
-          <span>STAR MAP OF THE NIGHT</span>
-
-          <h3>
-            Find Your Way Among Stars
-          </h3>
-
+        <div>
+          <i class="bi bi-clock"></i>
+          <span>Best viewing · 9:15 PM</span>
         </div>
 
+        <a href="#">
+          Explore Tonight
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
 
-        <div class="sky-grid">
+      </div>
 
-          <div class="sky-mini">
+    </div>
 
-            <div class="mini-icon">
-              <i class="bi bi-stars"></i>
-            </div>
+  </div>
 
-            <div>
-              <small>CONSTELLATION</small>
-              <strong>Cygnus</strong>
-            </div>
 
+
+  <!-- =====================================================
+       SKY 3
+  ====================================================== -->
+
+  <div class="tonight-card sky-panel" id="sky3">
+
+    <!-- LEFT IMAGE -->
+
+    <div class="tonight-image">
+
+      <img
+        src="images/constellation.jpeg"
+        alt="Constellation night sky"
+      >
+
+      <div class="image-overlay"></div>
+
+      <div class="sky-caption">
+
+        <span>CONSTELLATION FOCUS</span>
+
+        <strong>Cygnus Above</strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="tonight-content">
+
+      <div class="sky-intro">
+
+        <span>STAR MAP OF THE NIGHT</span>
+
+        <h3>Find Your Way Among Stars</h3>
+
+      </div>
+
+
+      <div class="sky-grid">
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-stars"></i>
           </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-compass"></i>
-            </div>
-
-            <div>
-              <small>DIRECTION</small>
-              <strong>Northwest Sky</strong>
-            </div>
-
-          </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-moon-stars"></i>
-            </div>
-
-            <div>
-              <small>MOONLIGHT</small>
-              <strong>Low Interference</strong>
-            </div>
-
-          </div>
-
-
-          <div class="sky-mini">
-
-            <div class="mini-icon">
-              <i class="bi bi-telescope"></i>
-            </div>
-
-            <div>
-              <small>SESSION</small>
-              <strong>Star Map Walk</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="tonight-bottom">
 
           <div>
-            <i class="bi bi-clock"></i>
-            <span>Best viewing · 8:45 PM</span>
+            <small>CONSTELLATION</small>
+            <strong>Cygnus</strong>
           </div>
 
-          <a href="#">
-            Explore Tonight
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-compass"></i>
+          </div>
+
+          <div>
+            <small>DIRECTION</small>
+            <strong>Northwest Sky</strong>
+          </div>
 
         </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-moon-stars"></i>
+          </div>
+
+          <div>
+            <small>MOONLIGHT</small>
+            <strong>Low Interference</strong>
+          </div>
+
+        </div>
+
+
+        <div class="sky-mini">
+
+          <div class="mini-icon">
+            <i class="bi bi-telescope"></i>
+          </div>
+
+          <div>
+            <small>SESSION</small>
+            <strong>Star Map Walk</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="tonight-bottom">
+
+        <div>
+          <i class="bi bi-clock"></i>
+          <span>Best viewing · 8:45 PM</span>
+        </div>
+
+        <a href="#">
+          Explore Tonight
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
 
       </div>
 
@@ -1831,400 +1528,218 @@ window.addEventListener(
 
 </section>
 
-
-
-
-
 <script>
 
-/* =========================================================
-   ASTRAVISTA — TONIGHT'S SKY
-   STABLE TAB SWITCHING
-========================================================= */
+/* =====================================================
+   SKY TAB SWITCHING
+===================================================== */
 
-document.addEventListener("DOMContentLoaded", function(){
+const skyTabs =
+  document.querySelectorAll(".sky-tab");
 
-  const tabs =
-    document.querySelectorAll(".sky-tab");
-
-  const panels =
-    document.querySelectorAll(".sky-panel");
+const skyPanels =
+  document.querySelectorAll(".sky-panel");
 
 
-  if(!tabs.length || !panels.length){
-    return;
-  }
+skyTabs.forEach(tab => {
+
+  tab.addEventListener("click", () => {
+
+    const target =
+      tab.getAttribute("data-target");
 
 
-  tabs.forEach(function(tab){
+    /* REMOVE ACTIVE TAB */
 
-    tab.addEventListener("click", function(){
+    skyTabs.forEach(item => {
 
-      const target =
-        this.getAttribute("data-target");
+      item.classList.remove("active");
 
-      const selectedPanel =
-        document.getElementById(target);
+    });
 
 
-      if(!selectedPanel){
-        return;
-      }
+    /* HIDE ALL PANELS */
+
+    skyPanels.forEach(panel => {
+
+      panel.classList.remove("active");
+
+    });
 
 
-      /* =========================================
-         ALREADY ACTIVE
-      ========================================= */
+    /* ACTIVATE SELECTED TAB */
 
-      if(this.classList.contains("active")){
-        return;
-      }
+    tab.classList.add("active");
 
 
-      /* =========================================
-         UPDATE TAB
-      ========================================= */
+    /* SHOW SELECTED PANEL */
 
-      tabs.forEach(function(item){
-
-        item.classList.remove("active");
-
-      });
-
-      this.classList.add("active");
+    const selectedPanel =
+      document.getElementById(target);
 
 
-      /* =========================================
-         UPDATE PANEL
-         All panels stay position:absolute.
-         Therefore page height does not change.
-      ========================================= */
-
-      panels.forEach(function(panel){
-
-        panel.classList.remove("active");
-
-      });
-
+    if(selectedPanel){
 
       selectedPanel.classList.add("active");
 
-    });
+    }
 
   });
 
 });
 
 </script>
-<section class="why-astravista-v3">
+<section class="why-astravista">
 
-  <!-- =====================================================
-       CENTER HEADING
-  ====================================================== -->
+  <div class="why-head">
+    <span class="why-eyebrow">WHY ASTRAVISTA</span>
 
-  <div class="why-v3-heading">
 
-    <div class="why-v3-eyebrow">
+<h2>
+  Curiosity Meets 
+  <span>Cosmos</span>
+</h2>
 
-      <span class="why-v3-eye-line"></span>
+<p>
+  Thoughtfully designed experiences that bring astronomy
+  closer through discovery, observation, and wonder.
+</p>
 
-      <span class="why-v3-eye-dot"></span>
 
-      <span>WHY ASTRAVISTA</span>
+  </div>
 
-      <span class="why-v3-eye-dot"></span>
+  <div class="why-cosmic-stage">
 
-      <span class="why-v3-eye-line"></span>
 
-    </div>
+<!-- =========================
+     FULL ORBIT SYSTEM
+========================== -->
 
-    <h2>
-      Where Curiosity
-      <span>Finds The Stars</span>
-    </h2>
+<div class="cosmic-orbit orbit-large">
+  <span class="orbit-glow"></span>
+  <span class="orbit-particle particle-a"></span>
+  <span class="orbit-particle particle-b"></span>
+</div>
+
+<div class="cosmic-orbit orbit-medium">
+  <span class="orbit-glow"></span>
+  <span class="orbit-particle particle-c"></span>
+</div>
+
+<div class="cosmic-orbit orbit-small">
+  <span class="orbit-glow"></span>
+  <span class="orbit-particle particle-d"></span>
+</div>
+
+
+<!-- =========================
+     CENTER COSMOS
+========================== -->
+
+<div class="cosmic-core">
+
+  <div class="core-glow"></div>
+
+  <div class="core-inner">
+
+    <span class="core-star">✦</span>
+
+    <strong>
+      ASTRA<br>
+      VISTA
+    </strong>
+
+    <small>
+      DISCOVER • EXPLORE
+    </small>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     01
+========================== -->
+
+<div class="why-item item-one">
+
+  <span class="why-number">01</span>
+
+  <div>
+    <h3>Immersive Shows</h3>
 
     <p>
-      From immersive planetarium journeys to real night-sky
-      observation, AstraVista transforms curiosity into
-      unforgettable discovery.
+      Cinematic journeys that transform astronomy
+      into an experience you can feel.
+    </p>
+  </div>
+
+</div>
+
+
+<!-- =========================
+     02
+========================== -->
+
+<div class="why-item item-two">
+
+  <span class="why-number">02</span>
+
+  <div>
+    <h3>Expert-Led Discovery</h3>
+
+    <p>
+      Explore the universe through engaging stories,
+      knowledge, and expert guidance.
+    </p>
+  </div>
+
+</div>
+
+
+<!-- =========================
+     03
+========================== -->
+
+<div class="why-item item-three">
+
+  <span class="why-number">03</span>
+
+  <div>
+    <h3>Observatory Experiences</h3>
+
+    <p>
+      Look beyond the screen and experience the
+      real night sky through our observatory.
     </p>
 
   </div>
 
+</div>
 
-  <!-- =====================================================
-       MAIN CONTENT
-  ====================================================== -->
 
-  <div class="why-v3-grid">
+<!-- =========================
+     04
+========================== -->
 
+<div class="why-item item-four">
 
-    <!-- =================================================
-         LEFT IMAGE
-    ================================================== -->
+  <span class="why-number">04</span>
 
-    <div class="why-v3-visual">
+  <div>
 
-      <div class="why-v3-image-frame">
+    <h3>Learning Through Wonder</h3>
 
-        <img
-          src="images/p10.jfif"
-          alt="AstraVista observatory and astronomy experience"
-        >
+    <p>
+      Turn curiosity into discovery with experiences
+      designed to inspire every generation.
+    </p>
 
-        <div class="why-v3-image-overlay"></div>
+  </div>
 
+</div>
 
-        <!-- Image top label -->
-
-        <div class="why-v3-image-top">
-
-          <span>ASTRAVISTA</span>
-
-          <span>01 — 04</span>
-
-        </div>
-
-
-        <!-- Image bottom information -->
-
-        <div class="why-v3-image-bottom">
-
-          <div class="why-v3-image-icon">
-         
-          </div>
-
-          <div>
-
-            <span>THE NIGHT SKY</span>
-
-            <strong>
-              An Invitation To Explore
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- Floating observation card -->
-
-      <div class="why-v3-floating">
-
-        <div class="why-v3-floating-icon">
-          <i class="fa-solid fa-telescope"></i>
-        </div>
-
-        <div>
-
-          <strong>
-            Observe Beyond
-          </strong>
-
-          <span>
-            Real sky experiences
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =================================================
-         RIGHT CONTENT
-    ================================================== -->
-
-    <div class="why-v3-content">
-
-
-      <!-- Intro -->
-
-      <div class="why-v3-intro">
-
-        <span class="why-v3-intro-number">
-          01
-        </span>
-
-        <div>
-
-          <span class="why-v3-intro-label">
-            DISCOVER DIFFERENTLY
-          </span>
-
-          <p>
-            AstraVista brings together storytelling,
-            technology, observation, and education to create
-            a deeper connection with the universe.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- =================================================
-           FEATURES
-      ================================================== -->
-
-      <div class="why-v3-features">
-
-
-        <!-- Feature 01 -->
-
-        <article class="why-v3-feature">
-
-          <div class="why-v3-feature-number">
-            01
-          </div>
-
-          <div class="why-v3-feature-content">
-
-            <div class="why-v3-feature-title">
-
-              <h3>
-                Immersive Shows
-              </h3>
-
-              <span>
-            
-              </span>
-
-            </div>
-
-            <p>
-              Travel across galaxies through cinematic
-              planetarium experiences that make the universe
-              feel remarkably close.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- Feature 02 -->
-
-        <article class="why-v3-feature">
-
-          <div class="why-v3-feature-number">
-            02
-          </div>
-
-          <div class="why-v3-feature-content">
-
-            <div class="why-v3-feature-title">
-
-              <h3>
-                Expert-Led Discovery
-              </h3>
-
-              <span>
-                
-              </span>
-
-            </div>
-
-            <p>
-              Learn from astronomy experts who transform
-              complex cosmic ideas into stories everyone can
-              understand and enjoy.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- Feature 03 -->
-
-        <article class="why-v3-feature">
-
-          <div class="why-v3-feature-number">
-            03
-          </div>
-
-          <div class="why-v3-feature-content">
-
-            <div class="why-v3-feature-title">
-
-              <h3>
-                Observatory Experiences
-              </h3>
-
-              <span>
-              
-              </span>
-
-            </div>
-
-            <p>
-              Step outside the digital universe and observe
-              planets, stars, and celestial wonders through
-              real astronomical instruments.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- Feature 04 -->
-
-        <article class="why-v3-feature">
-
-          <div class="why-v3-feature-number">
-            04
-          </div>
-
-          <div class="why-v3-feature-content">
-
-            <div class="why-v3-feature-title">
-
-              <h3>
-                Wonder For Everyone
-              </h3>
-
-              <span>
-                
-              </span>
-
-            </div>
-
-            <p>
-              Thoughtfully designed for families, students,
-              explorers, and anyone ready to look beyond
-              the familiar.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-      <!-- Bottom statement -->
-
-      <div class="why-v3-statement">
-
-        <span class="why-v3-statement-line"></span>
-
-        <p>
-          Every question is the beginning
-          of another journey.
-        </p>
-
-        <span class="why-v3-star">
-          
-        </span>
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -3045,6 +2560,68 @@ document.addEventListener("DOMContentLoaded", function(){
   </div>
 
 </section>
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* Lucide icons */
+  if(window.lucide){
+
+    lucide.createIcons();
+
+  }
+
+
+  /* Contact form */
+
+  const form =
+    document.getElementById("avContactForm");
+
+  const success =
+    document.getElementById("avSuccess");
+
+
+  if(form){
+
+    form.addEventListener(
+      "submit",
+      function(event){
+
+        event.preventDefault();
+
+
+        success.classList.add("show");
+
+
+        form.reset();
+
+
+        /* Re-render icons if needed */
+
+        if(window.lucide){
+
+          lucide.createIcons();
+
+        }
+
+
+        setTimeout(
+          function(){
+
+            success.classList.remove("show");
+
+          },
+          5000
+        );
+
+      }
+    );
+
+  }
+
+});
+
+</script>
 <section class="av-testimonials">
 
   <div class="av-testi-glow av-glow-left"></div>
@@ -3201,6 +2778,7 @@ document.addEventListener("DOMContentLoaded", function(){
   </div>
 
 </section>
+
 <script>
 
 /* =========================================================
@@ -3529,6 +3107,7 @@ lucide.createIcons();
   </div>
 
 </section>
+
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -4547,191 +4126,53 @@ mobileHomeBtn.setAttribute(
 );
 
 </script>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================================================
        ASTRA VISTA — CURRENT PAGE ACTIVE NAVIGATION
-       Supports:
-       - index.html
-       - home.html
-       - Shows&programs.html
-       - School Programs.html
-       - Membership.html
-       - contact.html
-       - dashboard.html
-       - Mobile + Desktop
     ========================================================= */
 
-    function normalizePage(url) {
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase()
+            .trim();
 
-        try {
-
-            const parsed =
-                new URL(
-                    url,
-                    window.location.href
-                );
-
-            let page =
-                parsed.pathname
-                    .split("/")
-                    .pop()
-                    .trim()
-                    .toLowerCase();
-
-            /*
-                Decode URL characters so filenames such as:
-                School%20Programs.html
-                become:
-                School Programs.html
-            */
-
-            try {
-                page = decodeURIComponent(page);
-            } catch (error) {}
-
-            return page;
-
-        } catch (error) {
-
-            return "";
-
-        }
-
-    }
-
-
-    /* =========================================================
-       CURRENT PAGE
-    ========================================================= */
-
-    let currentPage =
-        normalizePage(
-            window.location.href
-        );
-
-
-    /*
-        If the site is opened directly from a folder
-        without index.html, treat it as Home 1.
-    */
-
-    if (
-        currentPage === ""
-    ) {
-
-        currentPage = "index.html";
-
-    }
-
-
-    /* =========================================================
-       DESKTOP NAV LINKS
-    ========================================================= */
-
-    const desktopLinks =
+    const navLinks =
         document.querySelectorAll(
-            ".main-nav a[href]"
+            ".main-nav a, .nav-links a, .mobilePanel a"
         );
 
 
-    /* =========================================================
-       MOBILE NAV LINKS
-    ========================================================= */
-
-    const mobileLinks =
-        document.querySelectorAll(
-            ".mobile-panel a[href]"
-        );
-
-
-    /* =========================================================
-       CLEAR ACTIVE STATES
-    ========================================================= */
-
-    document
-        .querySelectorAll(
-            ".main-nav .active, .mobile-panel .active"
-        )
-        .forEach(function (element) {
-
-            element.classList.remove(
-                "active"
-            );
-
-        });
-
-
-    /* =========================================================
-       CHECK DESKTOP + MOBILE LINKS
-    ========================================================= */
-
-    function activateMatchingLink(link) {
+    navLinks.forEach(function (link) {
 
         const href =
             link.getAttribute("href");
 
-
-        if (
-            !href ||
-            href === "#" ||
-            href.startsWith("javascript:")
-        ) {
-
-            return false;
-
+        if (!href || href === "#") {
+            return;
         }
 
 
         const linkPage =
-            normalizePage(href);
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase()
+                .trim();
 
 
-        if (
-            !linkPage
-        ) {
+        /* Remove old active state */
 
-            return false;
-
-        }
-
-
-        /* =====================================================
-           HOME 1
-        ===================================================== */
-
-        if (
-            currentPage === "index.html" &&
-            linkPage === "index.html"
-        ) {
-
-            link.classList.add("active");
-
-            return true;
-
-        }
+        link.classList.remove("active");
 
 
         /* =====================================================
-           HOME 2
-        ===================================================== */
-
-        if (
-            currentPage === "home.html" &&
-            linkPage === "home.html"
-        ) {
-
-            link.classList.add("active");
-
-            return true;
-
-        }
-
-
-        /* =====================================================
-           ALL OTHER PAGES
+           CURRENT PAGE
         ===================================================== */
 
         if (
@@ -4740,107 +4181,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.classList.add("active");
 
-            return true;
-
         }
 
 
-        return false;
+        /* =====================================================
+           HOME PAGE
+        ===================================================== */
 
-    }
+        if (
+            (currentPage === "" ||
+             currentPage === "index.html") &&
+            (linkPage === "" ||
+             linkPage === "index.html")
+        ) {
 
-
-    desktopLinks.forEach(
-        activateMatchingLink
-    );
-
-
-    mobileLinks.forEach(
-        activateMatchingLink
-    );
-
-
-    /* =========================================================
-       HOME DROPDOWN PARENT
-       
-       If current page is:
-       - index.html
-       - home.html
-
-       make the main "Home" navigation active too.
-    ========================================================= */
-
-    if (
-        currentPage === "index.html" ||
-        currentPage === "home.html"
-    ) {
-
-        const desktopHome =
-            document.getElementById(
-                "homeToggle"
-            );
-
-
-        if (desktopHome) {
-
-            desktopHome.classList.add(
-                "active"
-            );
+            link.classList.add("active");
 
         }
 
-
-        const mobileHome =
-            document.getElementById(
-                "mobileHomeBtn"
-            );
-
-
-        if (mobileHome) {
-
-            mobileHome.classList.add(
-                "active"
-            );
-
-        }
-
-    }
-
-
-    /* =========================================================
-       SCHOOL PROGRAMS
-       
-       Explicit handling because the filename contains a space.
-    ========================================================= */
-
-    if (
-        currentPage ===
-        "school programs.html"
-    ) {
-
-        document
-            .querySelectorAll(
-                'a[href*="School Programs"]'
-            )
-            .forEach(function (link) {
-
-                link.classList.add(
-                    "active"
-                );
-
-            });
-
-    }
-
-
-    /* =========================================================
-       OPTIONAL — OPEN HOME DROPDOWN WHEN HOME 2 IS ACTIVE
-       
-       Desktop dropdown remains CSS hover based.
-       We only mark the Home parent active.
-    ========================================================= */
+    });
 
 });
 </script>
+
 </body>
 </html>

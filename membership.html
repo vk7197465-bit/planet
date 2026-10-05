@@ -9,7 +9,7 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Care Heaven | Premium Responsive Header & Footer</title>
+<title>AstraVista | Planetarium & Observatory Visitor Center</title>
 
 <!-- =========================================================
      GOOGLE FONTS
@@ -21,6 +21,7 @@
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin>
+<link rel="icon" type="image/png" sizes="42x42" href="images/logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet">
@@ -1964,7 +1965,7 @@ document.addEventListener(
 
 let darkMode =
     localStorage.getItem(
-        "careHeavenTheme"
+        "astravista-theme"
     ) === "dark";
 
 
@@ -2085,7 +2086,7 @@ themeBtn.addEventListener(
             !darkMode;
 
         localStorage.setItem(
-            "careHeavenTheme",
+            "astravista-theme",
             darkMode
                 ? "dark"
                 : "light"
@@ -2103,7 +2104,7 @@ themeBtn.addEventListener(
 
 let rtlMode =
     localStorage.getItem(
-        "careHeavenDirection"
+        "astravista-direction"
     ) === "rtl";
 
 
@@ -2136,7 +2137,7 @@ rtlBtn.addEventListener(
             !rtlMode;
 
         localStorage.setItem(
-            "careHeavenDirection",
+            "astravista-direction",
             rtlMode
                 ? "rtl"
                 : "ltr"
@@ -2338,5 +2339,83 @@ mobileHomeBtn.setAttribute(
 );
 
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       ASTRA VISTA — CURRENT PAGE ACTIVE NAVIGATION
+    ========================================================= */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase()
+            .trim();
+
+    const navLinks =
+        document.querySelectorAll(
+            ".main-nav a, .nav-links a, .mobilePanel a"
+        );
+
+
+    navLinks.forEach(function (link) {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href || href === "#") {
+            return;
+        }
+
+
+        const linkPage =
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase()
+                .trim();
+
+
+        /* Remove old active state */
+
+        link.classList.remove("active");
+
+
+        /* =====================================================
+           CURRENT PAGE
+        ===================================================== */
+
+        if (
+            linkPage === currentPage
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+
+        /* =====================================================
+           HOME PAGE
+        ===================================================== */
+
+        if (
+            (currentPage === "" ||
+             currentPage === "index.html") &&
+            (linkPage === "" ||
+             linkPage === "index.html")
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+</script>
+
 </body>
 </html>

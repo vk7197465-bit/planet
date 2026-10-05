@@ -1,0 +1,3298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Astra Vista | Sign Up</title>
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --primary:#173F9F;
+    --secondary:#7357E8;
+    --primary-dark:#102f7c;
+
+    --primary-soft:rgba(23,63,159,.10);
+    --secondary-soft:rgba(115,87,232,.11);
+
+    --bg:#f7f9ff;
+    --surface:#ffffff;
+    --surface-soft:#f5f7fc;
+
+    --text:#171a29;
+    --text-soft:#74798b;
+    --border:#e1e6f0;
+
+    --shadow:
+        0 38px 100px rgba(23,63,159,.14),
+        0 15px 40px rgba(30,38,70,.09);
+
+    --radius:32px;
+
+    --transition:.28s ease;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html.dark{
+
+    --bg:#070a15;
+    --surface:#111526;
+    --surface-soft:#171c2e;
+
+    --text:#f5f7ff;
+    --text-soft:#aeb5ca;
+    --border:#292f45;
+
+    --primary-soft:rgba(23,63,159,.18);
+    --secondary-soft:rgba(115,87,232,.17);
+
+    --shadow:
+        0 38px 100px rgba(0,0,0,.58),
+        0 15px 40px rgba(0,0,0,.32);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.auth-page{
+
+    width:100%;
+    height:100svh;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:28px;
+
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.auth-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.auth-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:760px;
+    height:760px;
+
+    top:-360px;
+    left:-280px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(23,63,159,.18),
+            transparent 68%
+        );
+
+    filter:blur(10px);
+}
+
+.auth-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:720px;
+    height:720px;
+
+    right:-320px;
+    bottom:-350px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.18),
+            transparent 68%
+        );
+
+    filter:blur(10px);
+}
+
+
+/* =========================================================
+   ORBS
+========================================================= */
+
+.orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    opacity:.7;
+}
+
+.orb-one{
+
+    width:100px;
+    height:100px;
+
+    top:12%;
+    right:12%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.15),
+            transparent 70%
+        );
+
+    animation:floatOne 8s ease-in-out infinite;
+}
+
+.orb-two{
+
+    width:70px;
+    height:70px;
+
+    bottom:13%;
+    left:10%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(23,63,159,.14),
+            transparent 70%
+        );
+
+    animation:floatTwo 7s ease-in-out infinite;
+}
+
+@keyframes floatOne{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+}
+
+@keyframes floatTwo{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(16px);
+    }
+}
+
+
+/* =========================================================
+   TOP CONTROLS
+========================================================= */
+
+.top-controls{
+
+    position:absolute;
+
+    top:22px;
+    right:26px;
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    z-index:20;
+}
+
+.control-btn{
+
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(16px);
+
+    color:var(--text);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:var(--transition);
+}
+
+html.dark .control-btn{
+
+    background:rgba(17,21,38,.9);
+}
+
+.control-btn:hover{
+
+    transform:translateY(-2px);
+
+    border-color:var(--secondary);
+
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   SIGNUP CARD
+   LARGER + CONTROLLED HEIGHT
+========================================================= */
+
+.signup-card{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(100%,580px);
+
+    height:min(94svh,900px);
+
+    min-height:650px;
+
+    padding:34px 52px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.985),
+            rgba(248,250,255,.975)
+        );
+
+    border:1px solid rgba(255,255,255,.9);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(24px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+html.dark .signup-card{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,21,38,.985),
+            rgba(12,16,30,.985)
+        );
+
+    border-color:rgba(255,255,255,.07);
+}
+
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.signup-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    top:-170px;
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.16),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand{
+
+    position:relative;
+    z-index:2;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:14px;
+
+    margin-bottom:20px;
+}
+
+.logo-box{
+
+    width:62px;
+    height:62px;
+
+    flex-shrink:0;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    background:var(--surface-soft);
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 12px 28px rgba(23,63,159,.15);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo-box img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+}
+
+.brand-name{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    letter-spacing:-.5px;
+}
+
+.brand-primary{
+    color:var(--primary);
+}
+
+.brand-secondary{
+    color:var(--secondary);
+}
+
+.brand-tag{
+
+    font-size:9px;
+
+    color:var(--secondary);
+
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.signup-intro{
+
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:18px;
+}
+
+.signup-intro .eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+}
+
+.eyebrow-line{
+
+    width:24px;
+    height:1px;
+
+    background:var(--secondary);
+}
+
+.signup-intro h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:35px;
+
+    line-height:1.12;
+
+    font-weight:600;
+
+    letter-spacing:-.8px;
+
+    margin-bottom:6px;
+}
+
+.signup-intro p{
+
+    color:var(--text-soft);
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    max-width:390px;
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.signup-form{
+
+    position:relative;
+    z-index:2;
+
+    width:100%;
+}
+
+.form-group{
+
+    margin-bottom:10px;
+}
+
+.form-label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+.input-wrapper{
+
+    position:relative;
+}
+
+.input-icon{
+
+    position:absolute;
+
+    left:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--text-soft);
+
+    font-size:15px;
+
+    pointer-events:none;
+
+    transition:var(--transition);
+
+    z-index:2;
+}
+
+.form-input{
+
+    width:100%;
+
+    height:45px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+
+    background:var(--surface-soft);
+
+    color:var(--text);
+
+    padding:0 43px;
+
+    font-family:inherit;
+
+    font-size:12px;
+
+    transition:var(--transition);
+}
+
+.form-input::placeholder{
+    color:#9aa1b1;
+}
+
+.form-input:focus{
+
+    border-color:var(--secondary);
+
+    background:var(--surface);
+
+    box-shadow:
+        0 0 0 4px rgba(115,87,232,.08);
+}
+
+.form-input:focus ~ .input-icon{
+
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.password-toggle{
+
+    position:absolute;
+
+    right:12px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:28px;
+    height:28px;
+
+    border:0;
+
+    background:transparent;
+
+    color:var(--text-soft);
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:15px;
+
+    padding:0;
+
+    z-index:3;
+}
+
+.password-toggle:hover{
+
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .input-icon{
+
+    left:auto;
+    right:15px;
+}
+
+html[dir="rtl"] .password-toggle{
+
+    right:auto;
+    left:12px;
+}
+
+html[dir="rtl"] .form-label{
+
+    text-align:right;
+}
+
+html[dir="rtl"] .terms{
+
+    direction:rtl;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.terms{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    margin:3px 0 13px;
+
+    color:var(--text-soft);
+
+    font-size:10px;
+
+    line-height:1.4;
+}
+
+.terms input{
+
+    width:14px;
+    height:14px;
+
+    flex-shrink:0;
+
+    margin-top:1px;
+
+    accent-color:var(--primary);
+
+    cursor:pointer;
+}
+
+.terms a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-decoration:none;
+}
+
+.terms a:hover{
+
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.signup-btn{
+
+    width:100%;
+
+    height:48px;
+
+    border:0;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:#fff;
+
+    font-family:inherit;
+
+    font-size:12.5px;
+
+    font-weight:700;
+
+    letter-spacing:.2px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 13px 28px rgba(23,63,159,.23);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.signup-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.2),
+            transparent
+        );
+
+    transition:.6s;
+}
+
+.signup-btn:hover::before{
+    left:100%;
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 17px 35px rgba(23,63,159,.30);
+}
+
+.signup-btn:active{
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:13px 0 10px;
+
+    color:var(--text-soft);
+
+    font-size:9px;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:var(--border);
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    width:100%;
+}
+
+.social-btn{
+
+    width:100%;
+
+    height:42px;
+
+    border:1px solid var(--border);
+
+    border-radius:11px;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    font-family:inherit;
+
+    font-size:11.5px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.social-btn:hover{
+
+    border-color:var(--secondary);
+
+    background:var(--secondary-soft);
+
+    transform:translateY(-2px);
+}
+
+.social-google i{
+
+    color:#4285F4;
+}
+
+.social-apple i{
+
+    color:var(--text);
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-line{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    font-size:11px;
+
+    color:var(--text-soft);
+}
+
+.login-line a{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    text-decoration:none;
+margin-top: 10px;
+    margin-left:4px;
+}
+
+.login-line a:hover{
+
+    color:var(--secondary);
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.security-note{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:9px;
+
+    font-size:8.5px;
+
+    color:var(--text-soft);
+
+    letter-spacing:.2px;
+}
+
+.security-note i{
+
+    color:var(--primary);
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   ASTRA VISTA — SIGNUP RESPONSIVE SYSTEM
+   Targets:
+   • Samsung S8 — 360 × 740
+   • iPad Mini — 768 × 1024
+   • Nest Hub — 1024 × 600
+========================================================= */
+
+
+/* =========================================================
+   TABLET — iPAD MINI PORTRAIT
+   600px — 850px
+========================================================= */
+
+@media (min-width:600px) and (max-width:850px){
+
+    .auth-page{
+        width:100%;
+        height:100svh;
+
+        padding:24px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    .top-controls{
+        top:18px;
+        right:20px;
+
+        gap:8px;
+    }
+
+
+    html[dir="rtl"] .top-controls{
+        right:auto;
+        left:20px;
+    }
+
+
+    .signup-card{
+
+        width:min(100%,560px);
+
+        height:auto;
+
+        min-height:720px;
+        max-height:calc(100svh - 48px);
+
+        padding:32px 46px;
+
+        border-radius:28px;
+
+        overflow:hidden;
+
+        justify-content:center;
+    }
+
+
+    .brand{
+        margin-bottom:24px;
+        gap:12px;
+    }
+
+
+    .logo-box{
+        width:64px;
+        height:64px;
+
+        border-radius:17px;
+    }
+
+
+    .brand-name{
+        font-size:28px;
+    }
+
+
+    .brand-tag{
+        font-size:8px;
+    }
+
+
+    .signup-intro{
+        margin-bottom:24px;
+    }
+
+
+    .signup-intro .eyebrow{
+        font-size:9px;
+        margin-bottom:7px;
+    }
+
+
+    .signup-intro h1{
+        font-size:36px;
+        margin-bottom:7px;
+    }
+
+
+    .signup-intro p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+
+    .form-group{
+        margin-bottom:13px;
+    }
+
+
+    .form-label{
+        font-size:11px;
+        margin-bottom:6px;
+    }
+
+
+    .form-input{
+        width:100%;
+        height:47px;
+
+        border-radius:13px;
+
+        font-size:12px;
+    }
+
+
+    .input-icon{
+        left:14px;
+        font-size:15px;
+    }
+
+
+    html[dir="rtl"] .input-icon{
+        left:auto;
+        right:14px;
+    }
+
+
+    .password-toggle{
+        right:11px;
+        font-size:16px;
+    }
+
+
+    html[dir="rtl"] .password-toggle{
+        right:auto;
+        left:11px;
+    }
+
+
+    .terms{
+        margin:3px 0 15px;
+
+        font-size:10px;
+        line-height:1.4;
+    }
+
+
+    .terms input{
+        width:14px;
+        height:14px;
+    }
+
+
+    .signup-btn{
+        width:100%;
+        height:49px;
+
+        border-radius:13px;
+
+        font-size:12px;
+    }
+
+
+    .divider{
+        margin:19px 0 13px;
+        font-size:9px;
+    }
+
+
+    .social-grid{
+        gap:10px;
+    }
+
+
+    .social-btn{
+        height:43px;
+
+        border-radius:12px;
+
+        font-size:11px;
+    }
+
+
+    .login-line{
+        margin-top:17px;
+        font-size:11px;
+    }
+
+
+    .security-note{
+        margin-top:9px;
+        font-size:8px;
+    }
+}
+
+
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media (min-width:850px) and (max-height:700px){
+
+    .auth-page{
+
+        width:100%;
+        height:100svh;
+
+        padding:14px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    .top-controls{
+
+        top:12px;
+        right:16px;
+
+        gap:7px;
+    }
+
+
+    html[dir="rtl"] .top-controls{
+
+        right:auto;
+        left:16px;
+    }
+
+
+    .control-btn{
+
+        width:38px;
+        height:38px;
+
+        border-radius:11px;
+
+        font-size:15px;
+    }
+
+
+    .signup-card{
+
+        width:500px;
+
+        height:570px;
+
+        min-height:0;
+
+        max-height:570px;
+
+        padding:20px 40px;
+
+        border-radius:25px;
+
+        justify-content:flex-start;
+
+        overflow:hidden;
+    }
+
+
+    .brand{
+
+        margin-bottom:8px;
+
+        gap:9px;
+    }
+
+
+    .logo-box{
+
+        width:45px;
+        height:45px;
+
+        border-radius:12px;
+    }
+
+
+    .brand-name{
+        font-size:21px;
+    }
+
+
+    .brand-tag{
+        font-size:7px;
+        letter-spacing:1.4px;
+    }
+
+
+    .signup-intro{
+
+        margin-bottom:8px;
+    }
+
+
+    .signup-intro .eyebrow{
+
+        font-size:8px;
+
+        margin-bottom:3px;
+    }
+
+
+    .signup-intro h1{
+
+        font-size:27px;
+
+        line-height:1.1;
+
+        margin-bottom:3px;
+    }
+
+
+    .signup-intro p{
+
+        font-size:10px;
+
+        line-height:1.3;
+    }
+
+
+    .form-group{
+
+        margin-bottom:5px;
+    }
+
+
+    .form-label{
+
+        font-size:9px;
+
+        margin-bottom:3px;
+    }
+
+
+    .form-input{
+
+        height:34px;
+
+        border-radius:9px;
+
+        font-size:10px;
+
+        padding-left:38px;
+
+        padding-right:38px;
+    }
+
+
+    html[dir="rtl"] .form-input{
+
+        padding-left:38px;
+        padding-right:38px;
+    }
+
+
+    .input-icon{
+
+        left:11px;
+
+        font-size:12px;
+    }
+
+
+    html[dir="rtl"] .input-icon{
+
+        left:auto;
+        right:11px;
+    }
+
+
+    .password-toggle{
+
+        right:7px;
+
+        width:22px;
+        height:22px;
+
+        padding:2px;
+
+        font-size:13px;
+    }
+
+
+    html[dir="rtl"] .password-toggle{
+
+        right:auto;
+        left:7px;
+    }
+
+
+    .terms{
+
+        margin:2px 0 6px;
+
+        font-size:8px;
+
+        line-height:1.25;
+    }
+
+
+    .terms input{
+
+        width:11px;
+        height:11px;
+    }
+
+
+    .signup-btn{
+
+        width:100%;
+
+        height:36px;
+
+        border-radius:9px;
+
+        font-size:10px;
+    }
+
+
+    .divider{
+
+        margin:6px 0 5px;
+
+        font-size:7.5px;
+    }
+
+
+    .social-grid{
+
+        gap:7px;
+    }
+
+
+    .social-btn{
+
+        height:31px;
+
+        border-radius:9px;
+
+        font-size:9px;
+    }
+
+
+    .social-btn i{
+
+        font-size:13px;
+    }
+
+
+    .login-line{
+
+        margin-top:5px;
+
+        font-size:8.5px;
+    }
+
+
+    .security-note{
+
+        margin-top:3px;
+
+        font-size:7px;
+    }
+}
+
+
+
+/* =========================================================
+   SAMSUNG S8 / STANDARD MOBILE
+   361px — 480px
+========================================================= */
+
+@media (min-width:361px) and (max-width:480px){
+
+    .auth-page{
+
+        width:100%;
+        height:100svh;
+
+        padding:12px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    .top-controls{
+
+        top:10px;
+        right:11px;
+
+        gap:6px;
+    }
+
+
+    html[dir="rtl"] .top-controls{
+
+        right:auto;
+        left:11px;
+    }
+
+
+    .control-btn{
+
+        width:36px;
+        height:36px;
+
+        border-radius:11px;
+
+        font-size:15px;
+    }
+
+
+    .signup-card{
+
+        width:100%;
+
+        height:auto;
+
+        min-height:0;
+
+        max-height:calc(100svh - 24px);
+
+        padding:22px 23px 19px;
+
+        border-radius:24px;
+
+        justify-content:flex-start;
+
+        overflow:hidden;
+    }
+
+
+    .brand{
+
+        margin-bottom:13px;
+
+        gap:10px;
+    }
+
+
+    .logo-box{
+
+        width:50px;
+        height:50px;
+
+        border-radius:14px;
+    }
+
+
+    .brand-name{
+
+        font-size:22px;
+    }
+
+
+    .brand-tag{
+
+        font-size:7px;
+
+        letter-spacing:1.5px;
+    }
+
+
+    .signup-intro{
+
+        margin-bottom:13px;
+    }
+
+
+    .signup-intro .eyebrow{
+
+        font-size:8.5px;
+
+        margin-bottom:5px;
+    }
+
+
+    .signup-intro h1{
+
+        font-size:28px;
+
+        line-height:1.1;
+
+        margin-bottom:5px;
+    }
+
+
+    .signup-intro p{
+
+        font-size:10px;
+
+        line-height:1.4;
+    }
+
+
+    .form-group{
+
+        margin-bottom:8px;
+    }
+
+
+    .form-label{
+
+        font-size:10.5px;
+
+        margin-bottom:4px;
+    }
+
+
+    .form-input{
+
+        height:41px;
+
+        border-radius:11px;
+
+        font-size:11px;
+
+        padding-left:39px;
+
+        padding-right:39px;
+    }
+
+
+    html[dir="rtl"] .form-input{
+
+        padding-left:39px;
+        padding-right:39px;
+    }
+
+
+    .input-icon{
+
+        left:12px;
+
+        font-size:14px;
+    }
+
+
+    html[dir="rtl"] .input-icon{
+
+        left:auto;
+        right:12px;
+    }
+
+
+    .password-toggle{
+
+        right:8px;
+
+        font-size:15px;
+    }
+
+
+    html[dir="rtl"] .password-toggle{
+
+        right:auto;
+        left:8px;
+    }
+
+
+    .terms{
+
+        margin:2px 0 10px;
+
+        font-size:8.5px;
+
+        line-height:1.3;
+    }
+
+
+    .terms input{
+
+        width:12px;
+        height:12px;
+    }
+
+
+    .signup-btn{
+
+        height:42px;
+
+        border-radius:11px;
+
+        font-size:11px;
+    }
+
+
+    .divider{
+
+        margin:11px 0 8px;
+
+        font-size:8px;
+    }
+
+
+    .social-grid{
+
+        gap:8px;
+    }
+
+
+    .social-btn{
+
+        height:37px;
+
+        border-radius:10px;
+
+        font-size:10px;
+    }
+
+
+    .login-line{
+
+        margin-top:10px;
+
+        font-size:10px;
+    }
+
+
+    .security-note{
+
+        margin-top:6px;
+
+        font-size:7.5px;
+    }
+}
+
+
+
+/* =========================================================
+   SAMSUNG S8
+   360 × 740
+========================================================= */
+
+@media (max-width:360px) and (min-height:600px){
+
+    .auth-page{
+
+        width:100%;
+        height:100svh;
+
+        padding:8px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    .top-controls{
+
+        top:8px;
+        right:9px;
+
+        gap:5px;
+    }
+
+
+    html[dir="rtl"] .top-controls{
+
+        right:auto;
+        left:9px;
+    }
+
+
+    .control-btn{
+
+        width:32px;
+        height:32px;
+
+        border-radius:10px;
+
+        font-size:13px;
+    }
+
+
+    .signup-card{
+
+        width:100%;
+
+        height:auto;
+
+        max-height:calc(100svh - 16px);
+
+        min-height:0;
+
+        padding:17px 17px 14px;
+
+        border-radius:21px;
+
+        justify-content:flex-start;
+
+        overflow:hidden;
+    }
+
+
+    .brand{
+
+        margin-bottom:8px;
+
+        gap:8px;
+    }
+
+
+    .logo-box{
+
+        width:42px;
+        height:42px;
+
+        border-radius:12px;
+    }
+
+
+    .brand-name{
+
+        font-size:18px;
+
+        letter-spacing:-.3px;
+    }
+
+
+    .brand-tag{
+
+        font-size:6px;
+
+        letter-spacing:1.2px;
+    }
+
+
+    .signup-intro{
+
+        margin-bottom:8px;
+    }
+
+
+    .signup-intro .eyebrow{
+
+        font-size:7.5px;
+
+        margin-bottom:3px;
+    }
+
+
+    .signup-intro h1{
+
+        font-size:22px;
+
+        line-height:1.1;
+
+        margin-bottom:4px;
+    }
+
+
+    .signup-intro p{
+
+        font-size:8.5px;
+
+        line-height:1.35;
+    }
+
+
+    .form-group{
+
+        margin-bottom:5px;
+    }
+
+
+    .form-label{
+
+        font-size:9px;
+
+        margin-bottom:3px;
+    }
+
+
+    .form-input{
+
+        height:35px;
+
+        border-radius:9px;
+
+        font-size:10px;
+
+        padding-left:34px;
+
+        padding-right:34px;
+    }
+
+
+    html[dir="rtl"] .form-input{
+
+        padding-left:34px;
+        padding-right:34px;
+    }
+
+
+    .input-icon{
+
+        left:10px;
+
+        font-size:12px;
+    }
+
+
+    html[dir="rtl"] .input-icon{
+
+        left:auto;
+        right:10px;
+    }
+
+
+    .password-toggle{
+
+        right:6px;
+
+        font-size:13px;
+    }
+
+
+    html[dir="rtl"] .password-toggle{
+
+        right:auto;
+        left:6px;
+    }
+
+
+    .terms{
+
+        margin:2px 0 7px;
+
+        font-size:7.5px;
+
+        line-height:1.25;
+    }
+
+
+    .terms input{
+
+        width:10px;
+        height:10px;
+    }
+
+
+    .signup-btn{
+
+        height:37px;
+
+        border-radius:9px;
+
+        font-size:9.5px;
+    }
+
+
+    .divider{
+
+        margin:8px 0 6px;
+
+        font-size:7px;
+    }
+
+
+    .social-grid{
+
+        gap:6px;
+    }
+
+
+    .social-btn{
+
+        height:32px;
+
+        border-radius:9px;
+
+        font-size:9px;
+    }
+
+
+    .social-btn i{
+
+        font-size:13px;
+    }
+
+
+    .login-line{
+
+        margin-top:7px;
+
+        font-size:8.5px;
+    }
+
+
+    .security-note{
+
+        margin-top:4px;
+
+        font-size:7px;
+    }
+}
+
+
+
+/* =========================================================
+   VERY SHORT MOBILE
+   Prevent vertical overflow
+========================================================= */
+
+@media (max-width:480px) and (max-height:650px){
+
+    .signup-card{
+
+        padding-top:14px;
+        padding-bottom:12px;
+    }
+
+
+    .brand{
+
+        margin-bottom:6px;
+    }
+
+
+    .logo-box{
+
+        width:39px;
+        height:39px;
+    }
+
+
+    .brand-name{
+
+        font-size:17px;
+    }
+
+
+    .signup-intro{
+
+        margin-bottom:6px;
+    }
+
+
+    .signup-intro h1{
+
+        font-size:20px;
+    }
+
+
+    .signup-intro p{
+
+        font-size:8px;
+    }
+
+
+    .form-group{
+
+        margin-bottom:4px;
+    }
+
+
+    .form-input{
+
+        height:33px;
+    }
+
+
+    .terms{
+
+        margin-bottom:5px;
+    }
+
+
+    .signup-btn{
+
+        height:35px;
+    }
+
+
+    .divider{
+
+        margin:6px 0 5px;
+    }
+
+
+    .social-btn{
+
+        height:29px;
+    }
+
+
+    .login-line{
+
+        margin-top:5px;
+    }
+
+
+    .security-note{
+
+        margin-top:3px;
+    }
+}
+
+
+
+/* =========================================================
+   LANDSCAPE PHONE
+========================================================= */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .auth-page{
+
+        padding:7px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    .top-controls{
+
+        top:5px;
+        right:7px;
+    }
+
+
+    html[dir="rtl"] .top-controls{
+
+        right:auto;
+        left:7px;
+    }
+
+
+    .signup-card{
+
+        width:560px;
+
+        height:calc(100svh - 14px);
+
+        min-height:0;
+
+        max-height:none;
+
+        padding:9px 30px;
+
+        border-radius:17px;
+
+        justify-content:flex-start;
+
+        overflow:hidden;
+    }
+
+
+    .brand{
+
+        margin-bottom:3px;
+    }
+
+
+    .logo-box{
+
+        width:30px;
+        height:30px;
+
+        border-radius:8px;
+    }
+
+
+    .brand-name{
+
+        font-size:14px;
+    }
+
+
+    .brand-tag{
+
+        font-size:4px;
+    }
+
+
+    .signup-intro{
+
+        margin-bottom:3px;
+    }
+
+
+    .signup-intro .eyebrow{
+
+        display:none;
+    }
+
+
+    .signup-intro h1{
+
+        font-size:16px;
+
+        margin-bottom:1px;
+    }
+
+
+    .signup-intro p{
+
+        display:none;
+    }
+
+
+    .form-group{
+
+        margin-bottom:2px;
+    }
+
+
+    .form-label{
+
+        display:none;
+    }
+
+
+    .form-input{
+
+        height:26px;
+
+        font-size:8.5px;
+    }
+
+
+    .terms{
+
+        margin:1px 0 2px;
+
+        font-size:6.5px;
+    }
+
+
+    .signup-btn{
+
+        height:27px;
+
+        font-size:8.5px;
+    }
+
+
+    .divider{
+
+        margin:2px 0;
+    }
+
+
+    .social-btn{
+
+        height:24px;
+
+        font-size:7.5px;
+    }
+
+
+    .login-line{
+
+        margin-top:2px;
+
+        font-size:7px;
+    }
+
+
+    .security-note{
+
+        display:none;
+    }
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<main class="auth-page">
+
+    <div class="auth-bg"></div>
+
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+
+    <!-- TOP CONTROLS -->
+
+    <div class="top-controls">
+
+        <button
+            class="control-btn"
+            id="directionBtn"
+            type="button"
+            aria-label="Change direction">
+
+            <i class="bi bi-arrow-left-right"></i>
+
+        </button>
+
+        <button
+            class="control-btn"
+            id="themeBtn"
+            type="button"
+            aria-label="Toggle dark mode">
+
+            <i class="bi bi-moon"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- SIGN UP CARD -->
+
+    <section class="signup-card">
+
+
+        <!-- BRAND -->
+
+        <a href="index.html" class="brand">
+
+            <div class="logo-box">
+
+                <img
+                    src="images/logo.png"
+                    alt="Astra Vista">
+
+            </div>
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+
+                    <span class="brand-primary">
+                        Astra
+                    </span>
+
+                    <span class="brand-secondary">
+                        Vista
+                    </span>
+
+                </span>
+
+                <span class="brand-tag">
+                    ASTRONOMY
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- INTRO -->
+
+        <div class="signup-intro">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                VISITOR ACCESS
+
+                <span class="eyebrow-line"></span>
+
+            </div>
+
+            <h1>
+                Create Your Account
+            </h1>
+
+            <p>
+                Join Astra Vista to explore upcoming shows,
+                reserve experiences and manage your visits.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form class="signup-form" id="signupForm">
+
+
+            <!-- FIRST NAME -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="firstName">
+
+                    First Name
+
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="firstName"
+                        placeholder="Enter your first name"
+                        autocomplete="given-name"
+                        required>
+
+                    <i class="bi bi-person input-icon"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- LAST NAME -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="lastName">
+
+                    Last Name
+
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="lastName"
+                        placeholder="Enter your last name"
+                        autocomplete="family-name"
+                        required>
+
+                    <i class="bi bi-person input-icon"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="email">
+
+                    Email Address
+
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        class="form-input"
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required>
+
+                    <i class="bi bi-envelope input-icon"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="password">
+
+                    Password
+
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        class="form-input"
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        required>
+
+                    <i class="bi bi-lock input-icon"></i>
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="passwordToggle"
+                        aria-label="Show password">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="confirmPassword">
+
+                    Confirm Password
+
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        class="form-input"
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        required>
+
+                    <i class="bi bi-shield-lock input-icon"></i>
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="confirmPasswordToggle"
+                        aria-label="Show password">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMS -->
+
+            <label class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required>
+
+                <span>
+
+                    I agree to the
+
+                    <a href="terms.html">
+                        Terms of Service
+                    </a>
+
+                    and
+
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>.
+
+                </span>
+
+            </label>
+
+
+            <!-- CREATE ACCOUNT -->
+
+            <button
+                type="submit"
+                class="signup-btn">
+
+                Create Astra Vista Account
+
+            </button>
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span>
+                    Or continue with
+                </span>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="social-grid">
+
+                <button
+                    type="button"
+                    class="social-btn social-google"
+                    id="googleBtn">
+
+                    <i class="bi bi-google"></i>
+
+                    <span>
+                        Google
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="social-btn social-apple"
+                    id="appleBtn">
+
+                    <i class="bi bi-apple"></i>
+
+                    <span>
+                        Apple
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <div class="login-line">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <!-- SECURITY -->
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   ASTRA VISTA — SIGNUP PAGE SCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    "use strict";
+
+
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+
+    const html =
+        document.documentElement;
+
+    const themeBtn =
+        document.getElementById("themeBtn");
+
+    const directionBtn =
+        document.getElementById("directionBtn");
+
+
+    /* =========================================================
+       THEME
+    ========================================================= */
+
+    let theme =
+        localStorage.getItem("astravista-theme") || "light";
+
+
+    function updateThemeIcon() {
+
+        if (!themeBtn) return;
+
+        const themeIcon =
+            themeBtn.querySelector("i");
+
+        const isDark =
+            html.classList.contains("dark");
+
+
+        if (themeIcon) {
+
+            themeIcon.className =
+                isDark
+                    ? "bi bi-sun"
+                    : "bi bi-moon";
+
+        }
+
+
+        themeBtn.setAttribute(
+            "aria-label",
+            isDark
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+        );
+
+
+        themeBtn.setAttribute(
+            "title",
+            isDark
+                ? "Light mode"
+                : "Dark mode"
+        );
+
+    }
+
+
+    /* Apply saved theme */
+
+    if (theme === "dark") {
+
+        html.classList.add("dark");
+
+    } else {
+
+        html.classList.remove("dark");
+
+    }
+
+
+    updateThemeIcon();
+
+
+    /* Theme button */
+
+    if (themeBtn) {
+
+        themeBtn.addEventListener(
+            "click",
+            function () {
+
+                html.classList.toggle("dark");
+
+
+                const isDark =
+                    html.classList.contains("dark");
+
+
+                theme =
+                    isDark
+                        ? "dark"
+                        : "light";
+
+
+                localStorage.setItem(
+                    "astravista-theme",
+                    theme
+                );
+
+
+                updateThemeIcon();
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================================
+       RTL / LTR
+    ========================================================= */
+
+    let direction =
+        localStorage.getItem("astravista-direction") || "ltr";
+
+
+    function applyDirection() {
+
+        html.setAttribute(
+            "dir",
+            direction
+        );
+
+
+        if (!directionBtn) return;
+
+
+        const directionIcon =
+            directionBtn.querySelector("i");
+
+
+        if (directionIcon) {
+
+            directionIcon.className =
+                "bi bi-arrow-left-right";
+
+        }
+
+
+        directionBtn.setAttribute(
+            "aria-label",
+            direction === "ltr"
+                ? "Switch to RTL"
+                : "Switch to LTR"
+        );
+
+
+        directionBtn.setAttribute(
+            "title",
+            direction === "ltr"
+                ? "Switch to RTL"
+                : "Switch to LTR"
+        );
+
+    }
+
+
+    applyDirection();
+
+
+    if (directionBtn) {
+
+        directionBtn.addEventListener(
+            "click",
+            function () {
+
+                direction =
+                    direction === "ltr"
+                        ? "rtl"
+                        : "ltr";
+
+
+                localStorage.setItem(
+                    "astravista-direction",
+                    direction
+                );
+
+
+                applyDirection();
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================================
+       PASSWORD TOGGLE
+    ========================================================= */
+
+    function setupPasswordToggle(
+        inputId,
+        buttonId
+    ) {
+
+        const input =
+            document.getElementById(inputId);
+
+        const button =
+            document.getElementById(buttonId);
+
+
+        if (!input || !button) return;
+
+
+        const icon =
+            button.querySelector("i");
+
+
+        if (!icon) return;
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const isPassword =
+                    input.type === "password";
+
+
+                input.type =
+                    isPassword
+                        ? "text"
+                        : "password";
+
+
+                icon.className =
+                    isPassword
+                        ? "bi bi-eye-slash"
+                        : "bi bi-eye";
+
+
+                button.setAttribute(
+                    "aria-label",
+                    isPassword
+                        ? "Hide password"
+                        : "Show password"
+                );
+
+
+                button.setAttribute(
+                    "title",
+                    isPassword
+                        ? "Hide password"
+                        : "Show password"
+                );
+
+            }
+        );
+
+    }
+
+
+    setupPasswordToggle(
+        "password",
+        "passwordToggle"
+    );
+
+
+    setupPasswordToggle(
+        "confirmPassword",
+        "confirmPasswordToggle"
+    );
+
+
+
+    /* =========================================================
+       SIGN UP FORM
+    ========================================================= */
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+
+    if (signupForm) {
+
+        signupForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const firstName =
+                    document
+                        .getElementById("firstName")
+                        ?.value
+                        .trim() || "";
+
+
+                const lastName =
+                    document
+                        .getElementById("lastName")
+                        ?.value
+                        .trim() || "";
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        ?.value
+                        .trim() || "";
+
+
+                const password =
+                    document
+                        .getElementById("password")
+                        ?.value || "";
+
+
+                const confirmPassword =
+                    document
+                        .getElementById("confirmPassword")
+                        ?.value || "";
+
+
+                const terms =
+                    document
+                        .getElementById("terms")
+                        ?.checked || false;
+
+
+
+                /* Required fields */
+
+                if (
+                    !firstName ||
+                    !lastName ||
+                    !email ||
+                    !password ||
+                    !confirmPassword
+                ) {
+
+                    alert(
+                        "Please complete all required fields."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Password match */
+
+                if (
+                    password !== confirmPassword
+                ) {
+
+                    alert(
+                        "Passwords do not match."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Terms */
+
+                if (!terms) {
+
+                    alert(
+                        "Please accept the Terms of Service and Privacy Policy."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Registration */
+
+                console.log(
+                    "AstraVista account registration:",
+                    {
+                        firstName,
+                        lastName,
+                        email
+                    }
+                );
+
+
+                alert(
+                    "Your AstraVista account has been created successfully."
+                );
+
+
+                /* Optional redirect */
+
+                // window.location.href = "login.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================================
+       GOOGLE SIGN UP
+    ========================================================= */
+
+    const googleBtn =
+        document.getElementById("googleBtn");
+
+
+    if (googleBtn) {
+
+        googleBtn.addEventListener(
+            "click",
+            function () {
+
+                console.log(
+                    "AstraVista Google Sign Up"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================================
+       APPLE SIGN UP
+    ========================================================= */
+
+    const appleBtn =
+        document.getElementById("appleBtn");
+
+
+    if (appleBtn) {
+
+        appleBtn.addEventListener(
+            "click",
+            function () {
+
+                console.log(
+                    "AstraVista Apple Sign Up"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================================
+       CURRENT PAGE ACTIVE NAVIGATION
+    ========================================================= */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase()
+            .trim();
+
+
+    const navLinks =
+        document.querySelectorAll(
+            ".main-nav a, .nav-links a, .mobilePanel a"
+        );
+
+
+    navLinks.forEach(function (link) {
+
+        const href =
+            link.getAttribute("href");
+
+
+        if (
+            !href ||
+            href === "#"
+        ) {
+
+            return;
+
+        }
+
+
+        const linkPage =
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase()
+                .trim();
+
+
+        /* Remove previous active */
+
+        link.classList.remove(
+            "active"
+        );
+
+
+        /* Current page */
+
+        if (
+            linkPage === currentPage
+        ) {
+
+            link.classList.add(
+                "active"
+            );
+
+        }
+
+
+        /* Home */
+
+        if (
+            (
+                currentPage === "" ||
+                currentPage === "index.html"
+            ) &&
+            (
+                linkPage === "" ||
+                linkPage === "index.html"
+            )
+        ) {
+
+            link.classList.add(
+                "active"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+

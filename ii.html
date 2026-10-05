@@ -1,0 +1,319 @@
+
+
+<section class="avp-hero" aria-label="AstraVista Planetarium">
+
+    <!-- =====================================================
+         CINEMATIC BACKGROUND
+    ====================================================== -->
+
+    <img
+        class="avp-hero-bg"
+        src="images/planetarium-hero.jpg"
+        alt="Planetarium and Observatory"
+    >
+
+    <div class="avp-hero-overlay"></div>
+    <div class="avp-hero-glow"></div>
+    <div class="avp-hero-stars"></div>
+
+
+    <!-- =====================================================
+         HERO CONTENT
+    ====================================================== -->
+
+    <div class="avp-hero-container">
+
+        <div class="avp-hero-content">
+
+            <div class="avp-hero-eyebrow">
+                <span></span>
+                PLANETARIUM & OBSERVATORY
+                <span class="avp-eyebrow-break">
+                    VISITOR CENTER
+                </span>
+            </div>
+
+
+            <h1 class="avp-hero-title">
+
+                <span class="avp-title-main">
+                    Discover
+                </span>
+
+                <span class="avp-title-serif">
+                    Universe
+                </span>
+
+            </h1>
+
+
+            <!-- TYPING LINE -->
+
+            <div class="avp-typing-line">
+
+                <span class="avp-typing-marker"></span>
+
+                <span id="avpTyping">
+                    THE UNIVERSE
+                </span>
+
+                <span class="avp-typing-cursor">
+                    |
+                </span>
+
+            </div>
+
+
+            <p class="avp-hero-description">
+
+                Journey beyond Earth into a spectacular
+                world of stars, planets and galaxies.
+                Experience astronomy through immersive
+                planetarium shows and unforgettable
+                observatory discoveries.
+
+            </p>
+
+
+            <!-- ACTIONS -->
+
+      
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTAINED MOVING SPACE VISUAL
+         EVERYTHING MOVES TOGETHER
+    ====================================================== -->
+
+    <div class="avp-hero-visual">
+
+
+        <!-- Atmospheric glow -->
+
+        <div class="avp-visual-halo"></div>
+
+
+        <!-- ORBIT SYSTEM -->
+
+        <div class="avp-orbit-system">
+
+            <div class="avp-orbit avp-orbit-one"></div>
+
+            <div class="avp-orbit avp-orbit-two"></div>
+
+            <div class="avp-orbit avp-orbit-three"></div>
+
+
+            <div class="avp-orbit-dot avp-dot-one"></div>
+
+            <div class="avp-orbit-dot avp-dot-two"></div>
+
+            <div class="avp-orbit-dot avp-dot-three"></div>
+
+        </div>
+
+
+        <!-- GIANT PLANET -->
+
+        <div class="avp-planet">
+
+            <div class="avp-planet-light"></div>
+
+            <div class="avp-planet-shadow"></div>
+
+            <div class="avp-planet-ring"></div>
+
+        </div>
+
+
+        <!-- FLOATING DATA -->
+
+        <div class="avp-data-card avp-data-top">
+
+            <small>
+                CELESTIAL COORDINATES
+            </small>
+
+            <strong>
+                18h 36m · +38° 47′
+            </strong>
+
+        </div>
+
+
+        <div class="avp-data-card avp-data-bottom">
+
+            <small>
+                OBSERVATION
+            </small>
+
+            <strong>
+                ∞ POSSIBILITIES
+            </strong>
+
+        </div>
+
+
+        <!-- SMALL LABEL -->
+
+        <div class="avp-visual-label">
+            EXPLORE
+            <span>∞</span>
+            DISCOVER
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDE VERTICAL LABEL
+    ====================================================== -->
+
+    <div class="avp-side-label">
+
+        LOOK BEYOND
+        <span>·</span>
+        THE NIGHT SKY IS WAITING
+
+    </div>
+
+
+    <!-- =====================================================
+         BOTTOM LINE
+    ====================================================== -->
+
+    <div class="avp-bottom-line">
+
+        <span></span>
+
+        <small>
+            ASTRONOMY • SCIENCE • DISCOVERY
+        </small>
+
+    </div>
+
+
+</section>
+
+<script>
+
+/* =========================================================
+   ASTRA VISTA HERO TYPING
+   UNIQUE VARIABLES — NO CONFLICT WITH f1.js
+========================================================= */
+
+(function(){
+
+    const avpTyping =
+        document.getElementById("avpTyping");
+
+    if(!avpTyping) return;
+
+
+    const avpWords = [
+
+        "THE UNIVERSE",
+
+        "THE COSMOS",
+
+        "DISTANT GALAXIES",
+
+        "THE NIGHT SKY",
+
+        "THE UNKNOWN"
+
+    ];
+
+
+    let avpWordIndex = 0;
+
+    let avpCharIndex = 0;
+
+    let avpDeleting = false;
+
+
+    function avpTypeWriter(){
+
+        const avpWord =
+            avpWords[avpWordIndex];
+
+
+        if(!avpDeleting){
+
+            avpTyping.textContent =
+                avpWord.substring(
+                    0,
+                    avpCharIndex + 1
+                );
+
+            avpCharIndex++;
+
+
+            if(
+                avpCharIndex >=
+                avpWord.length
+            ){
+
+                avpDeleting = true;
+
+                setTimeout(
+                    avpTypeWriter,
+                    1700
+                );
+
+                return;
+
+            }
+
+        }else{
+
+            avpTyping.textContent =
+                avpWord.substring(
+                    0,
+                    avpCharIndex - 1
+                );
+
+            avpCharIndex--;
+
+
+            if(avpCharIndex <= 0){
+
+                avpCharIndex = 0;
+
+                avpDeleting = false;
+
+                avpWordIndex =
+                    (
+                        avpWordIndex + 1
+                    )
+                    %
+                    avpWords.length;
+
+            }
+
+        }
+
+
+        setTimeout(
+
+            avpTypeWriter,
+
+            avpDeleting
+                ? 45
+                : 85
+
+        );
+
+    }
+
+
+    avpTypeWriter();
+
+})();
+
+</script>

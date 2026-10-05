@@ -3272,413 +3272,7 @@ html[dir="rtl"] .footer-links a:hover{
 
 }
 
-/* =========================================================
-   NEST HUB — 1024 × 600
-   LANDSCAPE HEADER + MOBILE NAV
-   1000px - 1100px
-========================================================= */
 
-@media screen and
-(min-width:1000px) and
-(max-width:1100px) and
-(min-height:550px) and
-(max-height:650px) and
-(orientation:landscape){
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .care-header{
-        padding:10px 28px;
-    }
-
-    .header-inner{
-        width:100%;
-        gap:12px;
-    }
-
-
-    /* =====================================================
-       BRAND
-    ===================================================== */
-
-    .brand{
-        gap:9px;
-        min-width:0;
-    }
-
-    .logo-box{
-        width:42px;
-        height:42px;
-        border-radius:12px;
-        flex:0 0 42px;
-    }
-
-    .logo-box svg{
-        width:20px;
-        height:20px;
-    }
-
-    .brand-name{
-        font-size:19px;
-        letter-spacing:-.4px;
-        white-space:nowrap;
-    }
-
-    .brand-tag{
-        font-size:6.5px;
-        letter-spacing:1px;
-        margin-top:2px;
-        white-space:nowrap;
-    }
-
-
-    /* =====================================================
-       DESKTOP NAV
-       Hidden — Nest Hub uses compact menu
-    ===================================================== */
-
-    .main-nav{
-        display:none !important;
-    }
-
-    .desktop-login{
-        display:none !important;
-    }
-
-
-    /* =====================================================
-       HEADER ACTIONS
-    ===================================================== */
-
-    .header-actions{
-        margin-left:auto;
-
-        display:flex;
-        align-items:center;
-
-        gap:7px;
-    }
-
-    .icon-btn{
-        width:38px;
-        height:38px;
-
-        border-radius:11px;
-
-        display:grid;
-        place-items:center;
-    }
-
-    .icon-btn svg{
-        width:17px;
-        height:17px;
-    }
-
-
-    /* =====================================================
-       MENU BUTTON
-    ===================================================== */
-
-    .menu-btn{
-        display:grid !important;
-
-        width:40px;
-        height:40px;
-
-        border-radius:11px;
-
-        place-items:center;
-    }
-
-    .menu-btn svg{
-        width:20px;
-        height:20px;
-    }
-
-
-    /* =====================================================
-       MOBILE PANEL
-    ===================================================== */
-
-    .mobile-panel{
-
-        left:24px;
-        right:24px;
-
-        width:auto;
-
-        max-width:
-            calc(100vw - 48px);
-
-        max-height:
-            calc(100dvh - 78px);
-
-        overflow-y:auto;
-
-        padding:10px;
-
-        border-radius:18px;
-
-        box-shadow:
-            0 24px 55px rgba(40,30,60,.22);
-    }
-
-
-    /* =====================================================
-       MAIN PANEL LINKS
-    ===================================================== */
-
-    .mobile-panel > a{
-
-        min-height:48px;
-
-        padding:11px 14px;
-
-        gap:11px;
-
-        font-size:13px;
-
-        border-radius:11px;
-    }
-
-    .mobile-panel > a svg{
-
-        width:18px;
-        height:18px;
-
-        flex:0 0 18px;
-    }
-
-
-    /* =====================================================
-       DROPDOWN BUTTON
-    ===================================================== */
-
-    .mobile-nav-dropdown{
-
-        min-height:48px;
-
-        padding:11px 14px;
-
-        font-size:13px;
-
-        border-radius:11px;
-    }
-
-    .mobile-nav-dropdown > span{
-
-        gap:11px;
-    }
-
-    .mobile-nav-dropdown svg{
-
-        width:18px;
-        height:18px;
-    }
-
-
-    /* =====================================================
-       DROPDOWN
-    ===================================================== */
-
-    .mobile-dropdown{
-
-        padding-left:27px;
-
-        padding-right:0;
-    }
-
-    .mobile-dropdown.active{
-
-        max-height:220px;
-    }
-
-    .mobile-dropdown a{
-
-        min-height:38px;
-
-        padding:9px 11px;
-
-        gap:9px;
-
-        font-size:12px;
-
-        border-radius:9px;
-    }
-
-    .mobile-dropdown a svg{
-
-        width:15px;
-        height:15px;
-    }
-
-
-    /* =====================================================
-       LOGIN
-    ===================================================== */
-
-    .mobile-login{
-
-        margin-top:7px;
-
-        padding:11px !important;
-
-        font-size:13px !important;
-
-        border-radius:11px !important;
-    }
-
-
-    /* =====================================================
-       DARK MODE
-    ===================================================== */
-
-    html[data-theme="dark"] .care-header{
-
-        background:var(--bg);
-
-        border-bottom:
-            1px solid rgba(255,255,255,.10);
-    }
-
-    html[data-theme="dark"] .mobile-panel{
-
-        background:var(--surface);
-
-        border:
-            1px solid rgba(255,255,255,.10);
-
-        box-shadow:
-            0 25px 60px rgba(0,0,0,.65);
-    }
-
-    html[data-theme="dark"] .mobile-panel > a,
-    html[data-theme="dark"] .mobile-nav-dropdown{
-
-        color:var(--text);
-    }
-
-    html[data-theme="dark"] .mobile-panel > a:hover,
-    html[data-theme="dark"] .mobile-nav-dropdown:hover{
-
-        background:var(--surface-2);
-
-        color:var(--text);
-    }
-
-    html[data-theme="dark"] .mobile-dropdown a{
-
-        color:var(--text);
-    }
-
-    html[data-theme="dark"] .mobile-dropdown a:hover{
-
-        background:#242936;
-
-        color:#FFFFFF;
-    }
-
-
-    /* =====================================================
-       RTL
-    ===================================================== */
-
-    html[dir="rtl"] .header-inner{
-
-        direction:rtl;
-    }
-
-    html[dir="rtl"] .brand{
-
-        direction:rtl;
-    }
-
-    html[dir="rtl"] .header-actions{
-
-        margin-left:0;
-        margin-right:auto;
-    }
-
-    html[dir="rtl"] .mobile-panel{
-
-        text-align:right;
-    }
-
-    html[dir="rtl"] .mobile-dropdown{
-
-        padding-left:0;
-        padding-right:27px;
-    }
-
-
-    /* =====================================================
-       VERY SHORT NEST HUB VIEW
-       Protect 600px height
-    ===================================================== */
-
-    @media (max-height:580px){
-
-        .care-header{
-            padding:7px 28px;
-        }
-
-        .logo-box{
-            width:38px;
-            height:38px;
-            flex-basis:38px;
-        }
-
-        .logo-box svg{
-            width:18px;
-            height:18px;
-        }
-
-        .brand-name{
-            font-size:18px;
-        }
-
-        .icon-btn{
-            width:35px;
-            height:35px;
-        }
-
-        .menu-btn{
-            width:37px;
-            height:37px;
-        }
-
-        .mobile-panel{
-
-            top:calc(100% + 6px);
-
-            max-height:
-                calc(100dvh - 62px);
-        }
-
-        .mobile-panel > a,
-        .mobile-nav-dropdown{
-
-            min-height:42px;
-
-            padding:9px 12px;
-
-            font-size:12px;
-        }
-
-        .mobile-dropdown a{
-
-            min-height:34px;
-
-            padding:7px 10px;
-
-            font-size:11px;
-        }
-
-    }
-
-}
 /* =========================================================
    BELOW 320
 ========================================================= */
@@ -4144,108 +3738,53 @@ html[dir="rtl"] .footer-links a:hover{
 
 
 /* =========================================================
-   NEST HUB / SMALL DESKTOP
-   801px — 1100px
-   PERFECT DARK MODE
+   NEST HUB DARK MODE
+   801px - 1100px
 ========================================================= */
 
-@media screen and (min-width:801px) and (max-width:1100px){
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
+@media screen and
+(min-width:801px) and
+(max-width:1100px){
 
     html[data-theme="dark"] .care-header{
-        background:var(--bg);
+
+        background:
+            var(--bg);
 
         border-bottom:
             1px solid rgba(255,255,255,.10);
 
-        box-shadow:
-            0 8px 30px rgba(0,0,0,.16);
     }
 
-
-    /* =====================================================
-       MOBILE / TABLET PANEL
-    ===================================================== */
 
     html[data-theme="dark"] .mobile-panel{
-        background:
-            linear-gradient(
-                145deg,
-                var(--surface),
-                var(--bg)
-            );
+
+        background:var(--bg);
 
         border:
-            1px solid rgba(255,255,255,.10);
+            1px solid rgba(255,255,255,.12);
 
         box-shadow:
-            0 25px 65px rgba(0,0,0,.65);
+            0 25px 60px rgba(0,0,0,.65);
 
-        backdrop-filter:blur(18px);
-        -webkit-backdrop-filter:blur(18px);
     }
 
-
-    /* =====================================================
-       MAIN PANEL LINKS
-    ===================================================== */
 
     html[data-theme="dark"] .mobile-panel > a,
     html[data-theme="dark"] .mobile-nav-dropdown{
 
         color:var(--text);
 
-        background:transparent;
-
-        border-color:
-            rgba(255,255,255,.06);
     }
 
 
     html[data-theme="dark"] .mobile-panel > a:hover,
-    html[data-theme="dark"] .mobile-panel > a:focus-visible,
-    html[data-theme="dark"] .mobile-nav-dropdown:hover,
-    html[data-theme="dark"] .mobile-nav-dropdown:focus-visible{
+    html[data-theme="dark"] .mobile-nav-dropdown:hover{
 
-        background:
-            rgba(255,255,255,.055);
+        background:var(--bg);
 
         color:var(--text);
-    }
 
-
-    /* =====================================================
-       ACTIVE LINK
-    ===================================================== */
-
-    html[data-theme="dark"] .mobile-panel > a.active,
-    html[data-theme="dark"] .mobile-nav-dropdown.active{
-
-        background:
-            rgba(168,149,216,.10);
-
-        color:
-            var(--secondary);
-
-        border-color:
-            rgba(168,149,216,.16);
-    }
-
-
-    /* =====================================================
-       DROPDOWN
-    ===================================================== */
-
-    html[data-theme="dark"] .mobile-dropdown{
-
-        background:
-            rgba(255,255,255,.025);
-
-        border-color:
-            rgba(255,255,255,.07);
     }
 
 
@@ -4253,213 +3792,46 @@ html[dir="rtl"] .footer-links a:hover{
 
         color:var(--text);
 
-        background:transparent;
     }
 
 
-    html[data-theme="dark"] .mobile-dropdown a:hover,
-    html[data-theme="dark"] .mobile-dropdown a:focus-visible{
+    html[data-theme="dark"] .mobile-dropdown a:hover{
 
-        background:
-            rgba(255,255,255,.07);
+        background:#242936;
 
         color:#FFFFFF;
+
     }
 
-
-    html[data-theme="dark"] .mobile-dropdown a.active{
-
-        background:
-            rgba(168,149,216,.10);
-
-        color:
-            var(--secondary);
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
 
     html[data-theme="dark"] .care-footer{
 
         background:
-
             radial-gradient(
-                circle at 8% 12%,
-                rgba(230,168,120,.09),
+                circle at 10% 10%,
+                rgba(230,168,120,.08),
                 transparent 30%
             ),
-
             radial-gradient(
-                circle at 92% 88%,
-                rgba(168,149,216,.11),
+                circle at 90% 90%,
+                rgba(168,149,216,.09),
                 transparent 35%
             ),
+            #0F1117;
 
-            linear-gradient(
-                145deg,
-                #0F1117,
-                #0B0D13
-            );
-
-        border-top:
-            1px solid rgba(255,255,255,.08);
     }
 
-
-    /* =====================================================
-       FOOTER DESCRIPTION
-    ===================================================== */
 
     html[data-theme="dark"] .footer-description{
 
         color:#B8B3C2;
+
     }
 
-
-    /* =====================================================
-       FOOTER LINKS
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer a{
-
-        color:#C8C3D0;
-
-        transition:
-            color .25s ease,
-            opacity .25s ease;
-    }
+}
 
 
-    html[data-theme="dark"] .care-footer a:hover{
-
-        color:
-            #FFFFFF;
-    }
-
-
-    /* =====================================================
-       FOOTER HEADINGS
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer h3,
-    html[data-theme="dark"] .care-footer h4{
-
-        color:
-            #F5F3F8;
-    }
-
-
-    /* =====================================================
-       FOOTER MUTED TEXT
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer span,
-    html[data-theme="dark"] .care-footer small{
-
-        color:
-            #96919F;
-    }
-
-
-    /* =====================================================
-       FOOTER BOTTOM
-    ===================================================== */
-
-    html[data-theme="dark"] .footer-bottom{
-
-        border-top:
-            1px solid rgba(255,255,255,.08);
-
-        color:
-            #918C99;
-    }
-
-
-    /* =====================================================
-       SOCIAL BUTTONS
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer .social-link{
-
-        background:
-            rgba(255,255,255,.045);
-
-        border:
-            1px solid rgba(255,255,255,.09);
-
-        color:
-            #D8D3DE;
-    }
-
-
-    html[data-theme="dark"] .care-footer .social-link:hover{
-
-        background:
-            rgba(168,149,216,.12);
-
-        border-color:
-            rgba(168,149,216,.28);
-
-        color:
-            #FFFFFF;
-    }
-
-
-    /* =====================================================
-       NEWSLETTER / INPUTS
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer input,
-    html[data-theme="dark"] .care-footer textarea{
-
-        background:
-            rgba(255,255,255,.045);
-
-        border:
-            1px solid rgba(255,255,255,.10);
-
-        color:
-            #FFFFFF;
-    }
-
-
-    html[data-theme="dark"] .care-footer input::placeholder,
-    html[data-theme="dark"] .care-footer textarea::placeholder{
-
-        color:
-            #898491;
-    }
-
-
-    html[data-theme="dark"] .care-footer input:focus,
-    html[data-theme="dark"] .care-footer textarea:focus{
-
-        border-color:
-            rgba(168,149,216,.45);
-
-        outline:none;
-
-        box-shadow:
-            0 0 0 3px rgba(168,149,216,.08);
-    }
-
-
-    /* =====================================================
-       BUTTONS
-    ===================================================== */
-
-    html[data-theme="dark"] .care-footer button{
-
-        border-color:
-            rgba(255,255,255,.10);
-
-        box-shadow:
-            0 8px 25px rgba(0,0,0,.20);
-    }
-
-}/* =========================================================
+/* =========================================================
    DESKTOP DARK MODE
    1101px+
 ========================================================= */

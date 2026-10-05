@@ -1,0 +1,1598 @@
+:root {
+  /* ================================
+     BRAND COLORS
+  ================================= */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     LIGHT THEME
+  ================================= */
+  --bg: #F7F9FF;
+  --bg-soft: #EEF2FF;
+  --surface: #FFFFFF;
+  --surface-soft: #F8F9FE;
+font-family: "Orbitron", sans-serif;  --text: #111827;
+  --text-soft: #4B5563;
+  --text-muted: #7B8498;
+
+  --border: #E2E7F2;
+  --border-soft: #EDF0F7;
+
+  --primary-soft: #E9EEFF;
+  --secondary-soft: #F0ECFF;
+
+  --shadow: 0 18px 50px rgba(23, 63, 159, 0.10);
+  --shadow-soft: 0 8px 28px rgba(17, 24, 39, 0.07);
+
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --footer-bg: #101936;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(17, 24, 39, 0.45);
+  --glass: rgba(255, 255, 255, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #16805D;
+  --warning: #D98B16;
+  --danger: #D14343;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 38px;
+
+  --transition: 0.3s ease;
+}
+
+
+/* ====================================
+   DARK THEME
+==================================== */
+[data-theme="dark"] {
+
+  /* Brand colors remain unchanged */
+  --primary: #173F9F;
+  --secondary: #7357E8;
+
+  /* ================================
+     DARK BACKGROUNDS
+  ================================= */
+  --bg: #080D1D;
+  --bg-soft: #0D1429;
+  --surface: #11182D;
+  --surface-soft: #151D35;
+
+  /* ================================
+     DARK TEXT
+  ================================= */
+  --text: #F5F7FF;
+  --text-soft: #C7CEE2;
+  --text-muted: #8F9AB4;
+
+  /* ================================
+     DARK BORDERS
+  ================================= */
+  --border: #27314D;
+  --border-soft: #1C2540;
+
+  /* ================================
+     BRAND SOFT COLORS
+  ================================= */
+  --primary-soft: #172A63;
+  --secondary-soft: #2A2159;
+
+  /* ================================
+     DARK SHADOWS
+  ================================= */
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 10px 32px rgba(0, 0, 0, 0.25);
+
+  /* ================================
+     NAV / FOOTER
+  ================================= */
+  --nav-bg: rgba(8, 13, 29, 0.88);
+  --footer-bg: #050914;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================
+     EFFECTS
+  ================================= */
+  --overlay: rgba(0, 0, 0, 0.58);
+  --glass: rgba(17, 24, 45, 0.72);
+
+  /* ================================
+     UI
+  ================================= */
+  --success: #36B37E;
+  --warning: #F0B84B;
+  --danger: #F06A6A;
+}
+
+
+:root{
+    --primary:#173F9F;
+    --secondary:#7357E8;
+    --ink:#151827;
+    --muted:#697087;
+    --soft:#F5F7FC;
+    --line:#E5E8F1;
+    --white:#fff;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.av-school{
+    font-family: "Orbitron", sans-serif;
+
+    color:var(--ink);
+    background:var(--bg);
+    overflow:hidden;
+}
+
+.av-school *{
+    box-sizing:border-box;
+}
+
+.av-school img{
+    display:block;
+    width:100%;
+}
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.avs-section{
+    padding:110px 0;
+}
+
+.avs-container{
+    width:min(1180px,91%);
+    margin:auto;
+}
+
+.avs-heading{
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.avs-eyebrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:17px;
+    color:var(--secondary);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:3px;
+}
+
+.avs-eyebrow span{
+    width:24px;
+    height:1px;
+    background:var(--primary)
+}
+
+.avs-heading h2{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    color: var(--primary);
+    letter-spacing:-2.5px;
+    font-weight:500;
+}
+
+.avs-heading h2 em{
+    color:var(--secondary);
+}
+
+.avs-heading p{
+    max-width:570px;
+    margin:20px auto 0;
+    color:var(--primary);
+    font-size:13px;
+    line-height:1.9;
+}
+
+
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.av-simple-hero{
+
+    --av-primary:var(--primary,#173F9F);
+    --av-secondary:var(--secondary,#7357E8);
+
+    position:relative;
+
+    min-height:86vh;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#050812;
+
+    isolation:isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.av-simple-hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-3;
+
+    background-image:
+        url("images/w7.jfif");
+
+    background-size:cover;
+    background-position:center;
+
+    transform:scale(1.04);
+
+    animation:avSimpleZoom 14s ease-in-out infinite alternate;
+}
+
+
+.av-simple-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(3,6,15,.92) 0%,
+            rgba(3,6,15,.78) 35%,
+            rgba(3,6,15,.35) 65%,
+            rgba(3,6,15,.18) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(3,6,15,.20),
+            rgba(3,6,15,.60)
+        );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.av-simple-hero-content{
+
+    width:min(1180px,92%);
+
+    margin:auto;
+
+    padding:100px 0 80px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+.av-simple-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+    color:rgba(255,255,255,.72);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2.5px;
+}
+
+
+.av-simple-eyebrow span{
+
+    width:34px;
+    height:1px;
+
+    background:var(--av-secondary);
+
+    display:block;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.av-simple-hero h1{
+
+    margin:0;
+
+    max-width:700px;
+
+    color:#fff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(52px,7vw,92px);
+
+    line-height:.98;
+
+    font-weight:400;
+
+    letter-spacing:-3px;
+}
+
+
+.av-simple-hero h1 strong{
+
+    color:#fff;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #b8c9ff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+
+/* =========================================================
+   TYPING
+========================================================= */
+
+.av-simple-typing{
+
+    margin-top:28px;
+
+    min-height:32px;
+
+    display:flex;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+}
+
+
+.av-cursor{
+
+    width:2px;
+
+    height:21px;
+
+    margin-left:5px;
+
+    background:var(--av-secondary);
+
+    animation:
+        avCursorBlink .8s steps(1) infinite;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.av-simple-hero p{
+
+    max-width:650px;
+
+    margin:18px 0 0;
+
+    color:rgba(255,255,255,.70);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.av-simple-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    margin-top:32px;
+}
+
+
+.av-simple-btn{
+
+    min-height:48px;
+
+    padding:0 25px;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size:13px;
+border-radius: 7px;
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+
+.av-simple-primary{
+
+    color:#fff;
+
+    background:var(--av-primary);
+
+    border:1px solid transparent;
+}
+
+
+.av-simple-outline{
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(10px);
+}
+
+
+.av-simple-btn:hover{
+
+    transform:translateY(-3px);
+}
+
+
+.av-simple-outline:hover{
+
+    border-color:rgba(255,255,255,.7);
+
+    background:rgba(255,255,255,.12);
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.av-simple-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:0;
+
+    margin-top:55px;
+}
+
+
+.av-simple-meta div{
+
+    min-width:150px;
+
+    padding-right:28px;
+
+    margin-right:28px;
+
+    border-right:1px solid rgba(255,255,255,.18);
+}
+
+
+.av-simple-meta div:last-child{
+
+    border-right:0;
+
+    margin-right:0;
+
+    padding-right:0;
+}
+
+
+.av-simple-meta strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:25px;
+
+    font-weight:500;
+}
+
+
+.av-simple-meta span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:rgba(255,255,255,.50);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1.7px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes avSimpleZoom{
+
+    from{
+        transform:scale(1.04);
+    }
+
+    to{
+        transform:scale(1.10);
+    }
+}
+
+
+@keyframes avCursorBlink{
+
+    0%,
+    45%{
+        opacity:1;
+    }
+
+    46%,
+    100%{
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html[data-theme="dark"] .av-simple-hero{
+
+    background:#03050c;
+}
+
+
+html[data-theme="dark"] .av-simple-hero-overlay{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(1,3,10,.94),
+            rgba(1,3,10,.72),
+            rgba(1,3,10,.30)
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(1,3,10,.20),
+            rgba(1,3,10,.70)
+        );
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+html[data-theme="light"] .av-simple-hero-overlay{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(4,8,20,.84),
+            rgba(4,8,20,.58),
+            rgba(4,8,20,.18)
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(4,8,20,.10),
+            rgba(4,8,20,.52)
+        );
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .av-simple-hero-content{
+
+    text-align:right;
+}
+
+
+html[dir="rtl"] .av-simple-eyebrow{
+
+    flex-direction:row-reverse;
+}
+
+
+html[dir="rtl"] .av-simple-actions{
+
+    justify-content:flex-start;
+}
+
+
+html[dir="rtl"] .av-simple-meta{
+
+    flex-direction:row-reverse;
+
+    justify-content:flex-start;
+}
+
+
+html[dir="rtl"] .av-simple-meta div{
+
+    border-right:0;
+
+    border-left:1px solid rgba(255,255,255,.18);
+
+    margin-right:0;
+
+    margin-left:28px;
+
+    padding-right:0;
+
+    padding-left:28px;
+}
+
+
+html[dir="rtl"] .av-simple-meta div:last-child{
+
+    border-left:0;
+
+    margin-left:0;
+
+    padding-left:0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1024px){
+
+    .av-simple-hero{
+
+        min-height:78vh;
+    }
+
+    .av-simple-hero-content{
+
+        width:min(900px,88%);
+
+        padding:90px 0 70px;
+    }
+
+    .av-simple-hero h1{
+
+        font-size:clamp(50px,8vw,76px);
+    }
+
+    .av-simple-hero p{
+
+        max-width:590px;
+    }
+
+}
+
+
+/* =========================================================
+   IPAD MINI
+========================================================= */
+
+@media (min-width:768px) and (max-width:834px){
+
+    .av-simple-hero{
+
+        min-height:76vh;
+    }
+
+    .av-simple-hero-content{
+
+        padding:80px 0 60px;
+    }
+
+    .av-simple-hero h1{
+
+        font-size:64px;
+    }
+
+    .av-simple-typing{
+
+        font-size:17px;
+    }
+
+    .av-simple-meta{
+
+        margin-top:42px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE / SAMSUNG S8+
+========================================================= */
+
+@media (max-width:767px){
+
+    .av-simple-hero{
+
+        min-height:88vh;
+
+        align-items:flex-end;
+    }
+
+    .av-simple-hero-bg{
+
+        background-position:
+            62% center;
+    }
+
+    .av-simple-hero-overlay{
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(3,6,15,.12) 0%,
+                rgba(3,6,15,.40) 35%,
+                rgba(3,6,15,.94) 82%,
+                rgba(3,6,15,.98) 100%
+            );
+    }
+
+    .av-simple-hero-content{
+
+        width:90%;
+
+        padding:90px 0 45px;
+    }
+
+    .av-simple-eyebrow{
+
+        font-size:9px;
+
+        letter-spacing:1.7px;
+
+        gap:8px;
+
+        margin-bottom:18px;
+    }
+
+    .av-simple-eyebrow span{
+
+        width:22px;
+    }
+
+    .av-simple-hero h1{
+
+        font-size:
+            clamp(46px,14vw,64px);
+
+        letter-spacing:-2px;
+    }
+
+    .av-simple-typing{
+
+        margin-top:22px;
+
+        font-size:15px;
+
+        min-height:27px;
+    }
+
+    .av-cursor{
+
+        height:18px;
+    }
+
+    .av-simple-hero p{
+
+        margin-top:14px;
+
+        font-size:13px;
+
+        line-height:1.7;
+    }
+
+    .av-simple-actions{
+
+        margin-top:24px;
+
+        gap:9px;
+    }
+
+    .av-simple-btn{
+
+        min-height:44px;
+
+        padding:0 18px;
+
+        font-size:11px;
+    }
+
+    .av-simple-meta{
+
+        margin-top:35px;
+
+        width:100%;
+
+        justify-content:space-between;
+    }
+
+    .av-simple-meta div{
+
+        min-width:auto;
+
+        flex:1;
+
+        padding-right:12px;
+
+        margin-right:12px;
+    }
+
+    .av-simple-meta strong{
+
+        font-size:20px;
+    }
+
+    .av-simple-meta span{
+
+        font-size:7px;
+
+        letter-spacing:1px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:380px){
+
+    .av-simple-hero{
+
+        min-height:92vh;
+    }
+
+    .av-simple-hero-content{
+
+        width:91%;
+
+        padding-bottom:32px;
+    }
+
+    .av-simple-hero h1{
+
+        font-size:43px;
+    }
+
+    .av-simple-hero p{
+
+        font-size:12px;
+    }
+
+    .av-simple-btn{
+
+        padding:0 15px;
+    }
+
+    .av-simple-meta{
+
+        margin-top:28px;
+    }
+
+}
+
+
+/* =========================================================
+   RTL MOBILE
+========================================================= */
+
+@media (max-width:767px){
+
+    html[dir="rtl"] .av-simple-hero-bg{
+
+        background-position:38% center;
+    }
+
+    html[dir="rtl"] .av-simple-meta div{
+
+        padding-left:10px;
+
+        margin-left:10px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   02 — PROGRAM PATH
+========================================================= */
+
+.avs-path{
+    background:var(--bg);
+}
+
+.avs-path-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.avs-path-card{
+    position:relative;
+    min-height:370px;
+    padding:30px;
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--secondary);
+    transition:.35s ease;
+    border-radius: 6px;
+}
+
+.avs-path-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 25px 60px rgba(20,30,70,.10);
+}
+
+.avs-path-number{
+    position:absolute;
+    right:25px;
+    top:20px;
+    color:var(--primary);
+    font-size:58px;
+    line-height:1.2;
+}
+
+.avs-path-image{
+    width:100%;
+    height:220px;
+    margin-bottom:25px;
+    overflow:hidden;
+    border-radius: 15px;
+}
+
+.avs-path-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.avs-path-card:hover img{
+    transform:scale(1.07);
+}
+
+.avs-path-card small{
+    color:var(--text);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.avs-path-card h3{
+    margin:9px 0 10px;
+    font-size:25px;
+    font-weight:600;
+    color:var(--primary);
+}
+
+.avs-path-card p{
+    margin:0;
+    color:var(--text);
+    font-size:12px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   03 — IMMERSIVE LEARNING
+========================================================= */
+
+.avs-experience{
+    background:var(--bg);
+}
+
+.avs-experience-layout{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:70px;
+    align-items:center;
+}
+
+.avs-experience-image{
+    position:relative;
+    height:570px;
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+.avs-experience-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.avs-image-tag{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    padding:13px 16px;
+    color:var(--text);
+    background:rgba(7,10,25,.78);
+    backdrop-filter:blur(12px);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1.5px;
+}
+
+.avs-experience-copy{
+    max-width:510px;
+}
+
+.avs-experience-copy .avs-eyebrow{
+    justify-content:flex-start;
+}
+
+.avs-experience-copy h2{
+    margin:0;
+    font-size:clamp(32px,5vw,54px);
+    line-height:.98;
+    letter-spacing:-2.5px;
+    font-weight:500;
+        color:var(--primary);
+
+}
+
+.avs-experience-copy h2 em{
+    color:var(--secondary);
+    font-style:normal;
+}
+
+.avs-experience-copy > p{
+    margin:22px 0 30px;
+    color:var(--text);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.avs-feature-list{
+    display:grid;
+    gap:12px;
+}
+
+.avs-feature{
+    display:grid;
+    grid-template-columns:38px 1fr;
+    gap:13px;
+    align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.avs-feature-icon{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    color:var(--text);
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+    font-size:12px;
+}
+
+.avs-feature strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:3px;
+    color:var(--secondary)
+}
+
+.avs-feature span{
+    color:var(--text);
+    font-size:12px;
+}
+
+/* =========================================================
+   04 — PROGRAMS
+========================================================= */
+
+.avs-programs{
+    background:var(--bg);
+}
+
+.avs-program-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.avs-program-card{
+    position:relative;
+    height:420px;
+    overflow:hidden;
+    background:var(--bg);
+    border-radius: 10px;
+}
+
+.avs-program-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+.avs-program-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 25%,
+            rgba(4,6,17,.9) 100%
+        );
+}
+
+.avs-program-card:hover img{
+    transform:scale(1.08);
+}
+
+.avs-program-info{
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:23px;
+    z-index:2;
+    color:var(--secondary);
+}
+
+.avs-program-info small{
+    color:var(--secondary);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1.5px;
+}
+
+.avs-program-info h3{
+    margin:7px 0 8px;
+    font-size:25px;
+    line-height:1;
+    font-weight:500;
+}
+
+.avs-program-info p{
+    min-height:44px;
+    margin:0;
+    color:var(--secondary);
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* =========================================================
+   05 — HOW IT WORKS
+========================================================= */
+
+.avs-journey{
+    background:var(--bg);
+}
+
+.avs-journey-line{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.avs-journey-line::before{
+    content:"";
+    position:absolute;
+    top:31px;
+    left:11%;
+    right:11%;
+    height:1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+    opacity:.25;
+}
+
+.avs-step{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.avs-step-circle{
+    width:62px;
+    height:62px;
+    margin:0 auto 23px;
+    display:grid;
+    place-items:center;
+    border:1px solid #dfe2ec;
+    background:var(--bg);
+    color:var(--secondary);
+    font-size:19px;
+    box-shadow:0 8px 25px rgba(20,30,70,.06);
+}
+
+.avs-step h3{
+    margin:0 0 8px;
+    font-size:14px;
+    color:var(--text)
+}
+
+.avs-step p{
+    max-width:190px;
+    margin:auto;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   06 — SCHOOL BENEFITS
+========================================================= */
+
+.avs-benefits{
+    background:var(--bg);
+       }
+
+.avs-benefit-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+
+}
+
+.avs-benefit{
+    min-height:245px;
+    padding:30px;
+    border:1px solid var(--primary);
+    background:var(--bg);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:.3s ease;
+    border-radius: 10px;
+}
+
+.avs-benefit:hover{
+    transform:translateY(-5px);
+    border-color:rgba(115,87,232,.35);
+}
+
+.avs-benefit-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.avs-benefit-number{
+    color:var(--text);
+    font-size:38px;
+}
+
+.avs-benefit-icon{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    color:var(--text);
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+}
+
+.avs-benefit h3{
+    margin:25px 0 8px;
+    font-size:23px;
+    font-weight:600;
+        color:var(--text);
+
+
+}
+
+.avs-benefit p{
+    max-width:430px;
+    margin:0;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   07 — CTA
+========================================================= */
+
+.avs-cta{
+    padding:80px 0 100px;
+}
+
+.avs-cta-box{
+    position:relative;
+    min-height:330px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    text-align:center;
+    color:#fff;
+    background:#080B19;
+    border-radius: 15px;
+}
+
+.avs-cta-image{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,7,18,.88),
+            rgba(23,63,159,.55),
+            rgba(5,7,18,.88)
+        ),
+        url("images/school-space.jpg")
+        center/cover no-repeat;
+}
+
+.avs-cta-content{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    padding:40px 20px;
+}
+
+.avs-cta-content .avs-eyebrow{
+    color:#c4c9e2;
+}
+
+.avs-cta-content h2{
+    margin:0;
+    font-size:clamp(38px,5vw,58px);
+    line-height:1;
+    font-weight:500;
+    letter-spacing:-2px;
+}
+
+.avs-cta-content p{
+    max-width:500px;
+    margin:17px auto 25px;
+    color:rgba(255,255,255,.62);
+    font-size:11px;
+    line-height:1.8;
+}
+
+.avs-cta-content .avs-btn{
+    background:#fff;
+    color:var(--primary);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+    .avs-section{
+        padding:85px 0;
+    }
+
+    .avs-path-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .avs-experience-layout{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .avs-experience-image{
+        height:470px;
+    }
+
+    .avs-program-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .avs-journey-line{
+        grid-template-columns:1fr 1fr;
+        row-gap:45px;
+    }
+
+    .avs-journey-line::before{
+        display:none;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .avs-section{
+        padding:70px 0;
+    }
+
+    .avs-heading{
+        margin-bottom:40px;
+    }
+
+    .avs-heading h2{
+        font-size:40px;
+    }
+
+    .avs-hero{
+        min-height:670px;
+    }
+
+    .avs-hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+    }
+
+    .avs-hero-copy p{
+        font-size:11px;
+    }
+
+    .avs-hero-actions{
+        flex-wrap:wrap;
+    }
+
+    .avs-path-grid,
+    .avs-program-grid,
+    .avs-benefit-layout{
+        grid-template-columns:1fr;
+    }
+
+    .avs-path-card{
+        min-height:350px;
+    }
+
+    .avs-experience-image{
+        height:390px;
+    }
+
+    .avs-experience-copy h2{
+        font-size:42px;
+    }
+
+    .avs-program-card{
+        height:390px;
+    }
+
+    .avs-journey-line{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .avs-journey-line::before{
+        display:none;
+    }
+
+    .avs-cta{
+        padding:60px 0 70px;
+    }
+
+    .avs-cta-box{
+        min-height:350px;
+    }
+
+}

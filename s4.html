@@ -1,0 +1,3674 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Maison Crumb | Artisan Bakery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<style>
+
+/* =========================================================
+   MAISON CRUMB
+   LUXURY ARTISAN BAKERY
+========================================================= */
+
+:root{
+
+    --primary:#8C4A2F;
+    --secondary:#D79A55;
+
+    --bg:#F8F1E8;
+    --surface:#FFFDF9;
+    --surface-2:#F1E5D7;
+
+    --text:#2B1D18;
+    --muted:#806F66;
+
+    --border:rgba(43,29,24,.11);
+
+    --header-bg:rgba(248,241,232,.78);
+    --header-scrolled:rgba(255,253,249,.95);
+
+    --footer-bg:#EDE0D1;
+
+    --cream:#FFF8EF;
+
+    --shadow:
+        0 22px 70px rgba(73,43,28,.10);
+
+    --heading:"Playfair Display",serif;
+    --body:"DM Sans",sans-serif;
+
+    --ease:cubic-bezier(.22,.75,.25,1);
+
+    --header-height:84px;
+
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+html[data-theme="dark"]{
+
+    --bg:#17110F;
+    --surface:#211916;
+    --surface-2:#2B211D;
+
+    --text:#FFF7EF;
+    --muted:#C2ADA0;
+
+    --border:rgba(255,247,239,.11);
+
+    --header-bg:rgba(23,17,15,.78);
+    --header-scrolled:rgba(23,17,15,.95);
+
+    --footer-bg:#1C1412;
+
+    --cream:#241A16;
+
+    --shadow:
+        0 25px 80px rgba(0,0,0,.38);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:var(--body);
+
+    transition:
+        background .45s ease,
+        color .45s ease;
+
+}
+
+button,
+input{
+    font:inherit;
+}
+
+button{
+    border:0;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.care-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:9999;
+
+    width:100%;
+
+    background:var(--header-bg);
+
+    border-bottom:1px solid transparent;
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    transition:
+        background .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease,
+        transform .45s var(--ease);
+
+    animation:
+        bakeryHeader .9s var(--ease) both;
+
+}
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+.care-header.scrolled{
+
+    background:var(--header-scrolled);
+
+    border-bottom-color:var(--border);
+
+    box-shadow:
+        0 12px 38px rgba(73,43,28,.08);
+
+}
+
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.header-inner{
+
+    width:min(1440px,calc(100% - 64px));
+
+    min-height:var(--header-height);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+    transition:
+        transform .4s var(--ease);
+
+}
+
+.brand:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   BAKERY LOGO
+   NO BACKGROUND
+========================================================= */
+
+.logo-box{
+
+    position:relative;
+
+    width:51px;
+
+    height:51px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:transparent !important;
+
+    border:0 !important;
+
+    box-shadow:none !important;
+
+}
+
+
+/* decorative ring */
+
+.logo-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:4px;
+
+    border:
+
+        1px solid
+        color-mix(
+            in srgb,
+            var(--secondary) 48%,
+            transparent
+        );
+
+    border-radius:
+
+        48%
+        52%
+        51%
+        49%;
+
+    transform:
+
+        rotate(-14deg);
+
+    transition:
+        transform .7s var(--ease);
+
+}
+
+
+/* second ring */
+
+.logo-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:58px;
+
+    height:32px;
+
+    border-top:
+
+        1px solid
+        color-mix(
+            in srgb,
+            var(--primary) 28%,
+            transparent
+        );
+
+    border-radius:50%;
+
+    transform:
+
+        rotate(24deg);
+
+    opacity:.7;
+
+}
+
+.brand:hover .logo-box::before{
+
+    transform:
+
+        rotate(25deg)
+        scale(1.08);
+
+}
+
+.logo-box img{
+
+    position:relative;
+
+    z-index:2;
+
+    width:43px;
+
+    height:43px;
+
+    object-fit:contain;
+
+    background:transparent !important;
+
+    border:0 !important;
+
+    box-shadow:none !important;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(91,47,27,.14)
+        );
+
+    transition:
+        transform .55s var(--ease),
+        filter .45s ease;
+
+}
+
+.brand:hover .logo-box img{
+
+    transform:
+
+        rotate(-4deg)
+        scale(1.07);
+
+    filter:
+        drop-shadow(
+            0 12px 20px
+            rgba(140,74,47,.24)
+        );
+
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1;
+
+}
+
+.brand-name{
+
+    font-family:var(--heading);
+
+    font-size:21px;
+
+    font-weight:700;
+
+    letter-spacing:-.45px;
+
+    white-space:nowrap;
+
+}
+
+.brand-primary{
+    color:var(--text);
+}
+
+.brand-secondary{
+    color:var(--primary);
+}
+
+.brand-tag{
+
+    margin-top:6px;
+
+    color:var(--muted);
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    white-space:nowrap;
+
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
+
+.main-nav{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+}
+
+.nav-link{
+
+    position:relative;
+
+    min-height:43px;
+
+    padding:0 14px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    border-radius:100px;
+
+    transition:
+        color .3s ease,
+        background .3s ease,
+        transform .3s var(--ease);
+
+}
+
+.nav-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:4px;
+
+    left:50%;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    opacity:0;
+
+    transform:
+        translateX(-50%)
+        translateY(5px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s var(--ease);
+
+}
+
+.nav-link:hover{
+
+    color:var(--text);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 9%,
+            transparent
+        );
+
+}
+
+.nav-link:hover::before{
+
+    opacity:1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+.nav-arrow{
+
+    width:13px;
+
+    height:13px;
+
+    transition:
+        transform .35s var(--ease);
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:calc(100% + 14px);
+
+    left:50%;
+
+    width:218px;
+
+    padding:9px;
+
+    border:
+
+        1px solid
+        var(--border);
+
+    border-radius:24px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface) 96%,
+            transparent
+        );
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 28px 75px
+        rgba(73,43,28,.15);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        translate(-50%,-12px)
+        scale(.96);
+
+    transform-origin:top center;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .4s var(--ease);
+
+}
+
+.dropdown-menu::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-16px;
+
+    left:0;
+
+    right:0;
+
+    height:16px;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translate(-50%,0)
+        scale(1);
+
+}
+
+.dropdown:hover .nav-arrow{
+
+    transform:rotate(180deg);
+
+}
+
+.dropdown-title{
+
+    padding:
+        10px
+        12px
+        8px;
+
+    color:var(--muted);
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.dropdown-item{
+
+    min-height:44px;
+
+    padding:0 13px;
+
+    display:flex;
+
+    align-items:center;
+
+    border-radius:14px;
+
+    color:var(--text);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s var(--ease);
+
+}
+
+.dropdown-item:hover{
+
+    color:var(--primary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 10%,
+            transparent
+        );
+
+    transform:translateX(4px);
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    flex-shrink:0;
+
+}
+
+.icon-btn{
+
+    width:40px;
+
+    height:40px;
+
+    display:grid;
+
+    place-items:center;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:var(--muted);
+
+    background:transparent;
+
+    border:1px solid transparent;
+
+    transition:
+        color .3s ease,
+        background .3s ease,
+        transform .35s var(--ease),
+        border-color .3s ease;
+
+}
+
+.icon-btn svg{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.icon-btn:hover{
+
+    color:var(--primary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 10%,
+            transparent
+        );
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--secondary) 18%,
+            transparent
+        );
+
+    transform:
+        translateY(-2px)
+        rotate(7deg);
+
+}
+
+
+/* =========================================================
+   ORDER BUTTON
+========================================================= */
+
+.login-btn{
+
+    position:relative;
+
+    min-height:42px;
+
+    padding:0 21px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:100px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--primary),
+            #A95F3D
+        );
+
+    font-size:11px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 9px 25px
+        rgba(140,74,47,.22);
+
+    transition:
+        transform .35s var(--ease),
+        box-shadow .35s ease;
+
+}
+
+.login-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    left:-100%;
+
+    width:60%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.38),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:
+        left .75s var(--ease);
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 14px 32px
+        rgba(140,74,47,.30);
+
+}
+
+.login-btn:hover::before{
+
+    left:150%;
+
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.menu-btn{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:var(--text);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 9%,
+            transparent
+        );
+
+    border:1px solid var(--border);
+
+    transition:
+        transform .35s var(--ease),
+        background .3s ease;
+
+}
+
+.menu-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 15%,
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   MOBILE PANEL
+========================================================= */
+
+.mobile-panel{
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.care-footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--footer-bg);
+
+    border-top:1px solid var(--border);
+
+    isolation:isolate;
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+}
+
+
+/* =========================================================
+   BAKERY FOOTER TEXTURE
+========================================================= */
+
+.care-footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-3;
+
+    opacity:.45;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 20%,
+            color-mix(
+                in srgb,
+                var(--secondary) 13%,
+                transparent
+            ),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 90% 75%,
+            color-mix(
+                in srgb,
+                var(--primary) 11%,
+                transparent
+            ),
+            transparent 28%
+        );
+
+}
+
+
+/* top elegant line */
+
+.care-footer::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--secondary),
+            var(--primary),
+            var(--secondary),
+            transparent
+        );
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   FOOTER ORBS
+========================================================= */
+
+.footer-orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.footer-orb.one{
+
+    width:340px;
+
+    height:340px;
+
+    left:-180px;
+
+    top:-220px;
+
+    border:
+
+        1px solid
+        color-mix(
+            in srgb,
+            var(--secondary) 22%,
+            transparent
+        );
+
+    animation:
+        bakeryOrbit 12s linear infinite;
+
+}
+
+.footer-orb.two{
+
+    width:280px;
+
+    height:280px;
+
+    right:-140px;
+
+    bottom:-170px;
+
+    border:
+
+        1px solid
+        color-mix(
+            in srgb,
+            var(--primary) 18%,
+            transparent
+        );
+
+    animation:
+        bakeryOrbitReverse 15s linear infinite;
+
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container{
+
+    width:min(1440px,calc(100% - 64px));
+
+    margin:auto;
+
+    padding:
+        74px 0
+        27px;
+
+}
+
+
+/* =========================================================
+   FOOTER TOP
+========================================================= */
+
+.footer-top{
+
+    display:grid;
+
+    grid-template-columns:
+        1.5fr
+        .8fr
+        1fr
+        1.1fr;
+
+    gap:55px;
+
+    padding-bottom:55px;
+
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand .brand{
+
+    margin-bottom:23px;
+
+}
+
+.footer-description{
+
+    max-width:415px;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================================================
+   BAKERY BADGE
+========================================================= */
+
+.footer-badge{
+
+    width:max-content;
+
+    margin-top:21px;
+
+    padding:
+        8px
+        13px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    border-radius:100px;
+
+    color:var(--muted);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface) 60%,
+            transparent
+        );
+
+    border:1px solid var(--border);
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.footer-badge span{
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    box-shadow:
+        0 0 0 5px
+        color-mix(
+            in srgb,
+            var(--secondary) 12%,
+            transparent
+        );
+
+    animation:
+        bakeryPulse 2.3s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.socials{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-top:24px;
+
+}
+
+.social{
+
+    width:37px;
+
+    height:37px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    color:var(--muted);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface) 55%,
+            transparent
+        );
+
+    border:1px solid var(--border);
+
+    transition:
+        transform .35s var(--ease),
+        color .3s ease,
+        background .3s ease;
+
+}
+
+.social:hover{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    transform:
+        translateY(-5px)
+        rotate(-7deg);
+
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column h3{
+
+    margin-bottom:21px;
+
+    color:var(--text);
+
+    font-family:var(--heading);
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    display:grid;
+
+    gap:11px;
+
+}
+
+.footer-links a{
+
+    position:relative;
+
+    display:inline-block;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    transition:
+        color .3s ease,
+        transform .3s var(--ease);
+
+}
+
+.footer-links a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-13px;
+
+    top:50%;
+
+    width:0;
+
+    height:1px;
+
+    background:var(--secondary);
+
+    transition:
+        width .3s var(--ease);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--text);
+
+    transform:translateX(5px);
+
+}
+
+.footer-links a:hover::before{
+
+    width:8px;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    margin-bottom:14px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.5;
+
+}
+
+.contact-icon{
+
+    width:34px;
+
+    height:34px;
+
+    flex:0 0 34px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:12px;
+
+    color:var(--primary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--secondary) 9%,
+            transparent
+        );
+
+    border:1px solid
+        color-mix(
+            in srgb,
+            var(--secondary) 15%,
+            transparent
+        );
+
+    transition:
+        transform .3s var(--ease),
+        color .3s ease;
+
+}
+
+.contact-icon svg{
+
+    width:15px;
+
+    height:15px;
+
+}
+
+.contact-item:hover .contact-icon{
+
+    color:var(--secondary);
+
+    transform:
+        translateY(-2px)
+        rotate(-5deg);
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter{
+
+    margin-top:23px;
+
+}
+
+.newsletter-box{
+
+    height:49px;
+
+    padding:4px;
+
+    display:flex;
+
+    align-items:center;
+
+    border-radius:100px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 9px 28px rgba(73,43,28,.05);
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.newsletter-box:focus-within{
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--secondary) 45%,
+            transparent
+        );
+
+    box-shadow:
+        0 12px 35px
+        color-mix(
+            in srgb,
+            var(--secondary) 12%,
+            transparent
+        );
+
+}
+
+.newsletter input{
+
+    width:100%;
+
+    height:100%;
+
+    padding:0 15px;
+
+    border:0;
+
+    outline:0;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:10px;
+
+}
+
+.newsletter input::placeholder{
+
+    color:var(--muted);
+
+}
+
+.newsletter button{
+
+    width:39px;
+
+    height:39px;
+
+    flex:0 0 39px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    transition:
+        transform .35s var(--ease);
+
+}
+
+.newsletter button:hover{
+
+    transform:
+        rotate(12deg)
+        scale(1.06);
+
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom{
+
+    min-height:69px;
+
+    padding-top:23px;
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+}
+
+.copyright{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+.footer-bottom-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+.footer-bottom-links a{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    transition:
+        color .3s ease;
+
+}
+
+.footer-bottom-links a:hover{
+
+    color:var(--primary);
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes bakeryHeader{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-28px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes bakeryOrbit{
+
+    from{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes bakeryOrbitReverse{
+
+    from{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+}
+
+
+@keyframes footerReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes bakeryPulse{
+
+    0%,
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(.65);
+
+        opacity:.5;
+
+    }
+
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .dropdown-menu{
+
+    left:auto;
+
+    right:50%;
+
+    transform:
+        translate(50%,-12px)
+        scale(.96);
+
+}
+
+html[dir="rtl"] .dropdown:hover .dropdown-menu{
+
+    transform:
+        translate(50%,0)
+        scale(1);
+
+}
+
+html[dir="rtl"] .dropdown-item:hover{
+
+    transform:translateX(-4px);
+
+}
+
+html[dir="rtl"] .footer-links a:hover{
+
+    transform:translateX(-5px);
+
+}
+
+html[dir="rtl"] .footer-links a::before{
+
+    left:auto;
+
+    right:-13px;
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200 - 1439
+========================================================= */
+
+@media (max-width:1439px){
+
+    .header-inner,
+    .footer-container{
+
+        width:min(
+            1360px,
+            calc(100% - 48px)
+        );
+
+    }
+
+    .nav-link{
+
+        padding:0 10px;
+
+        font-size:11px;
+
+    }
+
+    .footer-top{
+
+        gap:38px;
+
+    }
+
+}
+
+
+/* =========================================================
+   NEST HUB
+   1025 - 1199
+========================================================= */
+
+@media (max-width:1199px){
+
+    :root{
+
+        --header-height:77px;
+
+    }
+
+    .header-inner{
+
+        width:calc(100% - 38px);
+
+    }
+
+    .brand-name{
+
+        font-size:19px;
+
+    }
+
+    .brand-tag{
+
+        font-size:6px;
+
+    }
+
+    .logo-box{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .logo-box img{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .nav-link{
+
+        padding:0 7px;
+
+        font-size:10.5px;
+
+    }
+
+    .icon-btn{
+
+        width:37px;
+
+        height:37px;
+
+    }
+
+    .login-btn{
+
+        min-height:38px;
+
+        padding:0 16px;
+
+    }
+
+    .footer-container{
+
+        width:calc(100% - 48px);
+
+    }
+
+    .footer-top{
+
+        grid-template-columns:
+            1.3fr
+            .8fr
+            1fr
+            1fr;
+
+        gap:28px;
+
+    }
+
+}
+
+
+/* =========================================================
+   IPAD MINI
+   768 - 1024
+========================================================= */
+
+@media (max-width:1024px){
+
+    :root{
+
+        --header-height:72px;
+
+    }
+
+    .header-inner{
+
+        width:calc(100% - 34px);
+
+        min-height:72px;
+
+    }
+
+    .main-nav,
+    .desktop-login{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:grid;
+
+    }
+
+    .header-actions{
+
+        gap:5px;
+
+    }
+
+    .icon-btn{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+
+    /* =====================================================
+       MOBILE PANEL
+    ===================================================== */
+
+    .mobile-panel{
+
+        position:absolute;
+
+        top:calc(100% + 8px);
+
+        left:17px;
+
+        right:17px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:4px;
+
+        padding:10px;
+
+        max-height:
+            calc(100vh - 88px);
+
+        overflow-y:auto;
+
+        overscroll-behavior:contain;
+
+        border:
+            1px solid
+            var(--border);
+
+        border-radius:25px;
+
+        background:
+            color-mix(
+                in srgb,
+                var(--surface) 96%,
+                transparent
+            );
+
+        backdrop-filter:blur(28px);
+
+        -webkit-backdrop-filter:blur(28px);
+
+        box-shadow:
+            0 30px 80px
+            rgba(73,43,28,.18);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transform:
+            translateY(-12px)
+            scale(.97);
+
+        transform-origin:top center;
+
+        transition:
+            opacity .35s ease,
+            visibility .35s ease,
+            transform .45s var(--ease);
+
+    }
+
+    .mobile-panel.active{
+
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    .mobile-panel > a,
+    .mobile-nav-dropdown{
+
+        width:100%;
+
+        min-height:50px;
+
+        padding:0 16px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
+        border-radius:15px;
+
+        color:var(--text);
+
+        background:transparent;
+
+        font-size:13px;
+
+        font-weight:600;
+
+        cursor:pointer;
+
+        text-align:left;
+
+        transition:
+            background .3s ease,
+            color .3s ease,
+            transform .3s var(--ease);
+
+    }
+
+    .mobile-panel > a:hover,
+    .mobile-nav-dropdown:hover{
+
+        color:var(--primary);
+
+        background:
+            color-mix(
+                in srgb,
+                var(--secondary) 8%,
+                transparent
+            );
+
+        transform:translateX(3px);
+
+    }
+
+    .mobile-nav-dropdown{
+
+        border:0;
+
+    }
+
+    .mobile-nav-dropdown.open{
+
+        color:var(--primary);
+
+    }
+
+    .mobile-chevron{
+
+        width:16px;
+
+        height:16px;
+
+        transition:
+            transform .35s var(--ease);
+
+    }
+
+    .mobile-nav-dropdown.open
+    .mobile-chevron{
+
+        transform:rotate(180deg);
+
+    }
+
+
+    /* =====================================================
+       SUBMENU
+    ===================================================== */
+
+    .mobile-dropdown{
+
+        display:grid;
+
+        grid-template-rows:0fr;
+
+        overflow:hidden;
+
+        opacity:.4;
+
+        transition:
+            grid-template-rows .4s var(--ease),
+            opacity .3s ease;
+
+    }
+
+    .mobile-dropdown.active{
+
+        grid-template-rows:1fr;
+
+        opacity:1;
+
+    }
+
+    .mobile-dropdown a{
+
+        min-height:42px;
+
+        padding-left:35px;
+
+        display:flex;
+
+        align-items:center;
+
+        color:var(--muted);
+
+        font-size:12px;
+
+        font-weight:600;
+
+        border-radius:12px;
+
+        transition:
+            color .3s ease,
+            background .3s ease;
+
+    }
+
+    .mobile-dropdown a:hover{
+
+        color:var(--primary);
+
+        background:
+            color-mix(
+                in srgb,
+                var(--secondary) 8%,
+                transparent
+            );
+
+    }
+
+    .mobile-login{
+
+        margin-top:7px;
+
+        justify-content:center !important;
+
+        color:#fff !important;
+
+        background:
+            linear-gradient(
+                110deg,
+                var(--primary),
+                #A95F3D
+            ) !important;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-container{
+
+        width:calc(100% - 42px);
+
+        padding-top:60px;
+
+    }
+
+    .footer-top{
+
+        grid-template-columns:
+            1.25fr
+            1fr
+            1fr;
+
+        gap:38px;
+
+    }
+
+    .footer-brand{
+
+        grid-column:span 3;
+
+    }
+
+    .footer-description{
+
+        max-width:600px;
+
+    }
+
+    .footer-bottom{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SAMSUNG S8 / SMALL TABLET
+   481 - 767
+========================================================= */
+
+@media (max-width:767px){
+
+    :root{
+
+        --header-height:68px;
+
+    }
+
+    .header-inner{
+
+        width:calc(100% - 24px);
+
+        min-height:68px;
+
+    }
+
+    .brand{
+
+        gap:8px;
+
+    }
+
+    .logo-box{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .logo-box img{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .logo-box::before{
+
+        inset:4px;
+
+    }
+
+    .brand-name{
+
+        font-size:18px;
+
+    }
+
+    .brand-tag{
+
+        margin-top:5px;
+
+        font-size:5.5px;
+
+        letter-spacing:2.1px;
+
+    }
+
+    .header-actions{
+
+        gap:3px;
+
+    }
+
+    .icon-btn{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .menu-btn{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+    .mobile-panel{
+
+        left:10px;
+
+        right:10px;
+
+        border-radius:22px;
+
+        max-height:
+            calc(100vh - 80px);
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-container{
+
+        width:calc(100% - 28px);
+
+        padding:
+            50px 0
+            22px;
+
+    }
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+
+        gap:34px;
+
+        padding-bottom:38px;
+
+    }
+
+    .footer-brand{
+
+        grid-column:auto;
+
+    }
+
+    .footer-description{
+
+        max-width:none;
+
+        font-size:12px;
+
+    }
+
+    .footer-column h3{
+
+        font-size:16px;
+
+        margin-bottom:15px;
+
+    }
+
+    .footer-links{
+
+        gap:9px;
+
+    }
+
+    .contact-item{
+
+        font-size:11px;
+
+    }
+
+    .footer-bottom{
+
+        min-height:auto;
+
+        padding-top:20px;
+
+    }
+
+    .footer-bottom-links{
+
+        width:100%;
+
+        flex-wrap:wrap;
+
+        gap:10px 18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   <=400
+========================================================= */
+
+@media (max-width:400px){
+
+    .header-inner{
+
+        width:calc(100% - 18px);
+
+    }
+
+    .brand-name{
+
+        font-size:17px;
+
+    }
+
+    .brand-tag{
+
+        letter-spacing:1.6px;
+
+    }
+
+    .logo-box{
+
+        width:39px;
+
+        height:39px;
+
+    }
+
+    .logo-box img{
+
+        width:33px;
+
+        height:33px;
+
+    }
+
+    .logo-box::before{
+
+        inset:4px;
+
+    }
+
+    .logo-box::after{
+
+        display:none;
+
+    }
+
+    .icon-btn{
+
+        width:32px;
+
+        height:32px;
+
+    }
+
+    .menu-btn{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .footer-container{
+
+        width:calc(100% - 22px);
+
+    }
+
+    .social{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONE
+========================================================= */
+
+@media (max-height:520px) and (orientation:landscape){
+
+    .mobile-panel{
+
+        max-height:
+            calc(100vh - 82px);
+
+    }
+
+    .mobile-panel > a,
+    .mobile-nav-dropdown{
+
+        min-height:43px;
+
+    }
+
+    .mobile-dropdown a{
+
+        min-height:36px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="care-header" id="header">
+
+    <div class="header-inner">
+
+
+        <!-- BRAND -->
+
+        <a href="#" class="brand">
+
+            <div class="logo-box">
+
+                <img src="images/logo.png"
+                     alt="Maison Crumb Logo">
+
+            </div>
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+
+                    <span class="brand-primary">
+                        Maison
+                    </span>
+
+                    <span class="brand-secondary">
+                        Crumb
+                    </span>
+
+                </span>
+
+                <span class="brand-tag">
+                    ARTISAN BAKERY
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             DESKTOP NAV
+        ================================================== -->
+
+        <nav class="main-nav">
+
+            <div class="dropdown">
+
+                <a href="#"
+                   class="nav-link">
+
+                    Home
+
+                    <i data-lucide="chevron-down"
+                       class="nav-arrow">
+                    </i>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <div class="dropdown-title">
+                        Discover Maison
+                    </div>
+
+                    <a href="index.html"
+                       class="dropdown-item">
+                        Home 1
+                    </a>
+
+                    <a href="home.html"
+                       class="dropdown-item">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="products.html"
+               class="nav-link">
+                Bakes
+            </a>
+
+
+            <a href="specials.html"
+               class="nav-link">
+                Today's Specials
+            </a>
+
+
+            <a href="cakes.html"
+               class="nav-link">
+                Celebration Cakes
+            </a>
+
+
+            <a href="story.html"
+               class="nav-link">
+                Our Story
+            </a>
+
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             ACTIONS
+        ================================================== -->
+
+        <div class="header-actions">
+
+
+            <button
+                class="icon-btn"
+                id="themeBtn"
+                type="button"
+                aria-label="Toggle theme">
+
+                <i data-lucide="moon"></i>
+
+            </button>
+
+
+            <button
+                class="icon-btn"
+                id="rtlBtn"
+                type="button"
+                aria-label="Toggle direction">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <a href="order.html"
+               class="login-btn desktop-login">
+
+                Order Now
+
+            </a>
+
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE PANEL
+    ====================================================== -->
+
+    <div class="mobile-panel"
+         id="mobilePanel">
+
+
+        <div class="mobile-nav-group">
+
+            <button
+                class="mobile-nav-dropdown"
+                id="mobileHomeBtn"
+                type="button"
+                aria-expanded="false">
+
+                <span>
+                    Home
+                </span>
+
+                <i data-lucide="chevron-down"
+                   class="mobile-chevron">
+                </i>
+
+            </button>
+
+
+            <div class="mobile-dropdown"
+                 id="mobileHomeDropdown">
+
+                <a href="index.html">
+                    Home 1
+                </a>
+
+                <a href="home.html">
+                    Home 2
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="products.html">
+            Bakes
+        </a>
+
+
+        <a href="specials.html">
+            Today's Specials
+        </a>
+
+
+        <a href="cakes.html">
+            Celebration Cakes
+        </a>
+
+
+        <a href="story.html">
+            Our Story
+        </a>
+
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+
+        <a href="order.html"
+           class="mobile-login">
+
+            <i data-lucide="shopping-bag"></i>
+
+            Order Now
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     YOUR BAKERY PAGE CONTENT
+========================================================= -->
+
+<main>
+
+    <!-- Your bakery sections -->
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="care-footer">
+
+
+    <div class="footer-orb one"></div>
+
+    <div class="footer-orb two"></div>
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-top">
+
+
+            <!-- =================================================
+                 BRAND
+            ================================================== -->
+
+            <div class="footer-brand">
+
+
+                <a href="#"
+                   class="brand">
+
+                    <div class="logo-box">
+
+                        <img src="images/logo.png"
+                             alt="Maison Crumb Logo">
+
+                    </div>
+
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+
+                            <span class="brand-primary">
+                                Maison
+                            </span>
+
+                            <span class="brand-secondary">
+                                Crumb
+                            </span>
+
+                        </span>
+
+                        <span class="brand-tag">
+                            ARTISAN BAKERY
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Small-batch breads, delicate pastries and
+                    celebration cakes, freshly crafted every day
+                    with patience, tradition and beautiful
+                    ingredients.
+
+                </p>
+
+
+                <div class="footer-badge">
+
+                    <span></span>
+
+                    Freshly Baked • Every Morning
+
+                </div>
+
+
+                <div class="socials">
+
+                    <a href="#"
+                       class="social"
+                       aria-label="Facebook">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="social"
+                       aria-label="Instagram">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="social"
+                       aria-label="Pinterest">
+
+                        <i class="bi bi-pinterest"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="social"
+                       aria-label="YouTube">
+
+                        <i class="bi bi-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SHOP
+            ================================================== -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Bakes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="specials.html">
+                            Today's Specials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cakes.html">
+                            Celebration Cakes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="story.html">
+                            Our Story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 BAKERY
+            ================================================== -->
+
+            <div class="footer-column">
+
+                <h3>
+                    From Our Oven
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#">
+                            Sourdough Loaves
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Butter Croissants
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Seasonal Tarts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Signature Cakes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Artisan Cookies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Gift Boxes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Visit The Bakery
+                </h3>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="map-pin"></i>
+
+                    </div>
+
+                    <span>
+                        Bengaluru, Karnataka, India
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="phone"></i>
+
+                    </div>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i data-lucide="clock-3"></i>
+
+                    </div>
+
+                    <span>
+                        7:00 AM — 9:00 PM
+                    </span>
+
+                </div>
+
+
+                <div class="newsletter">
+
+                    <div class="newsletter-box">
+
+                        <input
+                            id="newsletterInput"
+                            type="email"
+                            placeholder="Your email address"
+                            autocomplete="email"
+                        >
+
+                        <button
+                            id="newsletterButton"
+                            type="button"
+                            aria-label="Subscribe">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             BOTTOM
+        ================================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="copyright">
+
+                © 2026 Maison Crumb.
+                Crafted with patience & care.
+
+            </div>
+
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Accessibility
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   LUCIDE
+========================================================= */
+
+lucide.createIcons();
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const header =
+    document.getElementById("header");
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mobilePanel =
+    document.getElementById("mobilePanel");
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+const rtlBtn =
+    document.getElementById("rtlBtn");
+
+const mobileHomeBtn =
+    document.getElementById("mobileHomeBtn");
+
+const mobileHomeDropdown =
+    document.getElementById("mobileHomeDropdown");
+
+const newsletterInput =
+    document.getElementById("newsletterInput");
+
+const newsletterButton =
+    document.getElementById("newsletterButton");
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 25
+        );
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+function setMenuIcon(open){
+
+    menuBtn.innerHTML = open
+
+        ? '<i data-lucide="x"></i>'
+
+        : '<i data-lucide="menu"></i>';
+
+    lucide.createIcons();
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE MENU
+========================================================= */
+
+function closeMenu(){
+
+    mobilePanel.classList.remove(
+        "active"
+    );
+
+    setMenuIcon(false);
+
+    mobileHomeDropdown.classList.remove(
+        "active"
+    );
+
+    mobileHomeBtn.classList.remove(
+        "open"
+    );
+
+    mobileHomeBtn.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+menuBtn.addEventListener(
+    "click",
+    event => {
+
+        event.stopPropagation();
+
+        const open =
+            mobilePanel.classList.toggle(
+                "active"
+            );
+
+        setMenuIcon(open);
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE HOME
+========================================================= */
+
+mobileHomeBtn.addEventListener(
+    "click",
+    event => {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+        const open =
+            mobileHomeDropdown.classList.toggle(
+                "active"
+            );
+
+        mobileHomeBtn.classList.toggle(
+            "open",
+            open
+        );
+
+        mobileHomeBtn.setAttribute(
+            "aria-expanded",
+            open ? "true" : "false"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".mobile-panel a"
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                closeMenu
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   OUTSIDE CLICK
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        if(
+
+            mobilePanel.classList.contains(
+                "active"
+            )
+
+            &&
+
+            !mobilePanel.contains(
+                event.target
+            )
+
+            &&
+
+            !menuBtn.contains(
+                event.target
+            )
+
+        ){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESC
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(
+            event.key === "Escape"
+        ){
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   DARK / LIGHT
+========================================================= */
+
+let darkMode =
+    localStorage.getItem(
+        "maison-theme"
+    ) === "dark";
+
+
+function applyTheme(){
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        darkMode
+            ? "dark"
+            : "light"
+    );
+
+    themeBtn.innerHTML =
+        darkMode
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+
+    lucide.createIcons();
+
+}
+
+
+applyTheme();
+
+
+themeBtn.addEventListener(
+    "click",
+    () => {
+
+        darkMode = !darkMode;
+
+        localStorage.setItem(
+            "maison-theme",
+            darkMode
+                ? "dark"
+                : "light"
+        );
+
+        applyTheme();
+
+    }
+);
+
+
+/* =========================================================
+   RTL / LTR
+========================================================= */
+
+let rtlMode =
+    localStorage.getItem(
+        "maison-direction"
+    ) === "rtl";
+
+
+function applyDirection(){
+
+    document.documentElement.dir =
+        rtlMode
+            ? "rtl"
+            : "ltr";
+
+}
+
+
+applyDirection();
+
+
+rtlBtn.addEventListener(
+    "click",
+    () => {
+
+        rtlMode = !rtlMode;
+
+        localStorage.setItem(
+            "maison-direction",
+            rtlMode
+                ? "rtl"
+                : "ltr"
+        );
+
+        applyDirection();
+
+    }
+);
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+newsletterButton.addEventListener(
+    "click",
+    () => {
+
+        const email =
+            newsletterInput.value.trim();
+
+
+        if(
+
+            !email ||
+
+            !email.includes("@") ||
+
+            !email.includes(".")
+
+        ){
+
+            newsletterInput.focus();
+
+            newsletterInput.style.outline =
+                "2px solid rgba(140,74,47,.35)";
+
+            setTimeout(
+                () => {
+
+                    newsletterInput.style.outline =
+                        "none";
+
+                },
+                1000
+            );
+
+            return;
+
+        }
+
+
+        newsletterButton.innerHTML =
+            '<i data-lucide="check"></i>';
+
+        lucide.createIcons();
+
+        newsletterInput.value = "";
+
+
+        setTimeout(
+            () => {
+
+                newsletterButton.innerHTML =
+                    '<i data-lucide="arrow-up-right"></i>';
+
+                lucide.createIcons();
+
+            },
+            2200
+        );
+
+    }
+);
+
+
+/* =========================================================
+   FOOTER REVEAL
+========================================================= */
+
+const footer =
+    document.querySelector(
+        ".care-footer"
+    );
+
+
+if(
+    "IntersectionObserver" in window
+){
+
+    const footerObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if(
+                            entry.isIntersecting
+                        ){
+
+                            footer.style.animation =
+                                "footerReveal .95s cubic-bezier(.2,.8,.2,1) both";
+
+                            footerObserver.unobserve(
+                                footer
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold:.05
+            }
+        );
+
+
+    footerObserver.observe(
+        footer
+    );
+
+}
+
+
+/* =========================================================
+   DISABLE EMPTY HASH
+========================================================= */
+
+document
+    .querySelectorAll(
+        'a[href="#"]'
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                event => {
+
+                    event.preventDefault();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
+
+setMenuIcon(false);
+
+mobileHomeDropdown.classList.remove(
+    "active"
+);
+
+mobileHomeBtn.classList.remove(
+    "open"
+);
+
+mobileHomeBtn.setAttribute(
+    "aria-expanded",
+    "false"
+);
+
+</script>
+
+</body>
+</html>

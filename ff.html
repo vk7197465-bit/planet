@@ -1,342 +1,954 @@
-<!-- =========================================================
-     ASTRA VISTA — MEMBERSHIP SECTION
-     Premium Editorial Membership
-========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AstraVista — Explore Beyond the Stars</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-
-<section class="av-membership">
-
-    <div class="av-membership-wrap">
-
-        <!-- CENTER HEADING -->
-        <div class="av-membership-heading">
-
-            <div class="av-membership-eyebrow">
-                <span></span>
-                ASTRA VISTA MEMBERSHIP
-                <span></span>
-            </div>
-
-            <h2>
-                Make Space
-                <em>Part of Your Story</em>
-            </h2>
-
-            <p>
-                Stay closer to the stars with exclusive access, special
-                programs, member events and experiences designed to make
-                every visit feel extraordinary.
-            </p>
-
-        </div>
-
-
-        <!-- MEMBERSHIP CONTENT -->
-        <div class="av-membership-grid">
-
-            <!-- IMAGE -->
-            <div class="av-membership-visual">
-
-                <img src="images/membership.jpg" alt="Astra Vista membership experience">
-
-                <div class="av-membership-image-label">
-                    <span>ASTRA</span>
-                    <strong>VISTA</strong>
-                </div>
-
-                <div class="av-membership-orbit"></div>
-
-            </div>
-
-
-            <!-- CONTENT -->
-            <div class="av-membership-content">
-
-                <div class="av-membership-intro">
-                    <span class="av-small-label">ONE MEMBERSHIP</span>
-
-                    <h3>
-                        More reasons<br>
-                        to <span>look up.</span>
-                    </h3>
-
-                    <p>
-                        Turn your curiosity into a year-round journey.
-                        Astra Vista Membership gives you more opportunities
-                        to explore, discover and experience the universe.
-                    </p>
-                </div>
-
-
-                <!-- BENEFITS -->
-                <div class="av-membership-benefits">
-
-                    <div class="av-member-item">
-                        <div class="av-member-number">01</div>
-                        <div>
-                            <h4>Unlimited Discovery</h4>
-                            <p>
-                                Enjoy member access throughout the year
-                                and return whenever curiosity calls.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="av-member-item">
-                        <div class="av-member-number">02</div>
-                        <div>
-                            <h4>Exclusive Events</h4>
-                            <p>
-                                Get closer to special programs, astronomy
-                                evenings and member-only experiences.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="av-member-item">
-                        <div class="av-member-number">03</div>
-                        <div>
-                            <h4>Bring Someone Along</h4>
-                            <p>
-                                Share the wonder with family and friends
-                                through selected membership benefits.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- CTA -->
-                <div class="av-membership-action">
-
-                    <a href="Membership.html" class="av-membership-btn">
-                        <span>Explore Membership</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-
-                    <div class="av-membership-note">
-                        <span></span>
-                        Discover your membership benefits
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
 
 /* =========================================================
-   ASTRA VISTA — MEMBERSHIP
+ROOT
 ========================================================= */
 
-.av-membership{
+:root{
 
-    position:relative;
+    --primary:#173F9F;
+    --secondary:#7357E8;
 
-    width:100%;
+    --bg:#F7F9FF;
+    --bg-soft:#EEF2FF;
 
-    padding:120px 7%;
+    --surface:#FFFFFF;
+    --surface-soft:#F8F9FE;
 
-    background:#fff;
+    --text:#111827;
+    --text-soft:#4B5563;
+    --text-muted:#7B8498;
 
-    overflow:hidden;
+    --border:#E2E7F2;
+    --border-soft:#EDF0F7;
 
-    font-family:"DM Sans",sans-serif;
+    --primary-soft:#E9EEFF;
+    --secondary-soft:#F0ECFF;
 
-    color:#15182a;
-}
+    --shadow:0 22px 60px rgba(23,63,159,.10);
+    --shadow-soft:0 12px 35px rgba(17,24,39,.08);
 
-
-.av-membership::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:520px;
-    height:520px;
-
-    right:-280px;
-    top:100px;
-
-    border:1px solid rgba(115,87,232,.10);
-
-    border-radius:50%;
-}
-
-
-.av-membership::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:380px;
-    height:380px;
-
-    left:-250px;
-    bottom:-170px;
-
-    border:1px solid rgba(23,63,159,.08);
-
-    border-radius:50%;
-}
-
-
-.av-membership-wrap{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:1280px;
-
-    margin:auto;
+    --heading:"Playfair Display",serif;
+    --body:"DM Sans",sans-serif;
 }
 
 
 /* =========================================================
-   CENTER HEADING
+DARK THEME
 ========================================================= */
 
-.av-membership-heading{
+body.dark-theme{
 
-    max-width:760px;
+    --bg:#080D1D;
+    --bg-soft:#0D1429;
 
-    margin:0 auto 75px;
+    --surface:#11182D;
+    --surface-soft:#151D35;
 
-    text-align:center;
+    --text:#F5F7FF;
+    --text-soft:#C7CEE2;
+    --text-muted:#8F9AB4;
+
+    --border:#27314D;
+    --border-soft:#1C2540;
+
+    --primary-soft:#172A63;
+    --secondary-soft:#2A2159;
+
+    --shadow:0 22px 60px rgba(0,0,0,.35);
+    --shadow-soft:0 12px 35px rgba(0,0,0,.28);
 }
 
 
-.av-membership-eyebrow{
+/* =========================================================
+RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:var(--body);
+
+    overflow-x:hidden;
+
+    transition:
+        background .35s ease,
+        color .35s ease;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+HERO
+========================================================= */
+
+.av-home-hero{
+
+    position:relative;
+
+    min-height:100svh;
+    width:100%;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    background:
+
+        radial-gradient(
+            circle at 72% 45%,
+            rgba(115,87,232,.18),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(23,63,159,.20),
+            transparent 30%
+        ),
+
+        #050916;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.av-home-hero__bg{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,8,20,.97) 0%,
+            rgba(5,9,22,.90) 42%,
+            rgba(5,9,22,.35) 75%,
+            rgba(5,9,22,.82) 100%
+        ),
+
+        url("images/planetarium-hero.jpg")
+        center / cover no-repeat;
+
+    opacity:.95;
+
+    transform:scale(1.04);
+
+    animation:
+        avHeroZoom 18s ease-in-out infinite alternate;
+}
+
+
+.av-home-hero__overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 50%,
+            transparent 0,
+            rgba(3,7,18,.22) 42%,
+            rgba(3,7,18,.72) 100%
+        );
+
+    pointer-events:none;
+}
+
+
+@keyframes avHeroZoom{
+
+    from{
+        transform:scale(1.04);
+    }
+
+    to{
+        transform:scale(1.10);
+    }
+}
+
+
+/* =========================================================
+STAR FIELD
+========================================================= */
+
+.av-home-hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    opacity:.5;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.9) 1px,
+            transparent 1.5px
+        ),
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.55) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        90px 90px,
+        150px 150px;
+
+    background-position:
+        20px 30px,
+        70px 90px;
+
+    animation:starMove 20s linear infinite;
+
+    pointer-events:none;
+}
+
+
+@keyframes starMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-90px);
+    }
+}
+
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.av-home-hero__container{
+
+    position:relative;
+    z-index:3;
+
+    width:min(1240px,92%);
+
+    margin:0 auto;
+
+    min-height:100svh;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(480px,1fr);
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:90px 0 60px;
+}
+
+
+/* =========================================================
+CONTENT
+========================================================= */
+
+.av-home-hero__content{
+
+    max-width:560px;
+
+    animation:
+        avContentIn 1s cubic-bezier(.22,1,.36,1) both;
+}
+
+
+@keyframes avContentIn{
+
+    from{
+        opacity:0;
+        transform:translateX(-45px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+
+/* =========================================================
+EYEBROW
+========================================================= */
+
+.av-home-hero__eyebrow{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:22px;
+
+    color:#B8C7FF;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:.18em;
+    text-transform:uppercase;
+}
+
+
+.av-home-hero__eyebrow::before{
+
+    content:"";
+
+    width:34px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            #A9B9FF
+        );
+}
+
+
+/* =========================================================
+NORMAL HEADING
+========================================================= */
+
+.av-home-hero__title{
+
+    font-family:var(--heading);
+
+    font-weight:600;
+
+    font-size:clamp(
+        48px,
+        5.3vw,
+        76px
+    );
+
+    line-height:1.08;
+
+    letter-spacing:-.035em;
+
+    color:#fff;
+
+    margin-bottom:24px;
+}
+
+
+/* normal text — no huge offset */
+
+.av-home-hero__title span{
+
+    display:block;
+
+    color:#fff;
+}
+
+
+.av-home-hero__title .accent{
+
+    color:#B7C5FF;
+
+    font-style:italic;
+
+    position:relative;
+}
+
+
+.av-home-hero__title .accent::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-7px;
+
+    width:82px;
+    height:2px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            transparent
+        );
+}
+
+
+/* =========================================================
+TYPING LINE
+========================================================= */
+
+.av-home-hero__typing{
+
+    min-height:26px;
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    margin-bottom:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:#AEBBDB;
+}
+
+
+.av-home-hero__typing strong{
+
+    color:#fff;
+}
+
+
+.av-home-hero__typing span{
+
+    color:#A8B5D5;
+}
+
+
+.av-home-hero__cursor{
+
+    width:2px;
+    height:16px;
+
+    background:var(--secondary);
+
+    animation:cursorBlink .8s infinite;
+}
+
+
+@keyframes cursorBlink{
+
+    0%,45%{
+        opacity:1;
+    }
+
+    46%,100%{
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.av-home-hero__description{
+
+    max-width:500px;
+
+    color:#C0C8DA;
+
+    font-size:15px;
+
+    line-height:1.85;
+
+    margin-bottom:32px;
+}
+
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.av-home-hero__actions{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
-
     gap:13px;
 
-    margin-bottom:18px;
+    flex-wrap:wrap;
 
-    color:var(--primary);
+    margin-bottom:42px;
+}
 
-    font-size:11px;
+
+.av-home-btn{
+
+    min-height:48px;
+
+    padding:0 22px;
+
+    border-radius:7px;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:3px;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
 }
 
 
-.av-membership-eyebrow span{
+.av-home-btn:hover{
 
-    width:28px;
-
-    height:1px;
-
-    background:var(--secondary);
-
-    display:block;
+    transform:translateY(-3px);
 }
 
 
-.av-membership-heading h2{
+/* primary */
 
-    margin:0;
+.av-home-btn-primary{
 
-    font-family:"Playfair Display",serif;
+    color:#fff;
 
-    font-size:clamp(42px,5vw,68px);
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
 
-    line-height:1.04;
-
-    font-weight:600;
-
-    letter-spacing:-2px;
-
-    color:#15182a;
+    box-shadow:
+        0 12px 30px
+        rgba(115,87,232,.28);
 }
 
 
-.av-membership-heading h2 em{
+.av-home-btn-primary:hover{
 
-    display:block;
-
-    font-weight:500;
-
-    color:var(--primary);
-
+    box-shadow:
+        0 17px 38px
+        rgba(115,87,232,.38);
 }
 
 
-.av-membership-heading p{
+/* outline */
 
-    max-width:620px;
+.av-home-btn-outline{
 
-    margin:24px auto 0;
+    color:#fff;
 
-    font-size:15px;
+    border:1px solid rgba(255,255,255,.25);
 
-    line-height:1.8;
+    background:rgba(255,255,255,.06);
 
-    color:#707384;
+    backdrop-filter:blur(10px);
+}
+
+
+.av-home-btn-outline:hover{
+
+    background:rgba(255,255,255,.12);
+
+    border-color:rgba(255,255,255,.4);
 }
 
 
 /* =========================================================
-   MAIN GRID
+STATS
 ========================================================= */
 
-.av-membership-grid{
+.av-home-hero__stats{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        repeat(3,1fr);
 
-    gap:75px;
+    max-width:550px;
 
-    align-items:center;
+    border-top:
+        1px solid
+        rgba(255,255,255,.12);
+
+    padding-top:20px;
+}
+
+
+.av-home-stat{
+
+    position:relative;
+
+    padding-right:18px;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.11);
+}
+
+
+.av-home-stat:last-child{
+
+    border-right:none;
+
+    padding-left:18px;
+}
+
+
+.av-home-stat:nth-child(2){
+
+    padding-left:18px;
+}
+
+
+.av-home-stat small{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#8D99B4;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:.13em;
+}
+
+
+.av-home-stat strong{
+
+    display:block;
+
+    color:#E8ECF8;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
 }
 
 
 /* =========================================================
-   IMAGE
+VISUAL
 ========================================================= */
 
-.av-membership-visual{
+.av-home-hero__visual{
 
     position:relative;
 
-    height:590px;
+    width:min(650px,100%);
 
-    border-radius:28px;
+    aspect-ratio:1 / 1;
 
-    overflow:hidden;
+    justify-self:end;
 
-    background:#111;
+    display:flex;
 
+    align-items:center;
+    justify-content:center;
+
+    animation:
+        avVisualIn 1.2s
+        cubic-bezier(.22,1,.36,1)
+        .15s both;
 }
 
 
-.av-membership-visual img{
+@keyframes avVisualIn{
+
+    from{
+        opacity:0;
+        transform:translateX(55px) scale(.94);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+VISUAL GLOW
+========================================================= */
+
+.av-home-hero__glow{
+
+    position:absolute;
+
+    width:62%;
+    height:62%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.38),
+            rgba(23,63,159,.15) 42%,
+            transparent 72%
+        );
+
+    filter:blur(20px);
+
+    animation:
+        visualGlow 5s ease-in-out infinite;
+}
+
+
+@keyframes visualGlow{
+
+    0%,100%{
+        transform:scale(.95);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.08);
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+ORBIT BASE
+========================================================= */
+
+.av-home-hero__orbit{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid
+        rgba(164,181,255,.22);
+
+    transform-origin:center;
+
+    pointer-events:none;
+}
+
+
+.av-home-hero__orbit::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 12px #fff,
+        0 0 28px var(--secondary);
+}
+
+
+/* orbit one */
+
+.av-home-hero__orbit--one{
+
+    width:82%;
+    height:38%;
+
+    transform:rotate(-27deg);
+
+    animation:
+        orbitOne 16s linear infinite;
+}
+
+
+.av-home-hero__orbit--one::before{
+
+    top:8%;
+    left:13%;
+}
+
+
+/* orbit two */
+
+.av-home-hero__orbit--two{
+
+    width:70%;
+    height:70%;
+
+    transform:rotate(38deg);
+
+    border-color:
+        rgba(115,87,232,.28);
+
+    animation:
+        orbitTwo 20s linear infinite reverse;
+}
+
+
+.av-home-hero__orbit--two::before{
+
+    right:7%;
+    top:16%;
+
+    width:6px;
+    height:6px;
+}
+
+
+/* orbit three */
+
+.av-home-hero__orbit--three{
+
+    width:52%;
+    height:86%;
+
+    transform:rotate(63deg);
+
+    border-color:
+        rgba(183,197,255,.16);
+
+    animation:
+        orbitThree 24s linear infinite;
+}
+
+
+.av-home-hero__orbit--three::before{
+
+    bottom:11%;
+    right:13%;
+
+    width:5px;
+    height:5px;
+}
+
+
+@keyframes orbitOne{
+
+    from{
+        transform:rotate(-27deg) rotate(0deg);
+    }
+
+    to{
+        transform:rotate(-27deg) rotate(360deg);
+    }
+}
+
+
+@keyframes orbitTwo{
+
+    from{
+        transform:rotate(38deg) rotate(0deg);
+    }
+
+    to{
+        transform:rotate(38deg) rotate(360deg);
+    }
+}
+
+
+@keyframes orbitThree{
+
+    from{
+        transform:rotate(63deg) rotate(0deg);
+    }
+
+    to{
+        transform:rotate(63deg) rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+PLANET
+========================================================= */
+
+.av-home-hero__planet{
+
+    position:absolute;
+
+    width:52%;
+    aspect-ratio:1;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    box-shadow:
+
+        0 0 0 10px
+        rgba(255,255,255,.02),
+
+        0 0 60px
+        rgba(115,87,232,.30),
+
+        inset -30px -20px 50px
+        rgba(0,0,0,.45);
+
+    animation:
+        planetFloat 6s ease-in-out infinite;
+}
+
+
+.av-home-hero__planet img{
 
     width:100%;
     height:100%;
@@ -345,342 +957,229 @@
 
     display:block;
 
-    transition:transform .8s ease;
+    filter:
+        saturate(.92)
+        contrast(1.05);
 }
 
 
-.av-membership-visual:hover img{
-
-    transform:scale(1.045);
-}
-
-
-.av-membership-visual::after{
+.av-home-hero__planet::after{
 
     content:"";
 
     position:absolute;
-
     inset:0;
+
+    border-radius:50%;
 
     background:
         linear-gradient(
-            180deg,
-            rgba(5,7,19,.05) 30%,
-            rgba(5,7,19,.72) 100%
+            135deg,
+            rgba(255,255,255,.15),
+            transparent 35%,
+            rgba(0,0,0,.42)
         );
 }
 
 
-/* IMAGE LABEL */
+@keyframes planetFloat{
 
-.av-membership-image-label{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+CENTER MARK
+========================================================= */
+
+.av-home-hero__center-mark{
 
     position:absolute;
 
-    left:30px;
-    bottom:28px;
+    z-index:5;
 
-    z-index:3;
+    width:118px;
+    height:118px;
+
+    border-radius:50%;
 
     display:flex;
 
     flex-direction:column;
 
-    line-height:.9;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        rgba(5,9,22,.58);
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.3);
 }
 
 
-.av-membership-image-label span{
+.av-home-hero__center-mark strong{
 
-    color:#fff;
+    font-family:var(--heading);
 
-    font-size:10px;
+    font-size:18px;
 
-    letter-spacing:4px;
-
-    font-weight:600;
-
-    margin-bottom:6px;
+    letter-spacing:.08em;
 }
 
 
-.av-membership-image-label strong{
+.av-home-hero__center-mark small{
 
-    color:#fff;
+    margin-top:6px;
 
-    font-family:"Playfair Display",serif;
+    color:#AAB5D1;
 
-    font-size:35px;
+    font-size:7px;
 
-    font-weight:500;
-
-    letter-spacing:2px;
-}
-
-
-/* ORBIT */
-
-.av-membership-orbit{
-
-    position:absolute;
-
-    z-index:3;
-
-    width:115px;
-    height:42px;
-
-    right:30px;
-    top:35px;
-
-    border:1px solid rgba(255,255,255,.35);
-
-    border-radius:50%;
-
-    transform:rotate(-25deg);
-}
-
-
-.av-membership-orbit::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:7px;
-    height:7px;
-
-    right:12px;
-    top:4px;
-
-    border-radius:50%;
-
-    background:var(--secondary);
+    letter-spacing:.18em;
 }
 
 
 /* =========================================================
-   CONTENT
+FLOATING INFO
 ========================================================= */
 
-.av-membership-content{
+.av-home-hero__info{
 
-    max-width:570px;
+    position:absolute;
+
+    z-index:8;
+
+    padding:12px 14px;
+
+    min-width:130px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    border-radius:8px;
+
+    background:
+        rgba(7,11,26,.65);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.25);
 }
 
 
-.av-small-label{
+.av-home-hero__info span{
 
-    display:inline-block;
+    display:block;
 
-    margin-bottom:16px;
+    color:#7F8BA6;
 
-    color:var(--secondary);
-
-    font-size:10px;
+    font-size:7px;
 
     font-weight:700;
 
-    letter-spacing:2.5px;
+    letter-spacing:.16em;
+
+    margin-bottom:4px;
 }
 
 
-.av-membership-intro h3{
+.av-home-hero__info strong{
 
-    margin:0;
+    display:block;
 
-    font-family:"Playfair Display",serif;
-
-    font-size:48px;
-
-    line-height:1.08;
-
-    font-weight:600;
-
-    letter-spacing:-1.5px;
-
-    color:#15182a;
-}
-
-
-.av-membership-intro h3 span{
-
-    color:var(--primary);
-
-    font-style:italic;
-}
-
-
-.av-membership-intro p{
-
-    margin:22px 0 0;
-
-    max-width:500px;
-
-    font-size:15px;
-
-    line-height:1.8;
-
-    color:#727583;
-}
-
-
-/* =========================================================
-   BENEFITS
-========================================================= */
-
-.av-membership-benefits{
-
-    margin-top:38px;
-
-    border-top:1px solid #e8e9ee;
-}
-
-
-.av-member-item{
-
-    display:grid;
-
-    grid-template-columns:45px 1fr;
-
-    gap:18px;
-
-    padding:22px 0;
-
-    border-bottom:1px solid #e8e9ee;
-
-    transition:padding-left .3s ease;
-}
-
-
-.av-member-item:hover{
-
-    padding-left:8px;
-}
-
-
-.av-member-number{
-
-    color:var(--secondary);
+    color:#F3F5FF;
 
     font-size:11px;
 
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    padding-top:3px;
+    letter-spacing:.04em;
 }
 
 
-.av-member-item h4{
+.av-home-hero__info--one{
 
-    margin:0 0 7px;
+    top:23%;
+    right:4%;
 
-    font-size:15px;
-
-    font-weight:700;
-
-    color:#202235;
+    animation:
+        infoFloatOne 5s ease-in-out infinite;
 }
 
 
-.av-member-item p{
+.av-home-hero__info--two{
 
-    margin:0;
+    bottom:23%;
+    left:2%;
 
-    font-size:13px;
+    animation:
+        infoFloatTwo 6s ease-in-out infinite;
+}
 
-    line-height:1.65;
 
-    color:#818390;
+@keyframes infoFloatOne{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+
+@keyframes infoFloatTwo{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
 }
 
 
 /* =========================================================
-   ACTION
+SCROLL
 ========================================================= */
 
-.av-membership-action{
+.av-home-hero__bottom{
+
+    position:absolute;
+
+    z-index:10;
+
+    left:4%;
+    bottom:28px;
 
     display:flex;
 
     align-items:center;
 
-    gap:25px;
-
-    margin-top:34px;
+    gap:12px;
 }
 
 
-.av-membership-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    min-height:54px;
-
-    padding:0 8px 0 22px;
-
-    border-radius:100px;
-
-    background:var(--primary);
-
-    color:#fff;
-
-    text-decoration:none;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    transition:
-        transform .3s ease,
-        background .3s ease;
-}
-
-
-.av-membership-btn i{
-
-    width:38px;
-    height:38px;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:50%;
-
-    background:var(--secondary);
-
-    font-size:14px;
-
-    transition:transform .3s ease;
-}
-
-
-.av-membership-btn:hover{
-
-    transform:translateY(-3px);
-
-    background:var(--secondary);
-}
-
-
-.av-membership-btn:hover i{
-
-    transform:rotate(45deg);
-
-    background:#fff;
-
-    color:var(--secondary);
-}
-
-
-.av-membership-note{
+.av-home-hero__scroll{
 
     display:flex;
 
@@ -688,120 +1187,850 @@
 
     gap:9px;
 
-    color:#858793;
+    color:#8E99B1;
 
-    font-size:11px;
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
 }
 
 
-.av-membership-note span{
+.av-home-hero__scroll i{
 
-    width:6px;
-    height:6px;
+    color:#B8C5FF;
 
-    border-radius:50%;
+    animation:
+        scrollArrow 1.7s ease-in-out infinite;
+}
 
-    background:var(--secondary);
+
+@keyframes scrollArrow{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(5px);
+    }
+}
+
+
+.av-home-hero__counter{
+
+    position:absolute;
+
+    right:4%;
+
+    bottom:28px;
+
+    color:#78839A;
+
+    font-size:10px;
+
+    letter-spacing:.12em;
 }
 
 
 /* =========================================================
-   TABLET
+TABLET
 ========================================================= */
 
-@media(max-width:900px){
+@media(max-width:1050px){
 
-    .av-membership{
+    .av-home-hero__container{
 
-        padding:90px 6%;
+        grid-template-columns:
+            minmax(0,1fr)
+            minmax(390px,1fr);
+
+        gap:20px;
+
+        width:94%;
     }
 
-    .av-membership-heading{
 
-        margin-bottom:55px;
+    .av-home-hero__title{
+
+        font-size:
+            clamp(44px,6vw,62px);
     }
 
-    .av-membership-grid{
+
+    .av-home-hero__visual{
+
+        width:100%;
+    }
+
+
+    .av-home-hero__info--one{
+
+        right:0;
+    }
+
+
+    .av-home-hero__info--two{
+
+        left:0;
+    }
+}
+
+
+/* =========================================================
+IPAD MINI
+========================================================= */
+
+@media(max-width:850px){
+
+    .av-home-hero{
+
+        min-height:auto;
+
+        padding-bottom:50px;
+    }
+
+
+    .av-home-hero__container{
+
+        min-height:auto;
 
         grid-template-columns:1fr;
 
-        gap:55px;
+        gap:30px;
+
+        padding:
+            90px 0
+            50px;
     }
 
-    .av-membership-visual{
 
-        height:500px;
+    .av-home-hero__content{
+
+        max-width:650px;
     }
 
-    .av-membership-content{
 
-        max-width:100%;
+    .av-home-hero__visual{
+
+        width:min(560px,90vw);
+
+        justify-self:center;
     }
 
+
+    .av-home-hero__bottom{
+
+        display:none;
+    }
+
+
+    .av-home-hero__counter{
+
+        display:none;
+    }
 }
 
 
 /* =========================================================
-   MOBILE
+MOBILE
 ========================================================= */
 
 @media(max-width:600px){
 
-    .av-membership{
+    .av-home-hero{
 
-        padding:75px 20px;
+        min-height:auto;
     }
 
-    .av-membership-heading{
 
-        margin-bottom:45px;
+    .av-home-hero__container{
+
+        width:90%;
+
+        padding:
+            75px 0
+            45px;
+
+        gap:25px;
     }
 
-    .av-membership-heading h2{
 
-        font-size:40px;
+    .av-home-hero__eyebrow{
 
-        letter-spacing:-1px;
+        margin-bottom:16px;
+
+        font-size:9px;
+
+        letter-spacing:.14em;
     }
 
-    .av-membership-heading p{
+
+    .av-home-hero__title{
+
+        font-size:
+            clamp(42px,12vw,55px);
+
+        line-height:1.05;
+
+        margin-bottom:18px;
+    }
+
+
+    .av-home-hero__title .accent::after{
+
+        width:60px;
+    }
+
+
+    .av-home-hero__typing{
+
+        font-size:10px;
+
+        margin-bottom:16px;
+    }
+
+
+    .av-home-hero__description{
+
+        font-size:13px;
+
+        line-height:1.7;
+
+        margin-bottom:24px;
+    }
+
+
+    .av-home-hero__actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        margin-bottom:30px;
+    }
+
+
+    .av-home-btn{
+
+        width:100%;
+    }
+
+
+    .av-home-hero__stats{
+
+        grid-template-columns:1fr;
+
+        gap:13px;
+
+        padding-top:17px;
+    }
+
+
+    .av-home-stat,
+    .av-home-stat:nth-child(2),
+    .av-home-stat:last-child{
+
+        padding:
+            0 0 12px;
+
+        border-right:none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.1);
+    }
+
+
+    .av-home-stat:last-child{
+
+        border-bottom:none;
+
+        padding-bottom:0;
+    }
+
+
+    .av-home-hero__visual{
+
+        width:100%;
+
+        max-width:440px;
+    }
+
+
+    .av-home-hero__planet{
+
+        width:48%;
+    }
+
+
+    .av-home-hero__center-mark{
+
+        width:88px;
+        height:88px;
+    }
+
+
+    .av-home-hero__center-mark strong{
 
         font-size:14px;
     }
 
-    .av-membership-eyebrow{
+
+    .av-home-hero__info{
+
+        min-width:105px;
+
+        padding:9px 10px;
+    }
+
+
+    .av-home-hero__info strong{
 
         font-size:9px;
-
-        letter-spacing:2px;
     }
 
-    .av-membership-eyebrow span{
 
-        width:18px;
+    .av-home-hero__info--one{
+
+        top:18%;
+        right:0;
     }
 
-    .av-membership-visual{
 
-        height:410px;
+    .av-home-hero__info--two{
 
-        border-radius:22px;
+        bottom:18%;
+        left:0;
+    }
+}
+
+
+/* =========================================================
+SMALL MOBILE — SAMSUNG S8
+========================================================= */
+
+@media(max-width:380px){
+
+    .av-home-hero__container{
+
+        width:88%;
+
+        padding-top:65px;
     }
 
-    .av-membership-intro h3{
 
-        font-size:38px;
+    .av-home-hero__title{
+
+        font-size:40px;
     }
 
-    .av-membership-action{
 
-        align-items:flex-start;
+    .av-home-hero__description{
 
-        flex-direction:column;
-
-        gap:17px;
+        font-size:12px;
     }
 
+
+    .av-home-hero__visual{
+
+        margin-top:8px;
+    }
+
+
+    .av-home-hero__info{
+
+        transform:scale(.88);
+    }
+
+
+    .av-home-hero__info--one{
+
+        right:-7px;
+    }
+
+
+    .av-home-hero__info--two{
+
+        left:-7px;
+    }
+}
+
+
+/* =========================================================
+LANDSCAPE MOBILE
+========================================================= */
+
+@media(
+    max-height:600px
+) and (
+    orientation:landscape
+){
+
+    .av-home-hero__container{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        min-height:100vh;
+
+        padding:
+            50px 0 35px;
+
+        gap:20px;
+    }
+
+
+    .av-home-hero__content{
+
+        max-width:500px;
+    }
+
+
+    .av-home-hero__title{
+
+        font-size:42px;
+    }
+
+
+    .av-home-hero__description{
+
+        font-size:11px;
+
+        line-height:1.5;
+
+        margin-bottom:15px;
+    }
+
+
+    .av-home-hero__actions{
+
+        margin-bottom:18px;
+    }
+
+
+    .av-home-btn{
+
+        min-height:40px;
+
+        padding:0 16px;
+
+        font-size:10px;
+    }
+
+
+    .av-home-hero__stats{
+
+        padding-top:12px;
+    }
+
+
+    .av-home-hero__visual{
+
+        width:min(450px,90vh);
+
+        justify-self:end;
+    }
+}
+
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        scroll-behavior:auto !important;
+
+        transition-duration:.01ms !important;
+    }
 }
 
 </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="av-home-hero">
+
+    <div class="av-home-hero__bg"></div>
+
+    <div class="av-home-hero__overlay"></div>
+
+
+    <div class="av-home-hero__container">
+
+
+        <!-- =================================================
+        LEFT CONTENT
+        ================================================= -->
+
+        <div class="av-home-hero__content">
+
+
+            <div class="av-home-hero__eyebrow">
+
+                PLANETARIUM & OBSERVATORY
+
+            </div>
+
+
+            <h1 class="av-home-hero__title">
+
+                <span>Explore</span>
+
+                <span>Beyond</span>
+
+                <span class="accent">the Stars.</span>
+
+            </h1>
+
+
+            <div class="av-home-hero__typing">
+
+                <strong>DISCOVER</strong>
+
+                <span id="avHomeHeroTyping">
+                    THE UNIVERSE
+                </span>
+
+                <i class="av-home-hero__cursor"></i>
+
+            </div>
+
+
+            <p class="av-home-hero__description">
+
+                Step into a world of stars, planets and distant
+                galaxies. Experience astronomy through immersive
+                shows, observatory discoveries and stories that
+                bring the universe closer.
+
+            </p>
+
+
+            <div class="av-home-hero__actions">
+
+                <a
+                    href="Shows&programs.html"
+                    class="av-home-btn av-home-btn-primary"
+                >
+
+                    Explore Shows
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </a>
+
+
+                <a
+                    href="#av-home-discover"
+                    class="av-home-btn av-home-btn-outline"
+                >
+
+                    Discover AstraVista
+
+                    <i class="bi bi-arrow-down"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="av-home-hero__stats">
+
+
+                <div class="av-home-stat">
+
+                    <small>01</small>
+
+                    <strong>
+                        IMMERSIVE SHOWS
+                    </strong>
+
+                </div>
+
+
+                <div class="av-home-stat">
+
+                    <small>02</small>
+
+                    <strong>
+                        NIGHT SKY DISCOVERY
+                    </strong>
+
+                </div>
+
+
+                <div class="av-home-stat">
+
+                    <small>03</small>
+
+                    <strong>
+                        SCIENCE & EDUCATION
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+        RIGHT VISUAL
+        ================================================= -->
+
+        <div class="av-home-hero__visual">
+
+
+            <div class="av-home-hero__glow"></div>
+
+
+            <!-- ORBIT 01 -->
+
+            <div
+                class="av-home-hero__orbit
+                       av-home-hero__orbit--one"
+            ></div>
+
+
+            <!-- ORBIT 02 -->
+
+            <div
+                class="av-home-hero__orbit
+                       av-home-hero__orbit--two"
+            ></div>
+
+
+            <!-- ORBIT 03 -->
+
+            <div
+                class="av-home-hero__orbit
+                       av-home-hero__orbit--three"
+            ></div>
+
+
+            <!-- PLANET -->
+
+            <div class="av-home-hero__planet">
+
+                <img
+                    src="images/planetarium-hero.jpg"
+                    alt="AstraVista Planetarium"
+                >
+
+            </div>
+
+
+            <!-- CENTER -->
+
+            <div class="av-home-hero__center-mark">
+
+                <strong>
+                    ASTRA<br>
+                    VISTA
+                </strong>
+
+                <small>
+                    DISCOVER • EXPLORE
+                </small>
+
+            </div>
+
+
+            <!-- INFO CARD 01 -->
+
+            <div
+                class="av-home-hero__info
+                       av-home-hero__info--one"
+            >
+
+                <span>
+                    NIGHT SKY
+                </span>
+
+                <strong>
+                    LIVE
+                </strong>
+
+            </div>
+
+
+            <!-- INFO CARD 02 -->
+
+            <div
+                class="av-home-hero__info
+                       av-home-hero__info--two"
+            >
+
+                <span>
+                    DEEP SPACE
+                </span>
+
+                <strong>
+                    01.∞
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+    BOTTOM
+    ================================================= -->
+
+    <div class="av-home-hero__bottom">
+
+        <div class="av-home-hero__scroll">
+
+            <i class="bi bi-arrow-down"></i>
+
+            SCROLL TO DISCOVER
+
+        </div>
+
+    </div>
+
+
+    <div class="av-home-hero__counter">
+
+        01 / 04
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+/* =========================================================
+TYPING EFFECT
+========================================================= */
+
+const avTyping = document.getElementById(
+    "avHomeHeroTyping"
+);
+
+const avWords = [
+
+    "THE UNIVERSE",
+    "DISTANT GALAXIES",
+    "THE NIGHT SKY",
+    "COSMIC WONDERS"
+
+];
+
+let avWordIndex = 0;
+let avCharIndex = 0;
+let avDeleting = false;
+
+
+function avTypeEffect(){
+
+    if(!avTyping) return;
+
+
+    const currentWord =
+        avWords[avWordIndex];
+
+
+    if(!avDeleting){
+
+        avTyping.textContent =
+            currentWord.substring(
+                0,
+                avCharIndex + 1
+            );
+
+        avCharIndex++;
+
+
+        if(
+            avCharIndex ===
+            currentWord.length
+        ){
+
+            avDeleting = true;
+
+            setTimeout(
+                avTypeEffect,
+                1600
+            );
+
+            return;
+        }
+
+    }else{
+
+        avTyping.textContent =
+            currentWord.substring(
+                0,
+                avCharIndex - 1
+            );
+
+        avCharIndex--;
+
+
+        if(avCharIndex === 0){
+
+            avDeleting = false;
+
+            avWordIndex =
+                (avWordIndex + 1)
+                % avWords.length;
+        }
+    }
+
+
+    setTimeout(
+        avTypeEffect,
+        avDeleting ? 45 : 85
+    );
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        setTimeout(
+            avTypeEffect,
+            500
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
