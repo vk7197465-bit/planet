@@ -169,142 +169,296 @@ button{
 }
 
 
+
+
 /* =========================================================
-   01 — NEW HERO
+   ROOT
 ========================================================= */
 
-.av-hero{
+:root{
+
+    --primary:#173F9F;
+    --secondary:#7357E8;
+
+    --bg:#F8F8FC;
+    --surface:#FFFFFF;
+
+    --text:#17172A;
+    --muted:#707083;
+
+    --border:rgba(23,23,42,.10);
+
+}
+
+
+/* =========================================================
+   DARK
+========================================================= */
+
+[data-theme="dark"]{
+
+    --bg:#10111E;
+    --surface:#17182A;
+
+    --text:#F5F5FA;
+    --muted:#A8A8BA;
+
+    --border:rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.av-simple-hero{
 
     position:relative;
 
-    min-height:730px;
+    min-height:100vh;
+
+    min-height:760px;
 
     display:flex;
+
     align-items:center;
+
+    justify-content:center;
 
     overflow:hidden;
 
-    background:var(--bg);
+    isolation:isolate;
+
+    background:#090B18;
+
 }
 
 
-/* giant typography */
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
 
-.av-hero-number{
+.av-simple-bg{
 
     position:absolute;
 
-    right:-40px;
-    bottom:-85px;
+    inset:0;
 
-    font-size:clamp(180px,28vw,420px);
+    z-index:-5;
 
-    line-height:.7;
+    background-image:url("images/hero7.png");
 
-    font-weight:700;
+    background-size:cover;
 
-    letter-spacing:-30px;
+    background-position:center;
 
-    color:rgba(115,87,232,.035);
+    background-repeat:no-repeat;
 
-    pointer-events:none;
+    transform:scale(1.02);
+
 }
 
 
-/* decorative line */
+/* =========================================================
+   DARK IMAGE OVERLAY
+========================================================= */
 
-.av-hero-line{
+.av-simple-overlay{
 
     position:absolute;
 
-    left:50%;
-    top:0;
+    inset:0;
 
-    width:1px;
-    height:100%;
+    z-index:-4;
 
     background:
+
         linear-gradient(
-            to bottom,
-            transparent,
-            rgba(115,87,232,.12),
-            transparent
+            180deg,
+            rgba(5,8,24,.62) 0%,
+            rgba(5,8,24,.48) 40%,
+            rgba(5,8,24,.72) 100%
         );
 
 }
 
 
-/* grid */
+/* =========================================================
+   CENTER GLOW
+========================================================= */
 
-.av-hero-grid{
+.av-simple-glow{
 
-    position:relative;
+    position:absolute;
 
-    z-index:2;
+    width:700px;
+    height:700px;
 
-    width:min(1180px,calc(100% - 80px));
+    left:50%;
+    top:50%;
 
-    margin:auto;
+    transform:
+        translate(-50%,-50%);
 
-    display:grid;
+    border-radius:50%;
 
-    grid-template-columns:1fr 1fr;
+    background:
 
-    align-items:center;
+        radial-gradient(
+            circle,
+            rgba(115,87,232,.16) 0%,
+            rgba(115,87,232,.06) 35%,
+            transparent 70%
+        );
 
-    gap:80px;
+    pointer-events:none;
 
 }
 
 
-/* left */
+/* =========================================================
+   CONTENT
+========================================================= */
 
-.av-hero-content{
+.av-simple-content{
 
     position:relative;
 
     z-index:3;
 
+    width:min(900px,calc(100% - 40px));
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#fff;
+
 }
 
-.av-hero-content .av-eyebrow{
 
-    justify-content:flex-start;
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.av-simple-eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    color:
+        rgba(255,255,255,.72);
+
 }
 
-.av-hero-content .av-eyebrow::before{
-    display:none;
+
+.av-simple-eyebrow::before,
+.av-simple-eyebrow::after{
+
+    content:"";
+
+    width:32px;
+
+    height:1px;
+
+    background:
+        rgba(255,255,255,.55);
+
 }
 
-.av-hero-title{
 
-    font-size:clamp(70px,8vw,115px);
+/* =========================================================
+   MAIN TITLE
+========================================================= */
 
-    line-height:.82;
+.av-simple-title{
+
+    margin:0;
+
+    font-size:
+        clamp(60px,9vw,125px);
+
+    line-height:.86;
 
     letter-spacing:-7px;
 
     font-weight:600;
+
+    text-shadow:
+        0 10px 40px
+        rgba(0,0,0,.25);
+
 }
 
-.av-hero-title span{
+
+.av-simple-title span{
+
     display:block;
+
 }
 
-.av-hero-title .italic{
 
-    margin-left:80px;
+.av-simple-title .accent{
 
-    font-family:"Playfair Display",serif;
+    
 
     font-weight:400;
 
-    color:var(--secondary);
+    font-style:italic;
+
+    color:#C9C0FF;
+
+    letter-spacing:-3px;
 
 }
 
 
-.av-hero-typing{
+/* =========================================================
+   TYPING
+========================================================= */
+
+.av-simple-typing{
 
     min-height:42px;
 
@@ -314,264 +468,522 @@ button{
 
     align-items:center;
 
-    gap:7px;
+    justify-content:center;
 
-    color:var(--text);
+    gap:8px;
 
-    font-size:22px;
+    font-size:21px;
 
-    font-weight:600;
+    font-weight:500;
+
+    color:
+        rgba(255,255,255,.78);
+
 }
 
-.av-typed{
 
-    color:var(--primary);
+.av-simple-typed{
 
-    min-width:260px;
+    min-width:230px;
+
+    text-align:left;
+
+    color:#D4CCFF;
+
+    font-weight:700;
+
 }
 
-.av-cursor{
+
+.av-simple-cursor{
 
     width:2px;
+
     height:25px;
 
-    background:var(--secondary);
+    background:#C9C0FF;
 
-    animation:cursorBlink .8s infinite;
+    animation:
+        simpleCursor .8s infinite;
+
 }
 
-@keyframes cursorBlink{
 
-    0%,50%{
+@keyframes simpleCursor{
+
+    0%,
+    49%{
         opacity:1;
     }
 
-    51%,100%{
+    50%,
+    100%{
         opacity:0;
     }
 
 }
 
-.av-hero-description{
 
-    max-width:520px;
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
-    margin-top:18px;
+.av-simple-description{
 
-    color:var(--text-soft);
+    max-width:610px;
 
-    font-size:13px;
+    margin:20px auto 0;
 
-    line-height:1.85;
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:14px;
+
+    line-height:1.9;
+
 }
 
-.av-hero-actions{
 
-    margin-top:32px;
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.av-simple-actions{
+
+    margin-top:34px;
 
     display:flex;
 
     align-items:center;
 
-    gap:22px;
+    justify-content:center;
+
+    gap:12px;
 
     flex-wrap:wrap;
+
 }
 
-.av-btn{
 
-    min-height:50px;
+.av-simple-btn{
 
-    padding:0 8px 0 10px;
+    min-height:52px;
+
+    padding:0 25px;
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:17px;
+    justify-content:center;
 
-    border:0;
+    gap:10px;
 
-    color:var(--white);
+    border-radius:7px;
 
-    background:var(--primary);
-        border-radius:5px;
-       
+    text-decoration:none;
 
-    font-size:11px;
+    font-size:12px;
 
-    font-weight:700;
+    font-weight:600;
 
-    transition:.3s ease;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border .3s ease;
+
 }
 
-.av-btn span{
 
-    width:34px;
-    height:34px;
+.av-simple-btn.primary{
 
-    display:grid;
-    place-items:center;
+    color:#fff;
 
-    background:rgba(255,255,255,.13);
+    background:
+        var(--primary);
+
+    
+
 }
 
-.av-btn:hover{
-    transform:translateY(-3px);
+
+.av-simple-btn.secondary{
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.30);
+
+    backdrop-filter:
+        blur(10px);
+
 }
 
-.av-outline-btn{
 
-    min-height:50px;
+.av-simple-btn:hover{
 
-    padding:0 22px;
+    transform:
+        translateY(-3px);
 
-    display:inline-flex;
+}
+
+
+.av-simple-btn.primary:hover{
+
+    background:#8068ED;
+
+}
+
+
+.av-simple-btn.secondary:hover{
+
+    background:
+        rgba(255,255,255,.16);
+
+}
+
+
+/* =========================================================
+   BOTTOM INFO
+========================================================= */
+
+.av-simple-bottom{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:30px;
+
+    z-index:4;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.av-simple-scroll{
+
+    display:flex;
 
     align-items:center;
 
     gap:10px;
 
-    border:1px solid var(--border);
+    color:
+        rgba(255,255,255,.45);
 
-    background:var(--surface);
+    font-size:8px;
 
-    font-size:11px;
+    letter-spacing:3px;
 
-    font-weight:700;
-
-    transition:.3s ease;
-}
-
-.av-outline-btn:hover{
-    border-color:var(--secondary);
-    color:var(--secondary);
 }
 
 
-/* right visual */
+.av-simple-scroll-line{
 
-.av-hero-visual{
+    width:35px;
 
-    position:relative;
-
-    width:min(470px,100%);
-
-    aspect-ratio:1/1;
-
-    margin-left:auto;
-
-    display:grid;
-
-    place-items:center;
-}
-
-.av-visual-ring{
-
-    position:absolute;
-
-    border:1px solid rgba(115,87,232,.16);
-
-    border-radius:50%;
-}
-
-.av-ring-one{
-
-    width:100%;
-    height:100%;
-
-    transform:rotate(23deg) scaleX(.61);
-}
-
-.av-ring-two{
-
-    width:82%;
-    height:82%;
-
-    transform:rotate(-31deg) scaleX(.68);
-}
-
-.av-ring-three{
-
-    width:64%;
-    height:64%;
-
-    border-style:dashed;
-
-    transform:rotate(47deg) scaleX(.7);
-}
-
-.av-visual-center{
-
-    position:relative;
-
-    width:170px;
-    height:170px;
-
-    border-radius:50%;
+    height:1px;
 
     background:
-        radial-gradient(
-            circle at 32% 25%,
-            #FFFFFF 0,
-            #D9DDFF 14%,
-            #969FE8 40%,
-            #535BAF 68%,
-            #1C235E 100%
-        );
-
-    box-shadow:
-        0 35px 90px rgba(23,63,159,.20);
+        rgba(255,255,255,.4);
 
 }
 
-.av-visual-center::after{
 
-    content:"";
+/* =========================================================
+   RTL
+========================================================= */
 
-    position:absolute;
+html[dir="rtl"] .av-simple-content{
 
-    width:210px;
-    height:42px;
+    direction:rtl;
 
-    left:-20px;
-    top:64px;
-
-    border:1px solid rgba(115,87,232,.35);
-
-    border-radius:50%;
-
-    transform:rotate(-22deg);
 }
 
-.av-orbit-dot{
 
-    position:absolute;
+html[dir="rtl"] .av-simple-typed{
 
-    width:13px;
-    height:13px;
+    text-align:right;
 
-    border-radius:50%;
-
-    background:var(--secondary);
-
-    box-shadow:
-        0 0 25px rgba(115,87,232,.5);
 }
 
-.av-dot-one{
-    top:57px;
-    right:74px;
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and
+(min-width:768px) and
+(max-width:1024px){
+
+    .av-simple-hero{
+
+        min-height:700px;
+
+    }
+
+    .av-simple-content{
+
+        width:
+            calc(100% - 70px);
+
+    }
+
+    .av-simple-title{
+
+        font-size:
+            clamp(58px,10vw,90px);
+
+    }
+
 }
 
-.av-dot-two{
-    bottom:65px;
-    left:57px;
 
-    width:9px;
-    height:9px;
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    background:var(--primary);
+@media screen and
+(min-width:381px) and
+(max-width:767px){
+
+    .av-simple-hero{
+
+        min-height:760px;
+
+    }
+
+    .av-simple-bg{
+
+        background-position:
+            58% center;
+
+    }
+
+    .av-simple-overlay{
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(5,8,24,.65),
+                rgba(5,8,24,.78)
+            );
+
+    }
+
+    .av-simple-content{
+
+        width:
+            calc(100% - 30px);
+
+    }
+
+    .av-simple-eyebrow{
+
+        font-size:8px;
+
+        letter-spacing:2.5px;
+
+        gap:8px;
+
+    }
+
+    .av-simple-eyebrow::before,
+    .av-simple-eyebrow::after{
+
+        width:20px;
+
+    }
+
+    .av-simple-title{
+
+        font-size:
+            clamp(48px,14vw,70px);
+
+        line-height:.9;
+
+        letter-spacing:-4px;
+
+    }
+
+    .av-simple-title .accent{
+
+        letter-spacing:-2px;
+
+    }
+
+    .av-simple-typing{
+
+        margin-top:28px;
+
+        font-size:16px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .av-simple-typed{
+
+        min-width:auto;
+
+    }
+
+    .av-simple-description{
+
+        font-size:12px;
+
+        line-height:1.8;
+
+    }
+
+    .av-simple-actions{
+
+        margin-top:28px;
+
+    }
+
+    .av-simple-btn{
+
+        min-height:48px;
+
+        padding:0 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media screen and
+(min-width:320px) and
+(max-width:380px){
+
+    .av-simple-hero{
+
+        min-height:720px;
+
+    }
+
+    .av-simple-content{
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+    .av-simple-eyebrow{
+
+        font-size:7px;
+
+        letter-spacing:2px;
+
+    }
+
+    .av-simple-title{
+
+        font-size:
+            clamp(42px,14vw,58px);
+
+        letter-spacing:-2px;
+
+    }
+
+    .av-simple-typing{
+
+        font-size:14px;
+
+        gap:6px;
+
+    }
+
+    .av-simple-cursor{
+
+        height:20px;
+
+    }
+
+    .av-simple-description{
+
+        font-size:11px;
+
+        line-height:1.75;
+
+    }
+
+    .av-simple-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .av-simple-btn{
+
+        width:100%;
+
+        max-width:250px;
+
+    }
+
+    .av-simple-bottom{
+
+        bottom:20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media screen and
+(max-width:319px){
+
+    .av-simple-title{
+
+        font-size:40px;
+
+    }
+
+    .av-simple-description{
+
+        font-size:10px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .av-simple-cursor{
+
+        animation:none;
+
+    }
+
 }
 
 

@@ -348,106 +348,231 @@
 
 
 
-<!-- =========================================================
-     01 — HERO
-========================================================= -->
+<section class="av-simple-hero">
 
-<section class="av-hero">
+    <div class="av-simple-bg"></div>
 
-    <div class="av-hero-line"></div>
+    <div class="av-simple-overlay"></div>
 
-    <div class="av-hero-number">
-        07
+    <div class="av-simple-glow"></div>
+
+
+    <div class="av-simple-content">
+
+        <div class="av-simple-eyebrow">
+            ASTRA VISTA OBSERVATORY
+        </div>
+
+
+        <h1 class="av-simple-title">
+
+            <span>Explore</span>
+
+            <span class="accent">
+                The Universe
+            </span>
+
+        </h1>
+
+
+        <div class="av-simple-typing">
+
+            <span>
+                Discover
+            </span>
+
+            <span
+                class="av-simple-typed">
+            </span>
+
+            <span
+                class="av-simple-cursor">
+            </span>
+
+        </div>
+
+
+        <p class="av-simple-description">
+
+            Journey beyond the familiar and experience
+            the wonders of space through immersive shows,
+            celestial observations and unforgettable
+            astronomical discoveries.
+
+        </p>
+
+
+        <div class="av-simple-actions">
+
+            <a
+                href="#shows"
+                class="av-simple-btn primary">
+
+                Explore Shows
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="#tickets"
+                class="av-simple-btn secondary">
+
+                <i class="fa-solid fa-ticket"></i>
+
+                Book Tickets
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <div class="av-hero-grid">
+    <div class="av-simple-bottom">
 
+        <div class="av-simple-scroll">
 
-        <div class="av-hero-content">
+            <span class="av-simple-scroll-line"></span>
 
-            <div class="av-eyebrow">
-                ASTRA VISTA CONTACT
-            </div>
-
-
-            <h1 class="av-hero-title">
-
-                <span>
-                    Let's
-                </span>
-
-                <span class="italic">
-                    Connect.
-                </span>
-
-            </h1>
-
-
-            <div class="av-hero-typing">
-
-                <span>
-                    Talk about
-                </span>
-
-                <span
-                    class="av-typed"
-                    id="avTyped">
-                </span>
-
-                <span class="av-cursor"></span>
-
-            </div>
-
-
-            <p class="av-hero-description">
-
-                Questions about shows, school programs,
-                memberships, group visits, or your next
-                astronomy experience? Our visitor team
-                is ready to help you plan it.
-
-            </p>
-
-
-            <div class="av-hero-actions">
-
-                <a
-                    href="#contact-form"
-                    class="av-btn">
-
-                    Send a Message
-
-                 
-                </a>
-
-
-     
-            </div>
+            SCROLL TO DISCOVER
 
         </div>
-
-
-        <div class="av-hero-visual">
-
-            <div class="av-visual-ring av-ring-one"></div>
-
-            <div class="av-visual-ring av-ring-two"></div>
-
-            <div class="av-visual-ring av-ring-three"></div>
-
-            <div class="av-visual-center"></div>
-
-            <span class="av-orbit-dot av-dot-one"></span>
-
-            <span class="av-orbit-dot av-dot-two"></span>
-
-        </div>
-
 
     </div>
 
 </section>
+
+
+<script>
+
+/* =========================================================
+   CENTER TYPING EFFECT
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const typed =
+            document.querySelector(
+                ".av-simple-typed"
+            );
+
+        if(!typed) return;
+
+
+        const words = [
+
+            "distant galaxies",
+
+            "mysterious planets",
+
+            "the Moon",
+
+            "deep space",
+
+            "the night sky"
+
+        ];
+
+
+        let wordIndex = 0;
+
+        let charIndex = 0;
+
+        let deleting = false;
+
+
+        function typing(){
+
+            const word =
+                words[wordIndex];
+
+
+            if(!deleting){
+
+                typed.textContent =
+                    word.substring(
+                        0,
+                        charIndex + 1
+                    );
+
+                charIndex++;
+
+
+                if(
+                    charIndex ===
+                    word.length
+                ){
+
+                    deleting = true;
+
+                    setTimeout(
+                        typing,
+                        1500
+                    );
+
+                    return;
+
+                }
+
+
+                setTimeout(
+                    typing,
+                    75
+                );
+
+            }
+
+            else{
+
+                typed.textContent =
+                    word.substring(
+                        0,
+                        charIndex - 1
+                    );
+
+                charIndex--;
+
+
+                if(charIndex === 0){
+
+                    deleting = false;
+
+                    wordIndex =
+                        (
+                            wordIndex + 1
+                        )
+                        %
+                        words.length;
+
+                    setTimeout(
+                        typing,
+                        300
+                    );
+
+                    return;
+
+                }
+
+
+                setTimeout(
+                    typing,
+                    40
+                );
+
+            }
+
+        }
+
+
+        typing();
+
+    });
+
+</script>
 
 
 

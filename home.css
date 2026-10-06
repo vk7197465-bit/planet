@@ -316,19 +316,21 @@ font-family: "Orbitron", sans-serif;  --text: #111827;
         serif;
 
     font-size:
-        clamp(70px, 7.7vw, 118px);
+        clamp(54px, 7.7vw, 77px);
 
     line-height: .84;
 
     font-weight: 500;
 
     letter-spacing: -5px;
+    gap:20px;
 }
 
 
 .av-home-hero__title > span {
 
     display: block;
+    gap:10px;
 }
 
 
